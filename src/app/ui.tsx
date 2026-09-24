@@ -105,28 +105,17 @@ export function useMarks() {
   };
 }
 
-/** "Wed, 23 Sep" — composed by hand because en-GB renders "Wed 23 Sept", no comma. */
-export const longDay = (iso: string) => {
-  const d = new Date(`${iso}T12:00:00Z`);
-  const weekday = d.toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" });
-  const month = d.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" });
-  return `${weekday}, ${d.getUTCDate()} ${month}`;
-};
-
-/** "22 – 24 September 2026", collapsing the month when both ends share one. */
+/** "22–24 Sep", or "30 Sep – 2 Oct" across a month boundary. */
 export const rangeLabel = (startIso: string, endIso: string) => {
   const s = new Date(startIso);
   const e = new Date(endIso);
-  const opts: Intl.DateTimeFormatOptions = { day: "numeric", month: "long", timeZone: "UTC" };
-  const left =
-    s.getUTCMonth() === e.getUTCMonth()
-      ? s.toLocaleDateString("en-GB", { day: "numeric", timeZone: "UTC" })
-      : s.toLocaleDateString("en-GB", opts);
-  return `${left} – ${e.toLocaleDateString("en-GB", { ...opts, year: "numeric" })}`;
+  return s.getUTCMonth() === e.getUTCMonth()
+    ? `${s.getUTCDate()}–${shortDay(endIso)}`
+    : `${shortDay(startIso)} – ${shortDay(endIso)}`;
 };
 
 /**
- * "23 Sep" from a full instant — the per-card date, now that headings are gone.
+ * "23 Sep" from a full instant — the per-card date.
  * en-US for the month: en-GB renders September as "Sept", which reads as a typo
  * next to every other three-letter month.
  */
@@ -139,16 +128,6 @@ export const shortDay = (iso: string) => {
 /** "04:57" — the payload derives these from status IDs, so keep them exact. */
 export const timeLabel = (iso: string) =>
   new Date(iso).toLocaleTimeString("en-GB", {
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: "UTC",
-  });
-
-export const stamp = (iso: string) =>
-  new Date(iso).toLocaleString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
     timeZone: "UTC",
@@ -433,10 +412,7 @@ export function Lightbox({
 function QuoteBlock({ quote, onOpen }: { quote: Quote; onOpen?: OpenMedia }) {
   return (
     <span className="mt-3 block rounded-xl border border-white/10 bg-white/[0.03] p-4">
-      <span className="flex flex-wrap items-baseline gap-x-2 text-sm">
-        <span className="font-semibold text-neutral-200">{quote.author.name}</span>
-        <span className="font-mono text-xs text-neutral-500">@{quote.author.handle}</span>
-      </span>
+      <span className="block text-xs text-neutral-500">{quote.author.name}</span>
       <span className="mt-1.5 block whitespace-pre-line break-words text-[15px] leading-relaxed text-neutral-300">
         {linkify(quote.text)}
       </span>
@@ -462,7 +438,7 @@ function ArrowIcon({ className = "h-3.5 w-3.5" }: { className?: string }) {
   );
 }
 
-function HeartIcon({ filled, className = "h-4 w-4" }: { filled?: boolean; className?: string }) {
+export function HeartIcon({ filled, className = "h-4 w-4" }: { filled?: boolean; className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -479,35 +455,16 @@ function HeartIcon({ filled, className = "h-4 w-4" }: { filled?: boolean; classN
   );
 }
 
-function CheckIcon({ className = "h-3.5 w-3.5" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden
-    >
-      <path d="m4 10.5 4 4 8-9" />
-    </svg>
-  );
-}
-
 /**
- * One post: its topic, who posted it, the post itself, its media, when. Nothing
- * is colour-coded, because the payload carries no categorisation to code —
- * `topic` is free text, one per post, and is shown as the words it is.
+ * One post: who posted it and when, quietly, then the post itself and its
+ * media. The post text is the only bright thing on the card.
  *
  * A `div`, not an `<a>`: clicking the card toggles read, and it contains links
- * and buttons of its own, which an anchor can't. "Read on X" is an explicit
- * link in the footer instead.
+ * and buttons of its own, which an anchor can't. The timestamp is the link to
+ * the post instead.
  */
 export function Card({
   item,
-  showAuthor = true,
   read = false,
   liked = false,
   onToggleRead,
@@ -515,7 +472,6 @@ export function Card({
   onOpenMedia,
 }: {
   item: Item;
-  showAuthor?: boolean;
   read?: boolean;
   liked?: boolean;
   onToggleRead?: (url: string) => void;
@@ -545,91 +501,67 @@ export function Card({
       role={onToggleRead ? "button" : undefined}
       tabIndex={onToggleRead ? 0 : undefined}
       aria-pressed={onToggleRead ? read : undefined}
-      className={`mb-4 flex break-inside-avoid flex-col rounded-2xl border p-5 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
+      className={`mb-4 break-inside-avoid rounded-2xl border p-5 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
         onToggleRead ? "cursor-pointer" : ""
       } ${
         // Liked posts keep a warm tint, which survives the read fade — a post
         // can be both saved and already read.
         liked
           ? "border-rose-400/30 bg-rose-500/[0.08] hover:border-rose-400/50"
-          : "border-white/10 bg-white/[0.03] hover:border-white/25"
+          : "border-white/10 bg-white/[0.03] hover:border-white/20"
       } ${
         // Read posts recede but stay legible, and come back on hover so a
         // mis-click isn't a dead end.
         read ? "opacity-35 hover:opacity-100" : ""
       }`}
     >
-      <p className="text-xs uppercase tracking-wider text-neutral-500">{item.topic}</p>
+      {/* Who and when, kept quiet — the post is the point. */}
+      <div className="flex items-center gap-2 text-xs text-neutral-500">
+        <span className="truncate">{item.name}</span>
+        <span aria-hidden className="text-neutral-700">·</span>
+        {/* Swallows its click: opening the source shouldn't silently flip the
+            card's read state behind the new tab. */}
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noreferrer"
+          onClick={swallow}
+          title="Open on X"
+          className="flex shrink-0 items-center gap-0.5 transition hover:text-neutral-200"
+        >
+          {shortDay(item.publishedAt)} {timeLabel(item.publishedAt)}
+          <ArrowIcon className="h-3 w-3" />
+        </a>
 
-      {showAuthor && (
-        <p className="mt-3 flex flex-wrap items-baseline gap-x-2 text-sm">
-          <span className="font-semibold text-white">{item.name}</span>
-          <span className="font-mono text-xs text-neutral-500">@{item.handle}</span>
-        </p>
-      )}
+        {/* Swallows its click — liking a post says nothing about whether
+            you've finished reading it. */}
+        {onToggleLike && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onToggleLike(item.url);
+            }}
+            aria-pressed={liked}
+            aria-label={liked ? "Remove like" : "Like"}
+            className={`-m-1 ml-auto shrink-0 rounded-full p-1 transition ${
+              liked ? "text-rose-400" : "text-neutral-600 hover:text-rose-300"
+            }`}
+          >
+            <HeartIcon filled={liked} />
+          </button>
+        )}
+      </div>
 
-      {/* The post as written. `whitespace-pre-line` because twelve of these
+      {/* The post as written. `whitespace-pre-line` because many of these
           carry their own line breaks — lists and prompts that collapse into
           mush without them. */}
-      <p
-        className={`whitespace-pre-line break-words text-[15px] leading-relaxed text-neutral-100 ${
-          showAuthor ? "mt-2" : "mt-3"
-        }`}
-      >
+      <p className="mt-2.5 whitespace-pre-line break-words text-[15px] leading-relaxed text-neutral-100">
         {linkify(item.text)}
       </p>
 
       <MediaBlock media={item.media} onOpen={onOpenMedia} />
 
       {item.quote && <QuoteBlock quote={item.quote} onOpen={onOpenMedia} />}
-
-      {/* Day and time both live here now that the day headings are gone. */}
-      <div className="mt-auto flex items-center justify-between gap-3 pt-5 text-xs text-neutral-500">
-        <span className="font-mono">
-          {shortDay(item.publishedAt)} {timeLabel(item.publishedAt)}
-        </span>
-
-        <span className="flex items-center gap-2">
-          {/* Also swallows its click — liking a post says nothing about whether
-              you've finished reading it. */}
-          {onToggleLike && (
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                onToggleLike(item.url);
-              }}
-              aria-pressed={liked}
-              aria-label={liked ? "Remove like" : "Like"}
-              className={`flex items-center rounded-full p-1.5 ring-1 ring-inset transition ${
-                liked
-                  ? "bg-rose-500/20 text-rose-300 ring-rose-400/40"
-                  : "text-neutral-400 ring-white/10 hover:text-rose-300 hover:ring-rose-400/30"
-              }`}
-            >
-              <HeartIcon filled={liked} />
-            </button>
-          )}
-
-          {/* Swallows its click: opening the source shouldn't silently flip the
-              card's read state behind the new tab. */}
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-            onClick={swallow}
-            className="flex items-center gap-1 rounded-full px-2.5 py-1 ring-1 ring-inset ring-white/10 transition hover:text-white hover:ring-white/30"
-          >
-            Read on X
-            <ArrowIcon />
-          </a>
-          {read && (
-            <span className="flex items-center gap-1 text-neutral-400">
-              <CheckIcon />
-              Read
-            </span>
-          )}
-        </span>
-      </div>
     </div>
   );
 }

@@ -32,8 +32,6 @@ export type Item = {
   handle: string;
   name: string;
   publishedAt: string;
-  /** UTC calendar day, `YYYY-MM-DD`. The payload states its window in UTC. */
-  day: string;
   url: string;
   topic: string;
   /** The post as written, newlines and all. */
@@ -47,8 +45,6 @@ export type Author = {
   handle: string;
   name: string;
   items: Item[];
-  /** Why an account contributed nothing. An empty account is a result. */
-  note?: string;
 };
 
 type RawQuote = {
@@ -100,12 +96,10 @@ export const AUTHORS: Author[] = handles.map((h) => {
   return {
     handle: a.handle,
     name: a.name,
-    note: a.note,
     items: a.items.map((i) => ({
       handle: a.handle,
       name: a.name,
       publishedAt: i.published_at,
-      day: i.published_at.slice(0, 10),
       url: i.url,
       topic: i.topic,
       text: i.text,
@@ -128,18 +122,10 @@ export const ITEMS: Item[] = AUTHORS.flatMap((a) => a.items).sort((a, b) =>
   b.publishedAt.localeCompare(a.publishedAt),
 );
 
-/** Every UTC day the window actually produced something on, newest first. */
-export const DAYS: string[] = [...new Set(ITEMS.map((i) => i.day))].sort((a, b) =>
-  b.localeCompare(a),
-);
-
 export const META = {
   generatedAt: raw.generated_at,
   window: raw.window,
   filter: raw.scope.filter,
-  source: raw.scope.source,
-  note: raw.scope.note,
-  fields: raw.scope.fields,
   accountsScanned: raw.scope.accounts.length,
   accountsWithPosts: AUTHORS.filter((a) => a.items.length > 0).length,
 };

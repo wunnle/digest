@@ -1,40 +1,90 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { AUTHORS, DAYS, ITEMS, META, type Media } from "./data";
-import { Card, Lightbox, rangeLabel, stamp, useMarks } from "./ui";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { AUTHORS, ITEMS, META, type Media } from "./data";
+import { Card, HeartIcon, Lightbox, rangeLabel, shortDay, timeLabel, useMarks } from "./ui";
 
-type View = "feed" | "authors";
+/** Accounts that contributed nothing can't narrow the feed, so they get no chip. */
+const CHIPS = AUTHORS.filter((a) => a.items.length > 0);
 
-const VIEWS: { id: View; label: string }[] = [
-  { id: "feed", label: "Feed" },
-  { id: "authors", label: "By author" },
-];
+/**
+ * Signed in: a small gradient avatar with your initial. The email and sign-out
+ * live behind it, since neither is something you need to see while reading.
+ */
+function AccountMenu({ email }: { email: string }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-label="Account"
+        className="relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 via-violet-500 to-rose-400 text-sm font-semibold uppercase text-white shadow-lg shadow-violet-500/20 ring-2 ring-neutral-950 transition hover:scale-105 focus:outline-none focus-visible:ring-white/40"
+      >
+        {email[0]}
+        {/* A little "you're in" dot. */}
+        <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-400 ring-2 ring-neutral-950" />
+      </button>
+
+      {open && (
+        <div className="absolute right-0 top-full z-20 mt-2 w-56 overflow-hidden rounded-xl border border-white/10 bg-neutral-900/95 text-sm shadow-2xl backdrop-blur">
+          <div className="px-3.5 py-3">
+            <p className="text-xs text-neutral-500">Signed in as</p>
+            <p className="mt-0.5 truncate text-neutral-200">{email}</p>
+          </div>
+          <form action="/api/auth/logout" method="post" className="border-t border-white/10">
+            <button className="w-full px-3.5 py-2.5 text-left text-neutral-400 transition hover:bg-white/5 hover:text-white">
+              Sign out
+            </button>
+          </form>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function GoogleIcon() {
+  return (
+    <svg viewBox="0 0 48 48" className="h-[18px] w-[18px]" aria-hidden>
+      <path
+        fill="#EA4335"
+        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+      />
+      <path
+        fill="#4285F4"
+        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
+      />
+      <path
+        fill="#34A853"
+        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+      />
+    </svg>
+  );
+}
 
 export default function DigestPage() {
-  const [view, setView] = useState<View>("feed");
   /** Selected handles. Empty means everything, so the page opens complete. */
   const [active, setActive] = useState<string[]>([]);
-
-  /**
-   * The view lives in the hash so `/#authors` is a shareable link. Read
-   * after mount rather than during render — the server has no hash, and seeding
-   * state from it directly would mismatch hydration.
-   */
-  useEffect(() => {
-    const fromHash = () => {
-      const h = window.location.hash.slice(1);
-      if (VIEWS.some((v) => v.id === h)) setView(h as View);
-    };
-    fromHash();
-    window.addEventListener("hashchange", fromHash);
-    return () => window.removeEventListener("hashchange", fromHash);
-  }, []);
-
-  const pick = (v: View) => {
-    setView(v);
-    history.replaceState(null, "", v === "feed" ? " " : `#${v}`);
-  };
 
   const { status, email, read, liked, toggleRead, toggleLike, clearRead } = useMarks();
 
@@ -46,8 +96,8 @@ export default function DigestPage() {
   const onToggleRead = canMark ? toggleRead : undefined;
   const onToggleLike = canMark ? toggleLike : undefined;
 
-  /** Set by the OAuth callback when it turns a sign-in away. Read after mount,
-      like the hash, so the static page doesn't depend on the query. */
+  /** Set by the OAuth callback when it turns a sign-in away. Read after mount
+      so the static page doesn't depend on the query. */
   const [authError, setAuthError] = useState<string | null>(null);
   useEffect(() => {
     const fromQuery = () => {
@@ -75,8 +125,6 @@ export default function DigestPage() {
   const [zoom, setZoom] = useState<{ media: Media[]; index: number } | null>(null);
   const openMedia = useCallback((media: Media[], index: number) => setZoom({ media, index }), []);
 
-  const on = (handle: string) => active.length === 0 || active.includes(handle);
-
   const shown = useMemo(
     () =>
       ITEMS.filter(
@@ -94,134 +142,92 @@ export default function DigestPage() {
   const toggleAccount = (h: string) =>
     setActive((prev) => (prev.includes(h) ? prev.filter((x) => x !== h) : [...prev, h]));
 
+  const chip = (on: boolean) =>
+    `flex shrink-0 items-center gap-1.5 rounded-md px-2 py-1 text-xs transition ${
+      on ? "bg-white/10 text-white" : "text-neutral-500 hover:bg-white/5 hover:text-neutral-200"
+    }`;
+
   return (
-    <main className="relative min-h-screen overflow-hidden bg-neutral-950 px-4 py-10 text-neutral-200 sm:px-8 sm:py-14">
+    <main className="relative min-h-screen overflow-hidden px-4 py-8 text-neutral-200 sm:px-8 sm:py-12">
       {/* Cool ambient wash behind the top rows, so the page isn't flat black */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[80rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(56,130,246,0.14),transparent)] blur-2xl"
+        className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[80rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(56,130,246,0.12),transparent)] blur-2xl"
       />
       <div className="relative mx-auto max-w-[95rem]">
-        <header className="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-neutral-500">
-              {META.window.duration_hours}-hour digest · {META.window.timezone}
+        <header className="flex items-center justify-between gap-4">
+          <div className="flex min-w-0 items-baseline gap-3">
+            <h1 className="text-lg font-semibold tracking-tight text-white">Digest</h1>
+            <p
+              className="truncate text-sm text-neutral-500"
+              title={`Updated ${shortDay(META.generatedAt)} ${timeLabel(META.generatedAt)} UTC`}
+            >
+              {rangeLabel(META.window.start, META.window.end)} · {ITEMS.length} posts
             </p>
-            {/* The page is its window, so the window is the title. */}
-            <h1 className="mt-1 text-4xl font-light tracking-tight text-white sm:text-5xl">
-              {rangeLabel(META.window.start, META.window.end)}
-            </h1>
           </div>
 
-          {/* Counts live in the header's dead right-hand space instead of another paragraph */}
-          <dl className="flex items-end gap-6 text-neutral-400">
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-neutral-500">Posts</dt>
-              <dd className="text-2xl font-semibold text-white">{ITEMS.length}</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-neutral-500">Accounts</dt>
-              <dd className="text-2xl font-semibold text-white">
-                {META.accountsWithPosts}
-                <span className="text-neutral-600">/{META.accountsScanned}</span>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-neutral-500">Days</dt>
-              <dd className="text-2xl font-semibold text-white">{DAYS.length}</dd>
-            </div>
-          </dl>
+          {/* Nothing until the session check lands, so the control doesn't flash. */}
+          <div className="flex h-9 shrink-0 items-center">
+            {status === "signedIn" && email && <AccountMenu email={email} />}
+            {/* Google's dark-theme button: #131314 fill, #8E918F outline,
+                the four-colour G. */}
+            {status === "signedOut" && (
+              <a
+                href="/api/auth/login"
+                className="flex h-9 items-center gap-2 rounded-full border border-[#8E918F] bg-[#131314] px-3.5 text-sm font-medium text-[#E3E3E3] transition hover:bg-[#1f1f20] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+              >
+                <GoogleIcon />
+                <span className="hidden sm:inline">Sign in with Google</span>
+                <span className="sm:hidden">Sign in</span>
+              </a>
+            )}
+          </div>
         </header>
 
-        <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-neutral-500">{META.filter}</p>
-        {/* Click-to-read isn't discoverable on its own, and signed out it
-            doesn't exist — so the hint and the account control share a line. */}
-        <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-neutral-600">
-          <p>
-            {canMark
-              ? "Click a card to mark it read. Click an image to enlarge it."
-              : "Click an image to enlarge it."}
-          </p>
-          {status === "signedIn" && (
-            <form action="/api/auth/logout" method="post" className="flex items-center gap-2">
-              <span className="text-neutral-500">{email}</span>
-              <button className="underline underline-offset-4 hover:text-neutral-300">
-                sign out
-              </button>
-            </form>
-          )}
-          {status === "signedOut" && (
-            <a
-              href="/api/auth/login"
-              className="text-neutral-400 underline underline-offset-4 hover:text-white"
-            >
-              Sign in with Google to mark and like posts
-            </a>
-          )}
-          {authError && <p className="text-rose-300/80">{authError}</p>}
-        </div>
+        {authError && <p className="mt-3 text-sm text-rose-300/80">{authError}</p>}
 
-        <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2">
-          {/* View switch first — it changes what the account filter applies to */}
-          <div className="flex rounded-full p-0.5 ring-1 ring-inset ring-white/10">
-            {VIEWS.map((v) => (
-              <button
-                key={v.id}
-                onClick={() => pick(v.id)}
-                aria-pressed={view === v.id}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
-                  view === v.id ? "bg-white text-neutral-950" : "text-neutral-400 hover:text-white"
-                }`}
-              >
-                {v.label}
-              </button>
-            ))}
-          </div>
-
+        {/* One row. It scrolls sideways on a phone rather than wrapping into a
+            block that pushes the posts down. */}
+        <div className="-mx-4 mt-5 flex items-center gap-1 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0">
           {/* Only appears once there's something saved — an always-on filter
               that can only ever show nothing is just a dead control. */}
           {likedCount > 0 && (
-            <button
-              onClick={() => setLikedOnly((v) => !v)}
-              aria-pressed={likedOnly}
-              className={`flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm ring-1 ring-inset transition ${
-                likedOnly
-                  ? "bg-rose-500/20 text-rose-200 ring-rose-400/40"
-                  : "text-neutral-400 ring-white/10 hover:text-rose-300 hover:ring-rose-400/30"
-              }`}
-            >
-              Liked
-              <span className="text-neutral-500">{likedCount}</span>
-            </button>
-          )}
-
-          <span className="hidden h-5 w-px bg-white/10 sm:block" aria-hidden />
-
-          {AUTHORS.map((a) => {
-            const sel = active.includes(a.handle);
-            return (
+            <>
               <button
-                key={a.handle}
-                onClick={() => toggleAccount(a.handle)}
-                aria-pressed={sel}
-                className={`flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm ring-1 ring-inset transition ${
-                  sel
-                    ? "bg-white/15 text-white ring-white/30"
-                    : "bg-transparent text-neutral-400 ring-white/10 hover:text-white"
+                onClick={() => setLikedOnly((v) => !v)}
+                aria-pressed={likedOnly}
+                aria-label="Liked only"
+                className={`flex shrink-0 items-center gap-1.5 rounded-md px-2 py-1 text-xs transition ${
+                  likedOnly
+                    ? "bg-rose-500/15 text-rose-300"
+                    : "text-neutral-500 hover:bg-white/5 hover:text-rose-300"
                 }`}
               >
-                <span className="font-mono text-xs">@{a.handle}</span>
-                <span className="text-neutral-500">{a.items.length}</span>
+                <HeartIcon filled={likedOnly} className="h-3.5 w-3.5" />
+                <span className="tabular-nums text-neutral-600">{likedCount}</span>
               </button>
-            );
-          })}
+              <span className="mx-1 h-3.5 w-px shrink-0 bg-white/10" aria-hidden />
+            </>
+          )}
+
+          {CHIPS.map((a) => (
+            <button
+              key={a.handle}
+              onClick={() => toggleAccount(a.handle)}
+              aria-pressed={active.includes(a.handle)}
+              className={chip(active.includes(a.handle))}
+            >
+              {a.handle}
+              <span className="tabular-nums text-neutral-600">{a.items.length}</span>
+            </button>
+          ))}
 
           {active.length > 0 && (
             <button
               onClick={() => setActive([])}
-              className="text-sm text-neutral-500 underline underline-offset-4 hover:text-neutral-300"
+              className="shrink-0 px-2 py-1 text-xs text-neutral-600 transition hover:text-neutral-300"
             >
-              clear
+              Clear
             </button>
           )}
 
@@ -230,80 +236,35 @@ export default function DigestPage() {
           {readCount > 0 && (
             <button
               onClick={clearRead}
-              className="text-sm text-neutral-500 underline underline-offset-4 hover:text-neutral-300"
+              className="ml-auto shrink-0 px-2 py-1 text-xs text-neutral-600 transition hover:text-neutral-300"
             >
               {readCount} read · reset
             </button>
           )}
         </div>
 
-        {view === "feed" ? (
-          /* One continuous masonry, newest first — no day breaks. Each card
-             carries its own date instead. Masonry rather than a grid because
-             post lengths run from 15 to 1200-odd characters, and equal-height
-             rows leave short posts stranded beside long ones. */
-          <div className="mt-8 gap-4 md:columns-2 xl:columns-3">
-            {shown.map((i) => (
-              <Card
-                key={i.url}
-                item={i}
-                read={read.has(i.url)}
-                liked={liked.has(i.url)}
-                onToggleRead={onToggleRead}
-                onToggleLike={onToggleLike}
-                onOpenMedia={openMedia}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="mt-8 space-y-10">
-            {AUTHORS.filter((a) => on(a.handle)).map((a) => (
-              <section key={a.handle}>
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <h2 className="text-lg font-semibold tracking-tight text-white sm:text-xl">
-                    {a.name}
-                  </h2>
-                  <a
-                    href={`https://x.com/${a.handle}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-mono text-sm text-neutral-500 underline-offset-4 hover:text-neutral-300 hover:underline"
-                  >
-                    @{a.handle}
-                  </a>
-                  <span className="text-sm text-neutral-600">
-                    {a.items.length} {a.items.length === 1 ? "post" : "posts"}
-                  </span>
-                </div>
-
-                {/* An account that produced nothing is a result, not a gap —
-                    the payload's note says why, so show it rather than hide the row. */}
-                {a.note && (
-                  <p className="mt-2 max-w-3xl text-[15px] leading-relaxed text-neutral-500">
-                    {a.note}
-                  </p>
-                )}
-
-                {a.items.length > 0 && (
-                  <div className="mt-3 gap-4 md:columns-2 xl:columns-3">
-                    {a.items.map((i) => (
-                      <Card
-                        key={i.url}
-                        item={i}
-                        showAuthor={false}
-                        read={read.has(i.url)}
-                        liked={liked.has(i.url)}
-                        onToggleRead={onToggleRead}
-                        onToggleLike={onToggleLike}
-                        onOpenMedia={openMedia}
-                      />
-                    ))}
-                  </div>
-                )}
-              </section>
-            ))}
-          </div>
+        {/* Click-to-read isn't discoverable on its own. Once something's been
+            marked, the hint has done its job. */}
+        {canMark && readCount === 0 && likedCount === 0 && (
+          <p className="mt-3 text-xs text-neutral-600">Click a card to mark it read.</p>
         )}
+
+        {/* One continuous masonry, newest first. Masonry rather than a grid
+            because post lengths run from 15 to 1200-odd characters, and
+            equal-height rows leave short posts stranded beside long ones. */}
+        <div className="mt-6 gap-4 md:columns-2 xl:columns-3">
+          {shown.map((i) => (
+            <Card
+              key={i.url}
+              item={i}
+              read={read.has(i.url)}
+              liked={liked.has(i.url)}
+              onToggleRead={onToggleRead}
+              onToggleLike={onToggleLike}
+              onOpenMedia={openMedia}
+            />
+          ))}
+        </div>
 
         {zoom && (
           <Lightbox
@@ -313,15 +274,6 @@ export default function DigestPage() {
             onClose={() => setZoom(null)}
           />
         )}
-
-        {/* Only the payload's own account of itself. */}
-        <footer className="mt-14 grid gap-3 border-t border-white/10 pt-6 text-sm leading-relaxed text-neutral-600 sm:grid-cols-2">
-          {META.fields && <p className="sm:col-span-2">{META.fields}</p>}
-          {META.note && <p className="sm:col-span-2">{META.note}</p>}
-          <p className="sm:col-span-2">
-            {META.source} · generated {stamp(META.generatedAt)} {META.window.timezone}
-          </p>
-        </footer>
       </div>
     </main>
   );
