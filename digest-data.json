@@ -1,0 +1,475 @@
+{
+  "generated_at": "2026-09-24T04:17:31Z",
+  "window": {
+    "start": "2026-09-22T04:17:31Z",
+    "end": "2026-09-24T04:17:31Z",
+    "timezone": "UTC",
+    "duration_hours": 48
+  },
+  "scope": {
+    "accounts": [
+      "simonw",
+      "mitsuhiko",
+      "badlogicgames",
+      "steipete",
+      "thorstenball",
+      "geoffreylitt",
+      "HamelHusain",
+      "RLanceMartin",
+      "sgoedecke",
+      "birgitta410",
+      "bcherny",
+      "trq212",
+      "alexalbert",
+      "_sholtodouglas",
+      "karpathy"
+    ],
+    "filter": "AI and software-development posts with concrete tools, workflows, evidence, experiments, or useful criticism",
+    "source": "Public X profile timelines",
+    "note": "Replies and repost-only activity may not appear on logged-out public profile timelines. Off-topic and low-signal posts were omitted. Timestamps were derived from X status IDs.",
+    "fields": "Each item contains original post text, source-backed media URLs, and the quoted tweet with its author, original text, timestamp, and media when present."
+  },
+  "digest": [
+    {
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-09-24T00:22:32.554Z",
+          "url": "https://x.com/simonw/status/2102916558712705427",
+          "topic": "MCP and voice interfaces",
+          "text": "I just had a voice conversation with the Datasette backup of my blog via datasette-mcp, which you can now talk to using the ChatGPT iPhone app",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/reach_vb/status/2102822338702307757",
+            "published_at": "2026-09-23T18:08:08Z",
+            "author": {
+              "name": "Vaibhav (VB) Srivastav",
+              "handle": "reach_vb"
+            },
+            "text": "Massive QoL update: ChatGPT Voice can now use plugins AND run on GPT-6 Astra, Sol & Luna, directly in ChatGPT Work on web and mobile.\n\nYour email, calendar, Slack + docs, decks, sites and spreadsheets, just by talking.\n\nRolling out now, enjoy!!",
+            "media": []
+          }
+        },
+        {
+          "published_at": "2026-09-23T20:45:19.125Z",
+          "url": "https://x.com/simonw/status/2102861892549279922",
+          "topic": "Gemini TTS playground",
+          "text": "The new Gemini 3.8 TTS models are super-cheap and can generate conversations between multiple voices (from 2,000+, or you can clone your own) - I built a little UI for it, then had Claude knock up a script where two pelicans debate moving to Pacifica Pier https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-22T23:50:29.264Z",
+          "url": "https://x.com/simonw/status/2102546103984079131",
+          "topic": "Frontier-model comparison",
+          "text": "Big model release today - I wrote about Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna - plus comparison grids of pelicans by the different model families at different reasoning levels https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-22T20:07:37.026Z",
+          "url": "https://x.com/simonw/status/2102490016752779458",
+          "topic": "Model selection",
+          "text": "GPT-6 Luna is half the price of 5.6 Luna, which was already an astonishingly cheap model given how capable it is\n\nLuna is my favorite model for building product features thanks to its cost (and speed)",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/OpenAI/status/2102460975790137662",
+            "published_at": "2026-09-22T18:12:13Z",
+            "author": {
+              "name": "OpenAI",
+              "handle": "OpenAI"
+            },
+            "text": "Please welcome GPT-6 Sol and GPT-6 Luna to the GPT-6 universe.\n\nGPT-6 Sol and Luna build on the advances behind GPT-6 Astra, bringing much of its strengths into faster and more affordable models to support work at scale.\n\nWe’ve also made caching and inference more efficient, and we’re passing the savings directly to you: 50% lower API prices for Sol and Luna compared with GPT‑5.6 promotional pricing.",
+            "media": [
+              {
+                "type": "video",
+                "url": "https://video.twimg.com/amplify_video/2102460948430966784/vid/avc1/1920x1080/2aqucgwb6tQ7xZ6U.mp4?tag=29",
+                "width": 1920,
+                "height": 1080,
+                "thumbnail_url": "https://pbs.twimg.com/amplify_video_thumb/2102460948430966784/img/AtB4MxYZuAKgOLey.jpg",
+                "format": "video/mp4",
+                "duration": 8
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-09-23T21:38:50.475Z",
+          "url": "https://x.com/mitsuhiko/status/2102875361927196678",
+          "topic": "AI-driven language adoption",
+          "text": "I know that DHH made many of us buy macs and TextMate back in the day. Maybe today he minted a bunch of new Rust programmers.",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T18:00:32.595Z",
+          "url": "https://x.com/mitsuhiko/status/2102820425436963165",
+          "topic": "Cache warming",
+          "text": "Love me my cache warming.",
+          "media": [],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-09-23T18:21:07.228Z",
+          "url": "https://x.com/badlogicgames/status/2102825603863072965",
+          "topic": "Rapid game prototyping",
+          "text": "my kind of slop",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/christofsalis/status/2102710421425934670",
+            "published_at": "2026-09-23T10:43:25Z",
+            "author": {
+              "name": "Christof Salis",
+              "handle": "christofsalis"
+            },
+            "text": "Ok so @Dimillian inspired me to spend a couple hours last night to make a broforce-esque game with Astra. \n\nYou can be @steipete or @badlogicgames or @theo or even @thsottiaux  \n\nTry it: https://evizero.github.io/Tokenbros/",
+            "media": [
+              {
+                "type": "video",
+                "url": "https://video.twimg.com/amplify_video/2102709543436218368/vid/avc1/3024x1664/ToTG77nfEZvQ0lf5.mp4?tag=29",
+                "width": 3024,
+                "height": 1664,
+                "thumbnail_url": "https://pbs.twimg.com/amplify_video_thumb/2102709543436218368/img/cp5Qoqdxjp0jsS91.jpg",
+                "format": "video/mp4",
+                "duration": 20.753
+              }
+            ]
+          }
+        },
+        {
+          "published_at": "2026-09-22T12:30:10.493Z",
+          "url": "https://x.com/badlogicgames/status/2102374897649647627",
+          "topic": "Maintaining engineering understanding",
+          "text": "recommended reading. i belive this to be true at this point in time.\n\nhttps://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/#isso-thread",
+          "media": [],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-09-23T22:34:18.303Z",
+          "url": "https://x.com/steipete/status/2102889319849713698",
+          "topic": "Claude Code AGENTS.md failure mode",
+          "text": "Huh. There is a catch. https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T08:13:25.118Z",
+          "url": "https://x.com/steipete/status/2102672670689275965",
+          "topic": "AI tooling observability",
+          "text": "CodexBar learned a few new tricks in the last few weeks!\n\nTypeSafe, Nous Portal, Muse Code, CodeRabbit, Replicate, HuggingFace, Pi, Helmcode, v0, Charm Hyper, GitKraken AI, Bifrost\n\nMy ambitions for this app REALLY outgrew the app name. (Oh and these keychain alerts are no more) http://codex.bar",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T07:50:54.207Z",
+          "url": "https://x.com/steipete/status/2102667004557832497",
+          "topic": "Decision models in agent control",
+          "text": "Next version of OpenClaw uses a decision model to automatically decide between steer or queue. \n\n(Lab feature, we support Jef* and API-compat (e.g. local models like Kef...) and ONNX variants)",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS4rnuRbYAASOzE.jpg?name=orig",
+              "width": 1326,
+              "height": 786
+            }
+          ],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-09-23T14:01:29.987Z",
+          "url": "https://x.com/thorstenball/status/2102760268178891180",
+          "topic": "Agent harness quality",
+          "text": "\"the best harness in the market\"",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/parcadei/status/2102750132005470242",
+            "published_at": "2026-09-23T13:21:13Z",
+            "author": {
+              "name": "dei",
+              "handle": "parcadei"
+            },
+            "text": "@AmpCode is the best harness in the market, there's no point even doing a tier list",
+            "media": []
+          }
+        },
+        {
+          "published_at": "2026-09-23T06:37:57.003Z",
+          "url": "https://x.com/thorstenball/status/2102648645233373328",
+          "topic": "Same-prompt model comparison",
+          "text": "Same prompt, four modes/models:\n\n- GPT-6 Sol\n- Opus 5.5\n- High (GPT-6 Astra)\n- Ultra (Fable 5.1)\n\nHere's the prompt:\n\n\"Look at the last two news posts we published on runner functionality: one runner is now enough, and one runner many worktrees.\n\nI now want you to write a news post that's similar but for the functionality behind the `shared-runners` feature flag.\n\nIt should probably also contain a screenshot of the picker that shows two normal runners and two shared runners, like `gpu-runner` or `macos-builder` or something and some nic elooking avatars and good data.\n\nAnd it should succinctly explain how it works and how people can use it.\"\n\nCosts:\n- Opus 5.5: $9.54\n- GPT-6 Sol: $3.10 (estimated list price, using sub)\n- High: $7.58 (estimated list price, using sub)\n- Ultra: $15\n\nNotes:\n\n- Ultra took by far the longest, Ultra is the only one that didn't create docs (I didn't say they should create docs but I think the other models looked at previous commits and figured out they should do that?)\n- Ultra was the only model that didn't prominently display the \"give me the grant to upload assets at the end\"\n- I think Opus 5.5 is the best result. It really feels like more creative (headline) and it nailed the screenshots.\n- High is my second favorite.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS4bTR0W4AAL6Nh.jpg?name=orig",
+              "width": 2672,
+              "height": 3949
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS4bT3VXAAAi6hn.jpg?name=orig",
+              "width": 2612,
+              "height": 4096
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS4bUbcXgAAhI6j.jpg?name=orig",
+              "width": 2560,
+              "height": 3922
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS4bVE4WQAAzdsp.jpg?name=orig",
+              "width": 2151,
+              "height": 4096
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T04:57:32.395Z",
+          "url": "https://x.com/thorstenball/status/2102623376196194763",
+          "topic": "Agent-driven end-to-end testing",
+          "text": "I'll say this:\n\nI've gotten more out of using orbs and asking agents\n\n \"test this e2e & give me irrefutable proof it works\"\n\nthan out of 80% of tests I've written and ran over the last 15 years.\n\nIt's truly remarkable that we can now ask machines:\n\n\"Did you manually test it?\"",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/nateberkopec/status/2102559606232985729",
+            "published_at": "2026-09-23T00:44:08Z",
+            "author": {
+              "name": "Nate Berkopec",
+              "handle": "nateberkopec"
+            },
+            "text": "I agree with @thorstenball, I think unit tests are dead in the water. \n\nThe ones the models write are terrible, at best just doubling total LOC. \n\nInverting the testing approach - heavy e2e/black box/golden master, reaching for lower levels only if necessary, works better for me",
+            "media": []
+          }
+        }
+      ]
+    },
+    {
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [
+        {
+          "published_at": "2026-09-24T03:03:49.885Z",
+          "url": "https://x.com/geoffreylitt/status/2102957148380750095",
+          "topic": "Organizing AI context",
+          "text": "my personal recommendation when people ask me where to put their AI context: docs, skills, memories, etc.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS80J18b0AAid8P.jpg?name=orig",
+              "width": 1344,
+              "height": 840
+            }
+          ],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-09-23T17:08:00.351Z",
+          "url": "https://x.com/HamelHusain/status/2102807203967365549",
+          "topic": "AI evals guide",
+          "text": "This is the most valuable free resource we've created on AI Evals 🎉 (not exaggerating!) \n\nI organized our public materials into this guide.  It allows you to find answers to your eval problems w/o searching  aimlessly. \n\nHumans: pick the row that sounds like you.\nAgents: point it at the post\n\nThe material draw on 60+ hours of office hours from our Evals course, where @sh_reya  and I have taught 5k engineers and PMs Evals.\n\nWe add new material often, with 15 FAQs added in the last two weeks. Recent additions are marked with a \"New\" badge. You can find all of these and more here: \n\nhttps://hamel.dev/blog/posts/evals-faq/#how-to-use-this-faq",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HSyUUecacAAYFyx.png?name=orig",
+              "width": 800,
+              "height": 795
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T17:00:04.306Z",
+          "url": "https://x.com/HamelHusain/status/2102805207289593987",
+          "topic": "Evaluation fundamentals",
+          "text": "Q: What are AI evals?\n\nA: Tests that tell you whether an AI system is doing what you want. Model benchmarks and product evals answer different questions.\n\nhttps://hamel.dev/blog/posts/evals-faq/what-are-llm-evals.html",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS6qMK5XkAA21KK.jpg?name=orig",
+              "width": 732,
+              "height": 1245
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T13:49:46.686Z",
+          "url": "https://x.com/HamelHusain/status/2102757318320648242",
+          "topic": "Bot-generated reply pollution",
+          "text": "Now the bots are replying to each other.  \n\nIt’s a firehose of slop",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS5-o03bcAAl55W.jpg?name=orig",
+              "width": 1179,
+              "height": 1401
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-22T23:36:23.362Z",
+          "url": "https://x.com/HamelHusain/status/2102542556013932990",
+          "topic": "Evaluation pipeline audit",
+          "text": "I recommend grabbing these skills that @sh_reya and I created and at the very least doing an /eval-audit of your existing pipeline.\n\nWe've found that people often find low hanging fruits!  https://github.com/ai-evals-course/evals-skills",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/lennysan/status/2102464854594662480",
+            "published_at": "2026-09-22T18:27:37Z",
+            "author": {
+              "name": "Lenny Rachitsky",
+              "handle": "lennysan"
+            },
+            "text": "Pro tip: Install this new evals skill from @HamelHusain and @sh_reya, it'll save you many hours and a lot of mistakes\n\nhttps://github.com/ai-evals-course/evals-skills",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HS10LhFaMAAj9J3.png?name=orig",
+                "width": 1562,
+                "height": 846
+              }
+            ]
+          }
+        },
+        {
+          "published_at": "2026-09-22T22:39:54.682Z",
+          "url": "https://x.com/HamelHusain/status/2102528342859915487",
+          "topic": "Testing model writing quality",
+          "text": "Is Slop Dead?  (Testing Writing With 5.5 Opus) https://x.com/i/broadcasts/1DxLdZaydPmxm",
+          "media": [],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [
+        {
+          "published_at": "2026-09-23T01:47:11.026Z",
+          "url": "https://x.com/RLanceMartin/status/2102575471502528989",
+          "topic": "Claude prompt audit",
+          "text": "useful tip for Opus 5.5:\n\nrun “/claude-api prompt-audit” in Claude Code. this checks you skills, agent.md, Claude.md, prompts and removes anti-patterns that hobble frontier models. \n\ni updated the skill w/ the latest Opus 5.5 guidance.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS3ZP4oakAASkwU.jpg?name=orig",
+              "width": 1260,
+              "height": 1102
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-22T16:43:03.563Z",
+          "url": "https://x.com/RLanceMartin/status/2102438538117816825",
+          "topic": "Migrating to Claude Opus 5.5",
+          "text": "Opus 5.5 is out! \n \nexcellent at coding, great at writing, reduced pricing.\n\nrun '/claude-api migrate' in the latest Claude Code to update your application code. run '/claude-api prompt-audit' to ensure your skills + prompts are well-tuned.\n\nshort video overview:",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://video.twimg.com/amplify_video/2102437251963908098/vid/avc1/1696x1270/YRK5KCzYKIBDSF6G.mp4?tag=29",
+              "width": 1696,
+              "height": 1270,
+              "thumbnail_url": "https://pbs.twimg.com/amplify_video_thumb/2102437251963908098/img/NsAxM5pK7Hyojovg.jpg",
+              "format": "video/mp4",
+              "duration": 200.133
+            }
+          ],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "The supplied handle resolves to an unrelated, nearly inactive account. No verified current X account for Sean Goedecke was identified, so nothing was attributed to him."
+    },
+    {
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "No posts in the window. Her public X timeline appears inactive since November 2022; her profile points to Bluesky and Mastodon."
+    },
+    {
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": []
+    },
+    {
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": []
+    },
+    {
+      "handle": "alexalbert",
+      "name": "Alex Albert",
+      "items": []
+    },
+    {
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": []
+    },
+    {
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": []
+    }
+  ],
+  "highlights": [
+    {
+      "title": "Most operationally useful",
+      "url": "https://x.com/steipete/status/2102889319849713698",
+      "reason": "Explains a silent Claude Code configuration failure caused by a remote feature flag."
+    },
+    {
+      "title": "Best reusable workflow",
+      "url": "https://x.com/HamelHusain/status/2102542556013932990",
+      "reason": "Run /eval-audit against an existing evaluation pipeline to find concrete improvements."
+    },
+    {
+      "title": "Best verification prompt",
+      "url": "https://x.com/thorstenball/status/2102623376196194763",
+      "reason": "Ask an agent to test end-to-end and provide irrefutable proof that the feature works."
+    },
+    {
+      "title": "Best shipped artifact",
+      "url": "https://x.com/simonw/status/2102861892549279922",
+      "reason": "A working Gemini TTS playground accompanies the post."
+    }
+  ]
+}
