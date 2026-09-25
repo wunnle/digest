@@ -15,6 +15,7 @@ Read marks and likes are the only per-user state. They live in Upstash Redis beh
 - `src/app/api/marks`: `GET` / `POST` / `DELETE` for read and like marks.
 - `src/app/sources`, `src/app/api/sources`: the source list editor, and its API. `GET` accepts a session or `Authorization: Bearer $AGENT_TOKEN`; `PUT` needs a session.
 - `src/sources.ts`: the source list's types and validation, shared by the API and the editor.
+- `src/app/insights`, `src/app/api/insights`: likes per source against posts shown, for deciding which sources to cut.
 - `src/server/`: the session and Redis helpers (server-only).
 
 ## Sources
@@ -23,7 +24,11 @@ The list is one JSON document in Redis under `digest:sources`, with no expiry. U
 
 ## Retention
 
-Each user has one sorted set per kind, `digest:{sub}:read` and `digest:{sub}:liked`. The member is the post URL; the score is when it was marked. Marks older than 30 days are trimmed on every read, and a key untouched for 30 days expires. No cron job.
+Each user has one sorted set per kind, `digest:{sub}:read` and `digest:{sub}:liked`. The member is the post URL; the score is when it was marked.
+
+- **Read marks** older than 30 days are trimmed on every read, and a key untouched for 30 days expires. No cron job.
+- **Likes** are kept for good; they feed `/insights`. Each like also records its source in `digest:{sub}:liked:meta`, looked up server-side from the deploy's payload, since the next run replaces it.
+- **Runs:** on each signed-in page load, `digest:{sub}:runs` records that run's posts per source, once per run. Those are the "posts shown" that likes are measured against.
 
 ## Setup
 

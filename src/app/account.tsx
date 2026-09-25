@@ -47,6 +47,12 @@ export function AccountMenu({ email }: { email: string }) {
             <p className="mt-0.5 truncate text-neutral-200">{email}</p>
           </div>
           <Link
+            href="/insights"
+            className="block border-t border-white/10 px-3.5 py-2.5 text-neutral-400 transition hover:bg-white/5 hover:text-white"
+          >
+            Insights
+          </Link>
+          <Link
             href="/sources"
             className="block border-t border-white/10 px-3.5 py-2.5 text-neutral-400 transition hover:bg-white/5 hover:text-white"
           >

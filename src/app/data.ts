@@ -106,7 +106,7 @@ const raw = payload as Payload;
 const idOf = (e: RawEntry) => (e.source_id ?? `x:${e.handle ?? e.name}`).toLowerCase();
 
 /** The run's own source list, as ids, in the order it was given. */
-const scanned: string[] =
+export const SCANNED: string[] =
   raw.scope.sources?.map((s) => s.id.toLowerCase()) ??
   (raw.scope.accounts ?? []).map((h) => `x:${h}`.toLowerCase());
 
@@ -117,8 +117,8 @@ const entries = new Map(raw.digest.map((e) => [idOf(e), e]));
  * written in. Any entry not in that list is appended.
  */
 const ids = [
-  ...scanned.filter((id) => entries.has(id)),
-  ...[...entries.keys()].filter((id) => !scanned.includes(id)),
+  ...SCANNED.filter((id) => entries.has(id)),
+  ...[...entries.keys()].filter((id) => !SCANNED.includes(id)),
 ];
 
 export const FEEDS: Feed[] = ids.map((id) => {
@@ -158,6 +158,6 @@ export const META = {
   generatedAt: raw.generated_at,
   window: raw.window,
   filter: raw.scope.filter,
-  sourcesScanned: scanned.length || entries.size,
+  sourcesScanned: SCANNED.length || entries.size,
   sourcesWithPosts: FEEDS.filter((f) => f.items.length > 0).length,
 };

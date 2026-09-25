@@ -1,21 +1,20 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { KINDS, likedMetaKey, markKey, runsKey, type Kind } from "@/server/marks";
+import { lookup, RUN_COUNTS, RUN_ID } from "@/server/payload";
 import { redis } from "@/server/redis";
 import { readSession } from "@/server/session";
 
 /**
  * Read and like marks, one sorted set per user per kind: the member is the post
- * URL, the score is when it was marked. That score is the whole retention
- * policy — anything older than 30 days is trimmed on every read, and a key left
- * untouched for 30 days expires outright. No cron.
+ * URL, the score is when it was marked.
+ *
+ * Read marks are housekeeping and expire: anything older than 30 days is
+ * trimmed on every read, and an untouched key expires outright. Likes are
+ * kept for good — they feed /insights — along with where each liked post came
+ * from, since the payload that named its source is replaced every run.
  */
 
-const KINDS = ["read", "liked"] as const;
-type Kind = (typeof KINDS)[number];
-
-const TTL_DAYS = 30;
-const TTL_SECONDS = TTL_DAYS * 24 * 60 * 60;
-
-const key = (sub: string, kind: Kind) => `digest:${sub}:${kind}`;
+const READ_TTL_SECONDS = 30 * 24 * 60 * 60;
 
 const isKind = (k: unknown): k is Kind => KINDS.includes(k as Kind);
 /** Marks are keyed by item URL, and items can now come from any https source. */
@@ -27,14 +26,18 @@ const unauthorized = () => NextResponse.json({ error: "unauthorized" }, { status
 export async function GET(req: NextRequest) {
   const session = await readSession(req);
   if (!session) return unauthorized();
+  const { sub } = session;
 
-  const cutoff = Date.now() - TTL_SECONDS * 1000;
   const p = redis().pipeline();
-  for (const k of KINDS) {
-    p.zremrangebyscore(key(session.sub, k), 0, cutoff);
-    p.zrange(key(session.sub, k), 0, -1);
-  }
-  const [, read, , liked] = (await p.exec()) as [number, string[], number, string[]];
+  p.zremrangebyscore(markKey(sub, "read"), 0, Date.now() - READ_TTL_SECONDS * 1000);
+  p.zrange(markKey(sub, "read"), 0, -1);
+  p.zrange(markKey(sub, "liked"), 0, -1);
+  // Clears the TTL earlier versions set on likes, so existing likes are kept too.
+  p.persist(markKey(sub, "liked"));
+  // Opening the page is what "shown" means: record this run's per-source post
+  // counts, once. They're the denominator on /insights.
+  p.hsetnx(runsKey(sub), RUN_ID, RUN_COUNTS);
+  const [, read, liked] = (await p.exec()) as [number, string[], string[], number, number];
 
   return NextResponse.json({ email: session.email, read, liked });
 }
@@ -42,6 +45,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   const session = await readSession(req);
   if (!session) return unauthorized();
+  const { sub } = session;
 
   const body = (await req.json().catch(() => null)) as {
     kind?: unknown;
@@ -51,18 +55,28 @@ export async function POST(req: NextRequest) {
   if (!body || !isKind(body.kind) || !isPostUrl(body.url) || typeof body.on !== "boolean") {
     return NextResponse.json({ error: "bad request" }, { status: 400 });
   }
+  const { kind, url, on } = body;
 
-  const k = key(session.sub, body.kind);
+  const k = markKey(sub, kind);
   const p = redis().pipeline();
-  if (body.on) p.zadd(k, { score: Date.now(), member: body.url });
-  else p.zrem(k, body.url);
-  p.expire(k, TTL_SECONDS);
+  if (on) p.zadd(k, { score: Date.now(), member: url });
+  else p.zrem(k, url);
+
+  if (kind === "read") {
+    p.expire(k, READ_TTL_SECONDS);
+  } else {
+    p.persist(k);
+    // Attributed from this deploy's own payload, never from the request.
+    const meta = on ? lookup(url) : null;
+    if (meta) p.hset(likedMetaKey(sub), { [url]: meta });
+    else if (!on) p.hdel(likedMetaKey(sub), url);
+  }
   await p.exec();
 
   return new NextResponse(null, { status: 204 });
 }
 
-/** Clears one kind wholesale — the page's "N read · reset". */
+/** Clears one kind wholesale — the page's read "Reset". */
 export async function DELETE(req: NextRequest) {
   const session = await readSession(req);
   if (!session) return unauthorized();
@@ -70,6 +84,9 @@ export async function DELETE(req: NextRequest) {
   const kind = req.nextUrl.searchParams.get("kind");
   if (!isKind(kind)) return NextResponse.json({ error: "bad request" }, { status: 400 });
 
-  await redis().del(key(session.sub, kind));
+  const p = redis().pipeline();
+  p.del(markKey(session.sub, kind));
+  if (kind === "liked") p.del(likedMetaKey(session.sub));
+  await p.exec();
   return new NextResponse(null, { status: 204 });
 }
