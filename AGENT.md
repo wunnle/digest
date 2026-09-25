@@ -18,7 +18,6 @@ The response looks like this:
 {
   "version": 1,
   "updatedAt": "2026-09-25T09:12:00.000Z",
-  "windowHours": 24,
   "sources": [
     { "id": "x:simonw", "type": "x", "target": "simonw", "label": "Simon Willison", "enabled": true, "addedAt": "…" },
     { "id": "rss:https://simonwillison.net/atom/everything/", "type": "rss", "target": "https://simonwillison.net/atom/everything/", "enabled": true, "addedAt": "…" }
@@ -27,7 +26,7 @@ The response looks like this:
 ```
 
 - Skip sources with `"enabled": false`.
-- **The window is `windowHours` from this response**, counted back from the time you start the run, in UTC. Use the value you're given; don't substitute your own. Starting a little earlier is fine, because overlapping runs are merged, but never start later, or posts fall between runs and are lost for good.
+- **Each run covers at least the 24 hours before it starts**, in UTC, so consecutive morning runs leave no gap. Starting a little earlier is fine, because overlapping runs are merged, but never later, or posts fall between runs and are lost for good.
 - The list says *where* to look, not *what* to keep. The selection criteria are part of your own configuration.
 
 ## 2. Collect

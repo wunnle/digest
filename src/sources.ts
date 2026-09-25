@@ -23,8 +23,6 @@ export type Source = {
 export type SourcesDoc = {
   version: 1;
   updatedAt: string;
-  /** How far back each run looks. */
-  windowHours: number;
   sources: Source[];
 };
 
@@ -160,11 +158,6 @@ export function parseDoc(input: unknown, now = new Date().toISOString()): Source
   if (!input || typeof input !== "object") throw new Error("Expected an object");
   const d = input as Record<string, unknown>;
 
-  const windowHours = Number(d.windowHours);
-  if (!Number.isInteger(windowHours) || windowHours < 1 || windowHours > 24 * 14) {
-    throw new Error("windowHours must be a whole number of hours, 1–336");
-  }
-
   if (!Array.isArray(d.sources)) throw new Error("sources must be a list");
   if (d.sources.length > LIMITS.sources) throw new Error(`At most ${LIMITS.sources} sources`);
 
@@ -193,5 +186,5 @@ export function parseDoc(input: unknown, now = new Date().toISOString()): Source
     }
   });
 
-  return { version: 1, updatedAt: now, windowHours, sources };
+  return { version: 1, updatedAt: now, sources };
 }

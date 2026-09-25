@@ -26,7 +26,7 @@ function seed(): SourcesDoc {
       enabled: true,
       addedAt,
     }));
-  return parseDoc({ windowHours: payload.window.duration_hours, sources }, addedAt);
+  return parseDoc({ sources }, addedAt);
 }
 
 export async function loadSources(): Promise<SourcesDoc> {

@@ -159,26 +159,6 @@ export default function SourcesPage() {
                 <p className="text-sm text-neutral-500">No sources yet. Add one above.</p>
               )}
             </div>
-
-            <section className="mt-10">
-              <h2 className="text-xs uppercase tracking-wider text-neutral-500">Digest</h2>
-              <div className="mt-2 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                <label className="flex items-center gap-3">
-                  <span className="text-xs text-neutral-500">Look back</span>
-                  <input
-                    type="number"
-                    min={1}
-                    max={336}
-                    value={doc.windowHours}
-                    onChange={(e) =>
-                      update((d) => ({ ...d, windowHours: Math.round(Number(e.target.value)) }))
-                    }
-                    className="w-20 rounded-lg bg-black/30 px-3 py-1.5 text-sm tabular-nums text-neutral-200 ring-1 ring-inset ring-white/10 focus:outline-none focus:ring-white/30"
-                  />
-                  <span className="text-xs text-neutral-500">hours</span>
-                </label>
-              </div>
-            </section>
           </>
         )}
       </div>
