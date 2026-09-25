@@ -1,0 +1,364 @@
+{
+  "generated_at": "2026-09-25T10:30:34Z",
+  "window": {
+    "start": "2026-09-24T10:30:34Z",
+    "end": "2026-09-25T10:30:34Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      }
+    ],
+    "filter": "High-signal AI and software-development posts published in the preceding 24 hours.",
+    "source": "Logged-out visits to every enabled live API source, with selected X posts and YouTube videos opened individually for exact enrichment.",
+    "note": "The live API requested a 48-hour window; this scheduled run applied the explicit 24-hour UTC policy. YouTube inspection was limited to the five newest visible videos."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-09-25T01:02:12.264Z",
+          "url": "https://x.com/simonw/status/2103288927805476900",
+          "topic": "Coding agents raise the bar for software engineering discipline",
+          "text": "The more time I spend working with coding agents, the more convinced I am that they make software engineering even harder\n\nWe can do amazing things with them, but unlocking their full potential requires extraordinary discipline and knowledge",
+          "quote_tweet": {
+            "url": "https://x.com/GergelyOrosz/status/2103075930709066033",
+            "published_at": "2026-09-24T10:55:49.799Z",
+            "author": {
+              "name": "Gergely Orosz",
+              "handle": "GergelyOrosz"
+            },
+            "text": "Bury your head in the ground at your own risk. I aim to not jump on any hype trains, but since Opus 4.6 and GPT-5.2 + the harnesses it was clear that these things can write code nearly as good as I can in my best language; better in other languages.\n\nBut we won't see non-devs push production code for a long time; possibly forever, if you ask me. Software still needs to be built in robust ways, and it's our profession to do this well, and use the new tools we have, which create new and interesting (+tough!) challenges",
+            "media": []
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "note": "No additional non-duplicate item was selected after enrichment.",
+      "items": []
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-09-25T08:55:18.076Z",
+          "url": "https://x.com/badlogicgames/status/2103407986530222325",
+          "topic": "Reviewing agent edits through diffs instead of tool calls",
+          "text": "i akso said \"don't fight the model, give in to its RL, let if flow over you\"\n\ni personally haven't given a fart about edit tool calls in a long while. i just look at diffs in VS Code, either while the agent is working, or after. which also gives me code nav and other things.",
+          "quote_tweet": {
+            "url": "https://x.com/mitsuhiko/status/2103231290338140630",
+            "published_at": "2026-09-24T21:13:10.421Z",
+            "author": {
+              "name": "Armin Ronacher ⇌",
+              "handle": "mitsuhiko"
+            },
+            "text": "Mario proposes to 'write an extension that inserts \"mofo, don't use bash to edit files\"'. Because this is my current experience with Opus 5.5 :(",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HTAtlYPWwAAKlnE?format=webp&name=large",
+                "width": 600,
+                "height": 120
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-09-24T15:41:55.127Z",
+          "url": "https://x.com/steipete/status/2103147927313199260",
+          "topic": "Auditing AI-generated tests for low-value coverage",
+          "text": "OpenClaw deleted around 400k LOC of its own tests without much change in code coverage. Modern models just love writing tests for every tiny change, even if they aren't useful. This skill helped. ",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/card_img/2103147931834736640/IiLA55Vc?format=webp&name=medium",
+              "width": 1200,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-09-25T06:41:39.959Z",
+          "url": "https://x.com/thorstenball/status/2103374356109726168",
+          "topic": "Agent workflows should not optimize for transcript waiting",
+          "text": "My maybe controversial opinion:\n\nIf TTFT is important to you, you're doing something wrong.\n\nDon't wait for the agents, make them wait for you.\n\nDon't stare at a single transcript. Do something else.\n\n(Yes, there's a tiny number of exceptions to this.)",
+          "quote_tweet": {
+            "url": "https://x.com/gakonst/status/2103292346574270946",
+            "published_at": "2026-09-25T01:15:47.362Z",
+            "author": {
+              "name": "Georgios Konstantopoulos",
+              "handle": "gakonst"
+            },
+            "text": "playtesting every harness again, i cannot believe how you folks don't lose it over the TUI taking over 50ms to start, and TTFT >2s - these companies are achieving AGI and here we're stuck with the slowpoke harnesses wtf",
+            "media": []
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "note": "No relevant item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "note": "No visible post was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "note": "No visible post was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Scott",
+      "note": "The configured profile was visited; its newest visible post is from 2012.",
+      "items": []
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta B.",
+      "note": "The configured profile was visited; its newest visible post is from 2022.",
+      "items": []
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "note": "No relevant item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq",
+      "items": [
+        {
+          "published_at": "2026-09-24T19:56:43.421Z",
+          "url": "https://x.com/trq212/status/2103212051065921632",
+          "topic": "Claude Code plan mode becoming a built-in mod",
+          "text": "lots feedback here, many of you are planning yourself & don't need plan mode\n\nothers prefer the UX of entering a mode where Claude is just thinking & brainstorming with you\n\nmy plan is to:\n- make plan mode into a built-in mod\n- allow mods to add new modes or override shift+tab",
+          "quote_tweet": {
+            "url": "https://x.com/trq212/status/2102813194196758746",
+            "published_at": "2026-09-23T17:31:48.533Z",
+            "author": {
+              "name": "Thariq",
+              "handle": "trq212"
+            },
+            "text": "we’re thinking of killing plan mode and using the shift+tab hotkey to adjust effort levels\n\nI don’t think the models need plan mode anymore, but if you’re a plan mode diehard would love to get your feedback on why",
+            "media": []
+          }
+        },
+        {
+          "published_at": "2026-09-24T15:50:36.260Z",
+          "url": "https://x.com/trq212/status/2103150113103458386",
+          "topic": "Sharing prompts alongside Claude-generated work",
+          "text": "my rule for sharing Claude output (PRs, artifacts, messages) is that I only do it if I would be happy sharing the prompts",
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "note": "No visible post fell inside the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "note": "No visible post was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "Theo - t3.gg",
+      "items": [
+        {
+          "published_at": "2026-09-25T00:11:51Z",
+          "url": "https://www.youtube.com/watch?v=ejjBbaq9RmY",
+          "topic": "Getting better results from Claude Opus 5.5",
+          "title": "Getting the most out of Opus 5.5",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi/ejjBbaq9RmY/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
