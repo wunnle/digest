@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Shell } from "../shell";
 import { META } from "../data";
 import { PlatformIcon, shortDay, timeLabel, useMarks } from "../ui";
@@ -16,19 +16,22 @@ import {
 } from "@/sources";
 
 /**
- * The list the scraping agent works from. Edits stay local until Save, which
- * writes the whole document; the agent picks it up on its next run.
+ * The list the scraping agent works from. Every edit saves as it's made —
+ * the agent picks the list up on its next run.
  */
 export default function SourcesPage() {
   // Only the session is needed here; the marks it also loads go unused.
   const { status, email } = useMarks();
 
   const [doc, setDoc] = useState<SourcesDoc | null>(null);
-  /** The last saved document, serialised, so Save knows whether anything changed. */
-  const [saved, setSaved] = useState("");
   const [loadError, setLoadError] = useState<string | null>(null);
-  const [saving, setSaving] = useState(false);
+  const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [saveError, setSaveError] = useState<string | null>(null);
+
+  /** The newest local copy, so a save always sends the latest edit. */
+  const latest = useRef<SourcesDoc | null>(null);
+  const inFlight = useRef(false);
+  const queued = useRef(false);
 
   useEffect(() => {
     if (status !== "signedIn") return;
@@ -38,8 +41,8 @@ export default function SourcesPage() {
         if (!res.ok) throw new Error(`Couldn't load sources (${res.status})`);
         const d = (await res.json()) as SourcesDoc;
         if (!live) return;
+        latest.current = d;
         setDoc(d);
-        setSaved(JSON.stringify(d));
       })
       .catch((e: Error) => live && setLoadError(e.message));
     return () => {
@@ -47,11 +50,54 @@ export default function SourcesPage() {
     };
   }, [status]);
 
-  const dirty = doc !== null && JSON.stringify(doc) !== saved;
+  /**
+   * Every edit saves itself. Saves run one at a time: an edit made while one
+   * is in flight is sent right after it, as the latest whole document, so
+   * quick clicks can't land out of order.
+   */
+  const flush = useCallback(async () => {
+    if (inFlight.current) {
+      queued.current = true;
+      return;
+    }
+    inFlight.current = true;
+    setSaveState("saving");
+    setSaveError(null);
+    try {
+      do {
+        queued.current = false;
+        const sending = latest.current;
+        const res = await fetch("/api/sources", {
+          method: "PUT",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(sending),
+        });
+        const body = (await res.json()) as SourcesDoc | { error: string };
+        if (!res.ok || "error" in body) {
+          throw new Error("error" in body ? body.error : `Save failed (${res.status})`);
+        }
+        // The server's copy is canonical (cleaned targets, stamped updatedAt),
+        // but only adopt it if nothing changed locally while it was in flight.
+        if (!queued.current && latest.current === sending) {
+          latest.current = body;
+          setDoc(body);
+        }
+      } while (queued.current);
+      setSaveState("saved");
+    } catch (e) {
+      setSaveState("error");
+      setSaveError((e as Error).message);
+    } finally {
+      inFlight.current = false;
+    }
+  }, []);
 
   const update = (fn: (d: SourcesDoc) => SourcesDoc) => {
-    setSaveError(null);
-    setDoc((d) => (d ? fn(d) : d));
+    if (!latest.current) return;
+    const next = fn(latest.current);
+    latest.current = next;
+    setDoc(next);
+    void flush();
   };
   const patchSource = (id: string, patch: Partial<Source>) =>
     update((d) => ({
@@ -61,29 +107,13 @@ export default function SourcesPage() {
   const removeSource = (id: string) =>
     update((d) => ({ ...d, sources: d.sources.filter((s) => s.id !== id) }));
 
-  const save = async () => {
-    if (!doc) return;
-    setSaving(true);
-    setSaveError(null);
-    try {
-      const res = await fetch("/api/sources", {
-        method: "PUT",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(doc),
-      });
-      const body = (await res.json()) as SourcesDoc | { error: string };
-      if (!res.ok || "error" in body) {
-        throw new Error("error" in body ? body.error : `Save failed (${res.status})`);
-      }
-      // The server's copy is canonical — cleaned targets, stamped updatedAt.
-      setDoc(body);
-      setSaved(JSON.stringify(body));
-    } catch (e) {
-      setSaveError((e as Error).message);
-    } finally {
-      setSaving(false);
-    }
-  };
+  // Closing the tab mid-save, or with a failed one, would lose the edit.
+  useEffect(() => {
+    if (saveState !== "saving" && saveState !== "error") return;
+    const warn = (e: BeforeUnloadEvent) => e.preventDefault();
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, [saveState]);
 
   /** Grouped by type, in the fixed type order, so the list reads the same every time. */
   const groups = useMemo(
@@ -95,11 +125,26 @@ export default function SourcesPage() {
 
   return (
     <Shell title="Sources" status={status} email={email}>
-      <p className="mt-2 text-sm text-neutral-500">
-        The agent reads this list at the start of each run. Last run used{" "}
-        {META.sourcesScanned} sources, {shortDay(META.generatedAt)}{" "}
-        {timeLabel(META.generatedAt)} UTC.
-      </p>
+      <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
+        <p className="text-neutral-500">
+          The agent reads this list at the start of each run. Last run used{" "}
+          {META.sourcesScanned} sources, {shortDay(META.generatedAt)}{" "}
+          {timeLabel(META.generatedAt)} UTC.
+        </p>
+        {/* Changes save as they're made; this just says how that's going. */}
+        <p aria-live="polite" className="shrink-0 text-xs">
+          {saveState === "saving" && <span className="text-neutral-500">Saving…</span>}
+          {saveState === "saved" && <span className="text-neutral-600">Saved</span>}
+          {saveState === "error" && (
+            <span className="text-rose-300/90">
+              Couldn&apos;t save{saveError ? `: ${saveError}` : ""} ·{" "}
+              <button onClick={() => void flush()} className="underline underline-offset-4 hover:text-rose-200">
+                Retry
+              </button>
+            </span>
+          )}
+        </p>
+      </div>
 
       {status === "signedOut" && (
         <p className="mt-10 text-sm text-neutral-400">Sign in to manage sources.</p>
@@ -138,35 +183,6 @@ export default function SourcesPage() {
             )}
           </div>
         </>
-      )}
-
-      {/* Appears only with something to save, so it can't be missed or mistaken. */}
-      {(dirty || saveError) && (
-        <div className="fixed inset-x-0 bottom-0 z-10 border-t border-white/10 bg-neutral-950/90 px-4 py-3 backdrop-blur sm:px-8">
-          <div className="mx-auto flex max-w-[42rem] items-center justify-between gap-4">
-            <p className={`text-sm ${saveError ? "text-rose-300/90" : "text-neutral-400"}`}>
-              {saveError ?? "Unsaved changes · applied on the next run"}
-            </p>
-            <div className="flex shrink-0 items-center gap-2">
-              <button
-                onClick={() => {
-                  setDoc(JSON.parse(saved) as SourcesDoc);
-                  setSaveError(null);
-                }}
-                className="rounded-full px-3 py-1.5 text-sm text-neutral-400 transition hover:text-white"
-              >
-                Discard
-              </button>
-              <button
-                onClick={save}
-                disabled={saving || !dirty}
-                className="rounded-full bg-white px-4 py-1.5 text-sm font-medium text-neutral-950 transition hover:bg-neutral-200 disabled:opacity-50"
-              >
-                {saving ? "Saving…" : "Save"}
-              </button>
-            </div>
-          </div>
-        </div>
       )}
     </Shell>
   );
