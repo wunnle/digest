@@ -83,7 +83,7 @@ One entry per source:
         { "type": "video", "url": "https://….mp4", "thumbnail_url": "https://….jpg", "width": 1280, "height": 720, "duration": 42.5 }
       ],
       "quote_tweet": null,           // x only: the quoted post, or null (shape below)
-      "author_reply": null           // x only: first direct reply when written by this post's author
+      "author_replies": []           // x only: consecutive direct replies by this post's author
     }
   ]
 }
@@ -101,7 +101,7 @@ A quoted post goes in `quote_tweet`, never in `text`:
 }
 ```
 
-When the first visible direct reply to an X post is written by the original post's author, capture it in `author_reply` using the same shape as `quote_tweet`. Otherwise use `null` or omit the field. Do not skip another account's reply to find a later author reply, and never merge reply text into the original `text`.
+When the first visible direct reply to an X post is written by the original post's author, capture it and every immediately consecutive reply by that author in ordered `author_replies`, using the same object shape as `quote_tweet`. Stop at the first reply from another account; do not skip intervening replies to find later author responses. Use an empty array or omit the field when the first reply is by another account or no reply is visible. Never merge reply text into the original `text`.
 
 ### What `text` must be
 

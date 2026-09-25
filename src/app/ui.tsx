@@ -575,10 +575,10 @@ function QuoteBlock({ quote, onOpen }: { quote: Quote; onOpen?: OpenMedia }) {
   );
 }
 
-function AuthorReplyBlock({ reply, onOpen }: { reply: Quote; onOpen?: OpenMedia }) {
+function AuthorReplyBlock({ reply, index, onOpen }: { reply: Quote; index: number; onOpen?: OpenMedia }) {
   return (
     <span className="mt-3 block border-l-2 border-sky-400/40 pl-4">
-      <span className="block text-xs text-neutral-500">Author follow-up</span>
+      <span className="block text-xs text-neutral-500">Author follow-up{index > 0 ? ` ${index + 1}` : ""}</span>
       <span className="mt-1.5 block whitespace-pre-line break-words text-[15px] leading-relaxed text-neutral-300">
         {linkify(reply.text)}
       </span>
@@ -802,7 +802,9 @@ function PostBody({
       )}
 
       {item.quote && <QuoteBlock quote={item.quote} onOpen={onOpenMedia} />}
-      {item.authorReply && <AuthorReplyBlock reply={item.authorReply} onOpen={onOpenMedia} />}
+      {item.authorReplies.map((reply, index) => (
+        <AuthorReplyBlock key={reply.url} reply={reply} index={index} onOpen={onOpenMedia} />
+      ))}
     </>
   );
 }

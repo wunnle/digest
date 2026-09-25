@@ -45,8 +45,8 @@ export type Item = {
   media: Media[];
   /** Present when the post is a quote tweet. Often the substance of the post. */
   quote?: Quote;
-  /** The first direct reply, only when it was written by the post's author. */
-  authorReply?: Quote;
+  /** Consecutive direct replies written by the post's author. */
+  authorReplies: Quote[];
 };
 
 /** One source's contribution to this run. */
@@ -74,6 +74,8 @@ type RawItem = {
   text?: string;
   media?: Media[];
   quote_tweet?: RawQuote | null;
+  author_replies?: RawQuote[];
+  /** Legacy singular fixture; retained for old append-only runs. */
   author_reply?: RawQuote | null;
 };
 
@@ -158,15 +160,13 @@ export const FEEDS: Feed[] = ids.map((id) => {
             media: i.quote_tweet.media ?? [],
           }
         : undefined,
-      authorReply: i.author_reply
-        ? {
-            url: i.author_reply.url,
-            publishedAt: i.author_reply.published_at,
-            author: i.author_reply.author,
-            text: i.author_reply.text,
-            media: i.author_reply.media ?? [],
-          }
-        : undefined,
+      authorReplies: (i.author_replies ?? (i.author_reply ? [i.author_reply] : [])).map((reply) => ({
+        url: reply.url,
+        publishedAt: reply.published_at,
+        author: reply.author,
+        text: reply.text,
+        media: reply.media ?? [],
+      })),
     })),
   };
 });
