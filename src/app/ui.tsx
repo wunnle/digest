@@ -576,10 +576,9 @@ function QuoteBlock({ quote, onOpen }: { quote: Quote; onOpen?: OpenMedia }) {
 }
 
 /**
- * The author's own replies under their post — the thought carried on, so they
- * read as a thread: a reply arrow, a connector running down beside them, a
- * dot per reply, and text at nearly the post's own weight. Each reply's date
- * links to that reply.
+ * The author's own replies under their post — the thought carried on. No
+ * label or dates: each reply hangs off the one above by a thin connector and
+ * a small hollow dot, so a run of them reads as one continuing thread.
  */
 function AuthorReplies({
   replies,
@@ -591,46 +590,29 @@ function AuthorReplies({
   large?: boolean;
 }) {
   if (replies.length === 0) return null;
+  // The dot sits on the middle of each reply's first line.
+  const dotTop = large ? "top-[26px]" : "top-[24px]";
+  const lineHeight = large ? "h-[22px]" : "h-[20px]";
   return (
-    <span className="mt-4 block">
-      <span className="flex items-center gap-2 text-xs text-neutral-500">
-        <ReplyIcon />
-        {replies.length === 1 ? "Follow-up" : `${replies.length} follow-ups`}
-      </span>
-      <span className="relative mt-2 block space-y-4 pl-6">
-        {/* The thread line, fading out below the last reply. */}
-        <span
-          aria-hidden
-          className="absolute bottom-2 left-[7px] top-1 w-px bg-gradient-to-b from-white/20 via-white/10 to-transparent"
-        />
-        {replies.map((r) => (
-          <span key={r.url || r.text} className="relative block">
-            <span aria-hidden className="absolute -left-[19px] top-[5px] h-[7px] w-[7px] rounded-full bg-neutral-600" />
-            {r.url && (
-              <span className="flex text-xs text-neutral-500">
-                <DateLink url={r.url} iso={r.publishedAt} />
-              </span>
-            )}
-            <span
-              className={`block whitespace-pre-line break-words leading-relaxed text-neutral-200 ${
-                r.url ? "mt-1" : ""
-              } ${large ? "text-[17px]" : "text-[15px]"}`}
-            >
-              {linkify(r.text)}
-            </span>
-            <MediaBlock media={r.media} onOpen={onOpen} />
+    <span className="mt-1 block" role="group" aria-label="The author's follow-ups">
+      {replies.map((r) => (
+        <span key={r.url || r.text} className="relative block pl-5 pt-3">
+          <span aria-hidden className={`absolute left-[3.5px] top-0 w-px bg-white/25 ${lineHeight}`} />
+          <span
+            aria-hidden
+            className={`absolute left-0 h-2 w-2 -translate-y-1/2 rounded-full border border-white/40 ${dotTop}`}
+          />
+          <span
+            className={`block whitespace-pre-line break-words leading-relaxed text-neutral-200 ${
+              large ? "text-[17px]" : "text-[15px]"
+            }`}
+          >
+            {linkify(r.text)}
           </span>
-        ))}
-      </span>
+          <MediaBlock media={r.media} onOpen={onOpen} />
+        </span>
+      ))}
     </span>
-  );
-}
-
-function ReplyIcon() {
-  return (
-    <Icon className="h-4 w-4 text-neutral-600">
-      <path d="M15 10l5 5-5 5M4 4v7a4 4 0 0 0 4 4h12" />
-    </Icon>
   );
 }
 
