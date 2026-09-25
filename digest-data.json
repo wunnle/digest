@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-24T04:17:31Z",
+  "generated_at": "2026-09-25T07:24:18Z",
   "window": {
-    "start": "2026-09-22T04:17:31Z",
-    "end": "2026-09-24T04:17:31Z",
+    "start": "2026-09-23T07:24:18Z",
+    "end": "2026-09-25T07:24:18Z",
     "timezone": "UTC",
     "duration_hours": 48
   },
@@ -25,8 +25,8 @@
       "karpathy"
     ],
     "filter": "AI and software-development posts with concrete tools, workflows, evidence, experiments, or useful criticism",
-    "source": "Public X profile timelines",
-    "note": "Replies and repost-only activity may not appear on logged-out public profile timelines. Off-topic and low-signal posts were omitted. Timestamps were derived from X status IDs.",
+    "source": "Public X profile timelines and rendered YouTube channel/video pages",
+    "note": "X and YouTube items were collected from logged-out public browser pages. Off-topic, stale, pinned, and low-signal items were omitted.",
     "fields": "Each item contains original post text, source-backed media URLs, and the quoted tweet with its author, original text, timestamp, and media when present."
   },
   "digest": [
@@ -35,64 +35,28 @@
       "name": "Simon Willison",
       "items": [
         {
-          "published_at": "2026-09-24T00:22:32.554Z",
+          "published_at": "2026-09-25T04:02:00Z",
+          "url": "https://x.com/simonw/status/2103288927805476900",
+          "topic": "AI coding agents",
+          "text": "Simon Willison\n@simonw\nThe more time I spend working with coding agents, the more convinced I am that they make software engineering even harder\n\nWe can do amazing things with them, but unlocking their full potential requires extraordinary discipline and knowledge\nGergely Orosz\n@GergelyOrosz\n20h\nReplying to @GergelyOrosz\nBury your head in the ground at your own risk. I aim to not jump on any hype trains, but since Opus 4.6 and GPT-5.2 + the harnesses it was clear that these things can write code nearly as good as I can in my best language; better in other languages.\n\nBut we won't see non-devs Show more\n4:02 · 25 Sept 2026\n·\n146.7k\nViews\n164\n147\n1.9k",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T03:22:00Z",
           "url": "https://x.com/simonw/status/2102916558712705427",
-          "topic": "MCP and voice interfaces",
-          "text": "I just had a voice conversation with the Datasette backup of my blog via datasette-mcp, which you can now talk to using the ChatGPT iPhone app",
+          "topic": "Models and evaluation",
+          "text": "Simon Willison\n@simonw\nI just had a voice conversation with the Datasette backup of my blog via datasette-mcp, which you can now talk to using the ChatGPT iPhone app\nVaibhav (VB) Srivastav\n@reach_vb\n23 Sept\nMassive QoL update: ChatGPT Voice can now use plugins AND run on GPT-6 Astra, Sol & Luna, directly in ChatGPT Work on web and mobile.\n\nYour email, calendar, Slack + docs, decks, sites and spreadsheets, just by talking.\n\nRolling out now, enjoy!!\n3:22 · 24 Sept 2026\n·\n30k\nViews\n101\n11\n156",
           "media": [],
-          "quote_tweet": {
-            "url": "https://x.com/reach_vb/status/2102822338702307757",
-            "published_at": "2026-09-23T18:08:08Z",
-            "author": {
-              "name": "Vaibhav (VB) Srivastav",
-              "handle": "reach_vb"
-            },
-            "text": "Massive QoL update: ChatGPT Voice can now use plugins AND run on GPT-6 Astra, Sol & Luna, directly in ChatGPT Work on web and mobile.\n\nYour email, calendar, Slack + docs, decks, sites and spreadsheets, just by talking.\n\nRolling out now, enjoy!!",
-            "media": []
-          }
+          "quote_tweet": null
         },
         {
-          "published_at": "2026-09-23T20:45:19.125Z",
+          "published_at": "2026-09-23T23:45:00Z",
           "url": "https://x.com/simonw/status/2102861892549279922",
-          "topic": "Gemini TTS playground",
-          "text": "The new Gemini 3.8 TTS models are super-cheap and can generate conversations between multiple voices (from 2,000+, or you can clone your own) - I built a little UI for it, then had Claude knock up a script where two pelicans debate moving to Pacifica Pier https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+          "topic": "Testing and code review",
+          "text": "Simon Willison\n@simonw\nThe new Gemini 3.8 TTS models are super-cheap and can generate conversations between multiple voices (from 2,000+, or you can clone your own) - I built a little UI for it, then had Claude knock up a script where two pelicans debate moving to Pacifica Pier \nsimonwillison.net\nTool: Gemini 3.8 TTS Playground\nTest and experiment with Google's Gemini 3.8 text-to-speech API through an interactive playground where you can compose single-voice narration or multi-speaker conversations, preview the generated...\n23:45 · 23 Sept 2026\n·\n41.4k\nViews\n84\n28\n658",
           "media": [],
           "quote_tweet": null
-        },
-        {
-          "published_at": "2026-09-22T23:50:29.264Z",
-          "url": "https://x.com/simonw/status/2102546103984079131",
-          "topic": "Frontier-model comparison",
-          "text": "Big model release today - I wrote about Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna - plus comparison grids of pelicans by the different model families at different reasoning levels https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
-          "media": [],
-          "quote_tweet": null
-        },
-        {
-          "published_at": "2026-09-22T20:07:37.026Z",
-          "url": "https://x.com/simonw/status/2102490016752779458",
-          "topic": "Model selection",
-          "text": "GPT-6 Luna is half the price of 5.6 Luna, which was already an astonishingly cheap model given how capable it is\n\nLuna is my favorite model for building product features thanks to its cost (and speed)",
-          "media": [],
-          "quote_tweet": {
-            "url": "https://x.com/OpenAI/status/2102460975790137662",
-            "published_at": "2026-09-22T18:12:13Z",
-            "author": {
-              "name": "OpenAI",
-              "handle": "OpenAI"
-            },
-            "text": "Please welcome GPT-6 Sol and GPT-6 Luna to the GPT-6 universe.\n\nGPT-6 Sol and Luna build on the advances behind GPT-6 Astra, bringing much of its strengths into faster and more affordable models to support work at scale.\n\nWe’ve also made caching and inference more efficient, and we’re passing the savings directly to you: 50% lower API prices for Sol and Luna compared with GPT‑5.6 promotional pricing.",
-            "media": [
-              {
-                "type": "video",
-                "url": "https://video.twimg.com/amplify_video/2102460948430966784/vid/avc1/1920x1080/2aqucgwb6tQ7xZ6U.mp4?tag=29",
-                "width": 1920,
-                "height": 1080,
-                "thumbnail_url": "https://pbs.twimg.com/amplify_video_thumb/2102460948430966784/img/AtB4MxYZuAKgOLey.jpg",
-                "format": "video/mp4",
-                "duration": 8
-              }
-            ]
-          }
         }
       ]
     },
@@ -101,18 +65,74 @@
       "name": "Armin Ronacher",
       "items": [
         {
-          "published_at": "2026-09-23T21:38:50.475Z",
-          "url": "https://x.com/mitsuhiko/status/2102875361927196678",
-          "topic": "AI-driven language adoption",
-          "text": "I know that DHH made many of us buy macs and TextMate back in the day. Maybe today he minted a bunch of new Rust programmers.",
-          "media": [],
+          "published_at": "2026-09-25T01:08:00Z",
+          "url": "https://x.com/mitsuhiko/status/2103245284004274360",
+          "topic": "Models and evaluation",
+          "text": "Armin Ronacher ⇌\n@mitsuhiko\nI guess the real question here is: do you actually still care about the tool calls in the transcript? If they are getting worse and worse, maybe they should be compressed? I wonder what people expect at this point. \nArmin Ronacher ⇌\n@mitsuhiko\n10h\nMario proposes to 'write an extension that inserts \"mofo, don't use bash to edit files\"'. Because this is my current experience with Opus 5.5 :(\n1:08 · 25 Sept 2026\n·\n13.7k\nViews\n41\n1\n57",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HTAtlYPWwAAKlnE?format=webp&name=small"
+            }
+          ],
           "quote_tweet": null
         },
         {
-          "published_at": "2026-09-23T18:00:32.595Z",
-          "url": "https://x.com/mitsuhiko/status/2102820425436963165",
-          "topic": "Cache warming",
-          "text": "Love me my cache warming.",
+          "published_at": "2026-09-25T00:13:00Z",
+          "url": "https://x.com/mitsuhiko/status/2103231290338140630",
+          "topic": "Models and evaluation",
+          "text": "Armin Ronacher ⇌\n@mitsuhiko\nMario proposes to 'write an extension that inserts \"mofo, don't use bash to edit files\"'. Because this is my current experience with Opus 5.5 :(\n0:13 · 25 Sept 2026\n·\n27.7k\nViews\n42\n5\n145",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HTAtlYPWwAAKlnE?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-25T01:06:00Z",
+          "url": "https://x.com/mitsuhiko/status/2103244755098292578",
+          "topic": "AI/software development",
+          "text": "Armin Ronacher ⇌\n@mitsuhiko\nThe question is really how to get people in the real world into a position where they want to do something about it. Because unfortunately, this is cultural. \nPatrick Collison\n@patrickc\n16h\nSome data we recently assembled on entrepreneurship/compute in Europe: eudata.vercel.app.\n\nWe hope that one of the useful roles that Stripe can play is in collecting and publishing empirical data pertaining to entrepreneurship and industry in Europe. There's growing Show more\n1:06 · 25 Sept 2026\n·\n6,125\nViews\n7\n2\n41",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS_I8EaaYAA2U8t?format=webp&name=small"
+            },
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS_JLXwaYAEIZ-X?format=webp&name=small"
+            },
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS_MWsTbsAA2u6e?format=webp&name=small"
+            },
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS_N53gbEAA334-?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-25T00:13:00Z",
+          "url": "https://x.com/mitsuhiko/status/2103231290338140630",
+          "topic": "Models and evaluation",
+          "text": "Armin Ronacher ⇌\n@mitsuhiko\nMario proposes to 'write an extension that inserts \"mofo, don't use bash to edit files\"'. Because this is my current experience with Opus 5.5 :(\n0:13 · 25 Sept 2026\n·\n27.7k\nViews\n42\n5\n145",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HTAtlYPWwAAKlnE?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T19:39:00Z",
+          "url": "https://x.com/mitsuhiko/status/2103162497733968185",
+          "topic": "AI coding agents",
+          "text": "Armin Ronacher ⇌\n@mitsuhiko\nNot sure what the path should be to making the experience of all those models using code to edit files acceptable.  The claude hack of adding everything to git and then diffing it is definitely an option but very heavy handed :-/\n19:39 · 24 Sept 2026\n·\n10.8k\nViews\n15\n50",
           "media": [],
           "quote_tweet": null
         }
@@ -123,38 +143,29 @@
       "name": "Mario Zechner",
       "items": [
         {
-          "published_at": "2026-09-23T18:21:07.228Z",
-          "url": "https://x.com/badlogicgames/status/2102825603863072965",
-          "topic": "Rapid game prototyping",
-          "text": "my kind of slop",
-          "media": [],
-          "quote_tweet": {
-            "url": "https://x.com/christofsalis/status/2102710421425934670",
-            "published_at": "2026-09-23T10:43:25Z",
-            "author": {
-              "name": "Christof Salis",
-              "handle": "christofsalis"
-            },
-            "text": "Ok so @Dimillian inspired me to spend a couple hours last night to make a broforce-esque game with Astra. \n\nYou can be @steipete or @badlogicgames or @theo or even @thsottiaux  \n\nTry it: https://evizero.github.io/Tokenbros/",
-            "media": [
-              {
-                "type": "video",
-                "url": "https://video.twimg.com/amplify_video/2102709543436218368/vid/avc1/3024x1664/ToTG77nfEZvQ0lf5.mp4?tag=29",
-                "width": 3024,
-                "height": 1664,
-                "thumbnail_url": "https://pbs.twimg.com/amplify_video_thumb/2102709543436218368/img/cp5Qoqdxjp0jsS91.jpg",
-                "format": "video/mp4",
-                "duration": 20.753
-              }
-            ]
-          }
+          "published_at": "2026-09-24T21:41:00Z",
+          "url": "https://x.com/badlogicgames/status/2103193213930496446",
+          "topic": "Testing and code review",
+          "text": "Mario Zechner\n@badlogicgames\nsomething @giuseppegurgone taught me at the first claude code anonymous, many hundred years ago.\n\ni don't use my bespoke review tool anymore. i inspect stuff in VS Code, with code nav/debugging/whatever i need to grok the code, then leave BOZOs for the agent.\n21:41 · 24 Sept 2026\n·\n16.9k\nViews\n35\n5\n212",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HTAK3wUXUAAYmW3?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
         },
         {
-          "published_at": "2026-09-22T12:30:10.493Z",
-          "url": "https://x.com/badlogicgames/status/2102374897649647627",
-          "topic": "Maintaining engineering understanding",
-          "text": "recommended reading. i belive this to be true at this point in time.\n\nhttps://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/#isso-thread",
-          "media": [],
+          "published_at": "2026-09-23T21:21:00Z",
+          "url": "https://x.com/badlogicgames/status/2102825603863072965",
+          "topic": "AI/software development",
+          "text": "Mario Zechner\n@badlogicgames\nmy kind of slop\nChristof Salis\n@christofsalis\n23 Sept\nOk so @Dimillian inspired me to spend a couple hours last night to make a broforce-esque game with Astra. \n\nYou can be @steipete or @badlogicgames or @theo or even @thsottiaux  \n\nTry it: evizero.github.io/Tokenbros/\n00:00\n21:21 · 23 Sept 2026\n·\n13.7k\nViews\n2\n2\n43",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/amplify_video_thumb/2102709543436218368/img/cp5Qoqdxjp0jsS91?format=webp&name=medium"
+            }
+          ],
           "quote_tweet": null
         }
       ]
@@ -164,32 +175,53 @@
       "name": "Peter Steinberger",
       "items": [
         {
-          "published_at": "2026-09-23T22:34:18.303Z",
-          "url": "https://x.com/steipete/status/2102889319849713698",
-          "topic": "Claude Code AGENTS.md failure mode",
-          "text": "Huh. There is a catch. https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
-          "media": [],
-          "quote_tweet": null
-        },
-        {
-          "published_at": "2026-09-23T08:13:25.118Z",
-          "url": "https://x.com/steipete/status/2102672670689275965",
-          "topic": "AI tooling observability",
-          "text": "CodexBar learned a few new tricks in the last few weeks!\n\nTypeSafe, Nous Portal, Muse Code, CodeRabbit, Replicate, HuggingFace, Pi, Helmcode, v0, Charm Hyper, GitKraken AI, Bifrost\n\nMy ambitions for this app REALLY outgrew the app name. (Oh and these keychain alerts are no more) http://codex.bar",
-          "media": [],
-          "quote_tweet": null
-        },
-        {
-          "published_at": "2026-09-23T07:50:54.207Z",
-          "url": "https://x.com/steipete/status/2102667004557832497",
-          "topic": "Decision models in agent control",
-          "text": "Next version of OpenClaw uses a decision model to automatically decide between steer or queue. \n\n(Lab feature, we support Jef* and API-compat (e.g. local models like Kef...) and ONNX variants)",
+          "published_at": "2026-09-24T18:52:00Z",
+          "url": "https://x.com/steipete/status/2103150483062014436",
+          "topic": "AI/software development",
+          "text": "Peter Steinberger 🦞\n@steipete\nAfghanistan is more excited about AI than we are?\nNick Gillespie\n@nickgillespie\n23 Sept\n'An average of 72 percent of respondents said they felt curious, happy or excited about A.I., compared with 41 percent who felt worried, sad or angry.' @nytimes's Damien Cave uses @Gallup data to remind us the rest of the world digs AI. (Annoyingly, NYT doesn't link to Gallup Show more\n18:52 · 24 Sept 2026\n·\n51.7k\nViews\n59\n14\n319",
           "media": [
             {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS4rnuRbYAASOzE.jpg?name=orig",
-              "width": 1326,
-              "height": 786
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS50KVfXAAA054M?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T18:41:00Z",
+          "url": "https://x.com/steipete/status/2103147927313199260",
+          "topic": "Testing and code review",
+          "text": "Peter Steinberger 🦞\n@steipete\nOpenClaw deleted around 400k LOC of its own tests without much change in code coverage. Modern models just love writing tests for every tiny change, even if they aren't useful. This skill helped. \nopenclaw/.agents/skills/test-audit/SKILL.md at main · openclaw/openclaw\nFrom github.com\n18:41 · 24 Sept 2026\n·\n428k\nViews\n169\n175\n4.4k",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/card_img/2103147931834736640/IiLA55Vc?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T09:01:00Z",
+          "url": "https://x.com/steipete/status/2103001790069526564",
+          "topic": "AI/software development",
+          "text": "Peter Steinberger 🦞\n@steipete\nAstra is crushing it.\n9:01 · 24 Sept 2026\n·\n143.8k\nViews\n72\n27\n1k",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS9c3QVbcAAomaR?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T08:17:00Z",
+          "url": "https://x.com/steipete/status/2102990776439636089",
+          "topic": "AI/software development",
+          "text": "Peter Steinberger 🦞\n@steipete\nWho needs VNC when there's browsers.\n8:17 · 24 Sept 2026\n·\n44.5k\nViews\n46\n11\n276",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS9S0owboAAk0f_?format=webp&name=small"
             }
           ],
           "quote_tweet": null
@@ -201,71 +233,41 @@
       "name": "Thorsten Ball",
       "items": [
         {
-          "published_at": "2026-09-23T14:01:29.987Z",
-          "url": "https://x.com/thorstenball/status/2102760268178891180",
-          "topic": "Agent harness quality",
-          "text": "\"the best harness in the market\"",
-          "media": [],
-          "quote_tweet": {
-            "url": "https://x.com/parcadei/status/2102750132005470242",
-            "published_at": "2026-09-23T13:21:13Z",
-            "author": {
-              "name": "dei",
-              "handle": "parcadei"
-            },
-            "text": "@AmpCode is the best harness in the market, there's no point even doing a tier list",
-            "media": []
-          }
-        },
-        {
-          "published_at": "2026-09-23T06:37:57.003Z",
-          "url": "https://x.com/thorstenball/status/2102648645233373328",
-          "topic": "Same-prompt model comparison",
-          "text": "Same prompt, four modes/models:\n\n- GPT-6 Sol\n- Opus 5.5\n- High (GPT-6 Astra)\n- Ultra (Fable 5.1)\n\nHere's the prompt:\n\n\"Look at the last two news posts we published on runner functionality: one runner is now enough, and one runner many worktrees.\n\nI now want you to write a news post that's similar but for the functionality behind the `shared-runners` feature flag.\n\nIt should probably also contain a screenshot of the picker that shows two normal runners and two shared runners, like `gpu-runner` or `macos-builder` or something and some nic elooking avatars and good data.\n\nAnd it should succinctly explain how it works and how people can use it.\"\n\nCosts:\n- Opus 5.5: $9.54\n- GPT-6 Sol: $3.10 (estimated list price, using sub)\n- High: $7.58 (estimated list price, using sub)\n- Ultra: $15\n\nNotes:\n\n- Ultra took by far the longest, Ultra is the only one that didn't create docs (I didn't say they should create docs but I think the other models looked at previous commits and figured out they should do that?)\n- Ultra was the only model that didn't prominently display the \"give me the grant to upload assets at the end\"\n- I think Opus 5.5 is the best result. It really feels like more creative (headline) and it nailed the screenshots.\n- High is my second favorite.",
+          "published_at": "2026-09-24T16:55:00Z",
+          "url": "https://x.com/thorstenball/status/2103121140927361331",
+          "topic": "AI coding agents",
+          "text": "Thorsten Ball\n@thorstenball\nTime to share your Amp runners\n\nampcode.com/news/shared-ru…\n16:55 · 24 Sept 2026\n·\n57.6k\nViews\n11\n6\n118",
           "media": [
             {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS4bTR0W4AAL6Nh.jpg?name=orig",
-              "width": 2672,
-              "height": 3949
-            },
-            {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS4bT3VXAAAi6hn.jpg?name=orig",
-              "width": 2612,
-              "height": 4096
-            },
-            {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS4bUbcXgAAhI6j.jpg?name=orig",
-              "width": 2560,
-              "height": 3922
-            },
-            {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS4bVE4WQAAzdsp.jpg?name=orig",
-              "width": 2151,
-              "height": 4096
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS_Ik70XIAATYuO?format=webp&name=small"
             }
           ],
           "quote_tweet": null
         },
         {
-          "published_at": "2026-09-23T04:57:32.395Z",
-          "url": "https://x.com/thorstenball/status/2102623376196194763",
-          "topic": "Agent-driven end-to-end testing",
-          "text": "I'll say this:\n\nI've gotten more out of using orbs and asking agents\n\n \"test this e2e & give me irrefutable proof it works\"\n\nthan out of 80% of tests I've written and ran over the last 15 years.\n\nIt's truly remarkable that we can now ask machines:\n\n\"Did you manually test it?\"",
+          "published_at": "2026-09-24T10:18:00Z",
+          "url": "https://x.com/thorstenball/status/2103021162121081070",
+          "topic": "AI coding agents",
+          "text": "Thorsten Ball\n@thorstenball\nIncreasingly convinced: people who do best with agents are those that are good at shipping things in small pieces.\n\nSomeone who could ship a feature in 4 commits going to main now does better with agents than the guy who always ended up with a 6k PR on Friday afternoon.\n10:18 · 24 Sept 2026\n·\n25.9k\nViews\n65\n26\n645",
           "media": [],
-          "quote_tweet": {
-            "url": "https://x.com/nateberkopec/status/2102559606232985729",
-            "published_at": "2026-09-23T00:44:08Z",
-            "author": {
-              "name": "Nate Berkopec",
-              "handle": "nateberkopec"
-            },
-            "text": "I agree with @thorstenball, I think unit tests are dead in the water. \n\nThe ones the models write are terrible, at best just doubling total LOC. \n\nInverting the testing approach - heavy e2e/black box/golden master, reaching for lower levels only if necessary, works better for me",
-            "media": []
-          }
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T09:14:00Z",
+          "url": "https://x.com/thorstenball/status/2103005081448649031",
+          "topic": "Testing and code review",
+          "text": "Thorsten Ball\n@thorstenball\nAnother thought I had yesterday in that conversation:\n\nThese models are so much more now than text-to-code converters.\n\nThink bigger! Aim higher!\n\nNow that the models can contribute across your whole stack, vertically, it's to let them loose horizontally:\n\nLet them monitor deployments, let them debug prod, let them do ops, let them help end to end.\n\nIf you think \"they'll screw this up\" that's on you and your codebase. Either you need to spend more tokens and build up instincts or you need to make your codebase and company processes friendlier to agents.\nThorsten Ball\n@thorstenball\n24 Sept\nUnexpectedly found myself in a conversation about agents yesterday evening with someone who now has to use Qwen at work, because company wants to save money.\n\nReally struggled with expressing how much of a category change using latest frontier models is vs. using Qwen.\n9:14 · 24 Sept 2026\n·\n9,894\nViews\n10\n6\n108",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T07:51:00Z",
+          "url": "https://x.com/thorstenball/status/2102984358231785883",
+          "topic": "Testing and code review",
+          "text": "Thorsten Ball\n@thorstenball\nUnexpectedly found myself in a conversation about agents yesterday evening with someone who now has to use Qwen at work, because company wants to save money.\n\nReally struggled with expressing how much of a category change using latest frontier models is vs. using Qwen.\n7:51 · 24 Sept 2026\n·\n143.1k\nViews\n54\n13\n552",
+          "media": [],
+          "quote_tweet": null
         }
       ]
     },
@@ -274,16 +276,27 @@
       "name": "Geoffrey Litt",
       "items": [
         {
-          "published_at": "2026-09-24T03:03:49.885Z",
-          "url": "https://x.com/geoffreylitt/status/2102957148380750095",
-          "topic": "Organizing AI context",
-          "text": "my personal recommendation when people ask me where to put their AI context: docs, skills, memories, etc.",
+          "published_at": "2026-09-24T18:20:00Z",
+          "url": "https://x.com/geoffreylitt/status/2103142572952797362",
+          "topic": "Models and evaluation",
+          "text": "Geoffrey Litt\n@geoffreylitt\nThings change fast\nGeoffrey Litt\n@geoffreylitt\n3 Dec 2022\nHad a fun time getting ChatGPT to solve today's Advent of Code puzzle\n\nI'd describe its performance in human terms as \"nervous interview candidate who drank too much coffee\": pretty smart, makes careless mistakes, responds well to feedback, works very fast. 1/\n18:20 · 24 Sept 2026\n·\n2,714\nViews\n2\n22",
           "media": [
             {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS80J18b0AAid8P.jpg?name=orig",
-              "width": 1344,
-              "height": 840
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/FjEfNZ6XwAE-_sy?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T06:03:00Z",
+          "url": "https://x.com/geoffreylitt/status/2102957148380750095",
+          "topic": "AI/software development",
+          "text": "Geoffrey Litt\n@geoffreylitt\nmy personal recommendation when people ask me where to put their AI context: docs, skills, memories, etc.\n6:03 · 24 Sept 2026\n·\n30.6k\nViews\n36\n30\n479",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS80J18b0AAid8P?format=webp&name=small"
             }
           ],
           "quote_tweet": null
@@ -295,80 +308,42 @@
       "name": "Hamel Husain",
       "items": [
         {
-          "published_at": "2026-09-23T17:08:00.351Z",
+          "published_at": "2026-09-23T20:08:00Z",
           "url": "https://x.com/HamelHusain/status/2102807203967365549",
-          "topic": "AI evals guide",
-          "text": "This is the most valuable free resource we've created on AI Evals 🎉 (not exaggerating!) \n\nI organized our public materials into this guide.  It allows you to find answers to your eval problems w/o searching  aimlessly. \n\nHumans: pick the row that sounds like you.\nAgents: point it at the post\n\nThe material draw on 60+ hours of office hours from our Evals course, where @sh_reya  and I have taught 5k engineers and PMs Evals.\n\nWe add new material often, with 15 FAQs added in the last two weeks. Recent additions are marked with a \"New\" badge. You can find all of these and more here: \n\nhttps://hamel.dev/blog/posts/evals-faq/#how-to-use-this-faq",
+          "topic": "AI coding agents",
+          "text": "Hamel Husain\n@HamelHusain\nThis is the most valuable free resource we've created on AI Evals 🎉 (not exaggerating!) \n\nI organized our public materials into this guide.  It allows you to find answers to your eval problems w/o searching  aimlessly. \n\nHumans: pick the row that sounds like you.\nAgents: point it at the post\n\nThe material draw on 60+ hours of office hours from our Evals course, where @sh_reya  and I have taught 5k engineers and PMs Evals.\n\nWe add new material often, with 15 FAQs added in the last two weeks. Recent additions are marked with a \"New\" badge. You can find all of these and more here: \n\nhamel.dev/blog/posts/eva…\n20:08 · 23 Sept 2026\n·\n60.1k\nViews\n51\n106\n917",
           "media": [
             {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HSyUUecacAAYFyx.png?name=orig",
-              "width": 800,
-              "height": 795
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HSyUUecacAAYFyx?format=webp&name=small"
             }
           ],
           "quote_tweet": null
         },
         {
-          "published_at": "2026-09-23T17:00:04.306Z",
+          "published_at": "2026-09-23T20:00:00Z",
           "url": "https://x.com/HamelHusain/status/2102805207289593987",
-          "topic": "Evaluation fundamentals",
-          "text": "Q: What are AI evals?\n\nA: Tests that tell you whether an AI system is doing what you want. Model benchmarks and product evals answer different questions.\n\nhttps://hamel.dev/blog/posts/evals-faq/what-are-llm-evals.html",
+          "topic": "Testing and code review",
+          "text": "Hamel Husain\n@HamelHusain\nQ: What are AI evals?\n\nA: Tests that tell you whether an AI system is doing what you want. Model benchmarks and product evals answer different questions.\n\nhamel.dev/blog/posts/eva…\nShreya Shankar\n20:00 · 23 Sept 2026\n·\n4,785\nViews\n28\n11\n94",
           "media": [
             {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS6qMK5XkAA21KK.jpg?name=orig",
-              "width": 732,
-              "height": 1245
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS6qMK5XkAA21KK?format=webp&name=small"
             }
           ],
           "quote_tweet": null
         },
         {
-          "published_at": "2026-09-23T13:49:46.686Z",
+          "published_at": "2026-09-23T16:49:00Z",
           "url": "https://x.com/HamelHusain/status/2102757318320648242",
-          "topic": "Bot-generated reply pollution",
-          "text": "Now the bots are replying to each other.  \n\nIt’s a firehose of slop",
+          "topic": "AI/software development",
+          "text": "Hamel Husain\n@HamelHusain\nNow the bots are replying to each other.  \n\nIt’s a firehose of slop\n16:49 · 23 Sept 2026\n·\n4,783\nViews\n18\n34",
           "media": [
             {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS5-o03bcAAl55W.jpg?name=orig",
-              "width": 1179,
-              "height": 1401
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS5-o03bcAAl55W?format=webp&name=small"
             }
           ],
-          "quote_tweet": null
-        },
-        {
-          "published_at": "2026-09-22T23:36:23.362Z",
-          "url": "https://x.com/HamelHusain/status/2102542556013932990",
-          "topic": "Evaluation pipeline audit",
-          "text": "I recommend grabbing these skills that @sh_reya and I created and at the very least doing an /eval-audit of your existing pipeline.\n\nWe've found that people often find low hanging fruits!  https://github.com/ai-evals-course/evals-skills",
-          "media": [],
-          "quote_tweet": {
-            "url": "https://x.com/lennysan/status/2102464854594662480",
-            "published_at": "2026-09-22T18:27:37Z",
-            "author": {
-              "name": "Lenny Rachitsky",
-              "handle": "lennysan"
-            },
-            "text": "Pro tip: Install this new evals skill from @HamelHusain and @sh_reya, it'll save you many hours and a lot of mistakes\n\nhttps://github.com/ai-evals-course/evals-skills",
-            "media": [
-              {
-                "type": "photo",
-                "url": "https://pbs.twimg.com/media/HS10LhFaMAAj9J3.png?name=orig",
-                "width": 1562,
-                "height": 846
-              }
-            ]
-          }
-        },
-        {
-          "published_at": "2026-09-22T22:39:54.682Z",
-          "url": "https://x.com/HamelHusain/status/2102528342859915487",
-          "topic": "Testing model writing quality",
-          "text": "Is Slop Dead?  (Testing Writing With 5.5 Opus) https://x.com/i/broadcasts/1DxLdZaydPmxm",
-          "media": [],
           "quote_tweet": null
         }
       ]
@@ -376,41 +351,7 @@
     {
       "handle": "RLanceMartin",
       "name": "Lance Martin",
-      "items": [
-        {
-          "published_at": "2026-09-23T01:47:11.026Z",
-          "url": "https://x.com/RLanceMartin/status/2102575471502528989",
-          "topic": "Claude prompt audit",
-          "text": "useful tip for Opus 5.5:\n\nrun “/claude-api prompt-audit” in Claude Code. this checks you skills, agent.md, Claude.md, prompts and removes anti-patterns that hobble frontier models. \n\ni updated the skill w/ the latest Opus 5.5 guidance.",
-          "media": [
-            {
-              "type": "photo",
-              "url": "https://pbs.twimg.com/media/HS3ZP4oakAASkwU.jpg?name=orig",
-              "width": 1260,
-              "height": 1102
-            }
-          ],
-          "quote_tweet": null
-        },
-        {
-          "published_at": "2026-09-22T16:43:03.563Z",
-          "url": "https://x.com/RLanceMartin/status/2102438538117816825",
-          "topic": "Migrating to Claude Opus 5.5",
-          "text": "Opus 5.5 is out! \n \nexcellent at coding, great at writing, reduced pricing.\n\nrun '/claude-api migrate' in the latest Claude Code to update your application code. run '/claude-api prompt-audit' to ensure your skills + prompts are well-tuned.\n\nshort video overview:",
-          "media": [
-            {
-              "type": "video",
-              "url": "https://video.twimg.com/amplify_video/2102437251963908098/vid/avc1/1696x1270/YRK5KCzYKIBDSF6G.mp4?tag=29",
-              "width": 1696,
-              "height": 1270,
-              "thumbnail_url": "https://pbs.twimg.com/amplify_video_thumb/2102437251963908098/img/NsAxM5pK7Hyojovg.jpg",
-              "format": "video/mp4",
-              "duration": 200.133
-            }
-          ],
-          "quote_tweet": null
-        }
-      ]
+      "items": []
     },
     {
       "handle": "sgoedecke",
@@ -427,12 +368,75 @@
     {
       "handle": "bcherny",
       "name": "Boris Cherny",
-      "items": []
+      "items": [
+        {
+          "published_at": "2026-09-24T06:59:00Z",
+          "url": "https://x.com/bcherny/status/2102971275543216623",
+          "topic": "AI/software development",
+          "text": "Boris Cherny\n@bcherny\nIt was an honor to meet Donald Knuth at the Computer History Museum today\n6:59 · 24 Sept 2026\n·\n210.5k\nViews\n134\n97\n5.1k",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS9BKngb0AAY-IB?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T23:15:00Z",
+          "url": "https://x.com/bcherny/status/2102854267782705648",
+          "topic": "Testing and code review",
+          "text": "Boris Cherny\n@bcherny\nIf you've noticed how fast claude.ai and the Desktop app have become in the last few weeks, here's how we did it. \n\nLots of juicy learnings & techniques in the blog post for engineers working on speeding up your own apps.\nClaudeDevs\n@ClaudeDevs\n23 Sept\nWe made claude​.ai 3x faster in two weeks.\n\nHere’s how we use Claude to measure, debug and improve performance. Prompts and methods included.\n\nclaude.dev/blog/how-we-ma…\n23:15 · 23 Sept 2026\n·\n758.8k\nViews\n222\n157\n4.9k",
+          "media": [],
+          "quote_tweet": null
+        }
+      ]
     },
     {
       "handle": "trq212",
       "name": "Thariq Shihipar",
-      "items": []
+      "items": [
+        {
+          "published_at": "2026-09-25T02:05:00Z",
+          "url": "https://x.com/trq212/status/2103259550325575806",
+          "topic": "AI coding agents",
+          "text": "Thariq\n@trq212\nincredibly thoughtful piece on AI and creativity\n\nhopefully we can make our producst better at enabling and amplifying creatives\nJeffrey Katzenberg\n@jeffreykWNDR\n23 Sept\nThe World is Changing: AI For Creativity\n\nBy Jeffrey Katzenberg\n\nA few months ago, I sat in my office in Silicon Valley and watched as a tech founder showed me something extraordinary. On the screen was a fully realized, beautifully lit, well-composed animated scene. It was Show more\n2:05 · 25 Sept 2026\n·\n91.1k\nViews\n25\n15\n537",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T22:56:00Z",
+          "url": "https://x.com/trq212/status/2103212051065921632",
+          "topic": "AI coding agents",
+          "text": "Thariq\n@trq212\nlots feedback here, many of you are planning yourself & don't need plan mode\n\nothers prefer the UX of entering a mode where Claude is just thinking & brainstorming with you\n\nmy plan is to:\n- make plan mode into a built-in mod\n- allow mods to add new modes or override shift+tab\nThariq\n@trq212\n23 Sept\nwe’re thinking of killing plan mode and using the shift+tab hotkey to adjust effort levels\n\nI don’t think the models need plan mode anymore, but if you’re a plan mode diehard would love to get your feedback on why\n22:56 · 24 Sept 2026\n·\n222.2k\nViews\n199\n32\n1.6k",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T20:31:00Z",
+          "url": "https://x.com/trq212/status/2102813194196758746",
+          "topic": "Models and evaluation",
+          "text": "Thariq\n@trq212\nwe’re thinking of killing plan mode and using the shift+tab hotkey to adjust effort levels\n\nI don’t think the models need plan mode anymore, but if you’re a plan mode diehard would love to get your feedback on why\n20:31 · 23 Sept 2026\n·\n1.4m\nViews\n3k\n206\n11k",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T18:50:00Z",
+          "url": "https://x.com/trq212/status/2103150113103458386",
+          "topic": "AI coding agents",
+          "text": "Thariq\n@trq212\nmy rule for sharing Claude output (PRs, artifacts, messages) is that I only do it if I would be happy sharing the prompts\n18:50 · 24 Sept 2026\n·\n130.5k\nViews\n104\n27\n1.6k",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-24T00:18:00Z",
+          "url": "https://x.com/trq212/status/2102870353781641416",
+          "topic": "AI coding agents",
+          "text": "Thariq\n@trq212\nthe post: \"Claude one-shot this\"\n\nthe prompt: 10k characters with good takes plus skills, examples and API keys\ndonald\n@donaldjewkes\n23 Sept\nReplying to @donaldjewkes\nI've included an MP4 file and an original link to a video that is called \"Claude Pop.\" It's a pop song that is about increasing rate of progress and the experience of the singularity approaching.\n\nI want you to independently do an end-to-end complete pass on making an updated Show more\n0:18 · 24 Sept 2026\n·\n249.7k\nViews\n74\n40\n2.1k",
+          "media": [],
+          "quote_tweet": null
+        }
+      ]
     },
     {
       "handle": "alexalbert",
@@ -442,12 +446,88 @@
     {
       "handle": "_sholtodouglas",
       "name": "Sholto Douglas",
-      "items": []
+      "items": [
+        {
+          "published_at": "2026-09-24T01:23:00Z",
+          "url": "https://x.com/_sholtodouglas/status/2102886493475967363",
+          "topic": "Models and evaluation",
+          "text": "Sholto Douglas\n@_sholtodouglas\nKiana Ehsani\n@ehsanik\n24 Sept\nSince I am obsessed with painting these days I got Opus 5.5 to replicate Mona Lisa. This was my prompt:\n\n\"can you search for the picture of Mona Lisa, then replicate it using mouse movement and brushes in JS paint using chrome?\"\n\nIt took 20 minutes for the drawing part using Show more\n00:00\n1:23 · 24 Sept 2026\n·\n20.3k\nViews\n5\n4\n181",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS70FGQaMAAtGu1?format=webp&name=small"
+            },
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/amplify_video_thumb/2102883642603380736/img/GlJU0XMsrqu9dlOY?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T21:05:00Z",
+          "url": "https://x.com/_sholtodouglas/status/2102821591227002953",
+          "topic": "AI/software development",
+          "text": "Sholto Douglas\n@_sholtodouglas\nWe can get to a defence dominant world if we build it\nJake Adler\n@jakeadler\n23 Sept\n1/ Biological threats can bring a country to a halt without a single shot being fired. Yet much of our biodefense infrastructure has barely changed in decades, even as America’s institutions produce extraordinary scientific breakthroughs.\n21:05 · 23 Sept 2026\n·\n15.8k\nViews\n7\n6\n220",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://pbs.twimg.com/media/HS6wYpJbUAAtzxs?format=webp&name=small"
+            }
+          ],
+          "quote_tweet": null
+        }
+      ]
     },
     {
       "handle": "karpathy",
       "name": "Andrej Karpathy",
       "items": []
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "name": "Theo - t3.gg",
+      "items": [
+        {
+          "published_at": "2026-09-24T17:11:51-07:00",
+          "url": "https://www.youtube.com/watch?v=ejjBbaq9RmY",
+          "topic": "AI coding and models",
+          "title": "Getting the most out of Opus 5.5",
+          "text": "Anthropic put out a blog post with some tips and tricks that they have for the Opus 5.5 release, so lets break them down\n\nThank you Browserbase for sponsoring! Check them out at: https://soydev.link/browserbase\n\nSources:\nhttps://claude.dev/blog/getting-the-most-out-of-opus-5-5/\n\nWant to sponsor a video? Learn more here: https://soydev.link/sponsor-me\n\nCheck out my Twitch, Twitter, Discord more at https://t3.gg\n\nS/O @Ph4seon3 for the awesome edit 🙏\n\n#ai #anthropic #coding",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://i.ytimg.com/vi_webp/ejjBbaq9RmY/maxresdefault.webp",
+              "width": 1280,
+              "height": 720,
+              "thumbnail_url": "https://i.ytimg.com/vi_webp/ejjBbaq9RmY/maxresdefault.webp",
+              "format": "youtube",
+              "duration": 1721
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T10:03:05-07:00",
+          "url": "https://www.youtube.com/watch?v=jgGyX7MPPVg",
+          "topic": "AI coding and models",
+          "title": "Wow.",
+          "text": "After Opus 5 wrecked my codebases, Opus 5.5 got a full day of real work done on about 20% of my weekly Claude limit, and I'm finally not scared to merge what it writes.\n\nThank you to WorkOS & Parallel for Sponsoring!\nWorkOS: https://soydev.link/workos\nParallel: https://soydev.link/parallel\n\nWant to sponsor a video? Learn more here: https://soydev.link/sponsor-me\n\nCheck out my Twitch, Twitter, Discord more at https://t3.gg\n\nS/O @Ph4seon3 for the awesome edit 🙏\n\n#opus #coding #programming #anthropic",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://i.ytimg.com/vi_webp/jgGyX7MPPVg/maxresdefault.webp",
+              "width": 1280,
+              "height": 720,
+              "thumbnail_url": "https://i.ytimg.com/vi_webp/jgGyX7MPPVg/maxresdefault.webp",
+              "format": "youtube",
+              "duration": 2414
+            }
+          ],
+          "quote_tweet": null
+        }
+      ]
     }
   ],
   "highlights": [
