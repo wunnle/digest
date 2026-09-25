@@ -23,13 +23,13 @@ export function Footer() {
         </svg>
         <div className="h-px flex-1 bg-white/[0.08]" />
       </div>
-      <div className="flex flex-col items-center justify-center gap-2 pt-4 text-slate-200 sm:flex-row sm:gap-4">
+      <div className="flex flex-col items-center justify-center gap-2 pt-4 text-neutral-500 sm:flex-row sm:gap-4">
         <span>made with ♥ by wunnle</span>
         <nav className="flex items-center gap-2">
           {LINKS.map((l, i) => (
             <span key={l.href} className="flex items-center gap-2">
-              {i > 0 && <span className="text-gray-400">•</span>}
-              <a href={l.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:underline">
+              {i > 0 && <span className="text-neutral-700">•</span>}
+              <a href={l.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-neutral-300 hover:underline">
                 {l.label}
               </a>
             </span>

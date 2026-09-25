@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import type { InsightRow, Insights } from "@/insights";
 import { TYPE_INFO, type SourceType } from "@/sources";
-import { AccountMenu, SignInButton } from "../account";
+import { Shell } from "../shell";
 import { shortDay, useMarks } from "../ui";
 
 /**
@@ -53,84 +53,62 @@ export default function InsightsPage() {
   }, [data]);
 
   return (
-    <main className="relative flex-1 overflow-x-clip px-4 py-8 text-neutral-200 sm:px-8 sm:py-12">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[80rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(56,130,246,0.12),transparent)] blur-2xl"
-      />
-      <div className="relative mx-auto max-w-3xl">
-        <header className="flex items-center justify-between gap-4">
-          <div className="flex min-w-0 items-baseline gap-2">
-            <Link
-              href="/"
-              className="text-lg font-semibold tracking-tight text-white transition hover:text-neutral-300"
-            >
-              Digest
+    <Shell title="Insights" status={status} email={email}>
+
+      {status === "signedOut" && (
+        <p className="mt-10 text-sm text-neutral-400">Sign in to see your insights.</p>
+      )}
+      {error && <p className="mt-10 text-sm text-rose-300/80">{error}</p>}
+
+      {data && (
+        <>
+          <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+            <p className="text-sm text-neutral-500">
+              {data.totalLikes} {data.totalLikes === 1 ? "like" : "likes"} from {data.totalPosts}{" "}
+              posts
+              {data.since && <> since {shortDay(data.since)}</>}
+            </p>
+            <Link href="/sources" className="text-sm text-neutral-500 transition hover:text-white">
+              Manage sources →
             </Link>
-            <span className="text-neutral-600">/</span>
-            <h1 className="text-lg text-neutral-400">Insights</h1>
           </div>
-          <div className="flex h-9 shrink-0 items-center">
-            {status === "signedIn" && email && <AccountMenu email={email} />}
-            {status === "signedOut" && <SignInButton />}
-          </div>
-        </header>
 
-        {status === "signedOut" && (
-          <p className="mt-10 text-sm text-neutral-400">Sign in to see your insights.</p>
-        )}
-        {error && <p className="mt-10 text-sm text-rose-300/80">{error}</p>}
+          {data.totalLikes === 0 ? (
+            <p className="mt-16 text-center text-sm text-neutral-500">
+              Like a few posts and they&apos;ll show up here.
+            </p>
+          ) : (
+            <>
+              {/* Two segments per bar, so two keys — identity never rests on colour alone. */}
+              <div className="mt-8 flex items-center gap-4 text-xs text-neutral-500">
+                <span className="flex items-center gap-1.5">
+                  <span className="h-2.5 w-2.5 rounded-sm bg-rose-500" aria-hidden />
+                  Liked
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="h-2.5 w-2.5 rounded-sm bg-rose-500/25" aria-hidden />
+                  Shown, not liked
+                </span>
+              </div>
 
-        {data && (
-          <>
-            <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-              <p className="text-sm text-neutral-500">
-                {data.totalLikes} {data.totalLikes === 1 ? "like" : "likes"} from {data.totalPosts}{" "}
-                posts
-                {data.since && <> since {shortDay(data.since)}</>}
-              </p>
-              <Link href="/sources" className="text-sm text-neutral-500 transition hover:text-white">
-                Manage sources →
-              </Link>
-            </div>
+              <Chart rows={liked} max={max} className="mt-3" />
 
-            {data.totalLikes === 0 ? (
-              <p className="mt-16 text-center text-sm text-neutral-500">
-                Like a few posts and they&apos;ll show up here.
-              </p>
-            ) : (
-              <>
-                {/* Two segments per bar, so two keys — identity never rests on colour alone. */}
-                <div className="mt-8 flex items-center gap-4 text-xs text-neutral-500">
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-2.5 w-2.5 rounded-sm bg-rose-500" aria-hidden />
-                    Liked
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-2.5 w-2.5 rounded-sm bg-rose-500/25" aria-hidden />
-                    Shown, not liked
-                  </span>
-                </div>
-
-                <Chart rows={liked} max={max} className="mt-3" />
-
-                {unliked.length > 0 && (
-                  <section className="mt-10">
-                    <h2 className="text-xs uppercase tracking-wider text-neutral-500">
-                      No likes yet
-                      <span className="ml-2 normal-case tracking-normal text-neutral-600">
-                        — candidates to cut
-                      </span>
-                    </h2>
-                    <Chart rows={unliked} max={max} className="mt-3 opacity-70" />
-                  </section>
-                )}
-              </>
-            )}
-          </>
-        )}
-      </div>
-    </main>
+              {unliked.length > 0 && (
+                <section className="mt-10">
+                  <h2 className="text-xs uppercase tracking-wider text-neutral-500">
+                    No likes yet
+                    <span className="ml-2 normal-case tracking-normal text-neutral-600">
+                      — candidates to cut
+                    </span>
+                  </h2>
+                  <Chart rows={unliked} max={max} className="mt-3 opacity-70" />
+                </section>
+              )}
+            </>
+          )}
+        </>
+      )}
+    </Shell>
   );
 }
 

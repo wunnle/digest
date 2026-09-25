@@ -1,14 +1,16 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { AccountMenu, SignInButton } from "./account";
+import { Shell } from "./shell";
 import { FEEDS, ITEMS, META, type Media } from "./data";
 import {
   ago,
   BUILT_AT,
   Card,
+  EyeOffIcon,
   Focus,
   HeartIcon,
+  PlatformIcon,
   Lightbox,
   shortDay,
   timeLabel,
@@ -158,54 +160,37 @@ export default function DigestPage() {
       on ? "bg-white/10 text-white" : "text-neutral-500 hover:bg-white/5 hover:text-neutral-200"
     }`;
 
-  const headerBar = (
-    <header className="flex items-center justify-between gap-4">
-      <div className="flex min-w-0 items-baseline gap-3">
-        <h1 className="text-lg font-semibold tracking-tight text-white">Digest</h1>
-        <p
-          className="truncate text-sm text-neutral-500"
-          title={`Collected ${stampUtc(META.generatedAt)} · deployed ${stampUtc(BUILT_AT)}`}
-        >
-          {ITEMS.length} posts
-          {/* Relative once the client knows the time; the exact stamp until then. */}
-          {BUILT_AT && (
-            <> · updated {minute === null ? stampUtc(BUILT_AT) : ago(BUILT_AT, minute)}</>
-          )}
-        </p>
-      </div>
-
-      <div className="flex shrink-0 items-center gap-3">
-        {/* Below md everything is one column anyway, so the switch only exists on desktop. */}
-        <div className="hidden rounded-lg p-0.5 ring-1 ring-inset ring-white/10 md:flex" role="group" aria-label="Layout">
-          {([false, true] as const).map((one) => (
-            <button
-              key={String(one)}
-              onClick={() => setSingle(one)}
-              aria-pressed={single === one}
-              aria-label={one ? "Single column" : "Grid"}
-              title={one ? "Single column" : "Grid"}
-              className={`rounded-md p-1.5 transition ${
-                single === one ? "bg-white/10 text-white" : "text-neutral-500 hover:text-neutral-200"
-              }`}
-            >
-              {one ? <ColumnIcon /> : <GridIcon />}
-            </button>
-          ))}
-        </div>
-
-        {/* Nothing until the session check lands, so the control doesn't flash. */}
-        <div className="flex h-9 shrink-0 items-center">
-          {status === "signedIn" && email && <AccountMenu email={email} />}
-          {status === "signedOut" && <SignInButton />}
-        </div>
-      </div>
-    </header>
+  const subtitle = (
+    <span title={`Collected ${stampUtc(META.generatedAt)} · deployed ${stampUtc(BUILT_AT)}`}>
+      {ITEMS.length} posts
+      {/* Relative once the client knows the time; the exact stamp until then. */}
+      {BUILT_AT && <> · updated {minute === null ? stampUtc(BUILT_AT) : ago(BUILT_AT, minute)}</>}
+    </span>
   );
 
-  /** Everything above the posts: header, sign-in errors, filter row, hint. */
+  /* Below md everything is one column anyway, so the switch only exists on desktop. */
+  const layoutSwitch = (
+    <div className="hidden rounded-lg p-0.5 ring-1 ring-inset ring-white/10 md:flex" role="group" aria-label="Layout">
+      {([false, true] as const).map((one) => (
+        <button
+          key={String(one)}
+          onClick={() => setSingle(one)}
+          aria-pressed={single === one}
+          aria-label={one ? "Single column" : "Grid"}
+          title={one ? "Single column" : "Grid"}
+          className={`rounded-md p-1.5 transition ${
+            single === one ? "bg-white/10 text-white" : "text-neutral-500 hover:text-neutral-200"
+          }`}
+        >
+          {one ? <ColumnIcon /> : <GridIcon />}
+        </button>
+      ))}
+    </div>
+  );
+
+  /** Everything above the posts: sign-in errors, filter row, hint. */
   const top = (
     <>
-      {headerBar}
       {authError && <p className="mt-3 text-sm text-rose-300/80">{authError}</p>}
 
       {/* One row. It scrolls sideways on a phone rather than wrapping into a
@@ -243,6 +228,7 @@ export default function DigestPage() {
             aria-pressed={active.includes(f.id)}
             className={chip(active.includes(f.id))}
           >
+            <PlatformIcon type={f.type} className="h-3 w-3 opacity-70" />
             {f.label}
             <span className="tabular-nums text-neutral-600">{f.items.length}</span>
           </button>
@@ -261,6 +247,7 @@ export default function DigestPage() {
         {canMark && readCount > 0 && (
           <div className="ml-auto flex shrink-0 items-center gap-1">
             <button onClick={flipHideRead} aria-pressed={hideRead} className={chip(hideRead)}>
+              <EyeOffIcon className="h-3.5 w-3.5" />
               Hide read
               <span className="tabular-nums text-neutral-600">{readCount}</span>
             </button>
@@ -320,134 +307,129 @@ export default function DigestPage() {
     </>
   );
 
-  return (
-    <main className="relative flex-1 overflow-x-clip px-4 py-8 text-neutral-200 sm:px-8 sm:py-12">
-      {/* Cool ambient wash behind the top rows, so the page isn't flat black */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[80rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(56,130,246,0.12),transparent)] blur-2xl"
-      />
-      <div className="relative mx-auto max-w-[95rem]">
-        {single ? (
-          /* One reading column, centred on the screen — header included. On
-             wide screens the filters sit in a sidebar just to its left; an
-             empty third column balances it so the posts stay centred. Below
-             xl there's no room beside it, so the filters stay on top. */
-          <div className="xl:grid xl:grid-cols-[minmax(0,1fr)_42rem_minmax(0,1fr)] xl:gap-10">
-            <aside className="hidden xl:block xl:w-52 xl:justify-self-end">
-              <div className="sticky top-8 space-y-6 text-sm">
-                {canMark && readCount === 0 && likedCount === 0 && (
-                  <p className="text-xs text-neutral-600">Click a card to mark it read.</p>
-                )}
+  /** The feed's own sidebar section, under the page links. */
+  const filters = (
+    <div className="space-y-6">
+      {canMark && readCount === 0 && likedCount === 0 && (
+        <p className="text-xs text-neutral-600">Click a card to mark it read.</p>
+      )}
 
-                {(likedCount > 0 || (canMark && readCount > 0)) && (
-                  <div className="space-y-0.5">
-                    {likedCount > 0 && (
-                      <button
-                        onClick={() => setLikedOnly((v) => !v)}
-                        aria-pressed={likedOnly}
-                        className={`flex w-full items-center justify-between gap-3 rounded-md px-2.5 py-1.5 text-left transition ${
-                          likedOnly
-                            ? "bg-rose-500/15 text-rose-300"
-                            : "text-neutral-400 hover:bg-white/5 hover:text-rose-300"
-                        }`}
-                      >
-                        <span className="flex items-center gap-2">
-                          <HeartIcon filled={likedOnly} className="h-3.5 w-3.5" />
-                          Liked
-                        </span>
-                        <span className="tabular-nums text-neutral-600">{likedCount}</span>
-                      </button>
-                    )}
-                    {canMark && readCount > 0 && (
-                      <button onClick={flipHideRead} aria-pressed={hideRead} className={row(hideRead)}>
-                        Hide read
-                        <span className="tabular-nums text-neutral-600">{readCount}</span>
-                      </button>
-                    )}
-                  </div>
-                )}
+      {(likedCount > 0 || (canMark && readCount > 0)) && (
+        <div className="space-y-0.5">
+          {likedCount > 0 && (
+            <button
+              onClick={() => setLikedOnly((v) => !v)}
+              aria-pressed={likedOnly}
+              className={`flex w-full items-center justify-between gap-3 rounded-md px-2.5 py-1.5 text-left transition ${
+                likedOnly
+                  ? "bg-rose-500/15 text-rose-300"
+                  : "text-neutral-400 hover:bg-white/5 hover:text-rose-300"
+              }`}
+            >
+              <span className="flex items-center gap-2.5">
+                <HeartIcon filled={likedOnly} />
+                Liked
+              </span>
+              <span className="tabular-nums text-neutral-600">{likedCount}</span>
+            </button>
+          )}
+          {canMark && readCount > 0 && (
+            <button onClick={flipHideRead} aria-pressed={hideRead} className={row(hideRead)}>
+              <span className="flex items-center gap-2.5">
+                <EyeOffIcon />
+                Hide read
+              </span>
+              <span className="tabular-nums text-neutral-600">{readCount}</span>
+            </button>
+          )}
+        </div>
+      )}
 
-                <div>
-                  <div className="flex items-baseline justify-between px-2.5">
-                    <h2 className="text-xs uppercase tracking-wider text-neutral-600">Sources</h2>
-                    {active.length > 0 && (
-                      <button
-                        onClick={() => setActive([])}
-                        className="text-xs text-neutral-600 transition hover:text-neutral-300"
-                      >
-                        Clear
-                      </button>
-                    )}
-                  </div>
-                  <div className="mt-1.5 space-y-0.5">
-                    {CHIPS.map((f) => (
-                      <button
-                        key={f.id}
-                        onClick={() => toggleSource(f.id)}
-                        aria-pressed={active.includes(f.id)}
-                        className={row(active.includes(f.id))}
-                      >
-                        <span className="truncate">{f.label}</span>
-                        <span className="tabular-nums text-neutral-600">{f.items.length}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {canMark && readCount > 0 && (
-                  <button
-                    onClick={clearRead}
-                    className="px-2.5 text-xs text-neutral-600 transition hover:text-neutral-300"
-                  >
-                    Reset read marks
-                  </button>
-                )}
-              </div>
-            </aside>
-
-            <div className="mx-auto w-full max-w-[42rem]">
-              {top}
-              <div className="mt-6">{posts}</div>
-              {emptyState}
-            </div>
-          </div>
-        ) : (
-          <>
-            {top}
-            {/* One continuous masonry, newest first. Masonry rather than a grid
-                because post lengths run from 15 to 1200-odd characters, and
-                equal-height rows leave short posts stranded beside long ones. */}
-            <div className="mt-6 gap-4 md:columns-2 xl:columns-3">{posts}</div>
-            {emptyState}
-          </>
-        )}
-
-        {focusItem && (
-          <Focus
-            item={focusItem}
-            position={focusIndex === -1 ? "–" : `${focusIndex + 1} / ${shown.length}`}
-            read={read.has(focusItem.url)}
-            liked={liked.has(focusItem.url)}
-            paused={zoom !== null}
-            onToggleRead={onToggleRead}
-            onToggleLike={onToggleLike}
-            onOpenMedia={openMedia}
-            onStep={stepFocus}
-            onClose={closeFocus}
-          />
-        )}
-
-        {/* After the focus view, so an image opened from it lands on top. */}
-        {zoom && (
-          <Lightbox
-            media={zoom.media}
-            index={zoom.index}
-            onIndex={(index) => setZoom((z) => (z ? { ...z, index } : z))}
-            onClose={() => setZoom(null)}
-          />
-        )}
+      <div>
+        <div className="flex items-baseline justify-between px-2.5">
+          <h2 className="text-xs uppercase tracking-wider text-neutral-600">Sources</h2>
+          {active.length > 0 && (
+            <button
+              onClick={() => setActive([])}
+              className="text-xs text-neutral-600 transition hover:text-neutral-300"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        <div className="mt-1.5 space-y-0.5">
+          {CHIPS.map((f) => (
+            <button
+              key={f.id}
+              onClick={() => toggleSource(f.id)}
+              aria-pressed={active.includes(f.id)}
+              className={row(active.includes(f.id))}
+            >
+              <span className="flex min-w-0 items-center gap-2.5">
+                <PlatformIcon type={f.type} className="h-3.5 w-3.5 text-neutral-500" />
+                <span className="truncate">{f.label}</span>
+              </span>
+              <span className="tabular-nums text-neutral-600">{f.items.length}</span>
+            </button>
+          ))}
+        </div>
       </div>
-    </main>
+
+      {canMark && readCount > 0 && (
+        <button
+          onClick={clearRead}
+          className="px-2.5 text-xs text-neutral-600 transition hover:text-neutral-300"
+        >
+          Reset read marks
+        </button>
+      )}
+    </div>
+  );
+
+  return (
+    <Shell
+      subtitle={subtitle}
+      controls={layoutSwitch}
+      sidebar={filters}
+      wide={!single}
+      status={status}
+      email={email}
+    >
+      {top}
+      {single ? (
+        <div className="feed mt-6">{posts}</div>
+      ) : (
+        /* One continuous masonry, newest first. Masonry rather than a grid
+           because post lengths run from 15 to 1200-odd characters, and
+           equal-height rows leave short posts stranded beside long ones. */
+        <div className="feed mt-6 gap-4 md:columns-2 xl:columns-3">{posts}</div>
+      )}
+      {emptyState}
+
+      {focusItem && (
+        <Focus
+          item={focusItem}
+          position={focusIndex === -1 ? "–" : `${focusIndex + 1} / ${shown.length}`}
+          read={read.has(focusItem.url)}
+          liked={liked.has(focusItem.url)}
+          paused={zoom !== null}
+          onToggleRead={onToggleRead}
+          onToggleLike={onToggleLike}
+          onOpenMedia={openMedia}
+          onStep={stepFocus}
+          onClose={closeFocus}
+        />
+      )}
+
+      {/* After the focus view, so an image opened from it lands on top. */}
+      {zoom && (
+        <Lightbox
+          media={zoom.media}
+          index={zoom.index}
+          onIndex={(index) => setZoom((z) => (z ? { ...z, index } : z))}
+          onClose={() => setZoom(null)}
+        />
+      )}
+    </Shell>
   );
 }

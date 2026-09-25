@@ -134,8 +134,7 @@ Leave out author names and handles, relative times ("20h"), timestamps, "Replyin
 Rules:
 - Every `url` must be `https://` and unique across the file.
 - Leave out `title` for social posts. Include it for everything else.
-- YouTube: the `title` is enough. Leave `text` empty or out. The page doesn't show descriptions.
-- For videos the page can't play inline (YouTube), give the thumbnail as a `photo`. The card links to the video.
+- YouTube: the `title` and the video's URL are enough. Leave `text` and `media` out: the page embeds the player from the URL and doesn't show descriptions.
 - `media` needs real `width` and `height`. Omit the whole field if there's no media.
 - Items don't need to be sorted; the page sorts newest-first.
 

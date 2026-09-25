@@ -161,9 +161,19 @@ export function usePreference(key: string): [boolean, (on: boolean) => void] {
 /** When this build was made — which, with a build per deploy, is the last deploy. */
 export const BUILT_AT = process.env.BUILT_AT ?? "";
 
+/** One interval shared by every subscriber — every card's date reads it. */
+const minuteListeners = new Set<() => void>();
+let minuteTimer: ReturnType<typeof setInterval> | undefined;
 const subscribeMinute = (tick: () => void) => {
-  const id = setInterval(tick, 60_000);
-  return () => clearInterval(id);
+  minuteListeners.add(tick);
+  minuteTimer ??= setInterval(() => minuteListeners.forEach((l) => l()), 60_000);
+  return () => {
+    minuteListeners.delete(tick);
+    if (minuteListeners.size === 0) {
+      clearInterval(minuteTimer);
+      minuteTimer = undefined;
+    }
+  };
 };
 
 /**
@@ -195,6 +205,55 @@ export const timeLabel = (iso: string) =>
     minute: "2-digit",
     timeZone: "UTC",
   });
+
+const startOfLocalDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+
+/**
+ * "Today", "Yesterday", a weekday within the week, else "23 Sep" — in the
+ * reader's own timezone. Until the client knows the time (prerender and
+ * hydration) it's the plain UTC date, so the two renders agree.
+ */
+export const dayLabel = (iso: string, minute: number | null) => {
+  if (minute === null) return shortDay(iso);
+  const d = new Date(iso);
+  const days = Math.round((startOfLocalDay(new Date(minute * 60_000)) - startOfLocalDay(d)) / 864e5);
+  if (days === 0) return "Today";
+  if (days === 1) return "Yesterday";
+  if (days > 1 && days < 7) return d.toLocaleDateString("en-US", { weekday: "long" });
+  const month = d.toLocaleDateString("en-US", { month: "short" });
+  return `${d.getDate()} ${month}`;
+};
+
+/** "09:41" in the reader's timezone. */
+const localTime = (iso: string) =>
+  new Date(iso).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+
+/**
+ * A post's date, linking to the post. The time is secondary, so it only
+ * shows on hover. Swallows its click: opening the source shouldn't silently
+ * flip the card's read state behind the new tab.
+ */
+function DateLink({ url, iso }: { url: string; iso: string }) {
+  const minute = useMinute();
+  // A quoted post may come without a timestamp; the link still works.
+  const valid = !Number.isNaN(Date.parse(iso));
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer"
+      onClick={swallow}
+      title={`${valid ? `${new Date(iso).toLocaleString("en-GB", { dateStyle: "full", timeStyle: "short" })} — ` : ""}open on ${host(url)}`}
+      className="group/date flex shrink-0 items-center gap-1 transition hover:text-neutral-200"
+    >
+      {valid ? dayLabel(iso, minute) : "Open"}
+      {valid && minute !== null && (
+        <span className="hidden text-neutral-500 group-hover/date:inline">{localTime(iso)}</span>
+      )}
+      <ArrowIcon />
+    </a>
+  );
+}
 
 /** 200.133 → "3:20". Videos carry a float duration in seconds. */
 const clock = (s: number) => {
@@ -485,7 +544,15 @@ export function Lightbox({
 function QuoteBlock({ quote, onOpen }: { quote: Quote; onOpen?: OpenMedia }) {
   return (
     <span className="mt-3 block rounded-xl border border-white/10 bg-white/[0.03] p-4">
-      <span className="block text-xs text-neutral-500">{quote.author.name}</span>
+      <span className="flex items-center gap-2 text-xs text-neutral-500">
+        <span className="truncate">{quote.author.name}</span>
+        {quote.url && (
+          <>
+            <span aria-hidden className="text-neutral-700">·</span>
+            <DateLink url={quote.url} iso={quote.publishedAt} />
+          </>
+        )}
+      </span>
       <span className="mt-1.5 block whitespace-pre-line break-words text-[15px] leading-relaxed text-neutral-300">
         {linkify(quote.text)}
       </span>
@@ -494,39 +561,7 @@ function QuoteBlock({ quote, onOpen }: { quote: Quote; onOpen?: OpenMedia }) {
   );
 }
 
-function ArrowIcon({ className = "h-3.5 w-3.5" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden
-    >
-      <path d="M6 14 14 6M7.5 6H14v6.5" />
-    </svg>
-  );
-}
 
-export function HeartIcon({ filled, className = "h-4 w-4" }: { filled?: boolean; className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill={filled ? "currentColor" : "none"}
-      stroke="currentColor"
-      strokeWidth="1.7"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden
-    >
-      <path d="M12 20.5s-7.5-4.6-7.5-9.7a4.3 4.3 0 0 1 7.5-2.8 4.3 4.3 0 0 1 7.5 2.8c0 5.1-7.5 9.7-7.5 9.7Z" />
-    </svg>
-  );
-}
 
 /**
  * One post: who posted it and when, quietly, then the post itself and its
@@ -536,6 +571,171 @@ export function HeartIcon({ filled, className = "h-4 w-4" }: { filled?: boolean;
  * and buttons of its own, which an anchor can't. The timestamp is the link to
  * the post instead.
  */
+/**
+ * One icon set: a 24-unit grid, one stroke weight, round caps — so the heart,
+ * expand and link icons sit at the same size and weight side by side.
+ */
+export function Icon({ className = "h-4 w-4", filled, children }: { className?: string; filled?: boolean; children: React.ReactNode }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill={filled ? "currentColor" : "none"}
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`shrink-0 ${className}`}
+      aria-hidden
+    >
+      {children}
+    </svg>
+  );
+}
+
+export function HeartIcon({ filled, className }: { filled?: boolean; className?: string }) {
+  return (
+    <Icon filled={filled} className={className}>
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </Icon>
+  );
+}
+
+export function EyeOffIcon({ className }: { className?: string }) {
+  return (
+    <Icon className={className}>
+      <path d="M10.73 5.08A10.74 10.74 0 0 1 21.94 11.65a1 1 0 0 1 0 .7 10.75 10.75 0 0 1-1.44 2.49" />
+      <path d="M14.08 14.16a3 3 0 0 1-4.24-4.24" />
+      <path d="M17.48 17.5a10.75 10.75 0 0 1-15.42-5.15 1 1 0 0 1 0-.7 10.75 10.75 0 0 1 4.45-5.14" />
+      <path d="m2 2 20 20" />
+    </Icon>
+  );
+}
+
+function ExpandIcon({ className }: { className?: string }) {
+  return (
+    <Icon className={className}>
+      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+    </Icon>
+  );
+}
+
+/**
+ * Which platform a post or source is from — small and muted, so it reads as a
+ * cue rather than a badge. Brand marks are filled; the generic ones (RSS, web,
+ * HN) are drawn in the same stroke as the rest of the icon set.
+ */
+export function PlatformIcon({ type, className = "h-3.5 w-3.5" }: { type: string; className?: string }) {
+  const label = { x: "X", youtube: "YouTube", bluesky: "Bluesky", rss: "RSS", hn: "Hacker News", web: "Web" }[type] ?? type;
+  const filled = (d: string) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={`shrink-0 ${className}`} role="img" aria-label={label}>
+      <path fillRule="evenodd" d={d} />
+    </svg>
+  );
+  switch (type) {
+    case "x":
+      return filled(
+        "M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12Z",
+      );
+    case "youtube":
+      return filled(
+        "M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6Z",
+      );
+    case "bluesky":
+      return filled(
+        "M12 10.8C10.91 8.69 7.95 4.75 5.2 2.8 2.57.94 1.56 1.27.9 1.57.14 1.9 0 3.08 0 3.77c0 .69.38 5.65.62 6.48.82 2.74 3.72 3.66 6.39 3.36-3.92.58-7.4 2-2.83 7.08 5.01 5.19 6.87-1.11 7.82-4.3.95 3.19 2.05 9.27 7.73 4.3 4.27-4.3 1.17-6.5-2.74-7.08 2.67.3 5.57-.62 6.39-3.36.24-.83.62-5.79.62-6.48 0-.69-.14-1.86-.9-2.2-.66-.3-1.67-.63-4.3 1.23C16.05 4.75 13.09 8.69 12 10.8Z",
+      );
+    case "rss":
+      return (
+        <Icon className={className}>
+          <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16" />
+          <circle cx="5" cy="19" r="1" />
+        </Icon>
+      );
+    case "hn":
+      return (
+        <Icon className={className}>
+          <rect x="3" y="3" width="18" height="18" rx="3" />
+          <path d="m8 7 4 6 4-6M12 13v4" />
+        </Icon>
+      );
+    default:
+      return (
+        <Icon className={className}>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18" />
+        </Icon>
+      );
+  }
+}
+
+function ArrowIcon({ className = "h-3 w-3" }: { className?: string }) {
+  return (
+    <Icon className={className}>
+      <path d="M7 17 17 7M7 7h10v10" />
+    </Icon>
+  );
+}
+
+/** The video id from any YouTube link: watch, youtu.be, shorts, live, embed. */
+export function youtubeId(url: string): string | null {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.replace(/^(www|m)\./, "");
+    const id =
+      host === "youtu.be"
+        ? u.pathname.slice(1)
+        : host === "youtube.com" || host === "youtube-nocookie.com"
+          ? u.searchParams.get("v") ?? u.pathname.match(/^\/(?:shorts|live|embed)\/([^/?#]+)/)?.[1]
+          : null;
+    return id && /^[\w-]{6,20}$/.test(id) ? id : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * A YouTube video, played in place. Until it's clicked it's only YouTube's
+ * thumbnail — no player, no YouTube scripts, no tracking — and the player is
+ * the privacy-enhanced youtube-nocookie one. Clicks are swallowed so playing
+ * a video doesn't also mark the card read.
+ */
+function YouTubeEmbed({ id, title }: { id: string; title?: string }) {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <span className="mt-3 block aspect-video w-full overflow-hidden rounded-xl bg-white/5" onClick={swallow}>
+      {playing ? (
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`}
+          title={title ?? "YouTube video"}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="h-full w-full"
+        />
+      ) : (
+        <button
+          onClick={() => setPlaying(true)}
+          aria-label={`Play ${title ?? "video"}`}
+          className="group/yt relative block h-full w-full"
+        >
+          {/* hqdefault always exists; it's 4:3 with bars, which the 16:9 crop removes. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+            alt=""
+            loading="lazy"
+            className="h-full w-full object-cover transition group-hover/yt:brightness-110"
+          />
+          <span className="absolute inset-0 flex items-center justify-center bg-black/20">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-white ring-1 ring-white/20 transition group-hover/yt:scale-105 group-hover/yt:bg-black/80">
+              <PlayIcon className="h-5 w-5 translate-x-px" />
+            </span>
+          </span>
+        </button>
+      )}
+    </span>
+  );
+}
+
 /** Title, text, media and quote — the post itself, shared by the card and focus view. */
 function PostBody({
   item,
@@ -571,49 +771,27 @@ function PostBody({
         </p>
       )}
 
-      <MediaBlock media={item.media} onOpen={onOpenMedia} />
+      {/* YouTube plays in place from its own URL; anything else shows the payload's media. */}
+      {item.type === "youtube" && youtubeId(item.url) ? (
+        <YouTubeEmbed id={youtubeId(item.url)!} title={item.title} />
+      ) : (
+        <MediaBlock media={item.media} onOpen={onOpenMedia} />
+      )}
 
       {item.quote && <QuoteBlock quote={item.quote} onOpen={onOpenMedia} />}
     </>
   );
 }
 
-function ExpandIcon({ className = "h-4 w-4" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden
-    >
-      <path d="M12 3.5h4.5V8M8 16.5H3.5V12M16.5 3.5 11 9M3.5 16.5 9 11" />
-    </svg>
-  );
-}
 
 /** Who and when, kept quiet — the post is the point. */
 function Byline({ item }: { item: Item }) {
   return (
     <>
+      <PlatformIcon type={item.type} className="h-3.5 w-3.5 text-neutral-500" />
       <span className="truncate">{item.name}</span>
       <span aria-hidden className="text-neutral-700">·</span>
-      {/* Swallows its click: opening the source shouldn't silently flip the
-          card's read state behind the new tab. */}
-      <a
-        href={item.url}
-        target="_blank"
-        rel="noreferrer"
-        onClick={swallow}
-        title={`Open on ${host(item.url)}`}
-        className="flex shrink-0 items-center gap-0.5 transition hover:text-neutral-200"
-      >
-        {shortDay(item.publishedAt)} {timeLabel(item.publishedAt)}
-        <ArrowIcon className="h-3 w-3" />
-      </a>
+      <DateLink url={item.url} iso={item.publishedAt} />
     </>
   );
 }
@@ -669,14 +847,14 @@ export function Card({
       role={onToggleRead ? "button" : undefined}
       tabIndex={onToggleRead ? 0 : undefined}
       aria-pressed={onToggleRead ? read : undefined}
-      className={`group mb-4 break-inside-avoid rounded-2xl border p-5 transition-[opacity,border-color,background-color] duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
+      className={`card group mb-4 break-inside-avoid rounded-2xl border p-5 transition-[opacity,border-color,background-color,filter] duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
         onToggleRead ? "cursor-pointer" : ""
       } ${
         // Liked posts carry the rose in their fill and border, so they're
         // findable at a glance down a column of cards.
         liked
-          ? "border-rose-400/45 bg-rose-500/[0.13] hover:border-rose-400/70"
-          : "border-white/10 bg-white/[0.03] hover:border-white/20"
+          ? "border-rose-400/45 bg-rose-500/[0.13] hover:border-rose-400/90"
+          : "border-white/10 bg-white/[0.03] hover:border-white/35"
       } ${
         // A liked post fades less when read — it was kept on purpose.
         read ? (justMarked ? fade : `${fade} hover:opacity-100`) : ""

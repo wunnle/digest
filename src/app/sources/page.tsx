@@ -1,10 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { AccountMenu, SignInButton } from "../account";
+import { Shell } from "../shell";
 import { META } from "../data";
-import { shortDay, timeLabel, useMarks } from "../ui";
+import { PlatformIcon, shortDay, timeLabel, useMarks } from "../ui";
 import {
   cleanTarget,
   detectSource,
@@ -95,78 +94,56 @@ export default function SourcesPage() {
   );
 
   return (
-    <main className="relative flex-1 overflow-x-clip px-4 py-8 pb-28 text-neutral-200 sm:px-8 sm:py-12">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[80rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(56,130,246,0.12),transparent)] blur-2xl"
-      />
-      <div className="relative mx-auto max-w-3xl">
-        <header className="flex items-center justify-between gap-4">
-          <div className="flex min-w-0 items-baseline gap-2">
-            <Link
-              href="/"
-              className="text-lg font-semibold tracking-tight text-white transition hover:text-neutral-300"
-            >
-              Digest
-            </Link>
-            <span className="text-neutral-600">/</span>
-            <h1 className="text-lg text-neutral-400">Sources</h1>
+    <Shell title="Sources" status={status} email={email}>
+      <p className="mt-2 text-sm text-neutral-500">
+        The agent reads this list at the start of each run. Last run used{" "}
+        {META.sourcesScanned} sources, {shortDay(META.generatedAt)}{" "}
+        {timeLabel(META.generatedAt)} UTC.
+      </p>
+
+      {status === "signedOut" && (
+        <p className="mt-10 text-sm text-neutral-400">Sign in to manage sources.</p>
+      )}
+      {loadError && <p className="mt-10 text-sm text-rose-300/80">{loadError}</p>}
+
+      {doc && (
+        <>
+          <AddSource
+            existing={doc.sources}
+            onAdd={(s) => update((d) => ({ ...d, sources: [...d.sources, s] }))}
+          />
+
+          <div className="mt-8 space-y-8">
+            {groups.map((g) => (
+              <section key={g.type}>
+                <h2 className="flex items-baseline gap-2 text-xs uppercase tracking-wider text-neutral-500">
+                  <PlatformIcon type={g.type} className="h-3 w-3 self-center" />
+                  {TYPE_INFO[g.type].label}
+                  <span className="tabular-nums text-neutral-700">{g.items.length}</span>
+                </h2>
+                <ul className="mt-2 divide-y divide-white/5 rounded-xl border border-white/10 bg-white/[0.02]">
+                  {g.items.map((s) => (
+                    <SourceRow
+                      key={s.id}
+                      source={s}
+                      onPatch={(p) => patchSource(s.id, p)}
+                      onRemove={() => removeSource(s.id)}
+                    />
+                  ))}
+                </ul>
+              </section>
+            ))}
+            {groups.length === 0 && (
+              <p className="text-sm text-neutral-500">No sources yet. Add one above.</p>
+            )}
           </div>
-          <div className="flex h-9 shrink-0 items-center">
-            {status === "signedIn" && email && <AccountMenu email={email} />}
-            {status === "signedOut" && <SignInButton />}
-          </div>
-        </header>
-
-        <p className="mt-2 text-sm text-neutral-500">
-          The agent reads this list at the start of each run. Last run used{" "}
-          {META.sourcesScanned} sources, {shortDay(META.generatedAt)}{" "}
-          {timeLabel(META.generatedAt)} UTC.
-        </p>
-
-        {status === "signedOut" && (
-          <p className="mt-10 text-sm text-neutral-400">Sign in to manage sources.</p>
-        )}
-        {loadError && <p className="mt-10 text-sm text-rose-300/80">{loadError}</p>}
-
-        {doc && (
-          <>
-            <AddSource
-              existing={doc.sources}
-              onAdd={(s) => update((d) => ({ ...d, sources: [...d.sources, s] }))}
-            />
-
-            <div className="mt-8 space-y-8">
-              {groups.map((g) => (
-                <section key={g.type}>
-                  <h2 className="flex items-baseline gap-2 text-xs uppercase tracking-wider text-neutral-500">
-                    {TYPE_INFO[g.type].label}
-                    <span className="tabular-nums text-neutral-700">{g.items.length}</span>
-                  </h2>
-                  <ul className="mt-2 divide-y divide-white/5 rounded-xl border border-white/10 bg-white/[0.02]">
-                    {g.items.map((s) => (
-                      <SourceRow
-                        key={s.id}
-                        source={s}
-                        onPatch={(p) => patchSource(s.id, p)}
-                        onRemove={() => removeSource(s.id)}
-                      />
-                    ))}
-                  </ul>
-                </section>
-              ))}
-              {groups.length === 0 && (
-                <p className="text-sm text-neutral-500">No sources yet. Add one above.</p>
-              )}
-            </div>
-          </>
-        )}
-      </div>
+        </>
+      )}
 
       {/* Appears only with something to save, so it can't be missed or mistaken. */}
       {(dirty || saveError) && (
         <div className="fixed inset-x-0 bottom-0 z-10 border-t border-white/10 bg-neutral-950/90 px-4 py-3 backdrop-blur sm:px-8">
-          <div className="mx-auto flex max-w-3xl items-center justify-between gap-4">
+          <div className="mx-auto flex max-w-[42rem] items-center justify-between gap-4">
             <p className={`text-sm ${saveError ? "text-rose-300/90" : "text-neutral-400"}`}>
               {saveError ?? "Unsaved changes · applied on the next run"}
             </p>
@@ -191,7 +168,7 @@ export default function SourcesPage() {
           </div>
         </div>
       )}
-    </main>
+    </Shell>
   );
 }
 

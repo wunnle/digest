@@ -4,3 +4,14 @@
   --font-sans: var(--font-body);
   --font-mono: var(--font-code);
 }
+
+/*
+ * Hovering a card brings it forward by dimming the rest of the feed. A filter
+ * rather than opacity, so it compounds with a read card's own fade instead of
+ * overriding it. Mouse only: on touch, "hover" sticks after a tap.
+ */
+@media (hover: hover) {
+  .feed:has(.card:hover) .card:not(:hover) {
+    filter: opacity(0.45);
+  }
+}
