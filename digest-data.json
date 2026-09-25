@@ -1,33 +1,137 @@
 {
-  "generated_at": "2026-09-25T07:24:18Z",
+  "generated_at": "2026-09-25T10:05:00Z",
   "window": {
-    "start": "2026-09-23T07:24:18Z",
-    "end": "2026-09-25T07:24:18Z",
+    "start": "2026-09-23T10:05:00Z",
+    "end": "2026-09-25T10:05:00Z",
     "timezone": "UTC",
     "duration_hours": 48
   },
   "scope": {
-    "accounts": [
-      "simonw",
-      "mitsuhiko",
-      "badlogicgames",
-      "steipete",
-      "thorstenball",
-      "geoffreylitt",
-      "HamelHusain",
-      "RLanceMartin",
-      "sgoedecke",
-      "birgitta410",
-      "bcherny",
-      "trq212",
-      "alexalbert",
-      "_sholtodouglas",
-      "karpathy"
-    ],
     "filter": "AI and software-development posts with concrete tools, workflows, evidence, experiments, or useful criticism",
-    "source": "Public X profile timelines and rendered YouTube channel/video pages",
-    "note": "X and YouTube items were collected from logged-out public browser pages. Off-topic, stale, pinned, and low-signal items were omitted.",
-    "fields": "Each item contains original post text, source-backed media URLs, and the quoted tweet with its author, original text, timestamp, and media when present."
+    "source": "Public X profile timelines and rendered YouTube channel/video pages, collected logged-out with exact individual-post verification",
+    "note": "X items were collected from logged-out public profile timelines and verified on individual post pages. YouTube t3dotgg was collected from the logged-out channel page; only the 5 newest visible videos were enriched before applying the same UTC window. Off-topic, stale, pinned, and low-signal items were omitted.",
+    "fields": "Each item contains original post text, source-backed media URLs, and the quoted tweet with its author, original text, timestamp, and media when present.",
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      }
+    ]
   },
   "digest": [
     {
@@ -58,7 +162,9 @@
           "media": [],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:simonw",
+      "type": "x"
     },
     {
       "handle": "mitsuhiko",
@@ -116,19 +222,6 @@
           "quote_tweet": null
         },
         {
-          "published_at": "2026-09-25T00:13:00Z",
-          "url": "https://x.com/mitsuhiko/status/2103231290338140630",
-          "topic": "Models and evaluation",
-          "text": "Armin Ronacher ⇌\n@mitsuhiko\nMario proposes to 'write an extension that inserts \"mofo, don't use bash to edit files\"'. Because this is my current experience with Opus 5.5 :(\n0:13 · 25 Sept 2026\n·\n27.7k\nViews\n42\n5\n145",
-          "media": [
-            {
-              "type": "image",
-              "url": "https://pbs.twimg.com/media/HTAtlYPWwAAKlnE?format=webp&name=small"
-            }
-          ],
-          "quote_tweet": null
-        },
-        {
           "published_at": "2026-09-24T19:39:00Z",
           "url": "https://x.com/mitsuhiko/status/2103162497733968185",
           "topic": "AI coding agents",
@@ -136,7 +229,9 @@
           "media": [],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:mitsuhiko",
+      "type": "x"
     },
     {
       "handle": "badlogicgames",
@@ -168,7 +263,9 @@
           ],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:badlogicgames",
+      "type": "x"
     },
     {
       "handle": "steipete",
@@ -226,7 +323,9 @@
           ],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:steipete",
+      "type": "x"
     },
     {
       "handle": "thorstenball",
@@ -269,7 +368,9 @@
           "media": [],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:thorstenball",
+      "type": "x"
     },
     {
       "handle": "geoffreylitt",
@@ -301,7 +402,9 @@
           ],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:geoffreylitt",
+      "type": "x"
     },
     {
       "handle": "HamelHusain",
@@ -346,24 +449,32 @@
           ],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:hamelhusain",
+      "type": "x"
     },
     {
       "handle": "RLanceMartin",
       "name": "Lance Martin",
-      "items": []
+      "items": [],
+      "source_id": "x:rlancemartin",
+      "type": "x"
     },
     {
       "handle": "sgoedecke",
       "name": "Sean Goedecke",
       "items": [],
-      "note": "The supplied handle resolves to an unrelated, nearly inactive account. No verified current X account for Sean Goedecke was identified, so nothing was attributed to him."
+      "note": "The supplied handle resolves to an unrelated, nearly inactive account. No verified current X account for Sean Goedecke was identified, so nothing was attributed to him.",
+      "source_id": "x:sgoedecke",
+      "type": "x"
     },
     {
       "handle": "birgitta410",
       "name": "Birgitta Böckeler",
       "items": [],
-      "note": "No posts in the window. Her public X timeline appears inactive since November 2022; her profile points to Bluesky and Mastodon."
+      "note": "No posts in the window. Her public X timeline appears inactive since November 2022; her profile points to Bluesky and Mastodon.",
+      "source_id": "x:birgitta410",
+      "type": "x"
     },
     {
       "handle": "bcherny",
@@ -390,7 +501,9 @@
           "media": [],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:bcherny",
+      "type": "x"
     },
     {
       "handle": "trq212",
@@ -436,12 +549,9 @@
           "media": [],
           "quote_tweet": null
         }
-      ]
-    },
-    {
-      "handle": "alexalbert",
-      "name": "Alex Albert",
-      "items": []
+      ],
+      "source_id": "x:trq212",
+      "type": "x"
     },
     {
       "handle": "_sholtodouglas",
@@ -477,12 +587,16 @@
           ],
           "quote_tweet": null
         }
-      ]
+      ],
+      "source_id": "x:_sholtodouglas",
+      "type": "x"
     },
     {
       "handle": "karpathy",
       "name": "Andrej Karpathy",
-      "items": []
+      "items": [],
+      "source_id": "x:karpathy",
+      "type": "x"
     },
     {
       "source_id": "youtube:t3dotgg",
@@ -527,25 +641,11 @@
           ],
           "quote_tweet": null
         }
-      ]
+      ],
+      "handle": "t3dotgg"
     }
   ],
   "highlights": [
-    {
-      "title": "Most operationally useful",
-      "url": "https://x.com/steipete/status/2102889319849713698",
-      "reason": "Explains a silent Claude Code configuration failure caused by a remote feature flag."
-    },
-    {
-      "title": "Best reusable workflow",
-      "url": "https://x.com/HamelHusain/status/2102542556013932990",
-      "reason": "Run /eval-audit against an existing evaluation pipeline to find concrete improvements."
-    },
-    {
-      "title": "Best verification prompt",
-      "url": "https://x.com/thorstenball/status/2102623376196194763",
-      "reason": "Ask an agent to test end-to-end and provide irrefutable proof that the feature works."
-    },
     {
       "title": "Best shipped artifact",
       "url": "https://x.com/simonw/status/2102861892549279922",
