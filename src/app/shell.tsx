@@ -39,6 +39,12 @@ function useHeadroom() {
   return hidden;
 }
 
+const FeedIcon = () => (
+  <Icon>
+    <path d="M4 6h16M4 12h16M4 18h10" />
+  </Icon>
+);
+
 export const SourcesIcon = () => (
   <Icon>
     <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16" />
@@ -75,12 +81,19 @@ export function SidebarLink({ href, label, icon }: { href: string; label: string
   );
 }
 
-/** Where the settings pages live. The logo is the way back to the feed. */
+/**
+ * The settings pages' sidebar: the way back to the feed first, then the
+ * settings pages themselves. The feed brings its own sidebar, so it never
+ * shows a link to itself.
+ */
 function DefaultSidebar() {
   return (
-    <nav className="space-y-0.5" aria-label="Pages">
-      <SidebarLink href="/sources" label="Sources" icon={<SourcesIcon />} />
-      <SidebarLink href="/insights" label="Insights" icon={<InsightsIcon />} />
+    <nav className="space-y-5" aria-label="Pages">
+      <SidebarLink href="/" label="Feed" icon={<FeedIcon />} />
+      <div className="space-y-0.5">
+        <SidebarLink href="/sources" label="Sources" icon={<SourcesIcon />} />
+        <SidebarLink href="/insights" label="Insights" icon={<InsightsIcon />} />
+      </div>
     </nav>
   );
 }
