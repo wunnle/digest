@@ -80,6 +80,30 @@ function check(run, file) {
       for (const [re, what] of CHROME) {
         if (re.test(i.text)) errors.push(`${at}: text contains ${what}`);
       }
+      // Quoted posts and the author's replies are post text too.
+      if (i.author_replies !== undefined && !Array.isArray(i.author_replies)) {
+        errors.push(`${at}: author_replies must be a list`);
+      }
+      const nested = [
+        ["quote_tweet", i.quote_tweet],
+        ["author_reply", i.author_reply],
+        ...(Array.isArray(i.author_replies) ? i.author_replies.map((r, n) => [`author_replies[${n}]`, r]) : []),
+      ];
+      for (const [field, q] of nested) {
+        if (!q) continue;
+        if (typeof q.text !== "string") {
+          errors.push(`${at}: ${field}.text must be a string`);
+          continue;
+        }
+        const name = q.author?.name;
+        const h = q.author?.handle;
+        if ((name && q.text.startsWith(`${name}\n@`)) || (h && q.text.startsWith(`@${h}\n`))) {
+          errors.push(`${at}: ${field}.text starts with the author's name/handle`);
+        }
+        for (const [re, what] of CHROME) {
+          if (re.test(q.text)) errors.push(`${at}: ${field}.text contains ${what}`);
+        }
+      }
     }
   }
   return errors;

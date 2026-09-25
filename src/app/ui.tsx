@@ -575,15 +575,62 @@ function QuoteBlock({ quote, onOpen }: { quote: Quote; onOpen?: OpenMedia }) {
   );
 }
 
-function AuthorReplyBlock({ reply, index, onOpen }: { reply: Quote; index: number; onOpen?: OpenMedia }) {
+/**
+ * The author's own replies under their post — the thought carried on, so they
+ * read as a thread: a reply arrow, a connector running down beside them, a
+ * dot per reply, and text at nearly the post's own weight. Each reply's date
+ * links to that reply.
+ */
+function AuthorReplies({
+  replies,
+  onOpen,
+  large = false,
+}: {
+  replies: Quote[];
+  onOpen?: OpenMedia;
+  large?: boolean;
+}) {
+  if (replies.length === 0) return null;
   return (
-    <span className="mt-3 block border-l-2 border-sky-400/40 pl-4">
-      <span className="block text-xs text-neutral-500">Author follow-up{index > 0 ? ` ${index + 1}` : ""}</span>
-      <span className="mt-1.5 block whitespace-pre-line break-words text-[15px] leading-relaxed text-neutral-300">
-        {linkify(reply.text)}
+    <span className="mt-4 block">
+      <span className="flex items-center gap-2 text-xs text-neutral-500">
+        <ReplyIcon />
+        {replies.length === 1 ? "Follow-up" : `${replies.length} follow-ups`}
       </span>
-      <MediaBlock media={reply.media} onOpen={onOpen} />
+      <span className="relative mt-2 block space-y-4 pl-6">
+        {/* The thread line, fading out below the last reply. */}
+        <span
+          aria-hidden
+          className="absolute bottom-2 left-[7px] top-1 w-px bg-gradient-to-b from-white/20 via-white/10 to-transparent"
+        />
+        {replies.map((r) => (
+          <span key={r.url || r.text} className="relative block">
+            <span aria-hidden className="absolute -left-[19px] top-[5px] h-[7px] w-[7px] rounded-full bg-neutral-600" />
+            {r.url && (
+              <span className="flex text-xs text-neutral-500">
+                <DateLink url={r.url} iso={r.publishedAt} />
+              </span>
+            )}
+            <span
+              className={`block whitespace-pre-line break-words leading-relaxed text-neutral-200 ${
+                r.url ? "mt-1" : ""
+              } ${large ? "text-[17px]" : "text-[15px]"}`}
+            >
+              {linkify(r.text)}
+            </span>
+            <MediaBlock media={r.media} onOpen={onOpen} />
+          </span>
+        ))}
+      </span>
     </span>
+  );
+}
+
+function ReplyIcon() {
+  return (
+    <Icon className="h-4 w-4 text-neutral-600">
+      <path d="M15 10l5 5-5 5M4 4v7a4 4 0 0 0 4 4h12" />
+    </Icon>
   );
 }
 
@@ -802,9 +849,7 @@ function PostBody({
       )}
 
       {item.quote && <QuoteBlock quote={item.quote} onOpen={onOpenMedia} />}
-      {item.authorReplies.map((reply, index) => (
-        <AuthorReplyBlock key={reply.url} reply={reply} index={index} onOpen={onOpenMedia} />
-      ))}
+      <AuthorReplies replies={item.authorReplies} onOpen={onOpenMedia} large={large} />
     </>
   );
 }
