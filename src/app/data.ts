@@ -29,11 +29,15 @@ export type Quote = {
 };
 
 export type Item = {
-  handle: string;
+  /** The source this came from — what the filter chips select on. */
+  sourceId: string;
+  /** Who wrote it, for the card's byline. */
   name: string;
   publishedAt: string;
   url: string;
   topic: string;
+  /** Articles, videos and HN stories have one; posts don't. */
+  title?: string;
   /** The post as written, newlines and all. */
   text: string;
   media: Media[];
@@ -41,9 +45,12 @@ export type Item = {
   quote?: Quote;
 };
 
-export type Author = {
-  handle: string;
-  name: string;
+/** One source's contribution to this run. */
+export type Feed = {
+  id: string;
+  type: string;
+  /** What the chip says: the handle for social accounts, else the name. */
+  label: string;
   items: Item[];
 };
 
@@ -59,49 +66,74 @@ type RawItem = {
   published_at: string;
   url: string;
   topic: string;
+  title?: string;
   text: string;
   media?: Media[];
   quote_tweet?: RawQuote | null;
+};
+
+/**
+ * v1 entries are X accounts keyed by `handle`. v2 adds `source_id` and `type`
+ * so an entry can be any source — see AGENT.md. Both shapes are read.
+ */
+type RawEntry = {
+  source_id?: string;
+  type?: string;
+  handle?: string;
+  name: string;
+  items: RawItem[];
+  note?: string;
 };
 
 type Payload = {
   generated_at: string;
   window: { start: string; end: string; timezone: string; duration_hours: number };
   scope: {
-    accounts: string[];
+    /** v2: the source list the run used. */
+    sources?: { id: string }[];
+    /** v1: X handles. */
+    accounts?: string[];
     filter: string;
-    source: string;
+    source?: string;
     note?: string;
     fields?: string;
   };
-  digest: { handle: string; name: string; items: RawItem[]; note?: string }[];
+  digest: RawEntry[];
 };
 
 const raw = payload as Payload;
 
-const entries = new Map(raw.digest.map((a) => [a.handle, a]));
+const idOf = (e: RawEntry) => (e.source_id ?? `x:${e.handle ?? e.name}`).toLowerCase();
+
+/** The run's own source list, as ids, in the order it was given. */
+const scanned: string[] =
+  raw.scope.sources?.map((s) => s.id.toLowerCase()) ??
+  (raw.scope.accounts ?? []).map((h) => `x:${h}`.toLowerCase());
+
+const entries = new Map(raw.digest.map((e) => [idOf(e), e]));
 
 /**
- * Ordered by `scope.accounts` — the list the scraper was asked to check — so an
- * account it was given but returned no entry for is still a visible row rather
- * than a silent omission. Any entry not in that list is appended.
+ * Ordered by the run's source list, so the chips keep the order the list was
+ * written in. Any entry not in that list is appended.
  */
-const handles = [
-  ...raw.scope.accounts.filter((h) => entries.has(h)),
-  ...raw.digest.map((a) => a.handle).filter((h) => !raw.scope.accounts.includes(h)),
+const ids = [
+  ...scanned.filter((id) => entries.has(id)),
+  ...[...entries.keys()].filter((id) => !scanned.includes(id)),
 ];
 
-export const AUTHORS: Author[] = handles.map((h) => {
-  const a = entries.get(h)!;
+export const FEEDS: Feed[] = ids.map((id) => {
+  const e = entries.get(id)!;
   return {
-    handle: a.handle,
-    name: a.name,
-    items: a.items.map((i) => ({
-      handle: a.handle,
-      name: a.name,
+    id,
+    type: e.type ?? "x",
+    label: e.handle ?? e.name,
+    items: e.items.map((i) => ({
+      sourceId: id,
+      name: e.name,
       publishedAt: i.published_at,
       url: i.url,
       topic: i.topic,
+      title: i.title || undefined,
       text: i.text,
       media: i.media ?? [],
       quote: i.quote_tweet
@@ -118,7 +150,7 @@ export const AUTHORS: Author[] = handles.map((h) => {
 });
 
 /** Newest first — a digest is read from the top. */
-export const ITEMS: Item[] = AUTHORS.flatMap((a) => a.items).sort((a, b) =>
+export const ITEMS: Item[] = FEEDS.flatMap((f) => f.items).sort((a, b) =>
   b.publishedAt.localeCompare(a.publishedAt),
 );
 
@@ -126,6 +158,6 @@ export const META = {
   generatedAt: raw.generated_at,
   window: raw.window,
   filter: raw.scope.filter,
-  accountsScanned: raw.scope.accounts.length,
-  accountsWithPosts: AUTHORS.filter((a) => a.items.length > 0).length,
+  sourcesScanned: scanned.length || entries.size,
+  sourcesWithPosts: FEEDS.filter((f) => f.items.length > 0).length,
 };

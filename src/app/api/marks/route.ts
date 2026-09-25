@@ -18,9 +18,9 @@ const TTL_SECONDS = TTL_DAYS * 24 * 60 * 60;
 const key = (sub: string, kind: Kind) => `digest:${sub}:${kind}`;
 
 const isKind = (k: unknown): k is Kind => KINDS.includes(k as Kind);
-const POST_URL = /^https:\/\/(x|twitter)\.com\//;
+/** Marks are keyed by item URL, and items can now come from any https source. */
 const isPostUrl = (u: unknown): u is string =>
-  typeof u === "string" && u.length <= 300 && POST_URL.test(u);
+  typeof u === "string" && u.length <= 300 && u.startsWith("https://");
 
 const unauthorized = () => NextResponse.json({ error: "unauthorized" }, { status: 401 });
 

@@ -17,7 +17,7 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-code" });
  */
 export function generateMetadata(): Metadata {
   const title = `${META.window.start.slice(0, 10)} – ${META.window.end.slice(0, 10)}`;
-  const description = `${ITEMS.length} posts from ${META.accountsWithPosts} of ${META.accountsScanned} accounts. ${META.filter}`;
+  const description = `${ITEMS.length} posts from ${META.sourcesWithPosts} of ${META.sourcesScanned} sources. ${META.filter}`;
   return { title, description, openGraph: { title, description } };
 }
 

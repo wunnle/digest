@@ -139,6 +139,16 @@ const clock = (s: number) => {
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
 };
 
+/** "x.com" → "X", "www.simonwillison.net" → "simonwillison.net". */
+const host = (url: string) => {
+  try {
+    const h = new URL(url).hostname.replace(/^www\./, "");
+    return h === "x.com" || h === "twitter.com" ? "X" : h;
+  } catch {
+    return "source";
+  }
+};
+
 /** Stop a click inside the card from also toggling the card's read state. */
 const swallow = (e: React.MouseEvent) => e.stopPropagation();
 
@@ -526,7 +536,7 @@ export function Card({
           target="_blank"
           rel="noreferrer"
           onClick={swallow}
-          title="Open on X"
+          title={`Open on ${host(item.url)}`}
           className="flex shrink-0 items-center gap-0.5 transition hover:text-neutral-200"
         >
           {shortDay(item.publishedAt)} {timeLabel(item.publishedAt)}
@@ -552,12 +562,24 @@ export function Card({
         )}
       </div>
 
+      {/* Articles, videos and stories lead with their headline; the text
+          under it is then a summary, so it steps back a shade. */}
+      {item.title && (
+        <p className="mt-2.5 text-[15px] font-medium leading-snug text-white">{item.title}</p>
+      )}
+
       {/* The post as written. `whitespace-pre-line` because many of these
           carry their own line breaks — lists and prompts that collapse into
           mush without them. */}
-      <p className="mt-2.5 whitespace-pre-line break-words text-[15px] leading-relaxed text-neutral-100">
-        {linkify(item.text)}
-      </p>
+      {item.text && (
+        <p
+          className={`whitespace-pre-line break-words text-[15px] leading-relaxed ${
+            item.title ? "mt-1.5 text-neutral-300" : "mt-2.5 text-neutral-100"
+          }`}
+        >
+          {linkify(item.text)}
+        </p>
+      )}
 
       <MediaBlock media={item.media} onOpen={onOpenMedia} />
 
