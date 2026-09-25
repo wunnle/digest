@@ -8,15 +8,13 @@ export const SOURCE_TYPES = ["x", "bluesky", "rss", "youtube", "hn", "web"] as c
 export type SourceType = (typeof SOURCE_TYPES)[number];
 
 export type Source = {
-  /** `${type}:${target}`, lowercased — stable across edits to label or note. */
+  /** `${type}:${target}`, lowercased — stable across edits to the label. */
   id: string;
   type: SourceType;
   /** A handle for x/bluesky/youtube, an https URL for rss/web, "front" or a query for hn. */
   target: string;
   /** Display name. Optional — the agent can fill it in from the source itself. */
   label?: string;
-  /** Free-text instruction to the agent, e.g. "only posts about evals". */
-  note?: string;
   /** Paused sources stay in the list but aren't scraped. */
   enabled: boolean;
   addedAt: string;
@@ -25,14 +23,12 @@ export type Source = {
 export type SourcesDoc = {
   version: 1;
   updatedAt: string;
-  /** The digest-wide inclusion rule the agent applies to every source. */
-  filter: string;
   /** How far back each run looks. */
   windowHours: number;
   sources: Source[];
 };
 
-export const LIMITS = { sources: 200, note: 500, label: 80, filter: 1000 } as const;
+export const LIMITS = { sources: 200, label: 80 } as const;
 
 /** Per-type copy for the form, and how a target is checked. */
 export const TYPE_INFO: Record<
@@ -103,7 +99,6 @@ export function parseDoc(input: unknown, now = new Date().toISOString()): Source
   if (!input || typeof input !== "object") throw new Error("Expected an object");
   const d = input as Record<string, unknown>;
 
-  const filter = optionalString(d.filter, LIMITS.filter) ?? "";
   const windowHours = Number(d.windowHours);
   if (!Number.isInteger(windowHours) || windowHours < 1 || windowHours > 24 * 14) {
     throw new Error("windowHours must be a whole number of hours, 1–336");
@@ -129,7 +124,6 @@ export function parseDoc(input: unknown, now = new Date().toISOString()): Source
         type: r.type,
         target: cleaned.target,
         label: optionalString(r.label, LIMITS.label),
-        note: optionalString(r.note, LIMITS.note),
         enabled: r.enabled !== false,
         addedAt: typeof r.addedAt === "string" ? r.addedAt : now,
       };
@@ -138,5 +132,5 @@ export function parseDoc(input: unknown, now = new Date().toISOString()): Source
     }
   });
 
-  return { version: 1, updatedAt: now, filter, windowHours, sources };
+  return { version: 1, updatedAt: now, windowHours, sources };
 }

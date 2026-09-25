@@ -6,7 +6,7 @@
  * fields and nothing else.
  */
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { Item, Media, Quote } from "./data";
 
 type Kind = "read" | "liked";
@@ -123,6 +123,78 @@ export const shortDay = (iso: string) => {
   const d = new Date(iso);
   const month = d.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" });
   return `${d.getUTCDate()} ${month}`;
+};
+
+const PREF_EVENT = "digest:pref";
+
+/**
+ * An on/off viewing preference remembered in this browser — not worth a
+ * round trip to the server. False while prerendering, and whenever storage is
+ * blocked, so the page always renders.
+ */
+export function usePreference(key: string): [boolean, (on: boolean) => void] {
+  const on = useSyncExternalStore(
+    (tick) => {
+      // `storage` covers other tabs; the custom event covers this one.
+      window.addEventListener("storage", tick);
+      window.addEventListener(PREF_EVENT, tick);
+      return () => {
+        window.removeEventListener("storage", tick);
+        window.removeEventListener(PREF_EVENT, tick);
+      };
+    },
+    () => {
+      try {
+        return localStorage.getItem(key) === "1";
+      } catch {
+        return false;
+      }
+    },
+    () => false,
+  );
+  const set = useCallback(
+    (next: boolean) => {
+      try {
+        if (next) localStorage.setItem(key, "1");
+        else localStorage.removeItem(key);
+      } catch {
+        // Private mode or a full quota: the toggle just won't be remembered.
+      }
+      window.dispatchEvent(new Event(PREF_EVENT));
+    },
+    [key],
+  );
+  return [on, set];
+}
+
+/** When this build was made — which, with a build per deploy, is the last deploy. */
+export const BUILT_AT = process.env.BUILT_AT ?? "";
+
+const subscribeMinute = (tick: () => void) => {
+  const id = setInterval(tick, 60_000);
+  return () => clearInterval(id);
+};
+
+/**
+ * The current minute, or null while prerendering and hydrating — the server
+ * can't know when the page will be read, so anything relative waits for the
+ * client instead of mismatching.
+ */
+export function useMinute(): number | null {
+  return useSyncExternalStore(
+    subscribeMinute,
+    () => Math.floor(Date.now() / 60_000),
+    () => null,
+  );
+}
+
+/** "just now", "12m ago", "3h ago", "2d ago". */
+export const ago = (iso: string, minute: number) => {
+  const m = Math.max(0, minute - Math.floor(new Date(iso).getTime() / 60_000));
+  if (m < 1) return "just now";
+  if (m < 60) return `${m}m ago`;
+  if (m < 60 * 24) return `${Math.floor(m / 60)}h ago`;
+  return `${Math.floor(m / (60 * 24))}d ago`;
 };
 
 /** "04:57" — the payload derives these from status IDs, so keep them exact. */
@@ -511,18 +583,20 @@ export function Card({
       role={onToggleRead ? "button" : undefined}
       tabIndex={onToggleRead ? 0 : undefined}
       aria-pressed={onToggleRead ? read : undefined}
-      className={`mb-4 break-inside-avoid rounded-2xl border p-5 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
+      className={`relative mb-4 break-inside-avoid rounded-2xl border p-5 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
         onToggleRead ? "cursor-pointer" : ""
       } ${
-        // Liked posts keep a warm tint, which survives the read fade — a post
-        // can be both saved and already read.
+        // Liked posts have to be findable at a glance in a column of cards:
+        // a rose edge down the left, a warmer fill and a soft glow — not just
+        // a tint that disappears next to the ambient blue.
         liked
-          ? "border-rose-400/30 bg-rose-500/[0.08] hover:border-rose-400/50"
+          ? "border-rose-400/40 bg-rose-500/[0.11] shadow-[0_10px_40px_-18px_rgba(244,63,94,0.55)] before:absolute before:inset-y-4 before:left-0 before:w-[3px] before:rounded-r-full before:bg-rose-400 hover:border-rose-400/60"
           : "border-white/10 bg-white/[0.03] hover:border-white/20"
       } ${
         // Read posts recede but stay legible, and come back on hover so a
-        // mis-click isn't a dead end.
-        read ? "opacity-35 hover:opacity-100" : ""
+        // mis-click isn't a dead end. A liked post fades less — it was kept
+        // on purpose.
+        read ? (liked ? "opacity-60 hover:opacity-100" : "opacity-35 hover:opacity-100") : ""
       }`}
     >
       {/* Who and when, kept quiet — the post is the point. */}

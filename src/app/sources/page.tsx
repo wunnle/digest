@@ -7,7 +7,6 @@ import { META } from "../data";
 import { shortDay, timeLabel, useMarks } from "../ui";
 import {
   cleanTarget,
-  LIMITS,
   SOURCE_TYPES,
   sourceId,
   TYPE_INFO,
@@ -162,19 +161,7 @@ export default function SourcesPage() {
 
             <section className="mt-10">
               <h2 className="text-xs uppercase tracking-wider text-neutral-500">Digest</h2>
-              <div className="mt-2 space-y-4 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                <label className="block">
-                  <span className="text-xs text-neutral-500">
-                    What to keep — applied to every source
-                  </span>
-                  <textarea
-                    value={doc.filter}
-                    maxLength={LIMITS.filter}
-                    onChange={(e) => update((d) => ({ ...d, filter: e.target.value }))}
-                    rows={3}
-                    className="mt-1.5 block w-full resize-y rounded-lg bg-black/30 px-3 py-2 text-sm text-neutral-200 ring-1 ring-inset ring-white/10 placeholder:text-neutral-600 focus:outline-none focus:ring-white/30"
-                  />
-                </label>
+              <div className="mt-2 rounded-xl border border-white/10 bg-white/[0.02] p-4">
                 <label className="flex items-center gap-3">
                   <span className="text-xs text-neutral-500">Look back</span>
                   <input
@@ -233,7 +220,6 @@ const input =
 function AddSource({ existing, onAdd }: { existing: Source[]; onAdd: (s: Source) => void }) {
   const [type, setType] = useState<SourceType>("x");
   const [target, setTarget] = useState("");
-  const [note, setNote] = useState("");
   const [error, setError] = useState<string | null>(null);
 
   const submit = (e: React.FormEvent) => {
@@ -246,12 +232,10 @@ function AddSource({ existing, onAdd }: { existing: Source[]; onAdd: (s: Source)
       id,
       type,
       target: cleaned.target,
-      note: note.trim() || undefined,
       enabled: true,
       addedAt: new Date().toISOString(),
     });
     setTarget("");
-    setNote("");
     setError(null);
   };
 
@@ -288,14 +272,6 @@ function AddSource({ existing, onAdd }: { existing: Source[]; onAdd: (s: Source)
           Add
         </button>
       </div>
-      <input
-        value={note}
-        onChange={(e) => setNote(e.target.value)}
-        maxLength={LIMITS.note}
-        placeholder="Note for the agent (optional) — e.g. only posts about evals"
-        aria-label="Note"
-        className={`${input} mt-2 w-full`}
-      />
       {error && <p className="mt-1.5 text-xs text-rose-300/90">{error}</p>}
     </form>
   );
@@ -312,7 +288,7 @@ function SourceRow({
 }) {
   const handleLike = TYPE_INFO[s.type].target === "handle";
   return (
-    <li className={`flex items-start gap-3 px-4 py-3 ${s.enabled ? "" : "opacity-50"}`}>
+    <li className={`flex items-center gap-3 px-4 py-3 ${s.enabled ? "" : "opacity-50"}`}>
       <div className="min-w-0 flex-1">
         <p className="flex flex-wrap items-baseline gap-x-2">
           <span className="truncate text-sm text-neutral-100">
@@ -320,15 +296,6 @@ function SourceRow({
           </span>
           {s.label && <span className="text-xs text-neutral-500">{s.label}</span>}
         </p>
-        {/* Inline, borderless until focused — most rows never need a note. */}
-        <input
-          value={s.note ?? ""}
-          onChange={(e) => onPatch({ note: e.target.value || undefined })}
-          maxLength={LIMITS.note}
-          placeholder="Add a note for the agent"
-          aria-label={`Note for ${s.target}`}
-          className="mt-0.5 w-full rounded bg-transparent text-xs text-neutral-400 placeholder:text-neutral-700 focus:bg-black/30 focus:px-1.5 focus:py-0.5 focus:outline-none"
-        />
       </div>
 
       <button
@@ -337,7 +304,7 @@ function SourceRow({
         aria-label={s.enabled ? "Pause" : "Resume"}
         title={s.enabled ? "Pause" : "Resume"}
         onClick={() => onPatch({ enabled: !s.enabled })}
-        className={`relative mt-0.5 h-5 w-9 shrink-0 rounded-full transition ${
+        className={`relative h-5 w-9 shrink-0 rounded-full transition ${
           s.enabled ? "bg-emerald-500/70" : "bg-white/10"
         }`}
       >
@@ -352,7 +319,7 @@ function SourceRow({
         onClick={onRemove}
         aria-label={`Remove ${s.target}`}
         title="Remove"
-        className="-m-1 mt-0 shrink-0 rounded-full p-1 text-neutral-600 transition hover:bg-white/5 hover:text-rose-300"
+        className="-m-1 shrink-0 rounded-full p-1 text-neutral-600 transition hover:bg-white/5 hover:text-rose-300"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="h-4 w-4" aria-hidden>
           <path d="m6 6 12 12M18 6 6 18" />

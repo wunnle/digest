@@ -3,7 +3,21 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AccountMenu, SignInButton } from "./account";
 import { FEEDS, ITEMS, META, type Media } from "./data";
-import { Card, HeartIcon, Lightbox, rangeLabel, shortDay, timeLabel, useMarks } from "./ui";
+import {
+  ago,
+  BUILT_AT,
+  Card,
+  HeartIcon,
+  Lightbox,
+  rangeLabel,
+  shortDay,
+  timeLabel,
+  useMarks,
+  useMinute,
+  usePreference,
+} from "./ui";
+
+const stampUtc = (iso: string) => `${shortDay(iso)} ${timeLabel(iso)} UTC`;
 
 /** Sources that contributed nothing can't narrow the feed, so they get no chip. */
 const CHIPS = FEEDS.filter((f) => f.items.length > 0);
@@ -13,14 +27,35 @@ export default function DigestPage() {
   const [active, setActive] = useState<string[]>([]);
 
   const { status, email, read, liked, toggleRead, toggleLike, clearRead } = useMarks();
+  const minute = useMinute();
 
   /**
    * Marking needs a signed-in user. Signed out, the handlers are withheld and
    * the card renders as plain reading — no click target, no heart.
    */
   const canMark = status === "signedIn";
-  const onToggleRead = canMark ? toggleRead : undefined;
   const onToggleLike = canMark ? toggleLike : undefined;
+
+  /** Hide posts already read. Remembered per browser. */
+  const [hideRead, setHideRead] = usePreference("digest:hideRead");
+  /**
+   * Posts marked read while hiding is on stay on screen, faded, until the next
+   * toggle or reload — a card vanishing from under the cursor reads as a
+   * misclick, and would leave no way to undo it.
+   */
+  const [keep, setKeep] = useState<ReadonlySet<string>>(new Set());
+  const markRead = useCallback(
+    (url: string) => {
+      if (hideRead) setKeep((k) => new Set(k).add(url));
+      toggleRead(url);
+    },
+    [hideRead, toggleRead],
+  );
+  const onToggleRead = canMark ? markRead : undefined;
+  const flipHideRead = () => {
+    setHideRead(!hideRead);
+    setKeep(new Set());
+  };
 
   /** Set by the OAuth callback when it turns a sign-in away. Read after mount
       so the static page doesn't depend on the query. */
@@ -55,9 +90,11 @@ export default function DigestPage() {
     () =>
       ITEMS.filter(
         (i) =>
-          (active.length === 0 || active.includes(i.sourceId)) && (!likedOnly || liked.has(i.url)),
+          (active.length === 0 || active.includes(i.sourceId)) &&
+          (!likedOnly || liked.has(i.url)) &&
+          (!hideRead || !read.has(i.url) || keep.has(i.url)),
       ),
-    [active, likedOnly, liked],
+    [active, likedOnly, liked, hideRead, read, keep],
   );
 
   /** Counted over the whole payload, not the filtered view, so the numbers
@@ -86,9 +123,13 @@ export default function DigestPage() {
             <h1 className="text-lg font-semibold tracking-tight text-white">Digest</h1>
             <p
               className="truncate text-sm text-neutral-500"
-              title={`Updated ${shortDay(META.generatedAt)} ${timeLabel(META.generatedAt)} UTC`}
+              title={`Collected ${stampUtc(META.generatedAt)} · deployed ${stampUtc(BUILT_AT)}`}
             >
               {rangeLabel(META.window.start, META.window.end)} · {ITEMS.length} posts
+              {/* Relative once the client knows the time; the exact stamp until then. */}
+              {BUILT_AT && (
+                <> · updated {minute === null ? stampUtc(BUILT_AT) : ago(BUILT_AT, minute)}</>
+              )}
             </p>
           </div>
 
@@ -146,15 +187,22 @@ export default function DigestPage() {
             </button>
           )}
 
-          {/* Without this, marking everything read leaves a page of faded cards
-              and no way back. */}
-          {readCount > 0 && (
-            <button
-              onClick={clearRead}
-              className="ml-auto shrink-0 px-2 py-1 text-xs text-neutral-600 transition hover:text-neutral-300"
-            >
-              {readCount} read · reset
-            </button>
+          {/* Only once something's been read — before that, there's nothing to hide. */}
+          {canMark && readCount > 0 && (
+            <div className="ml-auto flex shrink-0 items-center gap-1">
+              <button onClick={flipHideRead} aria-pressed={hideRead} className={chip(hideRead)}>
+                Hide read
+                <span className="tabular-nums text-neutral-600">{readCount}</span>
+              </button>
+              {/* Without this, marking everything read leaves a page of faded
+                  cards and no way back. */}
+              <button
+                onClick={clearRead}
+                className="shrink-0 px-2 py-1 text-xs text-neutral-600 transition hover:text-neutral-300"
+              >
+                Reset
+              </button>
+            </div>
           )}
         </div>
 
@@ -180,6 +228,19 @@ export default function DigestPage() {
             />
           ))}
         </div>
+
+        {/* Hiding read posts can empty the page; say so, rather than show nothing. */}
+        {shown.length === 0 && hideRead && (
+          <div className="mt-16 text-center text-sm text-neutral-500">
+            <p>All caught up.</p>
+            <button
+              onClick={flipHideRead}
+              className="mt-2 text-neutral-400 underline underline-offset-4 transition hover:text-white"
+            >
+              Show read posts
+            </button>
+          </div>
+        )}
 
         {zoom && (
           <Lightbox

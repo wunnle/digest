@@ -31,7 +31,7 @@ function isAgent(req: NextRequest) {
  * the payload it wrote — so the first run after this ships sees no change.
  */
 function seed(): SourcesDoc {
-  const scope = payload.scope as { accounts?: string[]; sources?: Source[]; filter?: string };
+  const scope = payload.scope as { accounts?: string[]; sources?: Source[] };
   const addedAt = payload.generated_at;
   const sources: Source[] =
     scope.sources ??
@@ -43,21 +43,18 @@ function seed(): SourcesDoc {
       enabled: true,
       addedAt,
     }));
-  return {
-    version: 1,
-    updatedAt: addedAt,
-    filter: scope.filter ?? "",
-    windowHours: payload.window.duration_hours,
-    sources,
-  };
+  return parseDoc({ windowHours: payload.window.duration_hours, sources }, addedAt);
 }
 
 export async function GET(req: NextRequest) {
   if (!isAgent(req) && !(await readSession(req))) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401, headers: noStore });
   }
-  const doc = await redis().get<SourcesDoc>(KEY);
-  return NextResponse.json(doc ?? seed(), { headers: noStore });
+  const stored = await redis().get<SourcesDoc>(KEY);
+  // Re-parsed on the way out, so fields since dropped from the shape (notes,
+  // the filter) never reach the agent even if an older save still holds them.
+  const doc = stored ? parseDoc(stored, stored.updatedAt) : seed();
+  return NextResponse.json(doc, { headers: noStore });
 }
 
 export async function PUT(req: NextRequest) {
