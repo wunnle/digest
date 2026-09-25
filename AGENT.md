@@ -82,7 +82,8 @@ One entry per source:
         { "type": "photo", "url": "https://…", "width": 1200, "height": 800 },
         { "type": "video", "url": "https://….mp4", "thumbnail_url": "https://….jpg", "width": 1280, "height": 720, "duration": 42.5 }
       ],
-      "quote_tweet": null            // x only: the quoted post, or null (shape below)
+      "quote_tweet": null,           // x only: the quoted post, or null (shape below)
+      "author_reply": null           // x only: first direct reply when written by this post's author
     }
   ]
 }
@@ -99,6 +100,8 @@ A quoted post goes in `quote_tweet`, never in `text`:
   "media": []
 }
 ```
+
+When the first visible direct reply to an X post is written by the original post's author, capture it in `author_reply` using the same shape as `quote_tweet`. Otherwise use `null` or omit the field. Do not skip another account's reply to find a later author reply, and never merge reply text into the original `text`.
 
 ### What `text` must be
 
