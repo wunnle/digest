@@ -1,0 +1,430 @@
+{
+  "generated_at": "2026-09-25T10:18:47Z",
+  "window": {
+    "start": "2026-09-23T10:18:47Z",
+    "end": "2026-09-25T10:18:47Z",
+    "timezone": "UTC",
+    "duration_hours": 48
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      }
+    ],
+    "filter": "AI and software-development posts with concrete tools, workflows, evidence, experiments, or useful criticism",
+    "source": "Logged-out public X profile timelines and the enabled YouTube channel videos",
+    "note": "X text was copied from visible post text only; quoted posts remain nested. YouTube was limited to the five newest visible videos before applying the 48-hour window."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-09-24T00:22:32.554Z",
+          "url": "https://x.com/simonw/status/2102916558712705427",
+          "topic": "MCP and voice interfaces",
+          "text": "I just had a voice conversation with the Datasette backup of my blog via datasette-mcp, which you can now talk to using the ChatGPT iPhone app",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/reach_vb/status/2102822338702307757",
+            "published_at": "2026-09-23T18:08:08Z",
+            "author": {
+              "name": "Vaibhav (VB) Srivastav",
+              "handle": "reach_vb"
+            },
+            "text": "Massive QoL update: ChatGPT Voice can now use plugins AND run on GPT-6 Astra, Sol & Luna, directly in ChatGPT Work on web and mobile.\n\nYour email, calendar, Slack + docs, decks, sites and spreadsheets, just by talking.\n\nRolling out now, enjoy!!",
+            "media": []
+          }
+        },
+        {
+          "published_at": "2026-09-23T20:45:19.125Z",
+          "url": "https://x.com/simonw/status/2102861892549279922",
+          "topic": "Gemini TTS playground",
+          "text": "The new Gemini 3.8 TTS models are super-cheap and can generate conversations between multiple voices (from 2,000+, or you can clone your own) - I built a little UI for it, then had Claude knock up a script where two pelicans debate moving to Pacifica Pier https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+          "media": [],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-09-23T21:38:50.475Z",
+          "url": "https://x.com/mitsuhiko/status/2102875361927196678",
+          "topic": "AI-driven language adoption",
+          "text": "I know that DHH made many of us buy macs and TextMate back in the day. Maybe today he minted a bunch of new Rust programmers.",
+          "media": [],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T18:00:32.595Z",
+          "url": "https://x.com/mitsuhiko/status/2102820425436963165",
+          "topic": "Cache warming",
+          "text": "Love me my cache warming.",
+          "media": [],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-09-23T18:21:07.228Z",
+          "url": "https://x.com/badlogicgames/status/2102825603863072965",
+          "topic": "Rapid game prototyping",
+          "text": "my kind of slop",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/christofsalis/status/2102710421425934670",
+            "published_at": "2026-09-23T10:43:25Z",
+            "author": {
+              "name": "Christof Salis",
+              "handle": "christofsalis"
+            },
+            "text": "Ok so @Dimillian inspired me to spend a couple hours last night to make a broforce-esque game with Astra. \n\nYou can be @steipete or @badlogicgames or @theo or even @thsottiaux  \n\nTry it: https://evizero.github.io/Tokenbros/",
+            "media": [
+              {
+                "type": "video",
+                "url": "https://video.twimg.com/amplify_video/2102709543436218368/vid/avc1/3024x1664/ToTG77nfEZvQ0lf5.mp4?tag=29",
+                "width": 3024,
+                "height": 1664,
+                "thumbnail_url": "https://pbs.twimg.com/amplify_video_thumb/2102709543436218368/img/cp5Qoqdxjp0jsS91.jpg",
+                "format": "video/mp4",
+                "duration": 20.753
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-09-23T22:34:18.303Z",
+          "url": "https://x.com/steipete/status/2102889319849713698",
+          "topic": "Claude Code AGENTS.md failure mode",
+          "text": "Huh. There is a catch. https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+          "media": [],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-09-23T14:01:29.987Z",
+          "url": "https://x.com/thorstenball/status/2102760268178891180",
+          "topic": "Agent harness quality",
+          "text": "\"the best harness in the market\"",
+          "media": [],
+          "quote_tweet": {
+            "url": "https://x.com/parcadei/status/2102750132005470242",
+            "published_at": "2026-09-23T13:21:13Z",
+            "author": {
+              "name": "dei",
+              "handle": "parcadei"
+            },
+            "text": "@AmpCode is the best harness in the market, there's no point even doing a tier list",
+            "media": []
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [
+        {
+          "published_at": "2026-09-24T03:03:49.885Z",
+          "url": "https://x.com/geoffreylitt/status/2102957148380750095",
+          "topic": "Organizing AI context",
+          "text": "my personal recommendation when people ask me where to put their AI context: docs, skills, memories, etc.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS80J18b0AAid8P.jpg?name=orig",
+              "width": 1344,
+              "height": 840
+            }
+          ],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-09-23T17:08:00.351Z",
+          "url": "https://x.com/HamelHusain/status/2102807203967365549",
+          "topic": "AI evals guide",
+          "text": "This is the most valuable free resource we've created on AI Evals 🎉 (not exaggerating!) \n\nI organized our public materials into this guide.  It allows you to find answers to your eval problems w/o searching  aimlessly. \n\nHumans: pick the row that sounds like you.\nAgents: point it at the post\n\nThe material draw on 60+ hours of office hours from our Evals course, where @sh_reya  and I have taught 5k engineers and PMs Evals.\n\nWe add new material often, with 15 FAQs added in the last two weeks. Recent additions are marked with a \"New\" badge. You can find all of these and more here: \n\nhttps://hamel.dev/blog/posts/evals-faq/#how-to-use-this-faq",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HSyUUecacAAYFyx.png?name=orig",
+              "width": 800,
+              "height": 795
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T17:00:04.306Z",
+          "url": "https://x.com/HamelHusain/status/2102805207289593987",
+          "topic": "Evaluation fundamentals",
+          "text": "Q: What are AI evals?\n\nA: Tests that tell you whether an AI system is doing what you want. Model benchmarks and product evals answer different questions.\n\nhttps://hamel.dev/blog/posts/evals-faq/what-are-llm-evals.html",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS6qMK5XkAA21KK.jpg?name=orig",
+              "width": 732,
+              "height": 1245
+            }
+          ],
+          "quote_tweet": null
+        },
+        {
+          "published_at": "2026-09-23T13:49:46.686Z",
+          "url": "https://x.com/HamelHusain/status/2102757318320648242",
+          "topic": "Bot-generated reply pollution",
+          "text": "Now the bots are replying to each other.  \n\nIt’s a firehose of slop",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HS5-o03bcAAl55W.jpg?name=orig",
+              "width": 1179,
+              "height": 1401
+            }
+          ],
+          "quote_tweet": null
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "note": "nothing relevant in the 48-hour window",
+      "items": []
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "note": "nothing relevant in the 48-hour window",
+      "items": []
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "note": "nothing relevant in the 48-hour window",
+      "items": []
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "note": "nothing relevant in the 48-hour window",
+      "items": []
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "note": "nothing relevant in the 48-hour window",
+      "items": []
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "note": "nothing relevant in the 48-hour window",
+      "items": []
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "note": "nothing relevant in the 48-hour window",
+      "items": []
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "name": "Theo - t3.gg",
+      "items": [
+        {
+          "published_at": "2026-09-25T00:18:00Z",
+          "url": "https://www.youtube.com/watch?v=ejjBbaq9RmY",
+          "topic": "Using Opus 5.5 effectively",
+          "title": "Getting the most out of Opus 5.5",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi/ejjBbaq9RmY/hq720.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          ]
+        },
+        {
+          "published_at": "2026-09-24T10:18:00Z",
+          "url": "https://www.youtube.com/watch?v=jgGyX7MPPVg",
+          "topic": "AI and software development",
+          "title": "Wow.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi/jgGyX7MPPVg/hq720_custom_1.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
