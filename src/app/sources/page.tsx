@@ -7,6 +7,7 @@ import { META } from "../data";
 import { shortDay, timeLabel, useMarks } from "../ui";
 import {
   cleanTarget,
+  detectSource,
   SOURCE_TYPES,
   sourceId,
   TYPE_INFO,
@@ -262,6 +263,9 @@ function AddSource({ existing, onAdd }: { existing: Source[]; onAdd: (s: Source)
           onChange={(e) => {
             setTarget(e.target.value);
             setError(null);
+            // Pick the type from what was pasted; the select stays as an override.
+            const found = detectSource(e.target.value);
+            if (found) setType(found.type);
           }}
           placeholder={TYPE_INFO[type].placeholder}
           aria-label="Handle or URL"

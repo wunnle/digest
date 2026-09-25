@@ -35,9 +35,9 @@ export const TYPE_INFO: Record<
   SourceType,
   { label: string; placeholder: string; target: "handle" | "url" | "hn" }
 > = {
-  x: { label: "X", placeholder: "@handle", target: "handle" },
-  bluesky: { label: "Bluesky", placeholder: "@name.bsky.social", target: "handle" },
-  youtube: { label: "YouTube", placeholder: "@channel", target: "handle" },
+  x: { label: "X", placeholder: "@handle, or an x.com link", target: "handle" },
+  bluesky: { label: "Bluesky", placeholder: "@name.bsky.social, or a bsky.app link", target: "handle" },
+  youtube: { label: "YouTube", placeholder: "@channel, or a youtube.com link", target: "handle" },
   rss: { label: "RSS", placeholder: "https://example.com/feed.xml", target: "url" },
   web: { label: "Web", placeholder: "https://example.com/blog", target: "url" },
   hn: { label: "HN", placeholder: "front, or a search query", target: "hn" },
@@ -50,8 +50,62 @@ export const sourceId = (type: SourceType, target: string) =>
   `${type}:${target}`.toLowerCase();
 
 // Covers X (`_sholtodouglas`), Bluesky (`name.bsky.social`, custom domains)
-// and YouTube (`@channel`) handles.
-const HANDLE = /^[A-Za-z0-9_][A-Za-z0-9_.-]{0,99}$/;
+// and YouTube handles, which may use any script (`@日本語チャンネル`) — and
+// YouTube's legacy `UC…` channel ids, which fit the same pattern.
+const HANDLE = /^[\p{L}\p{N}_][\p{L}\p{N}_.\-\u00B7]{0,99}$/u;
+
+/** Hosts whose profile URLs name a source outright, and how to read them. */
+const PROFILE_HOSTS: [RegExp, SourceType, (path: string[]) => string | undefined][] = [
+  // x.com/simonw — but not x.com/home, x.com/i/…, x.com/search
+  [/^(x|twitter)\.com$/, "x", ([h]) => (h && !["home", "i", "search", "explore"].includes(h) ? h : undefined)],
+  // bsky.app/profile/name.bsky.social
+  [/^bsky\.app$/, "bluesky", ([p, h]) => (p === "profile" ? h : undefined)],
+  // youtube.com/@name, /channel/UC…, /c/name, /user/name
+  [
+    /^youtube\.com$/,
+    "youtube",
+    ([a, b]) =>
+      a?.startsWith("@") ? a.slice(1) : ["channel", "c", "user"].includes(a ?? "") ? b : undefined,
+  ],
+  // news.ycombinator.com — the front page
+  [/^news\.ycombinator\.com$/, "hn", () => "front"],
+];
+
+/**
+ * Works out what kind of source a pasted link or handle is, so the form can
+ * pick the type itself. Null when it can't tell — a bare `@name` could be on
+ * any platform, so that keeps whatever type is selected.
+ */
+export function detectSource(raw: string): { type: SourceType; target: string } | null {
+  const t = raw.trim();
+  // A Bluesky handle is recognisable on its own.
+  if (/^@?[\w-]+\.bsky\.social$/i.test(t)) return { type: "bluesky", target: t.replace(/^@/, "") };
+
+  // Links, with or without the scheme for the hosts above.
+  const withScheme = /^https?:\/\//i.test(t)
+    ? t
+    : /^(www\.|m\.)?(x|twitter|bsky|youtube|news\.ycombinator)\.(com|app)\//i.test(t)
+      ? `https://${t}`
+      : null;
+  if (!withScheme) return null;
+  let u: URL;
+  try {
+    u = new URL(withScheme);
+  } catch {
+    return null;
+  }
+  const host = u.hostname.replace(/^(www|m)\./, "").toLowerCase();
+  const path = u.pathname.split("/").filter(Boolean).map(decodeURIComponent);
+  for (const [re, type, read] of PROFILE_HOSTS) {
+    if (!re.test(host)) continue;
+    const target = read(path);
+    return target ? { type, target } : null;
+  }
+  if (u.protocol !== "https:") return null;
+  // Anything feed-shaped is a feed; any other page is a page.
+  const feed = /\.(xml|rss|atom)$|\/(feed|rss|atom)(\/|$)|[?&]format=rss/i.test(u.pathname + u.search);
+  return { type: feed ? "rss" : "web", target: u.toString() };
+}
 
 /**
  * Tidies a target the way a person would type it and checks it against its
@@ -65,8 +119,15 @@ export function cleanTarget(
   if (!t) return { error: "Required" };
   switch (TYPE_INFO[type].target) {
     case "handle": {
-      const h = t.replace(/^@/, "");
-      return HANDLE.test(h) ? { target: h } : { error: "Not a valid handle" };
+      // A pasted profile URL for this platform is as good as the handle.
+      const found = detectSource(t);
+      const h = found?.type === type ? found.target : t.replace(/^@/, "");
+      if (HANDLE.test(h)) return { target: h };
+      return {
+        error: found
+          ? `That link is for ${TYPE_INFO[found.type].label} — switch the type`
+          : "Not a valid handle",
+      };
     }
     case "url": {
       try {
