@@ -545,6 +545,87 @@ export function HeartIcon({ filled, className = "h-4 w-4" }: { filled?: boolean;
  * and buttons of its own, which an anchor can't. The timestamp is the link to
  * the post instead.
  */
+/** Title, text, media and quote — the post itself, shared by the card and focus view. */
+function PostBody({
+  item,
+  onOpenMedia,
+  large = false,
+}: {
+  item: Item;
+  onOpenMedia?: OpenMedia;
+  large?: boolean;
+}) {
+  const size = large ? "text-[17px]" : "text-[15px]";
+  return (
+    <>
+      {/* Articles, videos and stories lead with their headline; the text
+          under it is then a summary, so it steps back a shade. */}
+      {item.title && (
+        <p className={`mt-2.5 ${large ? "text-xl" : "text-[15px]"} font-medium leading-snug text-white`}>
+          {item.title}
+        </p>
+      )}
+
+      {/* The post as written. `whitespace-pre-line` because many of these
+          carry their own line breaks — lists and prompts that collapse into
+          mush without them. */}
+      {item.text && (
+        <p
+          className={`whitespace-pre-line break-words ${size} leading-relaxed ${
+            item.title ? "mt-1.5 text-neutral-300" : "mt-2.5 text-neutral-100"
+          }`}
+        >
+          {linkify(item.text)}
+        </p>
+      )}
+
+      <MediaBlock media={item.media} onOpen={onOpenMedia} />
+
+      {item.quote && <QuoteBlock quote={item.quote} onOpen={onOpenMedia} />}
+    </>
+  );
+}
+
+function ExpandIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M12 3.5h4.5V8M8 16.5H3.5V12M16.5 3.5 11 9M3.5 16.5 9 11" />
+    </svg>
+  );
+}
+
+/** Who and when, kept quiet — the post is the point. */
+function Byline({ item }: { item: Item }) {
+  return (
+    <>
+      <span className="truncate">{item.name}</span>
+      <span aria-hidden className="text-neutral-700">·</span>
+      {/* Swallows its click: opening the source shouldn't silently flip the
+          card's read state behind the new tab. */}
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noreferrer"
+        onClick={swallow}
+        title={`Open on ${host(item.url)}`}
+        className="flex shrink-0 items-center gap-0.5 transition hover:text-neutral-200"
+      >
+        {shortDay(item.publishedAt)} {timeLabel(item.publishedAt)}
+        <ArrowIcon className="h-3 w-3" />
+      </a>
+    </>
+  );
+}
+
 export function Card({
   item,
   read = false,
@@ -552,6 +633,7 @@ export function Card({
   onToggleRead,
   onToggleLike,
   onOpenMedia,
+  onExpand,
 }: {
   item: Item;
   read?: boolean;
@@ -559,17 +641,29 @@ export function Card({
   onToggleRead?: (url: string) => void;
   onToggleLike?: (url: string) => void;
   onOpenMedia?: OpenMedia;
+  onExpand?: (url: string) => void;
 }) {
+  /**
+   * Read cards come back to full strength on hover, so a mis-click isn't a
+   * dead end — but not while the cursor is still on the card that was just
+   * marked, or marking would look like it did nothing.
+   */
+  const [justMarked, setJustMarked] = useState(false);
+
   const toggle = () => {
     // Selecting text inside a card shouldn't also mark it read — the mouseup
     // that ends a drag still fires a click on the card.
     if (window.getSelection()?.toString()) return;
+    if (!read) setJustMarked(true);
     onToggleRead?.(item.url);
   };
+
+  const fade = liked ? "opacity-60" : "opacity-35";
 
   return (
     <div
       onClick={onToggleRead ? toggle : undefined}
+      onMouseLeave={() => setJustMarked(false)}
       onKeyDown={
         onToggleRead
           ? (e) => {
@@ -583,81 +677,201 @@ export function Card({
       role={onToggleRead ? "button" : undefined}
       tabIndex={onToggleRead ? 0 : undefined}
       aria-pressed={onToggleRead ? read : undefined}
-      className={`relative mb-4 break-inside-avoid rounded-2xl border p-5 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
+      className={`group mb-4 break-inside-avoid rounded-2xl border p-5 transition-[opacity,border-color,background-color] duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
         onToggleRead ? "cursor-pointer" : ""
       } ${
-        // Liked posts have to be findable at a glance in a column of cards:
-        // a rose edge down the left, a warmer fill and a soft glow — not just
-        // a tint that disappears next to the ambient blue.
+        // Liked posts carry the rose in their fill and border, so they're
+        // findable at a glance down a column of cards.
         liked
-          ? "border-rose-400/40 bg-rose-500/[0.11] shadow-[0_10px_40px_-18px_rgba(244,63,94,0.55)] before:absolute before:inset-y-4 before:left-0 before:w-[3px] before:rounded-r-full before:bg-rose-400 hover:border-rose-400/60"
+          ? "border-rose-400/45 bg-rose-500/[0.13] hover:border-rose-400/70"
           : "border-white/10 bg-white/[0.03] hover:border-white/20"
       } ${
-        // Read posts recede but stay legible, and come back on hover so a
-        // mis-click isn't a dead end. A liked post fades less — it was kept
-        // on purpose.
-        read ? (liked ? "opacity-60 hover:opacity-100" : "opacity-35 hover:opacity-100") : ""
+        // A liked post fades less when read — it was kept on purpose.
+        read ? (justMarked ? fade : `${fade} hover:opacity-100`) : ""
       }`}
     >
-      {/* Who and when, kept quiet — the post is the point. */}
       <div className="flex items-center gap-2 text-xs text-neutral-500">
-        <span className="truncate">{item.name}</span>
-        <span aria-hidden className="text-neutral-700">·</span>
-        {/* Swallows its click: opening the source shouldn't silently flip the
-            card's read state behind the new tab. */}
-        <a
-          href={item.url}
-          target="_blank"
-          rel="noreferrer"
-          onClick={swallow}
-          title={`Open on ${host(item.url)}`}
-          className="flex shrink-0 items-center gap-0.5 transition hover:text-neutral-200"
-        >
-          {shortDay(item.publishedAt)} {timeLabel(item.publishedAt)}
-          <ArrowIcon className="h-3 w-3" />
-        </a>
+        <Byline item={item} />
 
-        {/* Swallows its click — liking a post says nothing about whether
-            you've finished reading it. */}
-        {onToggleLike && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onToggleLike(item.url);
-            }}
-            aria-pressed={liked}
-            aria-label={liked ? "Remove like" : "Like"}
-            className={`-m-1 ml-auto shrink-0 rounded-full p-1 transition ${
-              liked ? "text-rose-400" : "text-neutral-600 hover:text-rose-300"
-            }`}
-          >
-            <HeartIcon filled={liked} />
-          </button>
-        )}
+        <span className="ml-auto flex shrink-0 items-center gap-1">
+          {/* Desktop only, and only on hover, so it doesn't add noise to
+              every card. Swallows its click like the other controls. */}
+          {onExpand && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onExpand(item.url);
+              }}
+              aria-label="Expand"
+              title="Expand"
+              className="-m-1 hidden rounded-full p-1 text-neutral-500 opacity-0 transition hover:text-white focus-visible:opacity-100 group-hover:opacity-100 md:block"
+            >
+              <ExpandIcon />
+            </button>
+          )}
+
+          {/* Swallows its click — liking a post says nothing about whether
+              you've finished reading it. */}
+          {onToggleLike && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleLike(item.url);
+              }}
+              aria-pressed={liked}
+              aria-label={liked ? "Remove like" : "Like"}
+              className={`-m-1 rounded-full p-1 transition ${
+                liked ? "text-rose-400" : "text-neutral-600 hover:text-rose-300"
+              }`}
+            >
+              <HeartIcon filled={liked} />
+            </button>
+          )}
+        </span>
       </div>
 
-      {/* Articles, videos and stories lead with their headline; the text
-          under it is then a summary, so it steps back a shade. */}
-      {item.title && (
-        <p className="mt-2.5 text-[15px] font-medium leading-snug text-white">{item.title}</p>
-      )}
+      <PostBody item={item} onOpenMedia={onOpenMedia} />
+    </div>
+  );
+}
 
-      {/* The post as written. `whitespace-pre-line` because many of these
-          carry their own line breaks — lists and prompts that collapse into
-          mush without them. */}
-      {item.text && (
-        <p
-          className={`whitespace-pre-line break-words text-[15px] leading-relaxed ${
-            item.title ? "mt-1.5 text-neutral-300" : "mt-2.5 text-neutral-100"
+/**
+ * One post, large and alone — for reading something long, or a post whose
+ * screenshots need the room. ←/→ move through the posts on the page; Esc
+ * closes. Keys pause while the media lightbox is open over it.
+ */
+export function Focus({
+  item,
+  position,
+  read,
+  liked,
+  paused,
+  onToggleRead,
+  onToggleLike,
+  onOpenMedia,
+  onStep,
+  onClose,
+}: {
+  item: Item;
+  /** "3 / 22" — where this post sits in the current view. */
+  position: string;
+  read: boolean;
+  liked: boolean;
+  paused: boolean;
+  onToggleRead?: (url: string) => void;
+  onToggleLike?: (url: string) => void;
+  onOpenMedia?: OpenMedia;
+  onStep: (dir: -1 | 1) => void;
+  onClose: () => void;
+}) {
+  const panel = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (paused) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowRight") onStep(1);
+      if (e.key === "ArrowLeft") onStep(-1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [paused, onClose, onStep]);
+
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, []);
+
+  // Each post opens at its top.
+  useEffect(() => {
+    panel.current?.scrollTo({ top: 0 });
+  }, [item.url]);
+
+  const pill = "flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm ring-1 ring-inset transition";
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Post by ${item.name}`}
+      onClick={onClose}
+      className="fixed inset-0 z-40 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-8"
+    >
+      {([-1, 1] as const).map((dir) => (
+        <button
+          key={dir}
+          onClick={(e) => {
+            e.stopPropagation();
+            onStep(dir);
+          }}
+          aria-label={dir === 1 ? "Next post" : "Previous post"}
+          className={`absolute top-1/2 hidden -translate-y-1/2 rounded-full p-3 text-neutral-400 ring-1 ring-white/15 transition hover:bg-white/10 hover:text-white md:block ${
+            dir === 1 ? "right-6" : "left-6"
           }`}
         >
-          {linkify(item.text)}
-        </p>
-      )}
+          <ChevronIcon dir={dir} />
+        </button>
+      ))}
 
-      <MediaBlock media={item.media} onOpen={onOpenMedia} />
+      <div
+        ref={panel}
+        onClick={swallow}
+        className={`relative max-h-full w-full max-w-2xl overflow-y-auto rounded-2xl border p-7 shadow-2xl ${
+          liked ? "border-rose-400/45 bg-[#1d1114]" : "border-white/10 bg-neutral-900"
+        }`}
+      >
+        <div className="flex items-center gap-2 text-xs text-neutral-500">
+          <Byline item={item} />
+          <span className="ml-auto flex shrink-0 items-center gap-3">
+            <span className="font-mono tabular-nums text-neutral-600">{position}</span>
+            <button
+              onClick={onClose}
+              aria-label="Close"
+              className="-m-1 rounded-full p-1 text-neutral-400 transition hover:bg-white/10 hover:text-white"
+            >
+              <CloseIcon className="h-4 w-4" />
+            </button>
+          </span>
+        </div>
 
-      {item.quote && <QuoteBlock quote={item.quote} onOpen={onOpenMedia} />}
+        <PostBody item={item} onOpenMedia={onOpenMedia} large />
+
+        {(onToggleLike || onToggleRead) && (
+          <div className="mt-6 flex items-center gap-2 border-t border-white/10 pt-5">
+            {onToggleLike && (
+              <button
+                onClick={() => onToggleLike(item.url)}
+                aria-pressed={liked}
+                className={`${pill} ${
+                  liked
+                    ? "bg-rose-500/20 text-rose-200 ring-rose-400/40"
+                    : "text-neutral-400 ring-white/10 hover:text-rose-300 hover:ring-rose-400/30"
+                }`}
+              >
+                <HeartIcon filled={liked} className="h-3.5 w-3.5" />
+                {liked ? "Liked" : "Like"}
+              </button>
+            )}
+            {onToggleRead && (
+              <button
+                onClick={() => onToggleRead(item.url)}
+                aria-pressed={read}
+                className={`${pill} ${
+                  read
+                    ? "bg-white/10 text-white ring-white/20"
+                    : "text-neutral-400 ring-white/10 hover:text-white hover:ring-white/30"
+                }`}
+              >
+                {read ? "Read" : "Mark read"}
+              </button>
+            )}
+            <span className="ml-auto hidden text-xs text-neutral-600 md:inline">← → to move · Esc to close</span>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import {
   ago,
   BUILT_AT,
   Card,
+  Focus,
   HeartIcon,
   Lightbox,
   rangeLabel,
@@ -96,6 +97,22 @@ export default function DigestPage() {
       ),
     [active, likedOnly, liked, hideRead, read, keep],
   );
+
+  /** The post open in the focus view, by URL, and where it sits in the view. */
+  const [focusUrl, setFocusUrl] = useState<string | null>(null);
+  const focusIndex = focusUrl ? shown.findIndex((i) => i.url === focusUrl) : -1;
+  // Looked up in everything, not just what's shown, so unliking a post under
+  // "Liked only" doesn't yank it out from under the reader.
+  const focusItem = focusUrl ? ITEMS.find((i) => i.url === focusUrl) : undefined;
+  const stepFocus = useCallback(
+    (dir: -1 | 1) => {
+      if (shown.length === 0) return;
+      const from = focusIndex === -1 ? (dir === 1 ? -1 : 0) : focusIndex;
+      setFocusUrl(shown[(from + dir + shown.length) % shown.length].url);
+    },
+    [shown, focusIndex],
+  );
+  const closeFocus = useCallback(() => setFocusUrl(null), []);
 
   /** Counted over the whole payload, not the filtered view, so the numbers
       don't appear to drop when a filter hides posts. */
@@ -225,6 +242,7 @@ export default function DigestPage() {
               onToggleRead={onToggleRead}
               onToggleLike={onToggleLike}
               onOpenMedia={openMedia}
+              onExpand={setFocusUrl}
             />
           ))}
         </div>
@@ -242,6 +260,22 @@ export default function DigestPage() {
           </div>
         )}
 
+        {focusItem && (
+          <Focus
+            item={focusItem}
+            position={focusIndex === -1 ? "–" : `${focusIndex + 1} / ${shown.length}`}
+            read={read.has(focusItem.url)}
+            liked={liked.has(focusItem.url)}
+            paused={zoom !== null}
+            onToggleRead={onToggleRead}
+            onToggleLike={onToggleLike}
+            onOpenMedia={openMedia}
+            onStep={stepFocus}
+            onClose={closeFocus}
+          />
+        )}
+
+        {/* After the focus view, so an image opened from it lands on top. */}
         {zoom && (
           <Lightbox
             media={zoom.media}
