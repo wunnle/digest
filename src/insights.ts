@@ -21,6 +21,5 @@ export type Insights = {
   rows: InsightRow[];
   totalLikes: number;
   totalPosts: number;
-  runs: number;
   since: string | null;
 };

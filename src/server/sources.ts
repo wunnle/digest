@@ -1,5 +1,5 @@
 import "server-only";
-import payload from "../../digest-data.json";
+import payload from "../generated/digest.json";
 import { redis } from "@/server/redis";
 import { parseDoc, sourceId, type Source, type SourcesDoc } from "@/sources";
 

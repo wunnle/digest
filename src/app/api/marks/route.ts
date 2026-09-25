@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { KINDS, likedMetaKey, markKey, runsKey, type Kind } from "@/server/marks";
-import { lookup, RUN_COUNTS, RUN_ID } from "@/server/payload";
+import { KINDS, likedMetaKey, markKey, shownKey, shownSinceKey, type Kind } from "@/server/marks";
+import { lookup, SHOWN } from "@/server/payload";
 import { redis } from "@/server/redis";
 import { readSession } from "@/server/session";
 
@@ -34,10 +34,11 @@ export async function GET(req: NextRequest) {
   p.zrange(markKey(sub, "liked"), 0, -1);
   // Clears the TTL earlier versions set on likes, so existing likes are kept too.
   p.persist(markKey(sub, "liked"));
-  // Opening the page is what "shown" means: record this run's per-source post
-  // counts, once. They're the denominator on /insights.
-  p.hsetnx(runsKey(sub), RUN_ID, RUN_COUNTS);
-  const [, read, liked] = (await p.exec()) as [number, string[], string[], number, number];
+  // Opening the page is what "shown" means: record the newest run's posts,
+  // each once however many runs repeat it. They're the denominator on /insights.
+  if (Object.keys(SHOWN).length) p.hset(shownKey(sub), SHOWN);
+  p.setnx(shownSinceKey(sub), new Date().toISOString());
+  const [, read, liked] = (await p.exec()) as [number, string[], string[], ...unknown[]];
 
   return NextResponse.json({ email: session.email, read, liked });
 }

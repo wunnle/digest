@@ -87,12 +87,6 @@ export default function InsightsPage() {
               <p className="text-sm text-neutral-500">
                 {data.totalLikes} {data.totalLikes === 1 ? "like" : "likes"} from {data.totalPosts}{" "}
                 posts
-                {data.runs > 0 && (
-                  <>
-                    {" "}
-                    across {data.runs} {data.runs === 1 ? "run" : "runs"}
-                  </>
-                )}
                 {data.since && <> since {shortDay(data.since)}</>}
               </p>
               <Link href="/sources" className="text-sm text-neutral-500 transition hover:text-white">

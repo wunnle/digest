@@ -1,11 +1,11 @@
-import payload from "../../digest-data.json";
+import payload from "../generated/digest.json";
 
 /**
- * Everything on this page comes out of digest-data.json at the repo root — the
- * single file the scraper overwrites. This module reshapes that payload and
- * adds nothing to it: no categories, no labels, no editorial. Every string the
- * page renders is either a payload value or structural chrome (a column
- * heading, a link). Drop in a fresh payload and the page follows.
+ * Everything on this page comes out of the agent's runs (runs/*.json), merged
+ * at build time by scripts/build-digest.mjs into src/generated/digest.json —
+ * the last 30 days, de-duplicated by URL. This module reshapes that payload
+ * and adds nothing to it: no categories, no labels, no editorial. Every string
+ * the page renders is either a payload value or structural chrome.
  */
 
 /** A photo, or a video the payload also gives a poster frame for. */
@@ -30,6 +30,8 @@ export type Quote = {
 
 export type Item = {
   /** The source this came from — what the filter chips select on. */
+  /** The source's platform: "x", "youtube", "rss"… */
+  type: string;
   sourceId: string;
   /** Who wrote it, for the card's byline. */
   name: string;
@@ -67,7 +69,7 @@ type RawItem = {
   url: string;
   topic: string;
   title?: string;
-  text: string;
+  text?: string;
   media?: Media[];
   quote_tweet?: RawQuote | null;
 };
@@ -99,9 +101,16 @@ type Payload = {
     fields?: string;
   };
   digest: RawEntry[];
+  /** The newest run's posts, and which source each came from. */
+  latest: { url: string; source_id: string }[];
+  /** Timestamps of the runs merged in. */
+  runs: string[];
 };
 
 const raw = payload as Payload;
+
+/** Posts the newest run added — a page load counts these as shown. */
+export const LATEST = raw.latest;
 
 const idOf = (e: RawEntry) => (e.source_id ?? `x:${e.handle ?? e.name}`).toLowerCase();
 
@@ -129,12 +138,13 @@ export const FEEDS: Feed[] = ids.map((id) => {
     label: e.handle ?? e.name,
     items: e.items.map((i) => ({
       sourceId: id,
+      type: e.type ?? "x",
       name: e.name,
       publishedAt: i.published_at,
       url: i.url,
       topic: i.topic,
       title: i.title || undefined,
-      text: i.text,
+      text: i.text ?? "",
       media: i.media ?? [],
       quote: i.quote_tweet
         ? {

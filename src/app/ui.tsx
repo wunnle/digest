@@ -569,7 +569,8 @@ function PostBody({
       {/* The post as written. `whitespace-pre-line` because many of these
           carry their own line breaks — lists and prompts that collapse into
           mush without them. */}
-      {item.text && (
+      {/* A video's title is enough; its description is YouTube's clutter. */}
+      {item.text && item.type !== "youtube" && (
         <p
           className={`whitespace-pre-line break-words ${size} leading-relaxed ${
             item.title ? "mt-1.5 text-neutral-300" : "mt-2.5 text-neutral-100"

@@ -42,3 +42,6 @@ next-env.d.ts
 
 # except the template
 !.env.example
+
+# merged from runs/ by scripts/build-digest.mjs
+/src/generated/

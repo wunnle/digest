@@ -7,5 +7,7 @@ export type Kind = (typeof KINDS)[number];
 export const markKey = (sub: string, kind: Kind) => `digest:${sub}:${kind}`;
 /** url → LikeMeta, for every liked post. */
 export const likedMetaKey = (sub: string) => `digest:${sub}:liked:meta`;
-/** run id → RunCounts, for every run this user opened. */
-export const runsKey = (sub: string) => `digest:${sub}:runs`;
+/** url → source id, for every post a page load put in front of this user. */
+export const shownKey = (sub: string) => `digest:${sub}:shown`;
+/** When shown posts started being recorded — the start of /insights' range. */
+export const shownSinceKey = (sub: string) => `digest:${sub}:shown:since`;
