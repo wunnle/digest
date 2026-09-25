@@ -1,6 +1,6 @@
 # Digest agent: how a run works
 
-You build the digest. Each run has four steps: fetch the source list, collect posts from each source, write a new run file, and push it. The push deploys the site; there's no other step.
+You build the digest. It runs once every morning. Each run has four steps: fetch the source list, collect posts from each source, write a new run file, and push it. The push deploys the site; there's no other step.
 
 **Append, never overwrite.** Each run adds one new file under `runs/`. Never modify, replace or delete existing data: not other run files, not `digest-data.json`, nothing already in the repo. Posts from earlier runs must survive your run untouched.
 
@@ -18,7 +18,7 @@ The response looks like this:
 {
   "version": 1,
   "updatedAt": "2026-09-25T09:12:00.000Z",
-  "windowHours": 48,
+  "windowHours": 24,
   "sources": [
     { "id": "x:simonw", "type": "x", "target": "simonw", "label": "Simon Willison", "enabled": true, "addedAt": "…" },
     { "id": "rss:https://simonwillison.net/atom/everything/", "type": "rss", "target": "https://simonwillison.net/atom/everything/", "enabled": true, "addedAt": "…" }
@@ -27,12 +27,12 @@ The response looks like this:
 ```
 
 - Skip sources with `"enabled": false`.
-- The window is the `windowHours` before the time you start the run, in UTC.
+- **The window is `windowHours` from this response**, counted back from the time you start the run, in UTC. Use the value you're given; don't substitute your own. Starting a little earlier is fine, because overlapping runs are merged, but never start later, or posts fall between runs and are lost for good.
 - The list says *where* to look, not *what* to keep. The selection criteria are part of your own configuration.
 
 ## 2. Collect
 
-Collect from each enabled source however you normally would. `target` means:
+Collect from each enabled source however you normally would, **fresh, on every run**. Never build a run from existing files in `runs/` or from anything you collected earlier. If a source can't be reached, give it an empty entry with a `note` saying so; don't fill it from old data. `target` means:
 
 | `type`    | `target`                   |
 |-----------|----------------------------|
@@ -54,12 +54,12 @@ Add a **new** file to `runs/`, named after the run's `generated_at` with `:` rep
   "generated_at": "2026-09-25T04:00:00Z",
   "window": { "start": "…Z", "end": "…Z", "timezone": "UTC", "duration_hours": 48 },
   "scope": {
-    "sources": [ /* the enabled sources you were given, as-is */ ],
+    "sources": [ /* every enabled source you were given, as-is — one per entry in `digest` */ ],
     "filter": "your selection criteria, in one sentence (used in link previews)",
     "source": "one line on where posts came from",
     "note": "optional caveats about this run"
   },
-  "digest": [ /* one entry per source, in the order of scope.sources */ ]
+  "digest": [ /* one entry per source in scope.sources, same order, same ids */ ]
 }
 ```
 
