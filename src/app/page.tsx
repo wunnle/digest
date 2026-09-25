@@ -1,12 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Shell } from "./shell";
+import Link from "next/link";
+import { GearIcon, InsightsIcon, Shell, SidebarLink } from "./shell";
 import { FEEDS, ITEMS, META, type Media } from "./data";
 import {
   ago,
   BUILT_AT,
   Card,
+  EyeIcon,
   EyeOffIcon,
   Focus,
   HeartIcon,
@@ -80,6 +82,10 @@ export default function DigestPage() {
     [hideRead, toggleRead],
   );
   const onToggleRead = canMark ? markRead : undefined;
+  /** Says what the feed is doing, so the toggle needs no "on" look of its own. */
+  const readToggleLabel = hideRead ? "Hiding read" : "Showing read";
+  const readToggleIcon = (className?: string) =>
+    hideRead ? <EyeOffIcon className={className} /> : <EyeIcon className={className} />;
   const flipHideRead = () => {
     setHideRead(!hideRead);
     setKeep(new Set());
@@ -246,9 +252,9 @@ export default function DigestPage() {
         {/* Only once something's been read — before that, there's nothing to hide. */}
         {canMark && readCount > 0 && (
           <div className="ml-auto flex shrink-0 items-center gap-1">
-            <button onClick={flipHideRead} aria-pressed={hideRead} className={chip(hideRead)}>
-              <EyeOffIcon className="h-3.5 w-3.5" />
-              Hide read
+            <button onClick={flipHideRead} aria-pressed={hideRead} className={chip(false)}>
+              {readToggleIcon("h-3.5 w-3.5")}
+              {readToggleLabel}
               <span className="tabular-nums text-neutral-600">{readCount}</span>
             </button>
             {/* Without this, marking everything read leaves a page of faded
@@ -334,10 +340,10 @@ export default function DigestPage() {
             </button>
           )}
           {canMark && readCount > 0 && (
-            <button onClick={flipHideRead} aria-pressed={hideRead} className={row(hideRead)}>
+            <button onClick={flipHideRead} aria-pressed={hideRead} className={row(false)}>
               <span className="flex items-center gap-2.5">
-                <EyeOffIcon />
-                Hide read
+                {readToggleIcon()}
+                {readToggleLabel}
               </span>
               <span className="tabular-nums text-neutral-600">{readCount}</span>
             </button>
@@ -346,16 +352,32 @@ export default function DigestPage() {
       )}
 
       <div>
-        <div className="flex items-baseline justify-between px-2.5">
-          <h2 className="text-xs uppercase tracking-wider text-neutral-600">Sources</h2>
-          {active.length > 0 && (
-            <button
-              onClick={() => setActive([])}
-              className="text-xs text-neutral-600 transition hover:text-neutral-300"
+        {/* The heading is the way to manage the list it heads. */}
+        <div className="flex items-center justify-between gap-2 px-2.5">
+          <Link
+            href="/sources"
+            className="text-xs uppercase tracking-wider text-neutral-600 transition hover:text-neutral-300"
+          >
+            Sources
+          </Link>
+          <span className="flex items-center gap-2">
+            {active.length > 0 && (
+              <button
+                onClick={() => setActive([])}
+                className="text-xs text-neutral-600 transition hover:text-neutral-300"
+              >
+                Clear
+              </button>
+            )}
+            <Link
+              href="/sources"
+              aria-label="Manage sources"
+              title="Manage sources"
+              className="-m-1 rounded p-1 text-neutral-600 transition hover:text-neutral-300"
             >
-              Clear
-            </button>
-          )}
+              <GearIcon className="h-3.5 w-3.5" />
+            </Link>
+          </span>
         </div>
         <div className="mt-1.5 space-y-0.5">
           {CHIPS.map((f) => (
@@ -374,6 +396,8 @@ export default function DigestPage() {
           ))}
         </div>
       </div>
+
+      <SidebarLink href="/insights" label="Insights" icon={<InsightsIcon />} />
 
       {canMark && readCount > 0 && (
         <button

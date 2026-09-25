@@ -542,8 +542,22 @@ export function Lightbox({
  * without the thing being called slop.
  */
 function QuoteBlock({ quote, onOpen }: { quote: Quote; onOpen?: OpenMedia }) {
+  // The whole block opens the quoted post — except where something inside it
+  // (a link, an image) handles the click itself, or text is being selected.
+  const open = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if ((e.target as HTMLElement).closest("a, button, [role=button]")) return;
+    if (window.getSelection()?.toString()) return;
+    if (quote.url) window.open(quote.url, "_blank", "noreferrer");
+  };
   return (
-    <span className="mt-3 block rounded-xl border border-white/10 bg-white/[0.03] p-4">
+    <span
+      onClick={open}
+      title={quote.url ? "Open the quoted post" : undefined}
+      className={`mt-3 block rounded-xl border border-white/10 bg-white/[0.03] p-4 transition ${
+        quote.url ? "cursor-pointer hover:border-white/25 hover:bg-white/[0.06]" : ""
+      }`}
+    >
       <span className="flex items-center gap-2 text-xs text-neutral-500">
         <span className="truncate">{quote.author.name}</span>
         {quote.url && (
@@ -596,6 +610,15 @@ export function HeartIcon({ filled, className }: { filled?: boolean; className?:
   return (
     <Icon filled={filled} className={className}>
       <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </Icon>
+  );
+}
+
+export function EyeIcon({ className }: { className?: string }) {
+  return (
+    <Icon className={className}>
+      <path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0" />
+      <circle cx="12" cy="12" r="3" />
     </Icon>
   );
 }
@@ -694,45 +717,34 @@ export function youtubeId(url: string): string | null {
 }
 
 /**
- * A YouTube video, played in place. Until it's clicked it's only YouTube's
- * thumbnail — no player, no YouTube scripts, no tracking — and the player is
- * the privacy-enhanced youtube-nocookie one. Clicks are swallowed so playing
- * a video doesn't also mark the card read.
+ * A YouTube video as its thumbnail, opening the video on YouTube in a new tab.
+ * The thumbnail comes from the video id, so the agent needn't supply one.
+ * Swallows its click so opening a video doesn't also mark the card read.
  */
-function YouTubeEmbed({ id, title }: { id: string; title?: string }) {
-  const [playing, setPlaying] = useState(false);
+function YouTubePreview({ id, url, title }: { id: string; url: string; title?: string }) {
   return (
-    <span className="mt-3 block aspect-video w-full overflow-hidden rounded-xl bg-white/5" onClick={swallow}>
-      {playing ? (
-        <iframe
-          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`}
-          title={title ?? "YouTube video"}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className="h-full w-full"
-        />
-      ) : (
-        <button
-          onClick={() => setPlaying(true)}
-          aria-label={`Play ${title ?? "video"}`}
-          className="group/yt relative block h-full w-full"
-        >
-          {/* hqdefault always exists; it's 4:3 with bars, which the 16:9 crop removes. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
-            alt=""
-            loading="lazy"
-            className="h-full w-full object-cover transition group-hover/yt:brightness-110"
-          />
-          <span className="absolute inset-0 flex items-center justify-center bg-black/20">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-white ring-1 ring-white/20 transition group-hover/yt:scale-105 group-hover/yt:bg-black/80">
-              <PlayIcon className="h-5 w-5 translate-x-px" />
-            </span>
-          </span>
-        </button>
-      )}
-    </span>
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer"
+      onClick={swallow}
+      aria-label={`Watch ${title ?? "video"} on YouTube`}
+      className="group/yt relative mt-3 block aspect-video w-full overflow-hidden rounded-xl bg-white/5"
+    >
+      {/* hqdefault always exists; it's 4:3 with bars, which the 16:9 crop removes. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+        alt=""
+        loading="lazy"
+        className="h-full w-full object-cover transition group-hover/yt:brightness-110"
+      />
+      <span className="absolute inset-0 flex items-center justify-center bg-black/20">
+        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-white ring-1 ring-white/20 transition group-hover/yt:scale-105 group-hover/yt:bg-black/80">
+          <PlayIcon className="h-5 w-5 translate-x-px" />
+        </span>
+      </span>
+    </a>
   );
 }
 
@@ -771,9 +783,9 @@ function PostBody({
         </p>
       )}
 
-      {/* YouTube plays in place from its own URL; anything else shows the payload's media. */}
+      {/* YouTube previews from its own URL; anything else shows the payload's media. */}
       {item.type === "youtube" && youtubeId(item.url) ? (
-        <YouTubeEmbed id={youtubeId(item.url)!} title={item.title} />
+        <YouTubePreview id={youtubeId(item.url)!} url={item.url} title={item.title} />
       ) : (
         <MediaBlock media={item.media} onOpen={onOpenMedia} />
       )}
@@ -847,14 +859,14 @@ export function Card({
       role={onToggleRead ? "button" : undefined}
       tabIndex={onToggleRead ? 0 : undefined}
       aria-pressed={onToggleRead ? read : undefined}
-      className={`card group mb-4 break-inside-avoid rounded-2xl border p-5 transition-[opacity,border-color,background-color,filter] duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
+      className={`card group mb-4 break-inside-avoid rounded-2xl border p-5 transition-[opacity,border-color,background-color,filter,box-shadow,translate] duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
         onToggleRead ? "cursor-pointer" : ""
       } ${
         // Liked posts carry the rose in their fill and border, so they're
         // findable at a glance down a column of cards.
         liked
-          ? "border-rose-400/45 bg-rose-500/[0.13] hover:border-rose-400/90"
-          : "border-white/10 bg-white/[0.03] hover:border-white/35"
+          ? "border-rose-400/45 bg-rose-500/[0.13] hover:-translate-y-0.5 hover:border-rose-400/90 hover:shadow-[0_22px_50px_-22px_rgba(244,63,94,0.55),0_10px_24px_-12px_rgba(0,0,0,0.8)]"
+          : "border-white/10 bg-white/[0.03] hover:-translate-y-0.5 hover:border-white/35 hover:shadow-[0_22px_50px_-20px_rgba(0,0,0,0.95),0_0_40px_-12px_rgba(96,165,250,0.18)]"
       } ${
         // A liked post fades less when read — it was kept on purpose.
         read ? (justMarked ? fade : `${fade} hover:opacity-100`) : ""

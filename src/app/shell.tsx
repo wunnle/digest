@@ -9,8 +9,8 @@ import { Icon, type AuthStatus } from "./ui";
 /**
  * The frame every page shares, so the feed and its settings pages read as one
  * app: a reading column centred on the screen, a header that gets out of the
- * way, and — on wide screens — a sidebar just left of the column with the
- * page links first and anything page-specific (the feed's filters) below.
+ * way, and — on wide screens — a sidebar just left of the column: the feed's
+ * filters on the feed, links to the settings pages elsewhere.
  */
 
 /** Hidden while scrolling down, back the moment you scroll up. */
@@ -39,24 +39,27 @@ function useHeadroom() {
   return hidden;
 }
 
-const FeedIcon = () => (
-  <Icon>
-    <path d="M4 6h16M4 12h16M4 18h10" />
-  </Icon>
-);
-const SourcesIcon = () => (
+export const SourcesIcon = () => (
   <Icon>
     <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16" />
     <circle cx="5" cy="19" r="1" />
   </Icon>
 );
-const InsightsIcon = () => (
+export const InsightsIcon = () => (
   <Icon>
     <path d="M3 3v18h18M8 17v-6M13 17V7M18 17v-3" />
   </Icon>
 );
 
-function NavLink({ href, label, icon }: { href: string; label: string; icon: React.ReactNode }) {
+export const GearIcon = ({ className }: { className?: string }) => (
+  <Icon className={className}>
+    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+    <circle cx="12" cy="12" r="3" />
+  </Icon>
+);
+
+/** A sidebar row that goes somewhere, highlighted on its own page. */
+export function SidebarLink({ href, label, icon }: { href: string; label: string; icon: React.ReactNode }) {
   const active = usePathname() === href;
   return (
     <Link
@@ -72,17 +75,12 @@ function NavLink({ href, label, icon }: { href: string; label: string; icon: Rea
   );
 }
 
-function Nav() {
+/** Where the settings pages live. The logo is the way back to the feed. */
+function DefaultSidebar() {
   return (
-    <nav className="space-y-5" aria-label="Pages">
-      <NavLink href="/" label="Feed" icon={<FeedIcon />} />
-      <div>
-        <h2 className="px-2.5 text-xs uppercase tracking-wider text-neutral-600">Settings</h2>
-        <div className="mt-1.5 space-y-0.5">
-          <NavLink href="/sources" label="Sources" icon={<SourcesIcon />} />
-          <NavLink href="/insights" label="Insights" icon={<InsightsIcon />} />
-        </div>
-      </div>
+    <nav className="space-y-0.5" aria-label="Pages">
+      <SidebarLink href="/sources" label="Sources" icon={<SourcesIcon />} />
+      <SidebarLink href="/insights" label="Insights" icon={<InsightsIcon />} />
     </nav>
   );
 }
@@ -102,7 +100,7 @@ export function Shell({
   subtitle?: React.ReactNode;
   /** Extra header controls, left of the account. */
   controls?: React.ReactNode;
-  /** Page-specific sidebar content, under the page links. */
+  /** The page's own sidebar; without one, links to the settings pages. */
   sidebar?: React.ReactNode;
   /** The feed's grid: full width, no sidebar. */
   wide?: boolean;
@@ -163,9 +161,8 @@ export function Shell({
         // centred on the screen. Below xl there's no room beside it.
         <div className="relative xl:grid xl:grid-cols-[minmax(0,1fr)_42rem_minmax(0,1fr)] xl:gap-10">
           <aside className="hidden xl:block xl:w-52 xl:justify-self-end">
-            <div className="sticky top-6 space-y-8 pt-3 text-sm">
-              <Nav />
-              {sidebar}
+            <div className="sticky top-6 pt-3 text-sm">
+              {sidebar ?? <DefaultSidebar />}
             </div>
           </aside>
           <div className="mx-auto w-full max-w-[42rem]">
