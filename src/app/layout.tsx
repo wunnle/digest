@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { META, ITEMS } from "./data";
+import { Footer } from "./footer";
 import "./globals.css";
 
 /**
@@ -12,19 +13,27 @@ const body = Inter({ subsets: ["latin"], variable: "--font-body" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-code" });
 
 /**
- * Composed from payload values, so a refresh that changes the window updates
- * the tab and any shared link along with the page.
+ * The description is composed from payload values, so a refresh updates any
+ * shared link along with the page. The title stays plain — the digest spans
+ * a rolling 30 days, so no date range names it.
  */
 export function generateMetadata(): Metadata {
-  const title = `${META.window.start.slice(0, 10)} – ${META.window.end.slice(0, 10)}`;
   const description = `${ITEMS.length} posts from ${META.sourcesWithPosts} of ${META.sourcesScanned} sources. ${META.filter}`;
-  return { title, description, openGraph: { title, description } };
+  return {
+    title: { default: "Digest", template: "%s · Digest" },
+    description,
+    openGraph: { title: "Digest", description },
+  };
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${body.variable} ${mono.variable} h-full antialiased`}>
-      <body className="min-h-full bg-neutral-950 font-sans">{children}</body>
+      {/* A column, so short pages still put the footer at the bottom. */}
+      <body className="flex min-h-screen flex-col bg-neutral-950 font-sans">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

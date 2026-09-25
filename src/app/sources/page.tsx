@@ -95,7 +95,7 @@ export default function SourcesPage() {
   );
 
   return (
-    <main className="relative min-h-screen overflow-hidden px-4 py-8 pb-28 text-neutral-200 sm:px-8 sm:py-12">
+    <main className="relative flex-1 overflow-x-clip px-4 py-8 pb-28 text-neutral-200 sm:px-8 sm:py-12">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[80rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(56,130,246,0.12),transparent)] blur-2xl"

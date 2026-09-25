@@ -105,15 +105,6 @@ export function useMarks() {
   };
 }
 
-/** "22–24 Sep", or "30 Sep – 2 Oct" across a month boundary. */
-export const rangeLabel = (startIso: string, endIso: string) => {
-  const s = new Date(startIso);
-  const e = new Date(endIso);
-  return s.getUTCMonth() === e.getUTCMonth()
-    ? `${s.getUTCDate()}–${shortDay(endIso)}`
-    : `${shortDay(startIso)} – ${shortDay(endIso)}`;
-};
-
 /**
  * "23 Sep" from a full instant — the per-card date.
  * en-US for the month: en-GB renders September as "Sept", which reads as a typo

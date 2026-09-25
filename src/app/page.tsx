@@ -10,7 +10,6 @@ import {
   Focus,
   HeartIcon,
   Lightbox,
-  rangeLabel,
   shortDay,
   timeLabel,
   useMarks,
@@ -159,140 +158,184 @@ export default function DigestPage() {
       on ? "bg-white/10 text-white" : "text-neutral-500 hover:bg-white/5 hover:text-neutral-200"
     }`;
 
+  const headerBar = (
+    <header className="flex items-center justify-between gap-4">
+      <div className="flex min-w-0 items-baseline gap-3">
+        <h1 className="text-lg font-semibold tracking-tight text-white">Digest</h1>
+        <p
+          className="truncate text-sm text-neutral-500"
+          title={`Collected ${stampUtc(META.generatedAt)} · deployed ${stampUtc(BUILT_AT)}`}
+        >
+          {ITEMS.length} posts
+          {/* Relative once the client knows the time; the exact stamp until then. */}
+          {BUILT_AT && (
+            <> · updated {minute === null ? stampUtc(BUILT_AT) : ago(BUILT_AT, minute)}</>
+          )}
+        </p>
+      </div>
+
+      <div className="flex shrink-0 items-center gap-3">
+        {/* Below md everything is one column anyway, so the switch only exists on desktop. */}
+        <div className="hidden rounded-lg p-0.5 ring-1 ring-inset ring-white/10 md:flex" role="group" aria-label="Layout">
+          {([false, true] as const).map((one) => (
+            <button
+              key={String(one)}
+              onClick={() => setSingle(one)}
+              aria-pressed={single === one}
+              aria-label={one ? "Single column" : "Grid"}
+              title={one ? "Single column" : "Grid"}
+              className={`rounded-md p-1.5 transition ${
+                single === one ? "bg-white/10 text-white" : "text-neutral-500 hover:text-neutral-200"
+              }`}
+            >
+              {one ? <ColumnIcon /> : <GridIcon />}
+            </button>
+          ))}
+        </div>
+
+        {/* Nothing until the session check lands, so the control doesn't flash. */}
+        <div className="flex h-9 shrink-0 items-center">
+          {status === "signedIn" && email && <AccountMenu email={email} />}
+          {status === "signedOut" && <SignInButton />}
+        </div>
+      </div>
+    </header>
+  );
+
+  /** Everything above the posts: header, sign-in errors, filter row, hint. */
+  const top = (
+    <>
+      {headerBar}
+      {authError && <p className="mt-3 text-sm text-rose-300/80">{authError}</p>}
+
+      {/* One row. It scrolls sideways on a phone rather than wrapping into a
+          block that pushes the posts down. */}
+      <div
+        className={`-mx-4 mt-5 flex items-center gap-1 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0 ${
+          single ? "xl:hidden" : ""
+        }`}
+      >
+        {/* Only appears once there's something saved — an always-on filter
+            that can only ever show nothing is just a dead control. */}
+        {likedCount > 0 && (
+          <>
+            <button
+              onClick={() => setLikedOnly((v) => !v)}
+              aria-pressed={likedOnly}
+              aria-label="Liked only"
+              className={`flex shrink-0 items-center gap-1.5 rounded-md px-2 py-1 text-xs transition ${
+                likedOnly
+                  ? "bg-rose-500/15 text-rose-300"
+                  : "text-neutral-500 hover:bg-white/5 hover:text-rose-300"
+              }`}
+            >
+              <HeartIcon filled={likedOnly} className="h-3.5 w-3.5" />
+              <span className="tabular-nums text-neutral-600">{likedCount}</span>
+            </button>
+            <span className="mx-1 h-3.5 w-px shrink-0 bg-white/10" aria-hidden />
+          </>
+        )}
+
+        {CHIPS.map((f) => (
+          <button
+            key={f.id}
+            onClick={() => toggleSource(f.id)}
+            aria-pressed={active.includes(f.id)}
+            className={chip(active.includes(f.id))}
+          >
+            {f.label}
+            <span className="tabular-nums text-neutral-600">{f.items.length}</span>
+          </button>
+        ))}
+
+        {active.length > 0 && (
+          <button
+            onClick={() => setActive([])}
+            className="shrink-0 px-2 py-1 text-xs text-neutral-600 transition hover:text-neutral-300"
+          >
+            Clear
+          </button>
+        )}
+
+        {/* Only once something's been read — before that, there's nothing to hide. */}
+        {canMark && readCount > 0 && (
+          <div className="ml-auto flex shrink-0 items-center gap-1">
+            <button onClick={flipHideRead} aria-pressed={hideRead} className={chip(hideRead)}>
+              Hide read
+              <span className="tabular-nums text-neutral-600">{readCount}</span>
+            </button>
+            {/* Without this, marking everything read leaves a page of faded
+                cards and no way back. */}
+            <button
+              onClick={clearRead}
+              className="shrink-0 px-2 py-1 text-xs text-neutral-600 transition hover:text-neutral-300"
+            >
+              Reset
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Click-to-read isn't discoverable on its own. Once something's been
+          marked, the hint has done its job. */}
+      {canMark && readCount === 0 && likedCount === 0 && (
+        <p className={`mt-3 text-xs text-neutral-600 ${single ? "xl:hidden" : ""}`}>
+          Click a card to mark it read.
+        </p>
+      )}
+    </>
+  );
+
+  const posts = (
+    <>
+      {shown.map((i) => (
+        <Card
+          key={i.url}
+          item={i}
+          read={read.has(i.url)}
+          liked={liked.has(i.url)}
+          onToggleRead={onToggleRead}
+          onToggleLike={onToggleLike}
+          onOpenMedia={openMedia}
+          onExpand={setFocusUrl}
+        />
+      ))}
+    </>
+  );
+
+  const emptyState = (
+    <>
+      {/* Hiding read posts can empty the page; say so, rather than show nothing. */}
+      {shown.length === 0 && hideRead && (
+        <div className="mt-16 text-center text-sm text-neutral-500">
+          <p>All caught up.</p>
+          <button
+            onClick={flipHideRead}
+            className="mt-2 text-neutral-400 underline underline-offset-4 transition hover:text-white"
+          >
+            Show read posts
+          </button>
+        </div>
+      )}
+    </>
+  );
+
   return (
-    <main className="relative min-h-screen overflow-x-clip px-4 py-8 text-neutral-200 sm:px-8 sm:py-12">
+    <main className="relative flex-1 overflow-x-clip px-4 py-8 text-neutral-200 sm:px-8 sm:py-12">
       {/* Cool ambient wash behind the top rows, so the page isn't flat black */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[80rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(56,130,246,0.12),transparent)] blur-2xl"
       />
       <div className="relative mx-auto max-w-[95rem]">
-        <header className="flex items-center justify-between gap-4">
-          <div className="flex min-w-0 items-baseline gap-3">
-            <h1 className="text-lg font-semibold tracking-tight text-white">Digest</h1>
-            <p
-              className="truncate text-sm text-neutral-500"
-              title={`Collected ${stampUtc(META.generatedAt)} · deployed ${stampUtc(BUILT_AT)}`}
-            >
-              {rangeLabel(META.window.start, META.window.end)} · {ITEMS.length} posts
-              {/* Relative once the client knows the time; the exact stamp until then. */}
-              {BUILT_AT && (
-                <> · updated {minute === null ? stampUtc(BUILT_AT) : ago(BUILT_AT, minute)}</>
-              )}
-            </p>
-          </div>
-
-          <div className="flex shrink-0 items-center gap-3">
-            {/* Below md everything is one column anyway, so the switch only exists on desktop. */}
-            <div className="hidden rounded-lg p-0.5 ring-1 ring-inset ring-white/10 md:flex" role="group" aria-label="Layout">
-              {([false, true] as const).map((one) => (
-                <button
-                  key={String(one)}
-                  onClick={() => setSingle(one)}
-                  aria-pressed={single === one}
-                  aria-label={one ? "Single column" : "Grid"}
-                  title={one ? "Single column" : "Grid"}
-                  className={`rounded-md p-1.5 transition ${
-                    single === one ? "bg-white/10 text-white" : "text-neutral-500 hover:text-neutral-200"
-                  }`}
-                >
-                  {one ? <ColumnIcon /> : <GridIcon />}
-                </button>
-              ))}
-            </div>
-
-            {/* Nothing until the session check lands, so the control doesn't flash. */}
-            <div className="flex h-9 shrink-0 items-center">
-              {status === "signedIn" && email && <AccountMenu email={email} />}
-              {status === "signedOut" && <SignInButton />}
-            </div>
-          </div>
-        </header>
-
-        {authError && <p className="mt-3 text-sm text-rose-300/80">{authError}</p>}
-
-        {/* One row. It scrolls sideways on a phone rather than wrapping into a
-            block that pushes the posts down. */}
-        <div
-          className={`-mx-4 mt-5 flex items-center gap-1 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0 ${
-            single ? "md:hidden" : ""
-          }`}
-        >
-          {/* Only appears once there's something saved — an always-on filter
-              that can only ever show nothing is just a dead control. */}
-          {likedCount > 0 && (
-            <>
-              <button
-                onClick={() => setLikedOnly((v) => !v)}
-                aria-pressed={likedOnly}
-                aria-label="Liked only"
-                className={`flex shrink-0 items-center gap-1.5 rounded-md px-2 py-1 text-xs transition ${
-                  likedOnly
-                    ? "bg-rose-500/15 text-rose-300"
-                    : "text-neutral-500 hover:bg-white/5 hover:text-rose-300"
-                }`}
-              >
-                <HeartIcon filled={likedOnly} className="h-3.5 w-3.5" />
-                <span className="tabular-nums text-neutral-600">{likedCount}</span>
-              </button>
-              <span className="mx-1 h-3.5 w-px shrink-0 bg-white/10" aria-hidden />
-            </>
-          )}
-
-          {CHIPS.map((f) => (
-            <button
-              key={f.id}
-              onClick={() => toggleSource(f.id)}
-              aria-pressed={active.includes(f.id)}
-              className={chip(active.includes(f.id))}
-            >
-              {f.label}
-              <span className="tabular-nums text-neutral-600">{f.items.length}</span>
-            </button>
-          ))}
-
-          {active.length > 0 && (
-            <button
-              onClick={() => setActive([])}
-              className="shrink-0 px-2 py-1 text-xs text-neutral-600 transition hover:text-neutral-300"
-            >
-              Clear
-            </button>
-          )}
-
-          {/* Only once something's been read — before that, there's nothing to hide. */}
-          {canMark && readCount > 0 && (
-            <div className="ml-auto flex shrink-0 items-center gap-1">
-              <button onClick={flipHideRead} aria-pressed={hideRead} className={chip(hideRead)}>
-                Hide read
-                <span className="tabular-nums text-neutral-600">{readCount}</span>
-              </button>
-              {/* Without this, marking everything read leaves a page of faded
-                  cards and no way back. */}
-              <button
-                onClick={clearRead}
-                className="shrink-0 px-2 py-1 text-xs text-neutral-600 transition hover:text-neutral-300"
-              >
-                Reset
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* Click-to-read isn't discoverable on its own. Once something's been
-            marked, the hint has done its job. */}
-        {canMark && readCount === 0 && likedCount === 0 && (
-          <p className={`mt-3 text-xs text-neutral-600 ${single ? "md:hidden" : ""}`}>
-            Click a card to mark it read.
-          </p>
-        )}
-
         {single ? (
-          /* A sidebar of filters beside one readable column. The column is
-             capped at a comfortable line length rather than filling the width. */
-          <div className="mt-6 md:mt-8 md:grid md:grid-cols-[13rem_minmax(0,42rem)] md:justify-center md:gap-10">
-            <aside className="hidden md:block">
-              <div className="sticky top-6 space-y-6 text-sm">
+          /* One reading column, centred on the screen — header included. On
+             wide screens the filters sit in a sidebar just to its left; an
+             empty third column balances it so the posts stay centred. Below
+             xl there's no room beside it, so the filters stay on top. */
+          <div className="xl:grid xl:grid-cols-[minmax(0,1fr)_42rem_minmax(0,1fr)] xl:gap-10">
+            <aside className="hidden xl:block xl:w-52 xl:justify-self-end">
+              <div className="sticky top-8 space-y-6 text-sm">
                 {canMark && readCount === 0 && likedCount === 0 && (
                   <p className="text-xs text-neutral-600">Click a card to mark it read.</p>
                 )}
@@ -363,52 +406,21 @@ export default function DigestPage() {
               </div>
             </aside>
 
-            <div>
-              {shown.map((i) => (
-                <Card
-                  key={i.url}
-                  item={i}
-                  read={read.has(i.url)}
-                  liked={liked.has(i.url)}
-                  onToggleRead={onToggleRead}
-                  onToggleLike={onToggleLike}
-                  onOpenMedia={openMedia}
-                  onExpand={setFocusUrl}
-                />
-              ))}
+            <div className="mx-auto w-full max-w-[42rem]">
+              {top}
+              <div className="mt-6">{posts}</div>
+              {emptyState}
             </div>
           </div>
         ) : (
-          /* One continuous masonry, newest first. Masonry rather than a grid
-             because post lengths run from 15 to 1200-odd characters, and
-             equal-height rows leave short posts stranded beside long ones. */
-          <div className="mt-6 gap-4 md:columns-2 xl:columns-3">
-          {shown.map((i) => (
-            <Card
-              key={i.url}
-              item={i}
-              read={read.has(i.url)}
-              liked={liked.has(i.url)}
-              onToggleRead={onToggleRead}
-              onToggleLike={onToggleLike}
-              onOpenMedia={openMedia}
-              onExpand={setFocusUrl}
-            />
-          ))}
-          </div>
-        )}
-
-        {/* Hiding read posts can empty the page; say so, rather than show nothing. */}
-        {shown.length === 0 && hideRead && (
-          <div className="mt-16 text-center text-sm text-neutral-500">
-            <p>All caught up.</p>
-            <button
-              onClick={flipHideRead}
-              className="mt-2 text-neutral-400 underline underline-offset-4 transition hover:text-white"
-            >
-              Show read posts
-            </button>
-          </div>
+          <>
+            {top}
+            {/* One continuous masonry, newest first. Masonry rather than a grid
+                because post lengths run from 15 to 1200-odd characters, and
+                equal-height rows leave short posts stranded beside long ones. */}
+            <div className="mt-6 gap-4 md:columns-2 xl:columns-3">{posts}</div>
+            {emptyState}
+          </>
         )}
 
         {focusItem && (
