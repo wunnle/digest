@@ -1,0 +1,444 @@
+{
+  "generated_at": "2026-09-26T06:06:16Z",
+  "window": {
+    "start": "2026-09-25T06:06:16Z",
+    "end": "2026-09-26T06:06:16Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      }
+    ],
+    "filter": "Concrete AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Logged-out public X profile pages, YouTube channel/watch pages, and the public Bluesky profile feed.",
+    "note": "Every enabled source was visited. X public timelines were inspected through their complete visible logged-out first-page payload; stale timelines crossed the window boundary, while active timelines exposed only their newest visible posts and may omit replies or repost-only activity. YouTube inspection was limited to the five newest visible videos. One still-in-window X status from an overlapping run was explicitly re-reviewed and retained as a discovery safety-net addition."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-09-26T03:30:59Z",
+          "url": "https://x.com/simonw/status/2103688757337895282",
+          "topic": "Rapid change in frontier AI capabilities",
+          "text": "\"The last year in the technology industry has felt like 100 years all happening at once. Our industry is destabilized in a way nobody’s experienced since the advent of the personal computer. Every limit AI runs up against collapses within a month. Everything we do with frontier models today, in a few years we’ll be doing instantaneously and for free.\"",
+          "quote_tweet": null,
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-09-25T20:44:39Z",
+          "url": "https://x.com/mitsuhiko/status/2103586500541874580",
+          "topic": "Agent capability changes the tradeoffs around unsafe Rust",
+          "text": "Now that agents are this good, Rust developers should stop being afraid of unsafe.",
+          "quote_tweet": null,
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-09-25T09:41:31Z",
+          "url": "https://x.com/badlogicgames/status/2103419617788002795",
+          "topic": "GitHub issue sorting defaults",
+          "text": "github, love ya, but why did you change the default sorting of issues from \"last created\" to \"best match\"? best matching what exactly? in what world is that sensible? :/",
+          "quote_tweet": null,
+          "author_replies": []
+        },
+        {
+          "published_at": "2026-09-25T08:55:18Z",
+          "url": "https://x.com/badlogicgames/status/2103407986530222325",
+          "topic": "Reviewing agent edits through diffs instead of tool calls",
+          "text": "i akso said \"don't fight the model, give in to its RL, let if flow over you\"\n\ni personally haven't given a fart about edit tool calls in a long while. i just look at diffs in VS Code, either while the agent is working, or after. which also gives me code nav and other things.",
+          "quote_tweet": null,
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-09-26T00:51:43Z",
+          "url": "https://x.com/steipete/status/2103648679169257737",
+          "topic": "Migrating an agent system from synchronous SQLite access to async workers",
+          "text": "The biggest design mistake I made when we moved OC to sqlite: using sync db access. When it was just an agent that reports to you on Slack or iMessage this was fine; now that one agent might do 50 sessions in parallel and the whole team works on it, it is limiting.\n\nI have a /goal with Astra that so far landed 575 PRs to move everything to to async workers. We ship these improvements as we make progress. Pretty insane how even huge refactors are no longer scary.",
+          "quote_tweet": null,
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-09-25T17:19:00Z",
+          "url": "https://x.com/thorstenball/status/2103534749964988849",
+          "topic": "Runtime behavior and agent legibility matter more than language choice",
+          "text": "\"Programming languages and frameworks are dead.\"\n\nYes, kind of.\n\nWhat will matter in future is runtime behavior:\n\nPerformance characteristics, resource usage, failure modes, observability, debuggability, deployments, rollbacks.\n\nAnd legibility of all that to agents.",
+          "quote_tweet": null,
+          "author_replies": []
+        },
+        {
+          "published_at": "2026-09-25T15:51:55Z",
+          "url": "https://x.com/thorstenball/status/2103512832599814255",
+          "topic": "Moving beyond close reading of agent transcripts",
+          "text": "The days of reading transcripts up close are over.",
+          "quote_tweet": null,
+          "author_replies": []
+        },
+        {
+          "published_at": "2026-09-25T06:41:39.959Z",
+          "url": "https://x.com/thorstenball/status/2103374356109726168",
+          "topic": "Agent workflows should not optimize for transcript waiting",
+          "text": "My maybe controversial opinion:\n\nIf TTFT is important to you, you're doing something wrong.\n\nDon't wait for the agents, make them wait for you.\n\nDon't stare at a single transcript. Do something else.\n\n(Yes, there's a tiny number of exceptions to this.)",
+          "quote_tweet": {
+            "url": "https://x.com/gakonst/status/2103292346574270946",
+            "published_at": "2026-09-25T01:15:47.362Z",
+            "author": {
+              "name": "Georgios Konstantopoulos",
+              "handle": "gakonst"
+            },
+            "text": "playtesting every harness again, i cannot believe how you folks don't lose it over the TUI taking over 50ms to start, and TTFT >2s - these companies are achieving AGI and here we're stuck with the slowpoke harnesses wtf",
+            "media": []
+          },
+          "media": [],
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [
+        {
+          "published_at": "2026-09-25T23:57:30Z",
+          "url": "https://x.com/geoffreylitt/status/2103635033961681388",
+          "topic": "Durable agent skills should encode specifications, not brittle procedures",
+          "text": "in my experience, agent skills can totally remain relevant over time / across model generations, *as long as they are more spec than step-by-step instructions*\n\neg: specifying a good format for a doc output, a good flow for interviewing a human",
+          "quote_tweet": null,
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-09-25T17:00:02Z",
+          "url": "https://x.com/HamelHusain/status/2103529976624492564",
+          "topic": "Designing AI workflows around evaluable intermediate outputs",
+          "text": "Q: How can I make AI outputs easier for people to evaluate?\n\nA: Start with the product design. Keep the human in the loop by designing workflows that walk through intermediate outputs.\n\nhttps://t.co/5aboTit0u6 https://t.co/79zqBl44jr",
+          "quote_tweet": null,
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [
+        {
+          "published_at": "2026-09-25T17:34:34Z",
+          "url": "https://x.com/bcherny/status/2103538666597691552",
+          "topic": "Using a proactive Slack agent for coding, data analysis, and bug fixing",
+          "text": "Tag writes >50% of my PRs every day. It also does ~100% of my data analysis, and fixes most of our product feedback + bugs.\n\nIt's not like a regular Slack bot. It is proactive, programmable, it has memory, it has access to your connectors. With Opus 5.5 and Fable 5.1, it has strong judgement.\n\nExample prompts I use:\n\n- \"@Claude react to threads in this channel with ✅ when resolved\"\n- \"@Claude from now on, attempt to repro every bug in this channel end to end, running the full app. once you reproduce the bug, put up a pr to fix it and tag the right team for code review\"\n- \"@Claude brainstorm ~100 hypotheses for what could explain this weird data, use a workflow to in/validate. spend 10m tokens or so digging very deep. draw a chart with the result.\"\n- \"@Claude make me an interactive game explaining how this part of the code works, then make a slide deck explaining it for others on the team\"\n\nhttps://t.co/gmsALM8Lvs",
+          "quote_tweet": null,
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-09-25T20:04:18Z",
+          "url": "https://x.com/trq212/status/2103576349499855160",
+          "topic": "Testing when to change Claude effort levels",
+          "text": "What is effort really? When do you change it it and why not just use max effort for everything?\n\nI dove deep into this problem, looking into evals and doing my own tests and I was quite surprised by the results. https://t.co/KO2D51j34H",
+          "quote_tweet": null,
+          "author_replies": []
+        }
+      ]
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "Theo - t3․gg",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "note": "No relevant item was visible in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "Caleb Writes Code",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "Matthew Berman",
+      "items": [
+        {
+          "published_at": "2026-09-25T09:11:39Z",
+          "url": "https://www.youtube.com/watch?v=pkS3sNjzz2o",
+          "topic": "AI chip supply, infrastructure, and industry constraints",
+          "title": "SemiAnalysis MOTS: AI Chip Shortages, SpaceX, China, Neoclouds, and more!"
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "Two Minute Papers",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "note": "No visible item was published in the 24-hour window.",
+      "items": []
+    }
+  ]
+}
