@@ -49,6 +49,17 @@ export type Item = {
   authorReplies: Quote[];
 };
 
+/**
+ * A post kept on purpose. The snapshot outlives the 30 days the build keeps,
+ * so the page can still show the post after it has left the payload.
+ */
+export type Bookmark = {
+  item: Item;
+  /** The source's chip label, for when the source itself has left the payload. */
+  label: string;
+  bookmarkedAt: string;
+};
+
 /** One source's contribution to this run. */
 export type Feed = {
   id: string;

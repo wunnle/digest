@@ -7,7 +7,7 @@
  */
 
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
-import type { Item, Media, Quote } from "./data";
+import type { Bookmark, Item, Media, Quote } from "./data";
 
 type Kind = "read" | "liked";
 type Marks = Record<Kind, ReadonlySet<string>>;
@@ -29,6 +29,13 @@ export function useMarks() {
   const [status, setStatus] = useState<AuthStatus>("loading");
   const [email, setEmail] = useState<string | null>(null);
   const [marks, setMarks] = useState<Marks>({ read: new Set(), liked: new Set() });
+  /** url → Bookmark. Kept apart from marks: a bookmark carries the post itself. */
+  const [bookmarks, setBookmarks] = useState<ReadonlyMap<string, Bookmark>>(new Map());
+  const bookmarksNow = useRef(bookmarks);
+  const commitBookmarks = useCallback((next: ReadonlyMap<string, Bookmark>) => {
+    bookmarksNow.current = next;
+    setBookmarks(next);
+  }, []);
 
   // Mirrors `marks` so a click can decide add-vs-remove from what's on screen
   // right now, without reading state inside an updater.
@@ -43,17 +50,23 @@ export function useMarks() {
     fetch("/api/marks")
       .then(async (res) => {
         if (!res.ok) throw new Error(String(res.status));
-        const data = (await res.json()) as { email: string; read: string[]; liked: string[] };
+        const data = (await res.json()) as {
+          email: string;
+          read: string[];
+          liked: string[];
+          bookmarks?: Bookmark[];
+        };
         if (!live) return;
         setEmail(data.email);
         commit({ read: new Set(data.read), liked: new Set(data.liked) });
+        commitBookmarks(new Map((data.bookmarks ?? []).map((b) => [b.item.url, b])));
         setStatus("signedIn");
       })
       .catch(() => live && setStatus("signedOut"));
     return () => {
       live = false;
     };
-  }, [commit]);
+  }, [commit, commitBookmarks]);
 
   const flip = useCallback(
     (kind: Kind, url: string) => {
@@ -84,6 +97,36 @@ export function useMarks() {
   const toggleRead = useCallback((url: string) => toggle("read", url), [toggle]);
   const toggleLike = useCallback((url: string) => toggle("liked", url), [toggle]);
 
+  /**
+   * Optimistic like the others. The local snapshot is only a stand-in until
+   * the next load: the server keeps its own, built from the deploy's payload.
+   */
+  const toggleBookmark = useCallback(
+    (item: Item) => {
+      const before = bookmarksNow.current;
+      const on = !before.has(item.url);
+      const next = new Map(before);
+      if (on) next.set(item.url, { item, label: item.name, bookmarkedAt: new Date().toISOString() });
+      else next.delete(item.url);
+      commitBookmarks(next);
+      fetch("/api/marks", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ kind: "bookmarked", url: item.url, on }),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error(String(res.status));
+        })
+        .catch(() => {
+          const undo = new Map(bookmarksNow.current);
+          if (on) undo.delete(item.url);
+          else undo.set(item.url, before.get(item.url)!);
+          commitBookmarks(undo);
+        });
+    },
+    [commitBookmarks],
+  );
+
   const clearRead = useCallback(() => {
     const before = current.current.read;
     commit({ ...current.current, read: new Set() });
@@ -99,8 +142,10 @@ export function useMarks() {
     email,
     read: marks.read,
     liked: marks.liked,
+    bookmarks,
     toggleRead,
     toggleLike,
+    toggleBookmark,
     clearRead,
   };
 }
@@ -577,8 +622,8 @@ function QuoteBlock({ quote, onOpen }: { quote: Quote; onOpen?: OpenMedia }) {
 
 /**
  * The author's own replies under their post — the thought carried on. No
- * label or dates: each reply hangs off the one above by a thin connector and
- * a small hollow dot, so a run of them reads as one continuing thread.
+ * label or dates: one continuous line runs down from the post beside every
+ * reply, with a small dot where each one starts.
  */
 function AuthorReplies({
   replies,
@@ -592,26 +637,35 @@ function AuthorReplies({
   if (replies.length === 0) return null;
   // The dot sits on the middle of each reply's first line.
   const dotTop = large ? "top-[26px]" : "top-[24px]";
-  const lineHeight = large ? "h-[22px]" : "h-[20px]";
   return (
     <span className="mt-1 block" role="group" aria-label="The author's follow-ups">
-      {replies.map((r) => (
-        <span key={r.url || r.text} className="relative block pl-5 pt-3">
-          <span aria-hidden className={`absolute left-[3.5px] top-0 w-px bg-white/25 ${lineHeight}`} />
-          <span
-            aria-hidden
-            className={`absolute left-0 h-2 w-2 -translate-y-1/2 rounded-full border border-white/40 ${dotTop}`}
-          />
-          <span
-            className={`block whitespace-pre-line break-words leading-relaxed text-neutral-200 ${
-              large ? "text-[17px]" : "text-[15px]"
-            }`}
-          >
-            {linkify(r.text)}
+      {replies.map((r, i) => {
+        const last = i === replies.length - 1;
+        return (
+          <span key={r.url || r.text} className="relative block pl-5 pt-3">
+            {/* One unbroken line: each reply carries it the full height of its
+                block, and the last one stops at its own dot. */}
+            <span
+              aria-hidden
+              className={`absolute left-[3.5px] top-0 w-px bg-white/20 ${
+                last ? (large ? "h-[26px]" : "h-[24px]") : "bottom-0"
+              }`}
+            />
+            <span
+              aria-hidden
+              className={`absolute left-[1px] h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-neutral-500 ${dotTop}`}
+            />
+            <span
+              className={`block whitespace-pre-line break-words leading-relaxed text-neutral-200 ${
+                large ? "text-[17px]" : "text-[15px]"
+              }`}
+            >
+              {linkify(r.text)}
+            </span>
+            <MediaBlock media={r.media} onOpen={onOpen} />
           </span>
-          <MediaBlock media={r.media} onOpen={onOpen} />
-        </span>
-      ))}
+        );
+      })}
     </span>
   );
 }
@@ -650,6 +704,14 @@ export function HeartIcon({ filled, className }: { filled?: boolean; className?:
   return (
     <Icon filled={filled} className={className}>
       <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </Icon>
+  );
+}
+
+export function BookmarkIcon({ filled, className }: { filled?: boolean; className?: string }) {
+  return (
+    <Icon filled={filled} className={className}>
+      <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z" />
     </Icon>
   );
 }
@@ -853,16 +915,20 @@ export function Card({
   item,
   read = false,
   liked = false,
+  bookmarked = false,
   onToggleRead,
   onToggleLike,
+  onToggleBookmark,
   onOpenMedia,
   onExpand,
 }: {
   item: Item;
   read?: boolean;
   liked?: boolean;
+  bookmarked?: boolean;
   onToggleRead?: (url: string) => void;
   onToggleLike?: (url: string) => void;
+  onToggleBookmark?: (item: Item) => void;
   onOpenMedia?: OpenMedia;
   onExpand?: (url: string) => void;
 }) {
@@ -933,6 +999,25 @@ export function Card({
             </button>
           )}
 
+          {/* Keeps the post past the 30 days the feed holds. Swallows its
+              click, like the heart. */}
+          {onToggleBookmark && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleBookmark(item);
+              }}
+              aria-pressed={bookmarked}
+              aria-label={bookmarked ? "Remove bookmark" : "Bookmark"}
+              title={bookmarked ? "Bookmarked — kept past 30 days" : "Bookmark"}
+              className={`-m-1 rounded-full p-1 transition ${
+                bookmarked ? "text-amber-300" : "text-neutral-600 hover:text-amber-200"
+              }`}
+            >
+              <BookmarkIcon filled={bookmarked} />
+            </button>
+          )}
+
           {/* Swallows its click — liking a post says nothing about whether
               you've finished reading it. */}
           {onToggleLike && (
@@ -968,9 +1053,11 @@ export function Focus({
   position,
   read,
   liked,
+  bookmarked = false,
   paused,
   onToggleRead,
   onToggleLike,
+  onToggleBookmark,
   onOpenMedia,
   onStep,
   onClose,
@@ -980,9 +1067,11 @@ export function Focus({
   position: string;
   read: boolean;
   liked: boolean;
+  bookmarked?: boolean;
   paused: boolean;
   onToggleRead?: (url: string) => void;
   onToggleLike?: (url: string) => void;
+  onToggleBookmark?: (item: Item) => void;
   onOpenMedia?: OpenMedia;
   onStep: (dir: -1 | 1) => void;
   onClose: () => void;
@@ -1062,7 +1151,7 @@ export function Focus({
 
         <PostBody item={item} onOpenMedia={onOpenMedia} large />
 
-        {(onToggleLike || onToggleRead) && (
+        {(onToggleLike || onToggleRead || onToggleBookmark) && (
           <div className="mt-6 flex items-center gap-2 border-t border-white/10 pt-5">
             {onToggleLike && (
               <button
@@ -1076,6 +1165,20 @@ export function Focus({
               >
                 <HeartIcon filled={liked} className="h-3.5 w-3.5" />
                 {liked ? "Liked" : "Like"}
+              </button>
+            )}
+            {onToggleBookmark && (
+              <button
+                onClick={() => onToggleBookmark(item)}
+                aria-pressed={bookmarked}
+                className={`${pill} ${
+                  bookmarked
+                    ? "bg-amber-400/15 text-amber-200 ring-amber-300/40"
+                    : "text-neutral-400 ring-white/10 hover:text-amber-200 hover:ring-amber-300/30"
+                }`}
+              >
+                <BookmarkIcon filled={bookmarked} className="h-3.5 w-3.5" />
+                {bookmarked ? "Bookmarked" : "Bookmark"}
               </button>
             )}
             {onToggleRead && (

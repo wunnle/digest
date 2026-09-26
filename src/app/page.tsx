@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { GearIcon, InsightsIcon, Shell, SidebarLink } from "./shell";
-import { FEEDS, ITEMS, META, type Media } from "./data";
+import { FEEDS, ITEMS, META, type Item, type Media } from "./data";
 import {
   ago,
   BUILT_AT,
@@ -11,6 +11,7 @@ import {
   EyeIcon,
   EyeOffIcon,
   Focus,
+  BookmarkIcon,
   HeartIcon,
   PlatformIcon,
   Lightbox,
@@ -23,8 +24,10 @@ import {
 
 const stampUtc = (iso: string) => `${shortDay(iso)} ${timeLabel(iso)} UTC`;
 
-/** Sources that contributed nothing can't narrow the feed, so they get no chip. */
-const CHIPS = FEEDS.filter((f) => f.items.length > 0);
+const IN_PAYLOAD = new Set(ITEMS.map((i) => i.url));
+const FEED_INFO = new Map(FEEDS.map((f) => [f.id, { label: f.label, type: f.type }]));
+
+type Chip = { id: string; label: string; type: string; count: number };
 
 function GridIcon() {
   return (
@@ -50,7 +53,39 @@ export default function DigestPage() {
   /** Selected source ids. Empty means everything, so the page opens complete. */
   const [active, setActive] = useState<string[]>([]);
 
-  const { status, email, read, liked, toggleRead, toggleLike, clearRead } = useMarks();
+  const { status, email, read, liked, bookmarks, toggleRead, toggleLike, toggleBookmark, clearRead } =
+    useMarks();
+
+  /**
+   * The feed is this deploy's posts plus any bookmarked post that has since
+   * left it — merged here rather than at build time, so bookmarking and
+   * un-bookmarking show at once. A post still in the payload keeps its fresh
+   * copy.
+   */
+  const items = useMemo<Item[]>(() => {
+    const kept = [...bookmarks.values()].filter((b) => !IN_PAYLOAD.has(b.item.url)).map((b) => b.item);
+    if (kept.length === 0) return ITEMS;
+    return [...ITEMS, ...kept].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  }, [bookmarks]);
+
+  /** One chip per source with posts — including sources only bookmarks still hold. */
+  const chips = useMemo<Chip[]>(() => {
+    const byId = new Map<string, Chip>();
+    for (const i of items) {
+      const c = byId.get(i.sourceId);
+      if (c) c.count += 1;
+      else {
+        const info = FEED_INFO.get(i.sourceId) ?? {
+          label: bookmarks.get(i.url)?.label ?? i.name,
+          type: i.type,
+        };
+        byId.set(i.sourceId, { id: i.sourceId, ...info, count: 1 });
+      }
+    }
+    // Keep the payload's own source order; bookmark-only sources follow.
+    const order = new Map(FEEDS.map((f, n) => [f.id, n]));
+    return [...byId.values()].sort((a, b) => (order.get(a.id) ?? 1e9) - (order.get(b.id) ?? 1e9));
+  }, [items, bookmarks]);
   const minute = useMinute();
 
   /**
@@ -59,6 +94,7 @@ export default function DigestPage() {
    */
   const canMark = status === "signedIn";
   const onToggleLike = canMark ? toggleLike : undefined;
+  const onToggleBookmark = canMark ? toggleBookmark : undefined;
 
   /**
    * One reading column with the filters in a sidebar, instead of the grid.
@@ -115,6 +151,8 @@ export default function DigestPage() {
 
   /** Narrow the page to saved posts. Off unless there's something to show. */
   const [likedOnly, setLikedOnly] = useState(false);
+  /** Narrow the page to bookmarked posts. */
+  const [bookmarkedOnly, setBookmarkedOnly] = useState(false);
 
   /** Which media set the lightbox is showing, and where in it. */
   const [zoom, setZoom] = useState<{ media: Media[]; index: number } | null>(null);
@@ -122,13 +160,14 @@ export default function DigestPage() {
 
   const shown = useMemo(
     () =>
-      ITEMS.filter(
+      items.filter(
         (i) =>
           (active.length === 0 || active.includes(i.sourceId)) &&
           (!likedOnly || liked.has(i.url)) &&
+          (!bookmarkedOnly || bookmarks.has(i.url)) &&
           (!hideRead || !read.has(i.url) || keep.has(i.url)),
       ),
-    [active, likedOnly, liked, hideRead, read, keep],
+    [items, active, likedOnly, liked, bookmarkedOnly, bookmarks, hideRead, read, keep],
   );
 
   /** The post open in the focus view, by URL, and where it sits in the view. */
@@ -136,7 +175,7 @@ export default function DigestPage() {
   const focusIndex = focusUrl ? shown.findIndex((i) => i.url === focusUrl) : -1;
   // Looked up in everything, not just what's shown, so unliking a post under
   // "Liked only" doesn't yank it out from under the reader.
-  const focusItem = focusUrl ? ITEMS.find((i) => i.url === focusUrl) : undefined;
+  const focusItem = focusUrl ? items.find((i) => i.url === focusUrl) : undefined;
   const stepFocus = useCallback(
     (dir: -1 | 1) => {
       if (shown.length === 0) return;
@@ -149,8 +188,9 @@ export default function DigestPage() {
 
   /** Counted over the whole payload, not the filtered view, so the numbers
       don't appear to drop when a filter hides posts. */
-  const readCount = useMemo(() => ITEMS.filter((i) => read.has(i.url)).length, [read]);
-  const likedCount = useMemo(() => ITEMS.filter((i) => liked.has(i.url)).length, [liked]);
+  const readCount = useMemo(() => items.filter((i) => read.has(i.url)).length, [items, read]);
+  const likedCount = useMemo(() => items.filter((i) => liked.has(i.url)).length, [items, liked]);
+  const bookmarkedCount = bookmarks.size;
 
   const toggleSource = (id: string) =>
     setActive((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
@@ -168,7 +208,7 @@ export default function DigestPage() {
 
   const subtitle = (
     <span title={`Collected ${stampUtc(META.generatedAt)} · deployed ${stampUtc(BUILT_AT)}`}>
-      {ITEMS.length} posts
+      {items.length} posts
       {/* Relative once the client knows the time; the exact stamp until then. */}
       {BUILT_AT && <> · updated {minute === null ? stampUtc(BUILT_AT) : ago(BUILT_AT, minute)}</>}
     </span>
@@ -223,11 +263,28 @@ export default function DigestPage() {
               <HeartIcon filled={likedOnly} className="h-3.5 w-3.5" />
               <span className="tabular-nums text-neutral-600">{likedCount}</span>
             </button>
-            <span className="mx-1 h-3.5 w-px shrink-0 bg-white/10" aria-hidden />
           </>
         )}
+        {bookmarkedCount > 0 && (
+          <button
+            onClick={() => setBookmarkedOnly((v) => !v)}
+            aria-pressed={bookmarkedOnly}
+            aria-label="Bookmarked only"
+            className={`flex shrink-0 items-center gap-1.5 rounded-md px-2 py-1 text-xs transition ${
+              bookmarkedOnly
+                ? "bg-amber-400/15 text-amber-200"
+                : "text-neutral-500 hover:bg-white/5 hover:text-amber-200"
+            }`}
+          >
+            <BookmarkIcon filled={bookmarkedOnly} className="h-3.5 w-3.5" />
+            <span className="tabular-nums text-neutral-600">{bookmarkedCount}</span>
+          </button>
+        )}
+        {(likedCount > 0 || bookmarkedCount > 0) && (
+          <span className="mx-1 h-3.5 w-px shrink-0 bg-white/10" aria-hidden />
+        )}
 
-        {CHIPS.map((f) => (
+        {chips.map((f) => (
           <button
             key={f.id}
             onClick={() => toggleSource(f.id)}
@@ -236,7 +293,7 @@ export default function DigestPage() {
           >
             <PlatformIcon type={f.type} className="h-3 w-3 opacity-70" />
             {f.label}
-            <span className="tabular-nums text-neutral-600">{f.items.length}</span>
+            <span className="tabular-nums text-neutral-600">{f.count}</span>
           </button>
         ))}
 
@@ -287,8 +344,10 @@ export default function DigestPage() {
           item={i}
           read={read.has(i.url)}
           liked={liked.has(i.url)}
+          bookmarked={bookmarks.has(i.url)}
           onToggleRead={onToggleRead}
           onToggleLike={onToggleLike}
+          onToggleBookmark={onToggleBookmark}
           onOpenMedia={openMedia}
           onExpand={setFocusUrl}
         />
@@ -320,7 +379,7 @@ export default function DigestPage() {
         <p className="text-xs text-neutral-600">Click a card to mark it read.</p>
       )}
 
-      {(likedCount > 0 || (canMark && readCount > 0)) && (
+      {(likedCount > 0 || bookmarkedCount > 0 || (canMark && readCount > 0)) && (
         <div className="space-y-0.5">
           {likedCount > 0 && (
             <button
@@ -337,6 +396,23 @@ export default function DigestPage() {
                 Liked
               </span>
               <span className="tabular-nums text-neutral-600">{likedCount}</span>
+            </button>
+          )}
+          {bookmarkedCount > 0 && (
+            <button
+              onClick={() => setBookmarkedOnly((v) => !v)}
+              aria-pressed={bookmarkedOnly}
+              className={`flex w-full items-center justify-between gap-3 rounded-md px-2.5 py-1.5 text-left transition ${
+                bookmarkedOnly
+                  ? "bg-amber-400/15 text-amber-200"
+                  : "text-neutral-400 hover:bg-white/5 hover:text-amber-200"
+              }`}
+            >
+              <span className="flex items-center gap-2.5">
+                <BookmarkIcon filled={bookmarkedOnly} />
+                Bookmarked
+              </span>
+              <span className="tabular-nums text-neutral-600">{bookmarkedCount}</span>
             </button>
           )}
           {canMark && readCount > 0 && (
@@ -380,7 +456,7 @@ export default function DigestPage() {
           </span>
         </div>
         <div className="mt-1.5 space-y-0.5">
-          {CHIPS.map((f) => (
+          {chips.map((f) => (
             <button
               key={f.id}
               onClick={() => toggleSource(f.id)}
@@ -391,7 +467,7 @@ export default function DigestPage() {
                 <PlatformIcon type={f.type} className="h-3.5 w-3.5 text-neutral-500" />
                 <span className="truncate">{f.label}</span>
               </span>
-              <span className="tabular-nums text-neutral-600">{f.items.length}</span>
+              <span className="tabular-nums text-neutral-600">{f.count}</span>
             </button>
           ))}
         </div>
@@ -436,6 +512,8 @@ export default function DigestPage() {
           position={focusIndex === -1 ? "–" : `${focusIndex + 1} / ${shown.length}`}
           read={read.has(focusItem.url)}
           liked={liked.has(focusItem.url)}
+          bookmarked={bookmarks.has(focusItem.url)}
+          onToggleBookmark={onToggleBookmark}
           paused={zoom !== null}
           onToggleRead={onToggleRead}
           onToggleLike={onToggleLike}

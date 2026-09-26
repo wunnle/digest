@@ -1,5 +1,5 @@
 import "server-only";
-import { FEEDS, ITEMS, LATEST } from "@/app/data";
+import { FEEDS, ITEMS, LATEST, type Bookmark } from "@/app/data";
 
 /**
  * What the server knows about the posts baked into this deploy — so a like
@@ -28,6 +28,18 @@ const byUrl = new Map<string, LikeMeta>(
 
 /** Null when the post isn't in this deploy — older than the 30 days kept. */
 export const lookup = (url: string): LikeMeta | null => byUrl.get(url) ?? null;
+
+const itemsByUrl = new Map(ITEMS.map((i) => [i.url, i]));
+
+/**
+ * A bookmark's snapshot of a post in this deploy: the post as the page shows
+ * it, and its source's label. Null for anything not in the payload.
+ */
+export function snapshot(url: string): Omit<Bookmark, "bookmarkedAt"> | null {
+  const item = itemsByUrl.get(url);
+  if (!item) return null;
+  return { item, label: feeds.get(item.sourceId)?.label ?? item.name };
+}
 
 /**
  * url → source id for the newest run's posts. Recorded per post rather than
