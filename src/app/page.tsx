@@ -29,26 +29,6 @@ const FEED_INFO = new Map(FEEDS.map((f) => [f.id, { label: f.label, type: f.type
 
 type Chip = { id: string; label: string; type: string; count: number };
 
-function GridIcon() {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" className="h-4 w-4" aria-hidden>
-      <rect x="2" y="2" width="5" height="7" rx="1" />
-      <rect x="9" y="2" width="5" height="4" rx="1" />
-      <rect x="2" y="11" width="5" height="3" rx="1" />
-      <rect x="9" y="8" width="5" height="6" rx="1" />
-    </svg>
-  );
-}
-
-function ColumnIcon() {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" className="h-4 w-4" aria-hidden>
-      <rect x="4" y="2" width="8" height="5" rx="1" />
-      <rect x="4" y="9" width="8" height="5" rx="1" />
-    </svg>
-  );
-}
-
 export default function DigestPage() {
   /** Selected source ids. Empty means everything, so the page opens complete. */
   const [active, setActive] = useState<string[]>([]);
@@ -95,12 +75,6 @@ export default function DigestPage() {
   const canMark = status === "signedIn";
   const onToggleLike = canMark ? toggleLike : undefined;
   const onToggleBookmark = canMark ? toggleBookmark : undefined;
-
-  /**
-   * One reading column with the filters in a sidebar, instead of the grid.
-   * Desktop only; remembered per browser.
-   */
-  const [single, setSingle] = usePreference("digest:singleColumn");
 
   /** Hide posts already read. Remembered per browser. */
   const [hideRead, setHideRead] = usePreference("digest:hideRead");
@@ -214,26 +188,6 @@ export default function DigestPage() {
     </span>
   );
 
-  /* Below md everything is one column anyway, so the switch only exists on desktop. */
-  const layoutSwitch = (
-    <div className="hidden rounded-lg p-0.5 ring-1 ring-inset ring-white/10 md:flex" role="group" aria-label="Layout">
-      {([false, true] as const).map((one) => (
-        <button
-          key={String(one)}
-          onClick={() => setSingle(one)}
-          aria-pressed={single === one}
-          aria-label={one ? "Single column" : "Grid"}
-          title={one ? "Single column" : "Grid"}
-          className={`rounded-md p-1.5 transition ${
-            single === one ? "bg-white/10 text-white" : "text-neutral-500 hover:text-neutral-200"
-          }`}
-        >
-          {one ? <ColumnIcon /> : <GridIcon />}
-        </button>
-      ))}
-    </div>
-  );
-
   /** Everything above the posts: sign-in errors, filter row, hint. */
   const top = (
     <>
@@ -243,7 +197,7 @@ export default function DigestPage() {
           block that pushes the posts down. */}
       <div
         className={`-mx-4 mt-5 flex items-center gap-1 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0 ${
-          single ? "xl:hidden" : ""
+          "xl:hidden"
         }`}
       >
         {/* Only appears once there's something saved — an always-on filter
@@ -329,7 +283,7 @@ export default function DigestPage() {
       {/* Click-to-read isn't discoverable on its own. Once something's been
           marked, the hint has done its job. */}
       {canMark && readCount === 0 && likedCount === 0 && (
-        <p className={`mt-3 text-xs text-neutral-600 ${single ? "xl:hidden" : ""}`}>
+        <p className="mt-3 text-xs text-neutral-600 xl:hidden">
           Click a card to mark it read.
         </p>
       )}
@@ -489,21 +443,12 @@ export default function DigestPage() {
   return (
     <Shell
       subtitle={subtitle}
-      controls={layoutSwitch}
       sidebar={filters}
-      wide={!single}
       status={status}
       email={email}
     >
       {top}
-      {single ? (
-        <div className="feed mt-6">{posts}</div>
-      ) : (
-        /* One continuous masonry, newest first. Masonry rather than a grid
-           because post lengths run from 15 to 1200-odd characters, and
-           equal-height rows leave short posts stranded beside long ones. */
-        <div className="feed mt-6 gap-4 md:columns-2 xl:columns-3">{posts}</div>
-      )}
+      <div className="feed mt-6">{posts}</div>
       {emptyState}
 
       {focusItem && (

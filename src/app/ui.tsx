@@ -966,7 +966,7 @@ export function Card({
       role={onToggleRead ? "button" : undefined}
       tabIndex={onToggleRead ? 0 : undefined}
       aria-pressed={onToggleRead ? read : undefined}
-      className={`card group mb-4 break-inside-avoid rounded-2xl border p-5 transition-[opacity,border-color,background-color,filter,box-shadow,translate] duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
+      className={`card group mb-4 rounded-2xl border p-5 transition-[opacity,border-color,background-color,filter,box-shadow,translate] duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
         onToggleRead ? "cursor-pointer" : ""
       } ${
         // Liked posts carry the rose in their fill and border, so they're

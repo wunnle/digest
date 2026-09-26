@@ -103,7 +103,6 @@ export function Shell({
   subtitle,
   controls,
   sidebar,
-  wide = false,
   status,
   email,
   children,
@@ -115,8 +114,6 @@ export function Shell({
   controls?: React.ReactNode;
   /** The page's own sidebar; without one, links to the settings pages. */
   sidebar?: React.ReactNode;
-  /** The feed's grid: full width, no sidebar. */
-  wide?: boolean;
   status: AuthStatus;
   email: string | null;
   children: React.ReactNode;
@@ -164,26 +161,19 @@ export function Shell({
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[80rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(56,130,246,0.12),transparent)] blur-2xl"
       />
-      {wide ? (
-        <div className="relative mx-auto max-w-[95rem]">
+      {/* An empty third column balances the sidebar, so the column stays
+          centred on the screen. Below xl there's no room beside it. */}
+      <div className="relative xl:grid xl:grid-cols-[minmax(0,1fr)_42rem_minmax(0,1fr)] xl:gap-10">
+        <aside className="hidden xl:block xl:w-52 xl:justify-self-end">
+          <div className="sticky top-6 pt-3 text-sm">
+            {sidebar ?? <DefaultSidebar />}
+          </div>
+        </aside>
+        <div className="mx-auto w-full max-w-[42rem]">
           {header}
           {children}
         </div>
-      ) : (
-        // An empty third column balances the sidebar, so the column stays
-        // centred on the screen. Below xl there's no room beside it.
-        <div className="relative xl:grid xl:grid-cols-[minmax(0,1fr)_42rem_minmax(0,1fr)] xl:gap-10">
-          <aside className="hidden xl:block xl:w-52 xl:justify-self-end">
-            <div className="sticky top-6 pt-3 text-sm">
-              {sidebar ?? <DefaultSidebar />}
-            </div>
-          </aside>
-          <div className="mx-auto w-full max-w-[42rem]">
-            {header}
-            {children}
-          </div>
-        </div>
-      )}
+      </div>
     </main>
   );
 }
