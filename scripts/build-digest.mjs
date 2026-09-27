@@ -15,6 +15,7 @@
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { validateAttachments } from "./validate-attachments.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const RUNS = join(ROOT, "runs");
@@ -63,6 +64,7 @@ function check(run, file) {
       else if (seen.has(i.url)) errors.push(`${at}: duplicate url`);
       seen.add(i.url);
       if (Number.isNaN(Date.parse(i.published_at))) errors.push(`${at}: published_at must be an ISO timestamp`);
+      errors.push(...validateAttachments(i.attachments, at, i.url));
       // Text may be left out only where a title carries the item (YouTube).
       if (typeof i.text !== "string") {
         if (i.text === undefined && typeof i.title === "string") continue;

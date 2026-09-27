@@ -7,7 +7,7 @@
  */
 
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
-import type { Bookmark, Item, Media, Quote } from "./data";
+import type { Attachment, Bookmark, Item, Media, Quote } from "./data";
 
 type Kind = "read" | "liked";
 type Marks = Record<Kind, ReadonlySet<string>>;
@@ -850,7 +850,72 @@ function YouTubePreview({ id, url, title }: { id: string; url: string; title?: s
   );
 }
 
-/** Title, text, media and quote — the post itself, shared by the card and focus view. */
+function NativeVideoPreview({ attachment }: { attachment: Extract<Attachment, { type: "native_video" }> }) {
+  return (
+    <a
+      href={attachment.external_url}
+      target="_blank"
+      rel="noreferrer"
+      onClick={swallow}
+      aria-label="Watch video on X"
+      className="group/video relative mt-3 block w-full overflow-hidden rounded-xl bg-white/5"
+      style={{ aspectRatio: `${attachment.width} / ${attachment.height}` }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={attachment.poster_url}
+        alt=""
+        loading="lazy"
+        width={attachment.width}
+        height={attachment.height}
+        className="h-full w-full object-cover transition group-hover/video:brightness-110"
+      />
+      <span className="absolute inset-0 flex items-center justify-center bg-black/20">
+        <span className="flex items-center gap-1.5 rounded-full bg-black/75 py-2 pl-3 pr-3.5 text-sm font-medium text-white ring-1 ring-white/20">
+          <PlayIcon className="h-4 w-4" />
+          {attachment.duration ? clock(attachment.duration) : "Watch on X"}
+        </span>
+      </span>
+    </a>
+  );
+}
+
+function LinkCardPreview({ attachment }: { attachment: Extract<Attachment, { type: "link_card" }> }) {
+  const id = youtubeId(attachment.url);
+  if (id) return <YouTubePreview id={id} url={attachment.url} title={attachment.title} />;
+
+  return (
+    <a
+      href={attachment.url}
+      target="_blank"
+      rel="noreferrer"
+      onClick={swallow}
+      className="group/link mt-3 flex overflow-hidden rounded-xl border border-white/10 bg-white/[0.035] transition hover:border-white/25 hover:bg-white/[0.06]"
+    >
+      {attachment.thumbnail_url && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={attachment.thumbnail_url} alt="" loading="lazy" className="h-24 w-32 shrink-0 object-cover" />
+      )}
+      <span className="flex min-w-0 flex-col justify-center gap-1 p-3">
+        {attachment.publisher && <span className="text-xs text-neutral-500">{attachment.publisher}</span>}
+        <span className="line-clamp-2 text-sm font-medium leading-snug text-neutral-100">{attachment.title}</span>
+      </span>
+    </a>
+  );
+}
+
+function AttachmentBlock({ attachments }: { attachments: Attachment[] }) {
+  if (!attachments.length) return null;
+  return attachments.map((attachment, index) =>
+    attachment.type === "native_video" ? (
+      <NativeVideoPreview key={`${attachment.external_url}-${index}`} attachment={attachment} />
+    ) : (
+      <LinkCardPreview key={`${attachment.url}-${index}`} attachment={attachment} />
+    ),
+  );
+}
+
+/** Title, text, media, attachments and quote — shared by the card and focus view. */
 function PostBody({
   item,
   onOpenMedia,
@@ -891,6 +956,7 @@ function PostBody({
       ) : (
         <MediaBlock media={item.media} onOpen={onOpenMedia} />
       )}
+      <AttachmentBlock attachments={item.attachments ?? []} />
 
       {item.quote && <QuoteBlock quote={item.quote} onOpen={onOpenMedia} />}
       <AuthorReplies replies={item.authorReplies} onOpen={onOpenMedia} large={large} />

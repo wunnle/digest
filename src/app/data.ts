@@ -19,6 +19,25 @@ export type Media = {
   duration?: number;
 };
 
+/** Rendered X attachments that are not stable, directly hosted media files. */
+export type Attachment =
+  | {
+      type: "native_video";
+      poster_url: string;
+      external_url: string;
+      width: number;
+      height: number;
+      duration?: number;
+      playback_url?: string;
+    }
+  | {
+      type: "link_card";
+      url: string;
+      title: string;
+      publisher?: string;
+      thumbnail_url?: string;
+    };
+
 /** A post quoted by one of the scanned accounts, by someone not in scope. */
 export type Quote = {
   url: string;
@@ -43,6 +62,8 @@ export type Item = {
   /** The post as written, newlines and all. */
   text: string;
   media: Media[];
+  /** Native videos and rendered external cards captured from the post. */
+  attachments: Attachment[];
   /** Present when the post is a quote tweet. Often the substance of the post. */
   quote?: Quote;
   /** Consecutive direct replies written by the post's author. */
@@ -84,6 +105,7 @@ type RawItem = {
   title?: string;
   text?: string;
   media?: Media[];
+  attachments?: Attachment[];
   quote_tweet?: RawQuote | null;
   author_replies?: RawQuote[];
   /** Legacy singular fixture; retained for old append-only runs. */
@@ -162,6 +184,7 @@ export const FEEDS: Feed[] = ids.map((id) => {
       title: i.title || undefined,
       text: i.text ?? "",
       media: i.media ?? [],
+      attachments: i.attachments ?? [],
       quote: i.quote_tweet
         ? {
             url: i.quote_tweet.url,
