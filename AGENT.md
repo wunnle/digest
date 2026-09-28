@@ -57,6 +57,7 @@ Add a **new** file to `runs/`, named after the run's `generated_at` with `:` rep
 
 ```jsonc
 {
+  "collection_schema": 3,
   "generated_at": "2026-09-25T04:00:00Z",
   "window": { "start": "…Z", "end": "…Z", "timezone": "UTC", "duration_hours": 48 },
   "scope": {
@@ -94,7 +95,14 @@ One entry per source:
         { "type": "link_card", "url": "https://www.youtube.com/watch?v=…", "title": "Rendered card title", "publisher": "YouTube", "thumbnail_url": "https://…" }
       ],
       "quote_tweet": null,           // x only: the quoted post, or null (shape below)
-      "author_replies": []           // x only: consecutive direct replies by this post's author
+      "author_replies": [],          // x only: consecutive direct replies by this post's author
+      "render_audit": {              // required for every X item in collection_schema 3
+        "root_article_url": "https://x.com/simonw/status/…",
+        "inspected_at": "…Z",
+        "quote_card": { "visible": false },
+        "external_link_card": { "visible": true, "final_url": "https://example.com/article" },
+        "native_video": { "visible": false }
+      }
     }
   ]
 }
@@ -114,7 +122,17 @@ A quoted post goes in `quote_tweet`, never in `text`:
 
 When the first visible direct reply to an X post is written by the original post's author, capture it and every immediately consecutive reply by that author in ordered `author_replies`, using the same object shape as `quote_tweet`. Stop at the first reply from another account; do not skip intervening replies to find later author responses. Use an empty array or omit the field when the first reply is by another account or no reply is visible. Never merge reply text into the original `text`.
 
-### What `text` must be
+### Required rendered-embed audit for X
+
+Every newly collected X item uses top-level `collection_schema: 3` and includes `render_audit`. Inspect the root article in the rendered browser and record all three states explicitly:
+
+- `quote_card.visible`: when true, include its canonical `status_url` and a matching `quote_tweet`.
+- `external_link_card.visible`: when true, open that rendered card in a disposable tab, record its canonical `final_url`, and include a matching `attachments[].type: "link_card"`.
+- `native_video.visible`: when true, include a matching `attachments[].type: "native_video"`.
+
+`root_article_url` must equal the item URL and `inspected_at` must be the actual UTC inspection time. Never mark a visible embed false merely because extraction was inconvenient. `node scripts/build-digest.mjs` rejects schema-3 X items whose audit evidence and captured data disagree. Before publishing, test at least one known quote-card post and one known external-card post from the candidate set when either shape appears in the run.
+
+## What `text` must be
 
 Only what the author wrote. Not the page around it. This is what an X post looks like when its whole card is copied, and it's **wrong**:
 

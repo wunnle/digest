@@ -1,0 +1,66 @@
+[
+  {
+    "name": "external-link-card",
+    "item": {
+      "published_at": "2026-09-26T20:52:04.048Z",
+      "url": "https://x.com/badlogicgames/status/2103950754516205672",
+      "topic": "Talk on rewriting AI agents and capability gains",
+      "text": "recommended viewing.",
+      "attachments": [
+        {
+          "type": "link_card",
+          "url": "https://www.youtube.com/watch?v=yB6_iFGTq9k",
+          "title": "Can Rewriting an AI Agent Bend the Intelligence Curve? - Zhengyao Jiang",
+          "publisher": "YouTube",
+          "thumbnail_url": "https://pbs.twimg.com/card_img/2103950796811587584/i1KGn4t0?format=webp&name=medium"
+        }
+      ],
+      "quote_tweet": null,
+      "author_replies": [],
+      "render_audit": {
+        "root_article_url": "https://x.com/badlogicgames/status/2103950754516205672",
+        "inspected_at": "2026-09-28T07:45:00Z",
+        "quote_card": { "visible": false },
+        "external_link_card": {
+          "visible": true,
+          "final_url": "https://www.youtube.com/watch?v=yB6_iFGTq9k"
+        },
+        "native_video": { "visible": false }
+      }
+    }
+  },
+  {
+    "name": "nested-quote-card",
+    "item": {
+      "published_at": "2026-09-25T15:51:55.327Z",
+      "url": "https://x.com/thorstenball/status/2103512832599814255",
+      "topic": "Moving beyond close reading of agent transcripts",
+      "text": "The days of reading transcripts up close are over.",
+      "quote_tweet": {
+        "url": "https://x.com/sqs/status/2103512273809735805",
+        "published_at": "2026-09-25T15:49:42.101Z",
+        "author": { "name": "Quinn Slack", "handle": "sqs" },
+        "text": "If you have the patience to watch your agents work step-by-step, you're giving them too short a leash.\n\nSo: ampcode.com/news/less-noise",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HTEtQ4gacAA119b?format=webp&name=small",
+            "width": 600,
+            "height": 465
+          }
+        ]
+      },
+      "author_replies": [],
+      "render_audit": {
+        "root_article_url": "https://x.com/thorstenball/status/2103512832599814255",
+        "inspected_at": "2026-09-28T07:50:00Z",
+        "quote_card": {
+          "visible": true,
+          "status_url": "https://x.com/sqs/status/2103512273809735805"
+        },
+        "external_link_card": { "visible": false },
+        "native_video": { "visible": false }
+      }
+    }
+  }
+]

@@ -16,6 +16,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { validateAttachments } from "./validate-attachments.mjs";
+import { validateRunRenderAudits } from "./validate-render-audit.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const RUNS = join(ROOT, "runs");
@@ -56,6 +57,7 @@ function check(run, file) {
     errors.push(`${where}: digest must be a list`);
     return errors;
   }
+  errors.push(...validateRunRenderAudits(run, where));
   const seen = new Set();
   for (const e of run.digest) {
     for (const i of e.items ?? []) {
