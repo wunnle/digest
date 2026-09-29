@@ -1,0 +1,466 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-09-29T04:17:20Z",
+  "window": {
+    "start": "2026-09-28T04:17:20Z",
+    "end": "2026-09-29T04:17:20Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out browser collection from the enabled live API sources.",
+    "note": "All enabled sources visited; logged-out timelines may omit replies or repost-only activity."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-09-28T17:51:39.673Z",
+          "url": "https://x.com/simonw/status/2104630129528037415",
+          "topic": "2026 LLM and coding-agent trends",
+          "text": "I've published detailed notes and an annotated transcript to accompany the video of the keynote I gave at @WeAreDevs World Congress North America in San Jose on Friday - here's my rundown of everything that's happened with LLMs and agents in 2026 so far",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+              "title": "2026 in LLMs (so far)",
+              "publisher": "simonwillison.net",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2104408416173412352/AJlQJdU5?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2104630129528037415",
+            "inspected_at": "2026-09-29T04:17:20Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-09-28T17:00:12.288Z",
+          "url": "https://x.com/HamelHusain/status/2104617180096549369",
+          "topic": "Getting started with LLM evaluations",
+          "text": "Q: Can I help with evals if I'm not a domain expert?\n\nA: Yes, you can help more than you think!  Especially in the beginning, where there's often low hanging fruits that can be uncovered through looking at data.\n\nhamel.dev/blog/posts/eva…",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HTUaK8VXUAAvq2T?format=webp&name=large",
+              "width": 507,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2104617180096549369",
+            "inspected_at": "2026-09-29T04:17:20Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [
+        {
+          "published_at": "2026-09-28T21:09:33.955Z",
+          "url": "https://x.com/RLanceMartin/status/2104679933876576355",
+          "topic": "Automating eval design with Claude Code",
+          "text": "Claude Code can help with eval design + hillclimbing. \n\ncheck out this article i just published for details:",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+              "title": "Automating eval design and hillclimbing with Claude / claude.dev Blog",
+              "publisher": "claude.dev",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2104671805931962368/5_BmFoXH?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/RLanceMartin/status/2104679933876576355",
+            "inspected_at": "2026-09-29T04:17:20Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-09-28T16:26:50.907Z",
+          "url": "https://x.com/trq212/status/2104608785696440510",
+          "topic": "Context-rich agent workflows",
+          "text": "it's basically impossible for someone to just \"show you their prompt\" now, because everything is about references, skills and examples\n\nI often ask my agent to look at 3 other repos I've made first, search the web for references, use other AI APIs, etc.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2104608785696440510",
+            "inspected_at": "2026-09-29T04:17:20Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [
+        {
+          "published_at": "2026-09-28T23:00:00Z",
+          "url": "https://bsky.app/profile/danabra.mov/post/3mwm44czkr22b",
+          "topic": "Astra model impressions",
+          "text": "astra may be my favorite model now. it's a very weird one"
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    }
+  ]
+}
