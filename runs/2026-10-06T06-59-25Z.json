@@ -1,0 +1,516 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-06T06:59:25Z",
+  "window": {
+    "start": "2026-10-05T06:59:25Z",
+    "end": "2026-10-06T06:59:25Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out browser collection from the enabled live API sources.",
+    "note": "All enabled sources visited; logged-out timelines may omit replies or repost-only activity."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-10-05T17:19:20Z",
+          "url": "https://x.com/simonw/status/2107158711798218848",
+          "topic": "Qwen 3.8 arithmetic evaluation",
+          "text": "I re-ran an experiment @colin_fraser ran against GPT-4o a while back to see how good it was at adding long numbers, only this time I tried Qwen 3.8 27B running locally in both reasoning and non-reasoning modes simonwillison.net/2026/Oct/4/qwe…",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2107158711798218848",
+            "inspected_at": "2026-10-06T06:59:25Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-05T22:09:20Z",
+          "url": "https://x.com/badlogicgames/status/2107231693568438767",
+          "topic": "Mobile agent workflow",
+          "text": "i knew that humongous android tablet of mine will eventually pay off after ... 4 years. this is really nice to work with. agents run on my phone, tablet connects to it.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HT5j3yOWIAA515z?format=webp&name=large",
+              "width": 600,
+              "height": 375
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2107231693568438767",
+            "inspected_at": "2026-10-06T06:59:25Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-10-05T18:00:15Z",
+          "url": "https://x.com/HamelHusain/status/2107169008046772252",
+          "topic": "How often to run evals",
+          "text": "Q: How often should I run my evals?\n\nA: Weigh the cost and how saturated the eval is against the business value of catching the error.\n\nRead more: hamel.dev/blog/posts/eva…\n\nRead all the FAQs here: hamel.dev/blog/posts/eva…",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HT4rCQrWYAAlURC?format=webp&name=large",
+              "width": 336,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2107169008046772252",
+            "inspected_at": "2026-10-06T06:59:25Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-10-05T19:35:12Z",
+          "url": "https://x.com/trq212/status/2107192901537329354",
+          "topic": "HTML planning skill for Claude Code",
+          "text": "I've been working on a skill that makes better HTML plans in Claude Code. \n\nIt uses simple language, shows code snippets, surfaces questions & makes mockups. Linting reduces the normal failure cases that Claude runs into.\n\nWould love your feedback before shipping more broadly!",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2107190712819478528/img/uRUNrBppYBlJb6eh?format=webp&name=medium",
+              "external_url": "https://x.com/trq212/status/2107192901537329354",
+              "width": 1200,
+              "height": 737
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2107192901537329354",
+            "inspected_at": "2026-10-06T06:59:25Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-05T22:00:33Z",
+          "url": "https://x.com/trq212/status/2107229483015258493",
+          "topic": "Cloud agents with local file access",
+          "text": "my favorite name for this pattern is \"local hands\", Claude runs in the cloud but can access your files locally- also coming to cowork",
+          "quote_tweet": {
+            "url": "https://x.com/dfeinition/status/2107174121213722661",
+            "published_at": "2026-10-05T18:20:34Z",
+            "author": {
+              "name": "Dan Fein",
+              "handle": "dfeinition"
+            },
+            "text": "Your Claude Projects cloud session can now connect to a folder you approve on your computer.\n\nThe session stays in the cloud and only reaches for that local folder when a task needs it, reading and editing the files in place.\n\nStarting to roll out today.",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2107229483015258493",
+            "inspected_at": "2026-10-06T06:59:25Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/dfeinition/status/2107174121213722661"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [
+        {
+          "published_at": "2026-10-05T22:07:59Z",
+          "url": "https://www.youtube.com/watch?v=9eS6X_-h9gc",
+          "topic": "OpenAI product rollout recap",
+          "title": "28 Days of OpenAI",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/9eS6X_-h9gc/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [
+        {
+          "published_at": "2026-10-05T09:53:12Z",
+          "url": "https://www.youtube.com/watch?v=ZHVNTTKu9fU",
+          "topic": "Shrinking AI capability advantages",
+          "title": "The Billion Dollar AI Advantage Is Disappearing",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi/ZHVNTTKu9fU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    }
+  ]
+}
