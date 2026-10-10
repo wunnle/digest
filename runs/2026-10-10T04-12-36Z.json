@@ -1,0 +1,619 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-10T04:12:36Z",
+  "window": {
+    "start": "2026-10-09T04:12:36Z",
+    "end": "2026-10-10T04:12:36Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out browser collection from the enabled live API sources.",
+    "note": "All enabled sources visited; logged-out timelines may omit replies or repost-only activity."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-10-09T17:20:12Z",
+          "url": "https://x.com/simonw/status/2108608482442449261",
+          "topic": "Open-weight MoE coding model recommendations",
+          "text": "What's the best open weight Mixture-of-Experts LLM for coding that fits in less than 60GB of RAM?\n\nI think MoE might be necessary to get reasonably interactive speeds on the hardware I have access to - I want something faster than 12 tokens/second",
+          "quote_tweet": null,
+          "author_replies": [
+            {
+              "url": "https://x.com/simonw/status/2108608837175701514",
+              "published_at": "2026-10-09T17:21:37Z",
+              "author": {
+                "name": "Simon Willison",
+                "handle": "simonw"
+              },
+              "text": "I like Qwen3.5-35B-A3B for this, wondering what else is out there that might be a bit more recent and pack a little more of a punch"
+            }
+          ],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2108608482442449261",
+            "inspected_at": "2026-10-10T04:05:03Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-09T13:16:10Z",
+          "url": "https://x.com/simonw/status/2108547065634844839",
+          "topic": "Voice-driven Codex Desktop development",
+          "text": "I built a new feature for my blog entirely by voice with Codex Desktop, while I was cooking dinner",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+              "title": "A new feature for my blog, built using my voice",
+              "publisher": "simonwillison.net"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [
+            {
+              "url": "https://x.com/simonw/status/2108547654083039700",
+              "published_at": "2026-10-09T13:18:30Z",
+              "author": {
+                "name": "Simon Willison",
+                "handle": "simonw"
+              },
+              "text": "Example prompt:"
+            }
+          ],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2108547065634844839",
+            "inspected_at": "2026-10-10T04:05:08Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-10-09T20:45:17Z",
+          "url": "https://x.com/mitsuhiko/status/2108660090928504900",
+          "topic": "QuickJS choice for codemode",
+          "text": "If you want to know why we ended up with quickjs for codemode: pragmatism :)",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2108660090928504900",
+            "inspected_at": "2026-10-10T04:05:13Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-09T23:05:38Z",
+          "url": "https://x.com/badlogicgames/status/2108695410260824071",
+          "topic": "Multi-agent rewrite of Prime Agent in Rust",
+          "text": "pi goes rust. it just cost a few tokens.",
+          "quote_tweet": {
+            "url": "https://x.com/PrimeIntellect/status/2108672479007047952",
+            "published_at": "2026-10-09T21:34:30Z",
+            "author": {
+              "name": "Prime Intellect",
+              "handle": "PrimeIntellect"
+            },
+            "text": "Over two weeks, Prime Agent orchestrated a swarm of over 2,000 agents to rewrite itself in Rust.\n\nWith 10,000+ sandboxes, 200B+ GLM-5.3 tokens, and 16,000 agent-to-agent messages, this was our largest test yet of Prime Agent’s multi-agent capabilities and our infrastructure powering these agent swarms.\n\nPrime Agent now reaches usable input ~13× faster and uses 83% less startup memory than before.",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/amplify_video_thumb/2108672461055426560/img/OTJ0qEOe9CqW4-Bz?format=webp&name=medium",
+                "width": 1280,
+                "height": 720
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2108695410260824071",
+            "inspected_at": "2026-10-10T04:05:34Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/PrimeIntellect/status/2108672479007047952"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-10-09T15:00:17Z",
+          "url": "https://x.com/HamelHusain/status/2108573271503380723",
+          "topic": "Making the case for investing in evaluations",
+          "text": "Q: How do I make the case for investing in evaluations to my team?\n\nA: Review real user interactions and show your team the problems you find. Fix them, then show what improved.\n\nhamel.dev/blog/posts/eva…",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HUMoNvmWQAA01uI?format=webp&name=large",
+              "width": 469,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2108573271503380723",
+            "inspected_at": "2026-10-10T04:05:40Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-10-09T22:40:34Z",
+          "url": "https://x.com/trq212/status/2108689101503566319",
+          "topic": "Porting a personal agent to Claude Managed Agents",
+          "text": "before I joined Anthropic, I spent about 2 weeks hacking on this as a side project with Opus 4. It used the Agent SDK so it needed a constantly running process & didnt work that well\n\nbut one prompt to Opus 5.5 ported it to Claude Managed Agents & made it way more reliable",
+          "quote_tweet": {
+            "url": "https://x.com/trq212/status/2108301668828004396",
+            "published_at": "2026-10-08T21:01:02Z",
+            "author": {
+              "name": "Thariq",
+              "handle": "trq212"
+            },
+            "text": "you now get Claude API credits with your MAX plans ($100, or 200 matching your plan) every month, use this to build more personal AI for yourself! \n\nI made an AI homepage that's generated everyday based on sites I read and replaces my 'new tab' page in Chrome",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/amplify_video_thumb/2108300770366103552/img/yOZZ3vhVPoUnDCH2?format=webp&name=medium",
+                "width": 1280,
+                "height": 720
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2108689101503566319",
+            "inspected_at": "2026-10-10T04:05:46Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/trq212/status/2108301668828004396"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "Theo - t3․gg",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "dan",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "Caleb Writes Code",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "Matthew Berman",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "Two Minute Papers",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [
+        {
+          "published_at": "2026-10-09T22:09:55Z",
+          "url": "https://x.com/adamwathan/status/2108681391714214394",
+          "topic": "Amp Code orbs development workflow",
+          "text": "Building software in anything other than @AmpCode orbs feels like eating broken glass in comparison.\n\nBut it’s frustratingly one of those “you can’t understand why it’s better until you just use it” tools, a lot like Tailwind was.\n\nUse it, and be ruined.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/adamwathan/status/2108681391714214394",
+            "inspected_at": "2026-10-10T04:05:54Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [
+        {
+          "published_at": "2026-10-09T18:13:42Z",
+          "url": "https://x.com/dfeinition/status/2108621944262381945",
+          "topic": "Claude Code Projects waitlist access",
+          "text": "Pro/Max? ✅\nOn Claude Projects waitlist? ✅\n\nYou're in!",
+          "quote_tweet": {
+            "url": "https://x.com/ClaudeDevs/status/2108621476538781878",
+            "published_at": "2026-10-09T18:11:50Z",
+            "author": {
+              "name": "ClaudeDevs",
+              "handle": "ClaudeDevs"
+            },
+            "text": "We just let in every Pro and Max user from the Claude Code Projects waitlist!\n\nIf you're new to Claude Code Projects, here's a 4 minute walkthrough to get you started:",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/amplify_video_thumb/2108616285760499712/img/ESduThxQJik4m9hs?format=webp&name=medium",
+                "width": 640,
+                "height": 360
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/dfeinition/status/2108621944262381945",
+            "inspected_at": "2026-10-10T04:05:59Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/ClaudeDevs/status/2108621476538781878"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
