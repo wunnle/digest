@@ -1,0 +1,520 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-11T04:10:06Z",
+  "window": {
+    "start": "2026-10-10T04:10:06Z",
+    "end": "2026-10-11T04:10:06Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out browser collection from the enabled live API sources.",
+    "note": "All enabled sources visited; logged-out timelines may omit replies or repost-only activity."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-10T19:13:45Z",
+          "url": "https://x.com/badlogicgames/status/2108999442716111296",
+          "topic": "Unikernels for simpler software deployment",
+          "text": "recommended reading by @GeoffreyHuntley",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://ghuntley.com/unikernels/",
+              "title": "unikernels were hard. key word: were.",
+              "publisher": "ghuntley.com",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2109001615789510656/x5nyCbOR?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2108999442716111296",
+            "inspected_at": "2026-10-11T04:04:13Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://ghuntley.com/unikernels/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-10-10T14:44:18Z",
+          "url": "https://x.com/thorstenball/status/2108931634506465492",
+          "topic": "Using Claude subscriptions in Amp",
+          "text": "Big, big, big news:",
+          "quote_tweet": {
+            "url": "https://x.com/sqs/status/2108783608832122910",
+            "published_at": "2026-10-10T04:56:06Z",
+            "author": {
+              "name": "Quinn Slack",
+              "handle": "sqs"
+            },
+            "text": "You can use your Claude plan in Amp now. Free and open to everyone.\n\n(By very very very very popular request.)\n\nampcode.com/news/use-your-…",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HUPl-fJbIAAExO9?format=webp&name=large",
+                "width": 1200,
+                "height": 675
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2108931634506465492",
+            "inspected_at": "2026-10-11T04:04:19Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/sqs/status/2108783608832122910"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-10-10T23:27:34Z",
+          "url": "https://x.com/HamelHusain/status/2109063317427978553",
+          "topic": "Simulation-based evaluation for AI agents",
+          "text": "Recently had the chance to interview @benhylak on how he is thinking about simulations in our AI Evals Course 😁\n\nSimulations are incredibly useful for evals when you do them well. Ben discusses what he learned from implementing simulations for evals at several companies. Some fun topics came up, my favorite being \"simulation awareness\" - when models know they are in a simulation.\n\nBelow is a chapter summary:\n\n Why input/output tests miss agent failures\n Replay production traces to see what a change breaks\n Recreate the data and tools around the agent\n How agents detect simulations and change their behavior\n Choose scenarios that test the change you made\n Check answers, costs, and tool behavior across runs\n Replay known failures to verify a fix\n Common mistakes that make simulations misleading\n Check that the simulation reproduces production behavior\n When to start using simulations\n\nYou can also watch this on YT: youtube.com/watch?v=eLkESC…",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2109062951483424768/img/7mtePPPX69R1DcJh?format=webp&name=medium",
+              "external_url": "https://x.com/HamelHusain/status/2109063317427978553",
+              "width": 1200,
+              "height": 675
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2109063317427978553",
+            "inspected_at": "2026-10-11T04:04:24Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-10-10T06:12:29Z",
+          "url": "https://x.com/trq212/status/2108802833986552174",
+          "topic": "Personal AI-generated browser homepage workflow",
+          "text": "honestly pretty cool to have this on my new tab page \n\njust merged in some PRs by others too!",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HUP4190bMAEXgw-?format=webp&name=large",
+              "width": 600,
+              "height": 366
+            }
+          ],
+          "quote_tweet": {
+            "url": "https://x.com/trq212/status/2108301668828004396",
+            "published_at": "2026-10-08T21:01:02Z",
+            "author": {
+              "name": "Thariq",
+              "handle": "trq212"
+            },
+            "text": "you now get Claude API credits with your MAX plans ($100, or 200 matching your plan) every month, use this to build more personal AI for yourself! \n\nI made an AI homepage that's generated everyday based on sites I read and replaces my 'new tab' page in Chrome",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/amplify_video_thumb/2108300770366103552/img/yOZZ3vhVPoUnDCH2?format=webp&name=medium",
+                "width": 1200,
+                "height": 675
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2108802833986552174",
+            "inspected_at": "2026-10-11T04:04:29Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/trq212/status/2108301668828004396"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "Theo - t3․gg",
+      "items": [
+        {
+          "published_at": "2026-10-10T10:58:42Z",
+          "url": "https://www.youtube.com/watch?v=ND_kRgU_WlY",
+          "topic": "Economics of rewriting TypeScript systems in Rust",
+          "title": "You can rewrite typescript in rust for $420k"
+        }
+      ]
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "dan",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "Caleb Writes Code",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "Matthew Berman",
+      "items": [
+        {
+          "published_at": "2026-10-10T18:42:01Z",
+          "url": "https://www.youtube.com/watch?v=cX2kD2yQf88",
+          "topic": "Recent AI capability progress",
+          "title": "Everything has been solved"
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "Two Minute Papers",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    }
+  ]
+}
