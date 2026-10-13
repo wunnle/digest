@@ -1,0 +1,706 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-13T04:10:47Z",
+  "window": {
+    "start": "2026-10-12T04:10:47Z",
+    "end": "2026-10-13T04:10:47Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered-browser collection from the authenticated live source list.",
+    "note": "All enabled sources were visited; X discovery was limited to each logged-out profile’s initially rendered recent batch."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-10-12T21:22:00Z",
+          "url": "https://x.com/simonw/status/2109711203077619768",
+          "topic": "Python 3.15 and uv",
+          "text": "Shared some notes on Python 3.15, using it with uv, and features from Python 3.11 I'm excited to use now that 3.10 is no longer the minimum supported version for my own projects",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2109711203077619768",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://simonwillison.net/2026/Oct/12/python-3-15/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://simonwillison.net/2026/Oct/12/python-3-15/",
+              "title": "Hello Python 3.15, goodbye 3.10, and now I can use 3.11",
+              "publisher": "simonwillison.net",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2109711167837110272/UP5rVu0Y?format=webp&name=medium"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-10-12T11:11:00Z",
+          "url": "https://x.com/mitsuhiko/status/2109557489687540121",
+          "topic": "Building a game with coding models",
+          "text": "The weekend project was a little software factory where my kids and I build another little game. It's completely crazy how good these models got. It's really a lot of fun, and you can have it try to do things you wanted for a long time (eg: using WFC for worldgen).",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2109557489687540121",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HUanK_hW8AAPdBN?format=webp&name=large",
+              "width": 600,
+              "height": 417
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-12T20:46:00Z",
+          "url": "https://x.com/badlogicgames/status/2109702268186435711",
+          "topic": "Agent verification and codebase constraints",
+          "text": "listen to powerful poteto",
+          "quote_tweet": {
+            "url": "https://x.com/poteto/status/2109699980248408574",
+            "published_at": "2026-10-12T20:37:00Z",
+            "author": {
+              "name": "lauren",
+              "handle": "poteto"
+            },
+            "text": "something that keeps bothering me is how some people see slop as something that is happening to them, like they're some kind of helpless bystander powerless to do anything about it\n\nexcuse me but you are a software engineer, you literally learned how to make sand think and make computers do your bidding?! and now you can't do anything about it? please\n\nthe 2 things you should know to cut through all the noise:\n\n1. you need to give your agent a way to verify its own work (i just posted about this so won't rehash)\n2. your codebase is memory\n\nthe 2nd is not new either, we have always had lint rules, compilers with good diagnostics and strong type systems, LSPs, etc to help us write better code. there is no difference when agents write the code instead, you just need more of them, and stronger ones.\n\nforget rules and skills. you can add those later.\n\nyes, your codebase is a form of memory to agents! agents love extending what already exists. so every nit and every annoyance you've ever seen, every mistake and bad pattern you observe from agents, needs to turn into a constraint, or the agents will just keep repeating those same mistakes like a virus in your code. then you keep observing and repeating this process until your codebase is locked down enough that even agents with little context can one shot a high quality PR.\n\nan even better direction is to refactor/rewrite your code such that agent anti-patterns become categorically impossible. use type systems to your advantage, use libraries/frameworks that reduce the architectural search space, or heck, create your own framework like we did for grok bot and design high quality primitives and well thought out APIs",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2109702268186435711",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/poteto/status/2109699980248408574"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-12T20:22:00Z",
+          "url": "https://x.com/badlogicgames/status/2109696157815631992",
+          "topic": "Self-modifying software and harnesses",
+          "text": "recommended viewing. never noticed i have a lazy eye and now i can't unsee.",
+          "quote_tweet": {
+            "url": "https://x.com/pidotdev/status/2109588438215462962",
+            "published_at": "2026-10-12T13:14:00Z",
+            "author": {
+              "name": "Pi",
+              "handle": "pidotdev"
+            },
+            "text": "Welcome to our Monday Meditations! 🌞\n\n@badlogicgames and @mitsuhiko are chatting about self modifying software and harnesses.",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2109696157815631992",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/pidotdev/status/2109588438215462962"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-12T13:07:00Z",
+          "url": "https://x.com/badlogicgames/status/2109586739954376757",
+          "topic": "AI-assisted building",
+          "text": "announcing my second AI psychos.\n\nbuild all the things part II - electric boogaloo",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2109586739954376757",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-12T12:00:00Z",
+          "url": "https://x.com/badlogicgames/status/2109569782936690834",
+          "topic": "Terminal interfaces for agents",
+          "text": "pi-ception. guess tuis are still useful",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2109569782936690834",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HUayU-8WgAEfgsL?format=webp&name=large",
+              "width": 269,
+              "height": 600
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HUayfkqXQAEQ1uM?format=webp&name=large",
+              "width": 269,
+              "height": 600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-10-12T22:39:00Z",
+          "url": "https://x.com/steipete/status/2109730774593487009",
+          "topic": "Coding model throughput and cost",
+          "text": "6.1 Sol ultrafast >>> 6 Astra\n\n~ same cost but whole different game with 250 tpm",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2109730774593487009",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-12T22:15:00Z",
+          "url": "https://x.com/steipete/status/2109724776168300631",
+          "topic": "Beyond vibe coding",
+          "text": "said that last year, saying it again.\nvibes coding is a slur.",
+          "quote_tweet": {
+            "url": "https://x.com/signulll/status/2109317410301911551",
+            "published_at": "2026-10-11T19:17:00Z",
+            "author": {
+              "name": "signüll",
+              "handle": "signulll"
+            },
+            "text": "it’s clear we need to retire the term vibe coding because the models now produce better architecture & way more coherent code than an average software engineer.\n\nperhaps even better than top software engineers too because unlike a human, ai has a much much larger context window.\n\nthis ain’t vibe coding at all. it’s precision engineering.",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2109724776168300631",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/signulll/status/2109317410301911551"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-10-12T23:13:00Z",
+          "url": "https://x.com/thorstenball/status/2109739184818925789",
+          "topic": "Amp GitHub integration",
+          "text": "First-class GitHub integration, let's go!",
+          "quote_tweet": {
+            "url": "https://x.com/rockorager/status/2109735737356939510",
+            "published_at": "2026-10-12T22:59:00Z",
+            "author": {
+              "name": "Tim Culverhouse",
+              "handle": "rockorager"
+            },
+            "text": "Amp now gets GitHub reviews, comments, and CI results in the thread that wrote the code. Create a PR from an Amp thread and it will automatically subscribe.\n\nNever leave the Amp app again.\n\nampcode.com/news/github-li…",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HUdJXJyWsAAmhSv?format=webp&name=large",
+                "width": 600,
+                "height": 405
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2109739184818925789",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/rockorager/status/2109735737356939510"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited successfully; no relevant in-window items selected."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-10-12T17:39:00Z",
+          "url": "https://x.com/HamelHusain/status/2109655278786683305",
+          "topic": "Agent evaluation tooling",
+          "text": "I’ve known Ajay for a while and he’s doubled down on making tools that help you look at your data for evals\n\nPromising new entrant into the eval tools space",
+          "quote_tweet": {
+            "url": "https://x.com/bettersayAJ/status/2109639214723932495",
+            "published_at": "2026-10-12T16:35:00Z",
+            "author": {
+              "name": "ajay yadav",
+              "handle": "bettersayAJ"
+            },
+            "text": "building agents is easy\n\ngetting them to production is hard\n\ntoday we’re launching @neatlogs to fix that",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2109655278786683305",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/bettersayAJ/status/2109639214723932495"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited successfully; no relevant in-window items selected."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Profile rendered only stale 2012 posts."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Profile rendered only stale 2022 posts."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited successfully; no relevant in-window items selected."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "note": "Visited successfully; no relevant in-window items selected."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [
+        {
+          "published_at": "2026-10-12T23:19:00Z",
+          "url": "https://x.com/_sholtodouglas/status/2109740777245172157",
+          "topic": "AI modifying game software",
+          "text": "people have been asking 'if models are so good where is all the new software' for the last year or so. As always, look to gaming for early evidence of the future",
+          "quote_tweet": {
+            "url": "https://x.com/ptrschmdtnlsn/status/2109696268390089187",
+            "published_at": "2026-10-12T20:22:00Z",
+            "author": {
+              "name": "Peter Schmidt-Nielsen",
+              "handle": "ptrschmdtnlsn"
+            },
+            "text": "What a bizarre future. I wanted to play Halo: Combat Evolved for the first time with @robertskmiles, and we wanted local multiplayer across two screens, and a model could just immediately add that feature to the decompilation.",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HUclWFFbAAAGov0?format=webp&name=large",
+                "width": 600,
+                "height": 169
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/_sholtodouglas/status/2109740777245172157",
+            "inspected_at": "2026-10-13T04:10:47Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/ptrschmdtnlsn/status/2109696268390089187"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited successfully; no relevant in-window items selected."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [],
+      "note": "Five newest videos inspected; newest canonical timestamp was before the window."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Profile rendered; newest owned post was 8 days old."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [],
+      "note": "Five newest videos inspected; newest was 4 days old."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [
+        {
+          "published_at": "2026-10-13T00:47:04Z",
+          "url": "https://www.youtube.com/watch?v=rpLrkJ5NNEI",
+          "topic": "Meta Muse Wonder",
+          "title": "Meta just dropped something insane... (Muse Wonder)"
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "note": "Five newest videos inspected; newest canonical timestamp was before the window."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited successfully; no relevant in-window items selected."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited successfully; no relevant in-window items selected."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited successfully; no relevant in-window items selected."
+    }
+  ]
+}
