@@ -1,0 +1,653 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-15T04:11:36Z",
+  "window": {
+    "start": "2026-10-14T04:11:36Z",
+    "end": "2026-10-15T04:11:36Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Concrete AI and software-development tools, workflows, artifacts, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered browser collection from the authenticated live source list.",
+    "note": "All enabled sources visited; X discovery used each initially rendered recent timeline batch, and YouTube inspection was capped at five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-14T20:06:14.150Z",
+          "url": "https://x.com/badlogicgames/status/2110462202188533862",
+          "topic": "Plugin architecture and durable agent concepts",
+          "text": "designing a new plugin system. everything leads back to pi-durable concepts.\n\ni'm pi-durableing all the things now.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2110462202188533862",
+            "inspected_at": "2026-10-15T04:05:55.026Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-14T09:54:08.769Z",
+          "url": "https://x.com/badlogicgames/status/2110308164776100275",
+          "topic": "Agentic development and Rust",
+          "text": "recommended reading. liking this perspective.\n\nsmallcultfollowing.com/babysteps/blog…",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2110308164776100275",
+            "inspected_at": "2026-10-15T04:06:02.084Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-10-15T03:54:23.185Z",
+          "url": "https://x.com/thorstenball/status/2110580016140431681",
+          "topic": "Simpler context management with newer coding models",
+          "text": "With the latest models, I don't think stuff like /btw and forking and all the other context management makes sense anymore.\n\nThey are now so good at following instructions that you can literally ask side-questions in the same thread, they get steered in, model answers and then continues.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2110580016140431681",
+            "inspected_at": "2026-10-15T04:06:05.136Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-14T22:41:59.408Z",
+          "url": "https://x.com/thorstenball/status/2110501399041823219",
+          "topic": "First-principles prompting for organizational reviews",
+          "text": "What I find the most fascinating about this post:\n\nHow much first-principles thinking goes into these seemingly simple prompts.\n\nI don't know many people who could write\n\n\"review exists so leadership catches problems early and moves money and people to right places.\"",
+          "quote_tweet": {
+            "url": "https://x.com/felixrieseberg/status/2110023283169247623",
+            "published_at": "2026-10-13T15:02:07.701Z",
+            "author": {
+              "name": "Felix Rieseberg",
+              "handle": "felixrieseberg"
+            },
+            "text": "Hi, I'm Felix. I'm an eng lead working on Claude. I love watching people take flight and do things they never thought possible.\n\nWe often describe that as \"being more ambitious\" when using AI, which is tricky advice to follow. I wrote a tutorial:\n\nfelixrieseberg.com/how-to-be-more…",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HUoBbreawAAgM0A?format=webp&name=large",
+                "width": 495,
+                "height": 600
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2110501399041823219",
+            "inspected_at": "2026-10-15T04:06:25.457Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/felixrieseberg/status/2110023283169247623"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-10-14T21:52:18.460Z",
+          "url": "https://x.com/trq212/status/2110488896039690255",
+          "topic": "The detail-oriented skill of coding-agent work",
+          "text": "@fnthawar and I talked about how the skill of coding agents is \"being in the details\"\n\nlike running a company, you can't know everything but caring obsessively about the right details is what makes something great\n\nit could be code, architecture, design, UX- whatevers needed",
+          "quote_tweet": {
+            "url": "https://x.com/trq212/status/2110035114432532654",
+            "published_at": "2026-10-13T15:49:08.494Z",
+            "author": {
+              "name": "Thariq",
+              "handle": "trq212"
+            },
+            "text": "excited to be back home",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HUhZgBeXMAAkXxm?format=webp&name=large",
+                "width": 450,
+                "height": 600
+              }
+            ]
+          },
+          "author_replies": [
+            {
+              "url": "https://x.com/trq212/status/2110488897453257169",
+              "published_at": "2026-10-14T21:52:18.797Z",
+              "author": {
+                "name": "Thariq",
+                "handle": "trq212"
+              },
+              "text": "I used to tell people it's good to \"be technical\" but I think this is not accurate enough. \n\nIf you're technical you need to be in the details more with the right parts of the code.\n\nIf you're non-technical, being in the details means knowing how things work at the right level.",
+              "media": []
+            }
+          ],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2110488896039690255",
+            "inspected_at": "2026-10-15T04:06:28.900Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/trq212/status/2110035114432532654"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [
+        {
+          "published_at": "2026-10-14T15:45:44Z",
+          "url": "https://www.youtube.com/watch?v=NE006pkiAnk",
+          "topic": "AI and software development video",
+          "title": "So I've been testing Gemini 4..."
+        }
+      ]
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    }
+  ],
+  "collection_audit": [
+    {
+      "source_id": "x:simonw",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 2
+    },
+    {
+      "source_id": "x:steipete",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:thorstenball",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 2
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "visited": true,
+      "candidate_count": 2,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:birgitta410",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:bcherny",
+      "visited": true,
+      "candidate_count": 6,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:trq212",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 1
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:karpathy",
+      "visited": true,
+      "candidate_count": 6,
+      "selected_count": 0
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 1
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:adamwathan",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:dfeinition",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    }
+  ]
+}
