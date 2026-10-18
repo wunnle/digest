@@ -1,0 +1,509 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-18T04:05:33Z",
+  "window": {
+    "start": "2026-10-17T04:05:33Z",
+    "end": "2026-10-18T04:05:33Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Concrete AI and software-development tools, workflows, artifacts, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered browser collection from the authenticated live source list.",
+    "note": "All enabled sources visited; X discovery used each initially rendered recent timeline batch, and YouTube inspection was capped at five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [],
+      "note": "Visited; none of the five newest visible videos fell inside the 24-hour window."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Visited; no original posts in the rendered recent feed fell inside the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [
+        {
+          "published_at": "2026-10-17T05:15:52Z",
+          "url": "https://www.youtube.com/watch?v=WvI90l7c5Zs",
+          "topic": "MiMo V2.6 model overview",
+          "title": "MiMo V2.6 explained in 12min.."
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [
+        {
+          "published_at": "2026-10-17T20:50:42Z",
+          "url": "https://www.youtube.com/watch?v=oMYXJIHcEX0",
+          "topic": "ChatGPT personality and Sam Altman interview",
+          "title": "Sam Altman on ChatGPT Personality (clip from my interview)"
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "note": "Visited; none of the five newest visible videos fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited; no posts from the initially rendered recent timeline batch fell inside the 24-hour window."
+    }
+  ],
+  "collection_audit": [
+    {
+      "source_id": "x:simonw",
+      "visited": true,
+      "candidate_count": 6,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "visited": true,
+      "candidate_count": 8,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "visited": true,
+      "candidate_count": 7,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:steipete",
+      "visited": true,
+      "candidate_count": 8,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:thorstenball",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "visited": true,
+      "candidate_count": 8,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "visited": true,
+      "candidate_count": 6,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "visited": true,
+      "candidate_count": 6,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "visited": true,
+      "candidate_count": 2,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:birgitta410",
+      "visited": true,
+      "candidate_count": 7,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:bcherny",
+      "visited": true,
+      "candidate_count": 8,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:trq212",
+      "visited": true,
+      "candidate_count": 8,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "visited": true,
+      "candidate_count": 8,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:karpathy",
+      "visited": true,
+      "candidate_count": 7,
+      "selected_count": 0
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "visited": true,
+      "candidate_count": 28,
+      "selected_count": 0
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 1
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 1
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:adamwathan",
+      "visited": true,
+      "candidate_count": 6,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "visited": true,
+      "candidate_count": 6,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:dfeinition",
+      "visited": true,
+      "candidate_count": 8,
+      "selected_count": 0
+    }
+  ]
+}
