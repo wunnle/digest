@@ -1,0 +1,606 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-21T04:08:36Z",
+  "window": {
+    "start": "2026-10-20T04:08:36Z",
+    "end": "2026-10-21T04:08:36Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, or evidence-backed criticism; generic promotion and unrelated posts omitted.",
+    "source": "Fresh logged-out rendered-browser collection from the enabled live API source list.",
+    "note": "All enabled sources were visited. X discovery covered each initially rendered recent timeline batch; YouTube inspection covered at most five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-10-20T19:43:22.930Z",
+          "url": "https://x.com/simonw/status/2112630778068881543",
+          "topic": "Browser RTS built with Claude Opus 5.5",
+          "text": "I built a Command & Conquer style RTS called Battle Drones, mainly using Claude Opus 5.5, which runs in the browser and includes device-to-device multiplayer over an audio link simonwillison.net/2026/Oct/20/ba…",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVGR6imaIAA62ik?format=webp&name=large",
+              "width": 600,
+              "height": 388
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVGSc2-bQAA5kzf?format=webp&name=large",
+              "width": 600,
+              "height": 409
+            }
+          ],
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2112630778068881543",
+            "inspected_at": "2026-10-21T04:05:14.910Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-10-20T10:51:47.504Z",
+          "url": "https://x.com/mitsuhiko/status/2112496998955831473",
+          "topic": "DeepSeek DeepInfer inference framework",
+          "text": "You gotta love Deepseek. This is awesome stuff!",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://github.com/deepseek-ai/DeepInfer",
+              "title": "GitHub - deepseek-ai/DeepInfer: DeepInfer: High-performance, large-scale inference framework for...",
+              "publisher": "github.com",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2112468664037625856/NL9rjvaa?format=webp&name=medium"
+            }
+          ],
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2112496998955831473",
+            "inspected_at": "2026-10-21T04:05:18.705Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://github.com/deepseek-ai/DeepInfer"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-20T09:10:46.315Z",
+          "url": "https://x.com/mitsuhiko/status/2112471576486551609",
+          "topic": "Opus 5.5 report-writing quality",
+          "text": "Opus 5.5 is such a good writer that I really enjoy reading its reports now. Such a huge improvement over Fable.",
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2112471576486551609",
+            "inspected_at": "2026-10-21T04:05:22.456Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-20T20:58:26.027Z",
+          "url": "https://x.com/badlogicgames/status/2112649665426645315",
+          "topic": "Using mcporter to bridge MCP into another harness",
+          "text": "just used @steipete 's old mcporter to get mcp into a non-mcp supporting harness on the go. he invented codemode before it was cool.",
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2112649665426645315",
+            "inspected_at": "2026-10-21T04:05:37.339Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-10-20T17:29:48.455Z",
+          "url": "https://x.com/steipete/status/2112597162924351909",
+          "topic": "Mostly autonomous Lit-to-Solid frontend migration",
+          "text": "Two weeks ago I kicked off a loop to move OpenClaw's Lit-based Web frontend to Solid 2.0.\n\nTook ~6 days until we could remove Lit, and another week to move patterns to idiomatic Solid.\n\nI checked in with the session every other day, overall the process was mostly automatic. Took about ~600 PRs.\n\nResult: Smaller JS and CSS footprint and much more fine-grained update control. Everything feeling more snappy and responsive. team.openclaw.ai/chat/roboclaw/…",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVFxsUJbcAAlGap?format=webp&name=large",
+              "width": 580,
+              "height": 600
+            }
+          ],
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2112597162924351909",
+            "inspected_at": "2026-10-21T04:05:41.271Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-20T15:47:58.456Z",
+          "url": "https://x.com/steipete/status/2112571535731106013",
+          "topic": "Agent-assisted Rust TypeScript compiler adoption",
+          "text": "Moved to tsrs over the weekend. Drop-in replacement. Around 5x faster for OC.\n\nKind of amazing that it took Microsoft a team and two years to rewrite the TS compiler in go, and now you can just let an agent rip and get sth significantly better within weeks.",
+          "quote_tweet": {
+            "url": "https://x.com/voidzerodev/status/2112531443591020965",
+            "published_at": "2026-10-20T13:08:38.993Z",
+            "author": {
+              "name": "VoidZero",
+              "handle": "voidzerodev"
+            },
+            "text": "Introducing tsrs: a Rust port of the TypeScript compiler 🦀\n\nWe are not forking TypeScript!\n\n◆ In close collaborating with the TypeScript team\n◆ Up to 8x faster than TS 7.0 & ~70% less memory\n◆ Runs in WASM, so it works in your browser & on Workers\n◆ Soon part of the Oxc toolchain\n\nnpx tsrs\n\nblog.cloudflare.com/typescript-rus…",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2112571535731106013",
+            "inspected_at": "2026-10-21T04:05:45.459Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/voidzerodev/status/2112531443591020965"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "Theo - t3.gg",
+      "items": [
+        {
+          "published_at": "2026-10-20T22:13:42Z",
+          "url": "https://www.youtube.com/watch?v=3OshsLm3_OQ",
+          "topic": "Why stronger models still matter for software work",
+          "title": "Opus 5.5 is proof that we do need smarter models",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/3OshsLm3_OQ/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "dan",
+      "note": "The newest owned post was before the UTC window; no in-window posts were found.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "Caleb Writes Code",
+      "note": "No videos among the five newest fell inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "Matthew Berman",
+      "note": "No videos among the five newest fell inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "Two Minute Papers",
+      "note": "No videos among the five newest fell inside the UTC window.",
+      "items": []
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [
+        {
+          "published_at": "2026-10-21T02:07:31.730Z",
+          "url": "https://x.com/adamwathan/status/2112727451742969973",
+          "topic": "Direct manipulation versus prompting for UI fine-tuning",
+          "text": "Still find prompting UI tweaks to be way too slow compared to direct manipulation like in a design tool. \n\nWhat's your work flow for fine-tuning UI details in code without being the victim of the brutal agent feedback loop?",
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/adamwathan/status/2112727451742969973",
+            "inspected_at": "2026-10-21T04:06:10.393Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [
+        {
+          "published_at": "2026-10-20T17:58:19.233Z",
+          "url": "https://x.com/mustafaakin/status/2112604338447429657",
+          "topic": "Offline personalized language-learning game built with Claude",
+          "text": "Kızımın İngilizcesine destek olsun diye Claude ile basit bir web oyunu yaptım. Harf vurgulamalarını local bir modelle hallettim, ~100 kelimenin okunuşunu ekledim, offline da çalışıyor. \n\nBenzerleri çok tabii ama ona özel olunca çok daha hoşuna gidiyor 🙂\n\nwords.mustafaakin.dev",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVF4vPOWgAAUMCj?format=webp&name=large",
+              "width": 600,
+              "height": 468
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVF4xZGW8AAGVVG?format=webp&name=large",
+              "width": 600,
+              "height": 468
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVF5C-UWIAEjW_n?format=webp&name=large",
+              "width": 600,
+              "height": 468
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVF5Fg4XgAAkNk_?format=webp&name=large",
+              "width": 600,
+              "height": 468
+            }
+          ],
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mustafaakin/status/2112604338447429657",
+            "inspected_at": "2026-10-21T04:06:15.542Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "note": "No selected posts from the initially rendered recent timeline batch inside the UTC window.",
+      "items": []
+    }
+  ]
+}
