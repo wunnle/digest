@@ -1,0 +1,640 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-22T04:18:55Z",
+  "window": {
+    "start": "2026-10-21T04:18:55Z",
+    "end": "2026-10-22T04:18:55Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Concrete AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered browser collection from the enabled live API source list.",
+    "note": "X logged-out timelines expose bounded recent batches and may omit reply-only activity."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-10-21T16:28:00Z",
+          "url": "https://x.com/simonw/status/2112944161670488423",
+          "topic": "Claude Code game fork",
+          "text": "There's a French fork of Battle Drones with new models and music (and a cinematic intro video) and it is SO cool! menufactory43.github.io/panache/\n\nHere's the old v.s. new Goliath model",
+          "quote_tweet": {
+            "url": "https://x.com/Meffysto69/status/2112908755654365220",
+            "published_at": "2026-10-21T14:07:00Z",
+            "author": {
+              "name": "meff",
+              "handle": "Meffysto69"
+            },
+            "text": "Merci @simonw! 🎩 I forked Battle Drones into Panache: a French Belle Époque RTS, with dirigibles, steam tractors, clockwork soldiers in képis and Gargantua, a walking steam fortress. Fully in French, built with Claude Code.\n\ngithub.com/menufactory43/…",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2112944161670488423",
+            "inspected_at": "2026-10-22T04:08:19Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/Meffysto69/status/2112908755654365220"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVKvexMa4AM-HuP?format=webp&name=large",
+              "width": 600,
+              "height": 290
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-10-21T22:43:00Z",
+          "url": "https://x.com/mitsuhiko/status/2113038454942466410",
+          "topic": "Responsive iPhone Duo interface",
+          "text": "While I was doing actual productive work, \"make it work with iPhone Duo and make it make sense\" came out really nice.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2113038454942466410",
+            "inspected_at": "2026-10-22T04:08:31Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVME-8SX0AA7Siw?format=webp&name=large",
+              "width": 600,
+              "height": 443
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVMFKTbWYAA10pW?format=webp&name=large",
+              "width": 439,
+              "height": 600
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVMFM35WcAAVrFU?format=webp&name=large",
+              "width": 455,
+              "height": 600
+            }
+          ]
+        },
+        {
+          "published_at": "2026-10-21T18:10:00Z",
+          "url": "https://x.com/mitsuhiko/status/2112969696069005567",
+          "topic": "PHP security hardening with Fil-C",
+          "text": "Just looking at that PHP patch I’m starting to get the sense that there might be more like this. If you can afford it, it’s probably not the worst idea to run it via fil-C for the foreseeable future.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2112969696069005567",
+            "inspected_at": "2026-10-22T04:08:40Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-21T18:53:00Z",
+          "url": "https://x.com/badlogicgames/status/2112980566194716812",
+          "topic": "Long-context agent workflow",
+          "text": "look at me. i have becometh the token maxxer",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2112980566194716812",
+            "inspected_at": "2026-10-22T04:09:34Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVLQn6OWIAAMeQ5?format=webp&name=large",
+              "width": 328,
+              "height": 325
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-10-21T11:35:00Z",
+          "url": "https://x.com/thorstenball/status/2112870272009421120",
+          "topic": "Agent-generated review artifacts",
+          "text": "tired: reviewing code\n\nwired: looking at slide shows and demos agent made",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2112870272009421120",
+            "inspected_at": "2026-10-22T04:11:08Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          },
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2112870181995192320/img/WcEe5xVBaQFY3Sr3?format=webp&name=medium",
+              "external_url": "https://x.com/thorstenball/status/2112870272009421120",
+              "width": 480,
+              "height": 542,
+              "duration": 19.839999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-10-21T21:48:00Z",
+          "url": "https://x.com/HamelHusain/status/2113024734078345568",
+          "topic": "Trace analysis for AI engineering",
+          "text": "Career progression \n\n2003: Data Analyst\n2010: Data Scientist\n2016: Machine Learning Engineer \n\nNow: Data Analyst of Traces 😅",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2113024734078345568",
+            "inspected_at": "2026-10-22T04:12:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-21T16:01:00Z",
+          "url": "https://x.com/HamelHusain/status/2112937350070448508",
+          "topic": "Auditing AI benchmarks",
+          "text": "BenchmarkGate is a real thing \n\nDon’t blindly trust benchmarks even popular ones\n\nWe need to be doing evals on our evals",
+          "quote_tweet": {
+            "url": "https://x.com/dejavucoder/status/2112910513982292256",
+            "published_at": "2026-10-21T14:14:00Z",
+            "author": {
+              "name": "sankalp",
+              "handle": "dejavucoder"
+            },
+            "text": "curious people and people interested in llm evals, benchmarks, high data circles, please wake up. my blog post \"SWE-bench Multimodal v2 is not multimodal\" is up now. \n\nsankalp.bearblog.dev/swe_multimodal/",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HVKO665a8AAzrMt?format=webp&name=large",
+                "width": 450,
+                "height": 600
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2112937350070448508",
+            "inspected_at": "2026-10-22T04:12:17Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/dejavucoder/status/2112910513982292256"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVKO665a8AAzrMt?format=webp&name=large",
+              "width": 450,
+              "height": 600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "Theo - t3.gg",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "dan",
+      "items": [
+        {
+          "published_at": "2026-10-21T23:10:26Z",
+          "url": "https://bsky.app/profile/danabra.mov/post/3mygbh4uczk2m",
+          "topic": "AI-generated software decoherence",
+          "text": "this was very good and articulated a lot i've been feeling lately.\n\nin formalization, this effect is even more noticeable: decoherence is punished by the agent being stuck in the maze for days when otherwise it would've made progress in 30 minutes\n\nbut i think this applies broadly to software"
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "Caleb Writes Code",
+      "items": [
+        {
+          "published_at": "2026-10-22T03:10:23Z",
+          "url": "https://www.youtube.com/watch?v=0SVpmARc90o",
+          "topic": "Reinforcement learning engineering",
+          "title": "Reinforcement Learning is hard.."
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "Matthew Berman",
+      "items": [
+        {
+          "published_at": "2026-10-21T15:30:24Z",
+          "url": "https://www.youtube.com/watch?v=3gXLmy7DK_4",
+          "topic": "Sam Altman interview on AI systems",
+          "title": "Sam Altman: RSI, AI Consciousness, OpenAI's New Hardware, Compute, and more!"
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "Two Minute Papers",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [
+        {
+          "published_at": "2026-10-21T18:51:00Z",
+          "url": "https://x.com/mustafaakin/status/2112980227706229176",
+          "topic": "DLSS 5 video enhancement experiment",
+          "text": "Maçın görüntü kalitesi kötü olduğu için DLSS 5 ile izleyeyim dedim bence fena olmadı 😂  \n\nnatural presetle daha iyi tabi bu extreme.  ekranı videoya kaydedemedim ondan telefonla çektim",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mustafaakin/status/2112980227706229176",
+            "inspected_at": "2026-10-22T04:13:30Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          },
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2112980004132761601/img/ng3ExcP6SkOswTke?format=webp&name=medium",
+              "external_url": "https://x.com/mustafaakin/status/2112980227706229176",
+              "width": 640,
+              "height": 360,
+              "duration": 33.343853
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    }
+  ]
+}
