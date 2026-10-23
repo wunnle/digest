@@ -1,0 +1,560 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-23T04:08:58Z",
+  "window": {
+    "start": "2026-10-22T04:08:58Z",
+    "end": "2026-10-23T04:08:58Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Concrete AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered browser collection from the enabled live API source list.",
+    "note": "X logged-out timelines expose bounded recent batches and may omit reply-only activity."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-10-22T14:00:11.889Z",
+          "url": "https://x.com/mitsuhiko/status/2113269188714242345",
+          "topic": "Restrictable authentication tokens",
+          "text": "I think instead of OIDC more services could consider macaroon like tokens. Where any party can restrict token lifetime along the way.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2113269188714242345",
+            "inspected_at": "2026-10-23T04:05:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-22T09:55:25.606Z",
+          "url": "https://x.com/mitsuhiko/status/2113207589978636646",
+          "topic": "AI exposing legacy software debt",
+          "text": "As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2113207589978636646",
+            "inspected_at": "2026-10-23T04:05:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-22T17:32:06.869Z",
+          "url": "https://x.com/badlogicgames/status/2113322519205720320",
+          "topic": "Agent history tooling",
+          "text": "history tool is where it's at",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2113322519205720320",
+            "inspected_at": "2026-10-23T04:05:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVQHnWCXUAAaCEa?format=webp&name=large",
+              "width": 269,
+              "height": 600
+            }
+          ]
+        },
+        {
+          "published_at": "2026-10-22T16:12:19.414Z",
+          "url": "https://x.com/badlogicgames/status/2113302439164281308",
+          "topic": "Claude Opus 5.5 developer experience",
+          "text": "been a gpt shill for almost a year, but opus 5.5 is just so nice to work with.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2113302439164281308",
+            "inspected_at": "2026-10-23T04:05:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-10-23T03:59:38.487Z",
+          "url": "https://x.com/thorstenball/status/2113480441537995037",
+          "topic": "Internal agent platforms",
+          "text": "Raise your hand if you work in a 2010s SaaS company that has built their own agent platform that no one really wants to use.",
+          "quote_tweet": {
+            "url": "https://x.com/ajkemps/status/2113470734588641681",
+            "published_at": "2026-10-23T03:21:04.170Z",
+            "author": {
+              "name": "Alex Kemper",
+              "handle": "ajkemps"
+            },
+            "text": "To be direct about it: every company that considers themselves a “tech” company is currently building a much worse version of something they could buy off the shelf, and furthermore they often have several teams competing on this front\n\nThen they launch it after 3-6 months of building in a silo and can’t get their colleagues to use it for entirely predictable reasons\n\nCoding agents and their adjacent products are among the most competitive markets of all time. The benefits of a highly competitive market accrue to customers by virtue of this intense competition among suppliers. Econ 101\n\nIs the internal team working on your agent platform really keeping pace with the market? Even if they put in the same hours (they don’t), they don’t have the breadth of customers and hard contact with the market to get the feedback necessary to make the product any good\n\nBig corporates that call their devs “IT” don’t delude themselves in this way. They buy the best, recognize their relative advantage (vendors will build almost anything for you because the competitive pressures demand it), and get back to work",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2113480441537995037",
+            "inspected_at": "2026-10-23T04:05:00Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/ajkemps/status/2113470734588641681"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-22T05:29:51.480Z",
+          "url": "https://x.com/thorstenball/status/2113140757410521159",
+          "topic": "Self-hosted coding-agent infrastructure",
+          "text": "You can now self-host orbs.\n\nIt's free for individuals and teams.\n\nampcode.com/news/self-host…",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2113140757410521159",
+            "inspected_at": "2026-10-23T04:05:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVNf6OoWwAA3jFb?format=webp&name=large",
+              "width": 562,
+              "height": 600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [
+        {
+          "published_at": "2026-10-22T18:17:10.703Z",
+          "url": "https://x.com/bcherny/status/2113333859907747871",
+          "topic": "Agent Skills standard donation",
+          "text": "Agent Skills started as an experiment in Claude Code. Many across the industry have come to adopt it, so we at Anthropic found it more fitting to donate it to the @AgenticAIFdn, next to MCP.",
+          "quote_tweet": {
+            "url": "https://x.com/ClaudeDevs/status/2113328526413996100",
+            "published_at": "2026-10-22T17:55:59.099Z",
+            "author": {
+              "name": "ClaudeDevs",
+              "handle": "ClaudeDevs"
+            },
+            "text": "We're donating Agent Skills to the Agentic AI Foundation (@AgenticAIFdn), the same foundation we donated MCP to.\n\nSince December 2025, 70+ agent platforms have integrated the standard, including ChatGPT, Cursor, GitHub Copilot, and VS Code. \n\nHere's what that means for you:",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/bcherny/status/2113333859907747871",
+            "inspected_at": "2026-10-23T04:05:00Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/ClaudeDevs/status/2113328526413996100"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [
+        {
+          "published_at": "2026-10-22T19:14:45Z",
+          "url": "https://www.youtube.com/watch?v=USeyDcWyVCc",
+          "topic": "Major software security incidents",
+          "title": "Even The NSA Got Involved",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/USeyDcWyVCc/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited successfully; no relevant items selected from the rendered recent batch."
+    }
+  ]
+}
