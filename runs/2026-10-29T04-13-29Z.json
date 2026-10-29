@@ -1,0 +1,686 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-29T04:13:29Z",
+  "window": {
+    "start": "2026-10-28T04:13:29Z",
+    "end": "2026-10-29T04:13:29Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Concrete AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered-browser collection from the live authenticated source list.",
+    "note": "X timelines expose a bounded logged-out recent batch; all enabled sources were visited."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-10-28T14:05:04.354Z",
+          "url": "https://x.com/simonw/status/2115444742595260551",
+          "topic": "coding agents and vibe game development",
+          "text": "I think October represents another inflection point in capabilities for coding agents and the models that drive them: Claude Opus 5.5 can now build video games that are actually fun",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+              "title": "The October inflection point for vibe game development",
+              "publisher": "simonwillison.net",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2115442970161971200/p50reEaT?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2115444742595260551",
+            "inspected_at": "2026-10-29T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-28T17:01:04.104Z",
+          "url": "https://x.com/badlogicgames/status/2115489033396818079",
+          "topic": "developer-tool engagement on GitHub",
+          "text": "yo @can1357 look at us, our little babies made it into a table in a GH blog post. dunno what most engaged means, but i'm sure it's cool.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVu5_DXXMAEEHiK?format=webp&name=large",
+              "width": 386,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2115489033396818079",
+            "inspected_at": "2026-10-29T04:09:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-28T11:20:25.897Z",
+          "url": "https://x.com/badlogicgames/status/2115403309343494596",
+          "topic": "libghostty in JetBrains terminals",
+          "text": "that's awesome. would be nice if vscode would follow suit as well.",
+          "quote_tweet": {
+            "url": "https://x.com/mitchellh/status/2115101011518095385",
+            "published_at": "2026-10-27T15:19:12.479Z",
+            "author": {
+              "name": "Mitchell Hashimoto",
+              "handle": "mitchellh"
+            },
+            "text": "JetBrains IDEs are now powered by libghostty! This brings huge feature and performance improvements to JB terminals! Based on their own annual reports, that's over 12.5 million active users across all platforms about to get a libghostty-powered terminal. blog.jetbrains.com/platform/2026/…",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2115403309343494596",
+            "inspected_at": "2026-10-29T04:09:30Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/mitchellh/status/2115101011518095385"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-10-28T10:56:49.425Z",
+          "url": "https://x.com/steipete/status/2115397368229060636",
+          "topic": "offline-capable agent web UI",
+          "text": "OpenClaw’s web UI now works offline and uses a smart websocket compression/reconnect logic.\n\nBeen flying to Vienna today and got plenty work done, despite spotty airplane wifi.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVtmrzBW0AAFh5Y?format=webp&name=large",
+              "width": 295,
+              "height": 600
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVtmry_XoAA-OdM?format=webp&name=large",
+              "width": 276,
+              "height": 600
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVtmry-XsAA5HyQ?format=webp&name=large",
+              "width": 276,
+              "height": 600
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVtmrzDW0AAJKCY?format=webp&name=large",
+              "width": 276,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2115397368229060636",
+            "inspected_at": "2026-10-29T04:10:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-10-28T08:41:20.311Z",
+          "url": "https://x.com/thorstenball/status/2115363272254005736",
+          "topic": "agent transcript graphics",
+          "text": "Again surprised by how much better Amp looks today.\n\nApparently, we now have these incredible in-transcript graphics.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVtHeIQWgAAUnoC?format=webp&name=large",
+              "width": 398,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2115363272254005736",
+            "inspected_at": "2026-10-29T04:11:30Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-28T10:54:51.295Z",
+          "url": "https://x.com/thorstenball/status/2115396872755876148",
+          "topic": "AI inference economics",
+          "text": "People have been saying this for a year now.\n\nBeware of the great rug pull, etc.\n\nBut all indications point towards price/intelligence dropping. Ant's S-1 says subs are 10% of rev. Inference has 80% margins.\n\nWhy should this happen?",
+          "quote_tweet": {
+            "url": "https://x.com/zachmoskow/status/2115244246206754877",
+            "published_at": "2026-10-28T00:48:22.290Z",
+            "author": {
+              "name": "Zach Moskow",
+              "handle": "zachmoskow"
+            },
+            "text": "it's gonna be hilarious when everyone looks back 6 months from now and remembers getting $5K in inference for $200 a month...",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2115396872755876148",
+            "inspected_at": "2026-10-29T04:11:00Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/zachmoskow/status/2115244246206754877"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [
+        {
+          "published_at": "2026-10-28T23:37:13.972Z",
+          "url": "https://x.com/geoffreylitt/status/2115588731449274581",
+          "topic": "plugins and self-modifying software",
+          "text": "New episode of the Small Talk podcast with @mschoening: 🧩 Plugins\n\nSoftware plugins are evolving a lot right now. What's up with the new breed of self-modifying systems in 2026? And what are the enduring challenges?",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2115587266324336640/img/5rovwpnvAeKFKNQ8?format=webp&name=medium",
+              "external_url": "https://x.com/geoffreylitt/status/2115588731449274581",
+              "width": 1280,
+              "height": 720,
+              "duration": 69.541
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/geoffreylitt/status/2115588731449274581",
+            "inspected_at": "2026-10-29T04:12:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [
+        {
+          "published_at": "2026-10-28T17:09:54.820Z",
+          "url": "https://x.com/bcherny/status/2115491259381072269",
+          "topic": "Claude Code government pilot results",
+          "text": "Utah gave Claude Code to 34 developers across 10 state agencies. 80% had a working environment within 30 minutes, 71% reported saving 20+ hours by the end of the four-week pilot.",
+          "quote_tweet": {
+            "url": "https://x.com/AnthropicAI/status/2115207004293853358",
+            "published_at": "2026-10-27T22:20:23.126Z",
+            "author": {
+              "name": "Anthropic",
+              "handle": "AnthropicAI"
+            },
+            "text": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off.\nanthropic.com/news/expanding…",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/bcherny/status/2115491259381072269",
+            "inspected_at": "2026-10-29T04:12:30Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/AnthropicAI/status/2115207004293853358"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-10-28T20:39:42.524Z",
+          "url": "https://x.com/trq212/status/2115544056038350960",
+          "topic": "technical skills in the agent era",
+          "text": "very weird thing happening rn\n\ntechnical people are sad, they think their skills are now useless\n\nnon-technical people are desperately wishing they were more technical so they could use agents better",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2115544056038350960",
+            "inspected_at": "2026-10-29T04:13:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [
+        {
+          "published_at": "2026-10-28T19:05:28Z",
+          "url": "https://www.youtube.com/watch?v=NBCM_ZoWZo8",
+          "topic": "Claude usage and local model routing",
+          "title": "How To Give Claude Unlimited Usage",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/NBCM_ZoWZo8/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [
+        {
+          "published_at": "2026-10-29T00:29:20Z",
+          "url": "https://www.youtube.com/watch?v=zhnJo7s91ls",
+          "topic": "Google Carbon model",
+          "title": "Google \"Carbon\" just won everything...",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi/zhnJo7s91ls/maxresdefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [
+        {
+          "published_at": "2026-10-28T17:32:40Z",
+          "url": "https://www.youtube.com/watch?v=pryCaGv8wuo",
+          "topic": "DeepSeek model analysis",
+          "title": "Deepseek's New AI Has A Secret",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/pryCaGv8wuo/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    }
+  ]
+}
