@@ -1,0 +1,469 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-30T04:08:30Z",
+  "window": {
+    "start": "2026-10-29T04:08:30Z",
+    "end": "2026-10-30T04:08:30Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, and operational lessons; omit hype and unrelated posts.",
+    "source": "Fresh logged-out rendered-browser collection from the live authenticated source list.",
+    "note": "X timelines expose a bounded logged-out recent batch; YouTube inspection was limited to the five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "name": "Simon Willison",
+      "items": [],
+      "handle": "simonw",
+      "note": "Visited and reviewed; no items selected as sufficiently useful for this digest."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "name": "Armin Ronacher",
+      "items": [],
+      "handle": "mitsuhiko",
+      "note": "Visited and reviewed; no items selected as sufficiently useful for this digest."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-29T19:50:01.040Z",
+          "url": "https://x.com/badlogicgames/status/2115893938653409521",
+          "topic": "Running an agent-connected development setup from a phone",
+          "text": "getting everything running on my phone, having it connect to everything was my dumbest idea. so far.\n\nit's like i learned nothing from vibetunnel.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2115893938653409521",
+            "inspected_at": "2026-10-30T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "badlogicgames"
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "name": "Peter Steinberger",
+      "items": [],
+      "handle": "steipete",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-10-29T17:05:40.694Z",
+          "url": "https://x.com/thorstenball/status/2115852581364801911",
+          "topic": "Trunk-based development and replacing long-lived branches",
+          "text": "Next question: why are you still using branches?\n\nWe talked about PRs. I don't think they make sense anymore, if you rethink them from first principles.\n\nYes, if you only use them to trigger CI, then sure, go ahead. That's a fat commit, not a PR. But for mandatory code review? Knowledge sharing? C'mon.\n\nBut some of you said: \"we use PRs because we use branches! I love to keep my stuff on branches.\"\n\nAnd I'm here to tell you: you don't need branches! You can just push to main.\n\nIt's called trunk-based development and the idea behind it is true continuous integration: you continuously integrate your changes with the trunk, the main branch.\n\nIt's been around for a while, it works. Just yesterday I talked with someone who said they've used it in an org with 400 engineers, without any issues. Ruby, the project, uses trunk-based development.\n\nThe main idea is that you want to avoid long-lived branches. They're bad, because branches can diverge and merging can turn into a thing. And you don't want routine operations to become a thing.\n\nEven when I worked in teams that used PRs and branches, I considered it a smell when a branch lived for longer than a day or two.\n\nBut when I shared this with others, I'd often get something back like this:\n\n\"Well, good for you, but no. MY thing, what I'm working on, that can't be done on main. It needs to be on a branch! It has a database migration, it changes the underlying shape, the architecture, it refactors this and changes that. It can't go on main yet! I need to merge it all at the end.\"\n\nAnd then I'd say:\n\n\"Nah, I can merge nearly anything continuously in small commits to main. You split things up. Add the column first, merge that, deploy it, now it's out, works, safe.\n\nAdd the helpers first, merge them, get them out.\n\nWant to migrate from legacy pattern A to new pattern B? Don't do it all at once. Add the dependency, then migrate A to B, one by one, safe.\"\n\nIf it can be merged in a large change, I bet it can be done in small increments that you merge to main.\n\nYes, there are exceptions, but it's 0.5% of cases, not 50%.\n\nBut there was a real problem with this approach: it was hard!\n\nThere's a lot of \"meta programming\" you have to do: make sure this small first change compiles and runs and the tests work, merge it, get it out, monitor it; then do the next small piece, make sure that works and get it out; then maybe push some still-unused dead code, add a feature flag, add a config variable; or keep both configurations working at the same time, etc.\n\nThat meant sometimes it was just easier to do it in a big fat branch. But big fat branches are risky!\n\nA system that continuously flows is safer than a system that starts and stops in spurts.\n\nBut -- you guessed it -- here's the good news:\n\nNow, with agents, all of these chores are no chores at all!\n\nAgents are great at adding feature flags, they're great at splitting up code, they're great at keeping track of three changes and merging them one by one and watching them roll out. They're great at keeping two configurations working for a day. They're great at migrating one by one.\n\nIn other words: it's now 10x easier to just work on main and make sure everything is continuously integrated and working.\n\nIt's now easy to make sure the system constantly flows.\n\nAnd look, ...\n\nI'm not here to convince you to switch to trunk-based development. Just a ruse to get you to read this. (But also, hey: try it! Pushing to main is amazing.)\n\nI'm here to make you RETHINK how you develop software.\n\nDon't just use agents to replace your typing.\n\nUse agents as the magic code-writing machines they are. Everything that was hard about software development because it involved writing code -- even the meta programming -- has become easier.\n\nYou can now reach for the stars! But you need to look up.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2115852581364801911",
+            "inspected_at": "2026-10-30T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "thorstenball"
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "handle": "geoffreylitt",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "name": "Hamel Husain",
+      "items": [],
+      "handle": "HamelHusain",
+      "note": "Visited and reviewed; no items selected as sufficiently useful for this digest."
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "name": "Lance Martin",
+      "items": [],
+      "handle": "RLanceMartin",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "name": "Sean Goedecke",
+      "items": [],
+      "handle": "sgoedecke",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "handle": "birgitta410",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "name": "Boris Cherny",
+      "items": [],
+      "handle": "bcherny",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-10-29T22:42:37.948Z",
+          "url": "https://x.com/trq212/status/2115937378674372783",
+          "topic": "The productivity illusion and mania of coding-agent work",
+          "text": "There’s 100% a kind of mania you can get into with coding agents, where it feels like you’re getting a lot done and working all the time but nothing is really happening.\n\nI think it's often a form of avoidance of something else in life.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2115937378674372783",
+            "inspected_at": "2026-10-30T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "trq212"
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "name": "Sholto Douglas",
+      "items": [],
+      "handle": "_sholtodouglas",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "handle": "karpathy",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "name": "Theo - t3․gg",
+      "items": [
+        {
+          "published_at": "2026-10-29T17:34:08Z",
+          "url": "https://www.youtube.com/watch?v=uLGxb4F3SyI",
+          "topic": "A practical T3 Code workflow and tutorial",
+          "title": "T3 Code broke me",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/uLGxb4F3SyI/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ],
+      "handle": "t3dotgg"
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "name": "dan",
+      "items": [],
+      "handle": "danabra.mov",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "name": "Caleb Writes Code",
+      "items": [],
+      "handle": "calebwritescode",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "name": "Matthew Berman",
+      "items": [],
+      "handle": "matthew_berman",
+      "note": "Visited and reviewed; no items selected as sufficiently useful for this digest."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "name": "Two Minute Papers",
+      "items": [],
+      "handle": "TwoMinutePapers",
+      "note": "Visited and reviewed; no items selected as sufficiently useful for this digest."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "name": "adamwathan",
+      "items": [
+        {
+          "published_at": "2026-10-29T14:31:44.297Z",
+          "url": "https://x.com/adamwathan/status/2115813841108099467",
+          "topic": "A UI-detail joke about model capability",
+          "text": "Starting a new model lab, we're focused on training models that put the arrow in the right place in select menus.\n\nSo far no other lab has been able to do it, but I think we can with enough funding.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/adamwathan/status/2115813841108099467",
+            "inspected_at": "2026-10-30T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HVzhcrtXEAAGrlB?format=webp&name=large",
+              "width": 600,
+              "height": 272
+            }
+          ]
+        }
+      ],
+      "handle": "adamwathan"
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "name": "mustafaakin",
+      "items": [],
+      "handle": "mustafaakin",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "name": "dfeinition",
+      "items": [],
+      "handle": "dfeinition",
+      "note": "Visited successfully; no in-window candidates in the rendered recent batch."
+    }
+  ]
+}
