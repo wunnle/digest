@@ -1,0 +1,518 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-10-31T04:07:28Z",
+  "window": {
+    "start": "2026-10-30T04:07:28Z",
+    "end": "2026-10-31T04:07:28Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, and operational lessons; omit hype and unrelated posts.",
+    "source": "Fresh logged-out rendered-browser collection from the live authenticated source list.",
+    "note": "X timelines expose a bounded logged-out recent batch; YouTube inspection was limited to the five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "name": "Simon Willison",
+      "items": [],
+      "handle": "simonw",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "name": "Armin Ronacher",
+      "items": [],
+      "handle": "mitsuhiko",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-10-30T08:04:10.106Z",
+          "url": "https://x.com/badlogicgames/status/2116078693827428383",
+          "topic": "Durable agent execution with database commits and crash recovery",
+          "text": "people of pi (durable). i did a round of performance optimizations in pi-durable.\n\nquick primer. every step of an agent run is saved to a db before the agent moves on. 1 save = 1 commit. thats what makes it durable, crash mid run, resume from the last commit. ~12 commits per run",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HV3QbhyWsAArFHP?format=webp&name=large",
+              "width": 600,
+              "height": 337
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2116078693827428383",
+            "inspected_at": "2026-10-31T04:04:09.766Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-10-30T23:18:42.832Z",
+          "url": "https://x.com/badlogicgames/status/2116308846721511576",
+          "topic": "CPU scaling results for thousands of durable agent conversations",
+          "text": "people of pi (durable). after fixing perf in storage, cpu perf is also improved.\n\nat 4096 conversations in a single node process, this obv. saturates. but it's mostly workable.\n\nthanks to @she_llac for kicking my butt.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HV6jN75XYAAA0JE?format=webp&name=large",
+              "width": 600,
+              "height": 337
+            }
+          ],
+          "quote_tweet": {
+            "url": "https://x.com/badlogicgames/status/2116078693827428383",
+            "published_at": "2026-10-30T08:04:10.106Z",
+            "author": {
+              "name": "Mario Zechner",
+              "handle": "badlogicgames"
+            },
+            "text": "people of pi (durable). i did a round of performance optimizations in pi-durable.\n\nquick primer. every step of an agent run is saved to a db before the agent moves on. 1 save = 1 commit. thats what makes it durable, crash mid run, resume from the last commit. ~12 commits per run",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HV3QbhyWsAArFHP?format=webp&name=large",
+                "width": 600,
+                "height": 337
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2116308846721511576",
+            "inspected_at": "2026-10-31T04:04:08.485Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/badlogicgames/status/2116078693827428383"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "badlogicgames"
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "name": "Peter Steinberger",
+      "items": [],
+      "handle": "steipete",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "name": "Thorsten Ball",
+      "items": [],
+      "handle": "thorstenball",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "handle": "geoffreylitt",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "name": "Hamel Husain",
+      "items": [],
+      "handle": "HamelHusain",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "name": "Lance Martin",
+      "items": [],
+      "handle": "RLanceMartin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "name": "Sean Goedecke",
+      "items": [],
+      "handle": "sgoedecke",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "handle": "birgitta410",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "name": "Boris Cherny",
+      "items": [
+        {
+          "published_at": "2026-10-30T17:36:57.807Z",
+          "url": "https://x.com/bcherny/status/2116222842413142111",
+          "topic": "Claude Ultra removes its five-hour usage limit for verified accounts",
+          "text": "We're removing the 5-hour limit for verified Ultra accounts.",
+          "quote_tweet": {
+            "url": "https://x.com/claudeai/status/2116220869479428500",
+            "published_at": "2026-10-30T17:29:07.410Z",
+            "author": {
+              "name": "Claude",
+              "handle": "claudeai"
+            },
+            "text": "We’re renaming our Max plans: \n\nMax 5x → Max\nMax 20x → Ultra\n\nMax is still $100/month, and Ultra is still $200. If you’re a subscriber, there’s nothing you need to do.\n\nWe’re also removing the 5-hour limit for verified Ultra accounts, starting today with most existing subscribers. Newer accounts keep a temporary limit until they’re verified, which helps us prevent fraud and abuse. You'll get an email when it's removed.\n\nWeekly limits remain unchanged. View our plans here:  claude.com/pricing",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HV5MwwNWAAA5hUI?format=webp&name=large",
+                "width": 600,
+                "height": 337
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/bcherny/status/2116222842413142111",
+            "inspected_at": "2026-10-31T04:04:31.842Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/claudeai/status/2116220869479428500"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "bcherny"
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "handle": "trq212",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "name": "Sholto Douglas",
+      "items": [],
+      "handle": "_sholtodouglas",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "handle": "karpathy",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "name": "t3dotgg",
+      "items": [
+        {
+          "published_at": "2026-10-30T21:42:50Z",
+          "url": "https://www.youtube.com/watch?v=ebILGCoN4UU",
+          "topic": "Whether coding-agent harnesses still provide meaningful value",
+          "title": "Are Harnesses Dead?",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/ebILGCoN4UU/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ],
+      "handle": "t3dotgg"
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "name": "danabra.mov",
+      "items": [],
+      "handle": "danabra.mov",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "name": "calebwritescode",
+      "items": [
+        {
+          "published_at": "2026-10-30T15:25:24Z",
+          "url": "https://www.youtube.com/watch?v=s48xeUP_2qI",
+          "topic": "Why CUDA programming remains difficult",
+          "title": "CUDA is hard..",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/s48xeUP_2qI/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ],
+      "handle": "calebwritescode"
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "name": "matthew_berman",
+      "items": [],
+      "handle": "matthew_berman",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "name": "TwoMinutePapers",
+      "items": [
+        {
+          "published_at": "2026-10-30T15:57:16Z",
+          "url": "https://www.youtube.com/watch?v=CWdTBLsbaQs",
+          "topic": "A recent OpenAI research result and its claimed significance",
+          "title": "OpenAI Claims It Just Did The Impossible",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/CWdTBLsbaQs/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ],
+      "handle": "TwoMinutePapers"
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "name": "adamwathan",
+      "items": [],
+      "handle": "adamwathan",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "name": "mustafaakin",
+      "items": [],
+      "handle": "mustafaakin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "name": "dfeinition",
+      "items": [],
+      "handle": "dfeinition",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    }
+  ]
+}
