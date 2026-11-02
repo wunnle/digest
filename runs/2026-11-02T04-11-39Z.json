@@ -1,0 +1,610 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-02T04:11:39Z",
+  "window": {
+    "start": "2026-11-01T04:11:39Z",
+    "end": "2026-11-02T04:11:39Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, and operational lessons; omit hype and unrelated posts.",
+    "source": "Fresh logged-out rendered-browser collection from the live authenticated source list.",
+    "note": "X timelines expose a bounded logged-out recent batch; YouTube inspection was limited to the five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "name": "Simon Willison",
+      "items": [],
+      "handle": "simonw",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-11-01T23:00:52.563000Z",
+          "url": "https://x.com/mitsuhiko/status/2117029133418983576",
+          "topic": "Agent-generated clean-room reimplementation tested against GNU readline behavior",
+          "text": "On my point about the tests. This is readline reimplemented against synthetic tests that the agent first created against the original readline. Basically a GPL to MIT laundromat.",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://github.com/mitsuhiko/lineread",
+              "title": "GitHub - mitsuhiko/lineread: Like readline but not copyleft",
+              "publisher": "github.com",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2117029133750349825/yQIQhl11?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2117029133418983576",
+            "inspected_at": "2026-11-02T04:05:28.267Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://github.com/mitsuhiko/lineread"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "mitsuhiko"
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-11-01T22:04:01.703000Z",
+          "url": "https://x.com/badlogicgames/status/2117014827235475496",
+          "topic": "Building a small language called Pico for code mode",
+          "text": "after short deliberation, i'm now going to built my own language to be used with codemode. i'll call it pico.",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://prod-fastly-eu-central-1.video.pscp.tv/Transcoding/v1/replay_thumbnail/eu-central-1/periscope-replay-direct-prod-eu-central-1-public/eyJkIjowfQ/1GFAND9Yc369uwrTQIWx7xUqwIdRC7fxrlBBL9IPKWI8T_0v4jegUk9p4Gtrf5JoQAOiRChbGV5eEJF4ODvMCg/chunk_1793570614526887740_1332_b.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJBbGxvd2VkUHJvdG9jb2xzIjpbInRodW1iIl0sIkJyb2FkY2FzdElkIjoiMmV2TXBlTWVKT0VtUEsiLCJHcmFudFR5cGUiOiJyZWFkIiwiR3JhbnRlZEF0IjoxNzkzNTkyMzQ2LCJHcmFudGVkVG8iOiJ0dy0xNzkzNTkyMTM4Nzc4Mjc1OTAiLCJTdHJlYW1OYW1lIjoiMUdGQU5EOVljMzY5dXdyVFFJV3g3eFVxd0lkUkM3ZnhybEJCTDlJUEtXSThUXzB2NGplZ1VrOXA0R3RyZjVKb1FBT2lSQ2hiR1Y1ZUVKRjRPRHZNQ2ciLCJleHAiOjE3OTM3NjUxNDZ9.erk_iRQyzUyOH0eqEO4tVdTNnHudDzSS_yU7cfeLuSI&service=proxsee&digest=f2NfXh3tjSekUrOi6oCJtE74aNNCwAu66NX2X3mUeTw",
+              "external_url": "https://x.com/badlogicgames/status/2117014827235475496",
+              "width": 1280,
+              "height": 720,
+              "duration": 3931.025999999908
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2117014827235475496",
+            "inspected_at": "2026-11-02T04:05:49.133Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        }
+      ],
+      "handle": "badlogicgames"
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "name": "Peter Steinberger",
+      "items": [],
+      "handle": "steipete",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-11-01T17:19:29.172000Z",
+          "url": "https://x.com/thorstenball/status/2116943219850440750",
+          "topic": "Developer assumptions about trunk-based development and long-lived branches",
+          "text": "The responses to this post are very surprising to me.\n\nSeems like a lot of developers genuinely can't even imagine working without long-lived branches.\n\nOr think that pushing to main means pushing incomplete commits that break CI.",
+          "quote_tweet": {
+            "url": "https://x.com/thorstenball/status/2115852581364801911",
+            "published_at": "2026-10-29T17:05:40.694000Z",
+            "author": {
+              "name": "Thorsten Ball",
+              "handle": "thorstenball"
+            },
+            "text": "Next question: why are you still using branches?\n\nWe talked about PRs. I don't think they make sense anymore, if you rethink them from first principles.\n\nYes, if you only use them to trigger CI, then sure, go ahead. That's a fat commit, not a PR. But for mandatory code review?",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2116943219850440750",
+            "inspected_at": "2026-11-02T04:06:13.657Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/thorstenball/status/2115852581364801911"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "thorstenball"
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "handle": "geoffreylitt",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-11-01T20:16:06.369000Z",
+          "url": "https://x.com/HamelHusain/status/2116987667716223160",
+          "topic": "Incentive problems in commercial AI benchmark rankings",
+          "text": "1. Gartner for Vendor Rankings\n2. Credit Rating Agencies for Mortgage Backed Securities \n3. US News World Rankings For Colleges \n4. AI Benchmark Companies \n\nAre all involved in a very similar business.  Enough people haven’t caught onto 4 yet, but they will.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2116987667716223160",
+            "inspected_at": "2026-11-02T04:06:21.200Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "HamelHusain"
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "name": "Lance Martin",
+      "items": [],
+      "handle": "RLanceMartin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "name": "Sean Goedecke",
+      "items": [],
+      "handle": "sgoedecke",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "handle": "birgitta410",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "name": "Boris Cherny",
+      "items": [],
+      "handle": "bcherny",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-11-01T19:32:52.692000Z",
+          "url": "https://x.com/trq212/status/2116976789046350040",
+          "topic": "Using generated sprites while iterating on an AI-assisted game prototype",
+          "text": "adding a new character: a taekwondo master that fights with fire\n\nI also updated the art style from 3d models to use generated sprites",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2116976476386144256/img/JyZxk8Lt-0aYo79z?format=webp&name=medium",
+              "external_url": "https://x.com/trq212/status/2116976789046350040",
+              "width": 1174,
+              "height": 720,
+              "duration": 19.066666
+            }
+          ],
+          "quote_tweet": {
+            "url": "https://x.com/trq212/status/2105333496768319969",
+            "published_at": "2026-09-30T16:26:35.491000Z",
+            "author": {
+              "name": "Thariq",
+              "handle": "trq212"
+            },
+            "text": "As a personal side project, I've been prototyping a video game.\n\nAs a former games founder, the process of making a game is deeply satisfying and creative, don't outsource that to AI. Use AI to work with you to bring your vision to life.\n\nHere's how I'm trying it:",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/amplify_video_thumb/2105323929485373440/img/DvPLgoobX_x3GWIY?format=webp&name=medium",
+                "width": 1200,
+                "height": 675
+              }
+            ]
+          },
+          "author_replies": [
+            {
+              "url": "https://x.com/trq212/status/2116977363728867664",
+              "published_at": "2026-11-01T19:35:09.707000Z",
+              "author": {
+                "name": "Thariq",
+                "handle": "trq212"
+              },
+              "text": "also had a little highlight intro video\n\nI like how its all coming together! hoping to have a vertical slice sometime next week",
+              "media": [
+                {
+                  "type": "photo",
+                  "url": "https://pbs.twimg.com/amplify_video_thumb/2116977176440651776/img/nE1Ebcm7xWI6mXMP?format=webp&name=medium",
+                  "width": 1282,
+                  "height": 720
+                }
+              ]
+            }
+          ],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2116976789046350040",
+            "inspected_at": "2026-11-02T04:06:25.355Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/trq212/status/2105333496768319969"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        }
+      ],
+      "handle": "trq212"
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "name": "Sholto Douglas",
+      "items": [
+        {
+          "published_at": "2026-11-01T18:41:07.425000Z",
+          "url": "https://x.com/_sholtodouglas/status/2116963764612563415",
+          "topic": "User-controlled recommendation systems and what agents make possible",
+          "text": "- Claude fighting for you. Short form video and rec sys attractor basins are the cigs of our generation. Your time can be spent in a so much more fulfilling way. It’s insanely user hostile that you can’t turn off YouTube shorts or Instagram reels permanently.\n- Way better recs! Current algorithms are primitive. \n- Look at what you can do in a weekend now.",
+          "quote_tweet": {
+            "url": "https://x.com/karpathy/status/2116957135661945283",
+            "published_at": "2026-11-01T18:14:46.960000Z",
+            "author": {
+              "name": "Andrej Karpathy",
+              "handle": "karpathy"
+            },
+            "text": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 43M comments over 20 years of HN to 6,454 videos that keep being recommended. *Significantly* better viewing experience, ~2 hours with Opus 5.5:\nhackertube.org\n\n- Excellent recs without any logins (state is kept in local browser session)\n- Thumbnail is a representative frame from middle of the video instead of the super duper A/B test hyper-optimized user uploads\n- Underlying data from the comment analysis as one zip file, point your Claude at it and ask for your own version\n- HackerTube Longs ✊\n\nA bit more on the process:\nI use Claude Code (desktop app for Mac), Opus 5.5 on Medium effort as my default. I only talk to Claude and have it do everything, the only \"manual work\" I helped with in tandem was in the browser (reminiscent of MenuGen): 1) I had to create some kind of API key from Google Cloud UI to query YouTube for video metadata, 2) I booted up a VPS box for serving and 3) I bought the domain name. Once the box was up I gave Claude the IP and told it update, secure, harden, deploy and optimize the code, and it did the whole thing.\n\nMany awesome projects that would have normally taken weeks/months even can now be few-shotted for breakfast. What else are we not thinking of.",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HWDnuuCaIAA__wa?format=webp&name=large",
+                "width": 600,
+                "height": 348
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/_sholtodouglas/status/2116963764612563415",
+            "inspected_at": "2026-11-02T04:06:28.420Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/karpathy/status/2116957135661945283"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "_sholtodouglas"
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "name": "Andrej Karpathy",
+      "items": [
+        {
+          "published_at": "2026-11-01T18:14:46.960000Z",
+          "url": "https://x.com/karpathy/status/2116957135661945283",
+          "topic": "Building HackerTube with Claude from 43 million Hacker News comments",
+          "text": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 43M comments over 20 years of HN to 6,454 videos that keep being recommended. *Significantly* better viewing experience, ~2 hours with Opus 5.5:\nhackertube.org\n\n- Excellent recs without any logins (state is kept in local browser session)\n- Thumbnail is a representative frame from middle of the video instead of the super duper A/B test hyper-optimized user uploads\n- Underlying data from the comment analysis as one zip file, point your Claude at it and ask for your own version\n- HackerTube Longs ✊\n\nA bit more on the process:\nI use Claude Code (desktop app for Mac), Opus 5.5 on Medium effort as my default. I only talk to Claude and have it do everything, the only \"manual work\" I helped with in tandem was in the browser (reminiscent of MenuGen): 1) I had to create some kind of API key from Google Cloud UI to query YouTube for video metadata, 2) I booted up a VPS box for serving and 3) I bought the domain name. Once the box was up I gave Claude the IP and told it update, secure, harden, deploy and optimize the code, and it did the whole thing.\n\nMany awesome projects that would have normally taken weeks/months even can now be few-shotted for breakfast. What else are we not thinking of.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HWDnuuCaIAA__wa?format=webp&name=large",
+              "width": 600,
+              "height": 348
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/karpathy/status/2116957135661945283",
+            "inspected_at": "2026-11-02T04:06:49.987Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "karpathy"
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "name": "t3dotgg",
+      "items": [],
+      "handle": "t3dotgg",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "name": "danabra.mov",
+      "items": [],
+      "handle": "danabra.mov",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "name": "calebwritescode",
+      "items": [],
+      "handle": "calebwritescode",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "name": "matthew_berman",
+      "items": [],
+      "handle": "matthew_berman",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "handle": "TwoMinutePapers",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "name": "adamwathan",
+      "items": [],
+      "handle": "adamwathan",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "name": "mustafaakin",
+      "items": [],
+      "handle": "mustafaakin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "name": "dfeinition",
+      "items": [],
+      "handle": "dfeinition",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    }
+  ]
+}
