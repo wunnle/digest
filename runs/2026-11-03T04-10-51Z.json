@@ -1,0 +1,463 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-03T04:10:51Z",
+  "window": {
+    "start": "2026-11-02T04:10:51Z",
+    "end": "2026-11-03T04:10:51Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, and operational lessons; omit hype and unrelated posts.",
+    "source": "Fresh logged-out rendered-browser collection from the live authenticated source list.",
+    "note": "X timelines expose a bounded logged-out recent batch; YouTube inspection was limited to the five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-11-02T19:24:46.967Z",
+          "url": "https://x.com/simonw/status/2117337139633607167",
+          "topic": "U.S. Census AI-adoption data affected by the Super Intelligence executive order",
+          "text": "In updating a graphic showing U.S. company AI adoption over time according to a long-running U.S. Census Bureau survey, I found out that the Bureau's work has been sullied by that asinine \"Super Intelligence\" executive order",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+              "title": "The U.S. Census Bureau and “Super Intelligence”",
+              "publisher": "simonwillison.net",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2117269251778392064/PUkZ2NBL?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2117337139633607167",
+            "inspected_at": "2026-11-03T04:05:32.095Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "simonw"
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "name": "Armin Ronacher",
+      "items": [],
+      "handle": "mitsuhiko",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "name": "Mario Zechner",
+      "items": [],
+      "handle": "badlogicgames",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "name": "Peter Steinberger",
+      "items": [],
+      "handle": "steipete",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "name": "Thorsten Ball",
+      "items": [],
+      "handle": "thorstenball",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "handle": "geoffreylitt",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-11-02T22:32:12.685Z",
+          "url": "https://x.com/HamelHusain/status/2117384307593646230",
+          "topic": "Concrete failure modes in public OCR benchmarks and model rankings",
+          "text": "Should you rely on public benchmark scores when choosing a model? @VikParuchuri argues \"no\" in this talk.\n\nTo illustrate this, he shows specific problems found in popular OCR benchmarks:\n\nParseBench:\n\n• A test expects 310 gigawatts of solar-panel capacity when the correct value is 303.  Additionally, 73% of its chart tests ask for values that aren't printed on the chart. (4:51)\n\n• A test requires \"Parish Priest:\" to be bold even though those words aren't bold in the source document. (15:33)\n\n• The scorer fails to recognize heading tags placed on separate lines. (16:15)\n\n• dots.mocr ranks last among six models even though it beats the first-ranked model on content and tables.  This is an example of how overall benchmark score can hide important differences in model capabilities. (14:48)\n\nolmOCR-bench:\n\n• A model correctly preserves a line break in a document and gets penalized for it. (10:30)\n\n• A test expects \"Republican Party\" when a document says \"Republican party\". Copying the capitalization correctly makes the model fail. (10:49)\n\n• A 700-line postprocessor that rewrites model output adds 1 to 2 points, more than many gaps between models. (12:12)\n\nOmniDocBench:\n\n• This benchmark uses edit distance, which penalizes a correct table written in HTML more heavily than a wrong number in Markdown. So the format matters more than the answer! (6:58)\n\nThis is just the tip of the iceberg, the video contains more examples.\n\nChapters:\n\n0:00 Choosing a model when every vendor claims to be #1\n1:54 How OCR benchmark scores improve without better OCR\n5:30 Metric design and tests that reject correct answers\n11:33 Postprocessing, saturation, and misleading model rankings\n12:40 How to slice benchmarks by your task and check for bias\n16:53 How to build fair tests with verified answers and consistent scoring\n19:05 How to test OCR models on your own documents\n24:10 Benchmark marketing, private evals, and how to choose a model\n31:28",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2117351279307771904/img/zTGx0WTIWIATMBAc?format=webp&name=medium",
+              "external_url": "https://x.com/HamelHusain/status/2117384307593646230",
+              "width": 1280,
+              "height": 720,
+              "duration": 1888.533
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [
+            {
+              "url": "https://x.com/HamelHusain/status/2117384309229466092",
+              "published_at": "2026-11-02T22:32:13.075Z",
+              "author": {
+                "name": "Hamel Husain",
+                "handle": "HamelHusain"
+              },
+              "text": "The video on YT:",
+              "media": []
+            }
+          ],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2117384307593646230",
+            "inspected_at": "2026-11-03T04:05:36.235Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        }
+      ],
+      "handle": "HamelHusain"
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "name": "Lance Martin",
+      "items": [],
+      "handle": "RLanceMartin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "name": "Sean Goedecke",
+      "items": [],
+      "handle": "sgoedecke",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "handle": "birgitta410",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "name": "Boris Cherny",
+      "items": [],
+      "handle": "bcherny",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "name": "Thariq Shihipar",
+      "items": [
+        {
+          "published_at": "2026-11-02T17:20:13.329Z",
+          "url": "https://x.com/trq212/status/2117305792923889731",
+          "topic": "Practical token-budget limits and the falling cost of coding-agent intelligence",
+          "text": "one week in my takeaway is that you don't need unlimited tokens to do great work, the $200 plans are amazing \n\nand this is the most expensive intelligence will ever be",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/trq212/status/2117305792923889731",
+            "inspected_at": "2026-11-03T04:05:01.660Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "trq212"
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "name": "Sholto Douglas",
+      "items": [],
+      "handle": "_sholtodouglas",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "handle": "karpathy",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "name": "t3dotgg",
+      "items": [
+        {
+          "published_at": "2026-11-02T09:10:01Z",
+          "url": "https://www.youtube.com/watch?v=y5TEATUDDfc",
+          "topic": "Claude Ultra pricing, limits, and practical account verification details",
+          "title": "Anthropic can't stop winning"
+        }
+      ],
+      "handle": "t3dotgg"
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "name": "danabra.mov",
+      "items": [],
+      "handle": "danabra.mov",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "name": "calebwritescode",
+      "items": [],
+      "handle": "calebwritescode",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "name": "matthew_berman",
+      "items": [],
+      "handle": "matthew_berman",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "handle": "TwoMinutePapers",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "name": "adamwathan",
+      "items": [],
+      "handle": "adamwathan",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "name": "mustafaakin",
+      "items": [],
+      "handle": "mustafaakin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "name": "dfeinition",
+      "items": [],
+      "handle": "dfeinition",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    }
+  ]
+}
