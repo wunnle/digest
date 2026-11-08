@@ -1,0 +1,662 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-08T04:08:49Z",
+  "window": {
+    "start": "2026-11-07T04:08:49Z",
+    "end": "2026-11-08T04:08:49Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, and operational lessons; omit hype and unrelated posts.",
+    "source": "Fresh logged-out rendered-browser collection from the live authenticated source list.",
+    "note": "X timelines expose a bounded logged-out recent batch; YouTube inspection was limited to the five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "name": "Simon Willison",
+      "items": [],
+      "handle": "simonw",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-11-08T00:27:41.924Z",
+          "url": "https://x.com/mitsuhiko/status/2119225310256496769",
+          "topic": "Durable JavaScript agents via heap-dump-style persistence",
+          "text": "It looks sort of insane but djs really just \"heap dumps\" in JavaScript now and I think that might work actually better for a durable coding agent than an actual heap dump.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HWkAElNXoAAXoS9?format=webp&name=large",
+              "width": 600,
+              "height": 546
+            }
+          ],
+          "attachments": [],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2119225310256496769",
+            "inspected_at": "2026-11-08T04:02:59.222Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "mitsuhiko"
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-11-07T12:33:38.877Z",
+          "url": "https://x.com/badlogicgames/status/2119045613493039234",
+          "topic": "Pi extension design and conversation-state snapshots",
+          "text": "i reject PRs with love, especially if they come from folks like Nico.",
+          "attachments": [],
+          "quote_tweet": {
+            "url": "https://x.com/nicopreme/status/2118964899309297897",
+            "published_at": "2026-11-07T07:12:55.116Z",
+            "author": {
+              "name": "Nico Bailon",
+              "handle": "nicopreme"
+            },
+            "text": "Hot take: Pi has extensions because I wanted an undo button.\n\nLast December I opened a PR for Pi to snapshot every turn so jumping backwards in a convo could restore your file changes. Mario said no to adding it to core, then floated: \"hooks could be a way to actually extend pi.\"",
+            "media": []
+          },
+          "author_replies": [
+            {
+              "url": "https://x.com/badlogicgames/status/2119046640103301146",
+              "published_at": "2026-11-07T12:37:43.640Z",
+              "author": {
+                "name": "Mario Zechner",
+                "handle": "badlogicgames"
+              },
+              "text": "huh, looks like i started working on extension on my birthday. what a hustler i am.",
+              "media": []
+            }
+          ],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2119045613493039234",
+            "inspected_at": "2026-11-08T04:03:14.795Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/nicopreme/status/2118964899309297897"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "badlogicgames"
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "name": "Peter Steinberger",
+      "items": [],
+      "handle": "steipete",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-11-07T12:37:38.036Z",
+          "url": "https://x.com/thorstenball/status/2119046616598343754",
+          "topic": "Whether changing model and thinking effort mid-thread helps agent work",
+          "text": "I might be missing something, because I haven't done it in the last two years, but:\n\nAre there really any benefits to switching the model and the thinking effort mid-thread?\n\nWhenever someone tells me they're doing this, my reaction is they're probably doing something wrong.",
+          "attachments": [],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2119046616598343754",
+            "inspected_at": "2026-11-08T04:03:27.148Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-07T11:43:43.460Z",
+          "url": "https://x.com/thorstenball/status/2119033049803338184",
+          "topic": "Amp Spaces interaction workflow for coding agents",
+          "text": "We shipped this yesterday and the feedback so far has been incredible. Makes me very happy.",
+          "attachments": [],
+          "quote_tweet": {
+            "url": "https://x.com/lewis_b_metcalf/status/2118771481245307177",
+            "published_at": "2026-11-06T18:24:20.656Z",
+            "author": {
+              "name": "Lewis Metcalf",
+              "handle": "lewis_b_metcalf"
+            },
+            "text": "We built a new way to interact with agents in Amp.\n\nampcode.com/news/spaces",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HWdihiNW4AAMaLv?format=webp&name=large",
+                "width": 600,
+                "height": 562
+              }
+            ],
+            "links": [
+              "https://ampcode.com/news/spaces"
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2119033049803338184",
+            "inspected_at": "2026-11-08T04:03:28.279Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/lewis_b_metcalf/status/2118771481245307177"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-07T06:15:51.595Z",
+          "url": "https://x.com/thorstenball/status/2118950540021203169",
+          "topic": "Running full-stack coding agents on remote headless environments",
+          "text": "This is blowing my mind.\n\nIs this true, you can't run Postgres or MySQL in Claude Code and Cursor?\n\nYou can run your full stack in orbs. We run multiple dev servers/services, Postgres, Redis, Docker in there.\n\nAnd hard disagree on 2nd point: the \"problems of remote coding\" *are* solved.\n\nFor one, you're no longer coding :) No need anymore to get LSPs or other editor-centric tooling running. Or an editor! That was always a huge pain in the ass, now the whole ass is gone.\n\nAnd everything else that was painful about setting up remote envs is truly no longer painful with agents. Configuring services to work in there, making headless browsers work, making headless anything work -- super easy now.\n\nIt sounds like Armin & Ben haven't tried it, but I urge you: put your code on a remote box, headless, ask an agent to run through it end to end. It will blow your mind.\n\nEverything has changed.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HWgEEfOW0AAfEvZ?format=webp&name=large",
+              "width": 542,
+              "height": 600
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HWgEzR9XsAAPNtG?format=webp&name=large",
+              "width": 600,
+              "height": 381
+            }
+          ],
+          "attachments": [],
+          "quote_tweet": {
+            "url": "https://x.com/bentlegen/status/2118694956726440415",
+            "published_at": "2026-11-06T13:20:15.789Z",
+            "author": {
+              "name": "Ben Vinegar",
+              "handle": "bentlegen"
+            },
+            "text": "🎙️ State of Agentic Coding w/ @mitsuhiko returns:\n\nIn episode #12:\n- models we're using now\n- is local desktop software dead?\n- time to hoard PS5s?\n- debating @thorstenball's \"how I work with agents\"\n\nand much more 👇",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/amplify_video_thumb/2118527647894446080/img/8-PfwMO_K21Ua7VO?format=webp&name=medium",
+                "width": 1200,
+                "height": 675
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2118950540021203169",
+            "inspected_at": "2026-11-08T04:03:29.262Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/bentlegen/status/2118694956726440415"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "thorstenball"
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "name": "Geoffrey Litt",
+      "items": [
+        {
+          "published_at": "2026-11-07T04:16:10.384Z",
+          "url": "https://x.com/geoffreylitt/status/2118920419839557658",
+          "topic": "Preinfusion as a research and project-planning workflow",
+          "text": "One of my favorite research practices I learned at @inkandswitch is “preinfusion”. The term comes from espresso (I believe @pvh coined it?) - and the original meaning is that you have a lower pressure soak before you turn on the high pressure and pull the shot. \n\nThe way it works at the lab is that you patiently let a cluster of ideas slowly form and develop, meandering somewhat in the background, and you lay the groundwork to work on them more seriously… before starting an intense high-pressure sprint. Could be a few months of part-time preinfusion before a hardcore 3 month project.\n\nThis really helps avoid the problem where you’re trying to sprint, but you don’t actually have enough clarity to know where to run.\n\nI think this applies in many other contexts. Preinfuse before trying to write an essay. Preinfuse before raising money for a company. A slow and patient preparation can enable swift follow through.",
+          "attachments": [],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/geoffreylitt/status/2118920419839557658",
+            "inspected_at": "2026-11-08T04:03:30.265Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "geoffreylitt"
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-11-07T18:41:19.343Z",
+          "url": "https://x.com/HamelHusain/status/2119138141793841376",
+          "topic": "MaxxBench exposes benchmark sensitivity in software-engineering models",
+          "text": "The industrial-benchmark complex is on thin ice",
+          "attachments": [],
+          "quote_tweet": {
+            "url": "https://x.com/loresjpg/status/2118880329490637049",
+            "published_at": "2026-11-07T01:36:52.100Z",
+            "author": {
+              "name": "Justin Lo",
+              "handle": "loresjpg"
+            },
+            "text": "Nice DeepSWE score! Does it survive a lowercase filename?\n\nIntroducing MaxxBench: 89 DeepSWE tasks with small changes to the instructions or starting code. Same engineering problem, slightly different requirement.\n\nModels clustered around 74% on DeepSWE end up 23 pp apart.\n\nGood",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HWfGLoKaUAAi2sL?format=webp&name=large",
+                "width": 600,
+                "height": 337
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2119138141793841376",
+            "inspected_at": "2026-11-08T04:03:42.071Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/loresjpg/status/2118880329490637049"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "HamelHusain"
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "name": "Lance Martin",
+      "items": [],
+      "handle": "RLanceMartin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "name": "Sean Goedecke",
+      "items": [],
+      "handle": "sgoedecke",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "handle": "birgitta410",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "name": "Boris Cherny",
+      "items": [],
+      "handle": "bcherny",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "handle": "trq212",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "name": "Sholto Douglas",
+      "items": [],
+      "handle": "_sholtodouglas",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "name": "Andrej Karpathy",
+      "items": [
+        {
+          "published_at": "2026-11-07T17:07:31.627Z",
+          "url": "https://x.com/karpathy/status/2119114537442189652",
+          "topic": "TristanTube: a Claude Code-built interface for 47K curated technical videos",
+          "text": "Earlier this week Tristan published his top YouTube channels:\nthume.ca/2026/11/01/you…\nWhich looked excellent so clearly I had to turn it into TristanTube:\nkarpathy.ai/tristan-tube/\n47K super nerdy videos +TV mode for laid back watching. (One-shotted with Claude Code in 3 minutes)",
+          "attachments": [],
+          "quote_tweet": {
+            "url": "https://x.com/karpathy/status/2116957135661945283",
+            "published_at": "2026-11-01T18:14:46.960Z",
+            "author": {
+              "name": "Andrej Karpathy",
+              "handle": "karpathy"
+            },
+            "text": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 43M comments over 20 years of HN to 6,454 videos that keep being recommended. *Significantly* better viewing experience, ~2 hours with Opus 5.5:\nhackertube.org\n\n- Excellent",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HWDnuuCaIAA__wa?format=webp&name=large",
+                "width": 600,
+                "height": 348
+              }
+            ],
+            "links": [
+              "https://hackertube.org"
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/karpathy/status/2119114537442189652",
+            "inspected_at": "2026-11-08T04:03:43.134Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/karpathy/status/2116957135661945283"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "karpathy"
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "name": "t3dotgg",
+      "items": [],
+      "handle": "t3dotgg",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "name": "danabra.mov",
+      "items": [],
+      "handle": "danabra.mov",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "name": "calebwritescode",
+      "items": [],
+      "handle": "calebwritescode",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "name": "matthew_berman",
+      "items": [],
+      "handle": "matthew_berman",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "name": "TwoMinutePapers",
+      "items": [
+        {
+          "published_at": "2026-11-07T16:24:47Z",
+          "url": "https://www.youtube.com/watch?v=GJ6PMUm5oTA",
+          "topic": "Astra weight-space programming and interpreting neural-network weights",
+          "title": "OpenAI's Astra Just Opened The Black Box Of AI"
+        }
+      ],
+      "handle": "TwoMinutePapers"
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "name": "adamwathan",
+      "items": [],
+      "handle": "adamwathan",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "name": "mustafaakin",
+      "items": [],
+      "handle": "mustafaakin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "name": "dfeinition",
+      "items": [],
+      "handle": "dfeinition",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    }
+  ]
+}
