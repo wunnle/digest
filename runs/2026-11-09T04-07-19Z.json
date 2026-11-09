@@ -1,0 +1,474 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-09T04:07:19Z",
+  "window": {
+    "start": "2026-11-08T04:07:19Z",
+    "end": "2026-11-09T04:07:19Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, and operational lessons; omit hype and unrelated posts.",
+    "source": "Fresh logged-out rendered-browser collection from the live authenticated source list.",
+    "note": "X timelines expose a bounded logged-out recent batch; YouTube inspection was limited to the five newest visible videos per channel."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "name": "Simon Willison",
+      "items": [],
+      "handle": "simonw",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "name": "Armin Ronacher",
+      "items": [],
+      "handle": "mitsuhiko",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-11-08T20:01:23.750Z",
+          "url": "https://x.com/badlogicgames/status/2119520680802750659",
+          "topic": "Y Combinator QM using the Pi agent harness",
+          "text": "til ycombinators QM is based on pi.",
+          "attachments": [],
+          "quote_tweet": {
+            "url": "https://x.com/garrytan/status/2119492448200405110",
+            "published_at": "2026-11-08T18:09:12.573Z",
+            "author": {
+              "name": "Garry Tan",
+              "handle": "garrytan"
+            },
+            "text": "Out of curiosity I am doing some open source eval work on harnesses with frontier models and here’s what is coming back so far",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HWnzJgvb0AAU7Bl?format=webp&name=large",
+                "width": 600,
+                "height": 589
+              }
+            ]
+          },
+          "author_replies": [
+            {
+              "url": "https://x.com/badlogicgames/status/2119520724385980647",
+              "published_at": "2026-11-08T20:01:34.141Z",
+              "author": {
+                "name": "Mario Zechner",
+                "handle": "badlogicgames"
+              },
+              "text": "not pi durable tho",
+              "media": []
+            }
+          ],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2119520680802750659",
+            "inspected_at": "2026-11-09T04:03:20.586Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/garrytan/status/2119492448200405110"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "badlogicgames"
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "name": "Peter Steinberger",
+      "items": [],
+      "handle": "steipete",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "name": "Thorsten Ball",
+      "items": [],
+      "handle": "thorstenball",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "handle": "geoffreylitt",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-11-09T00:16:46.490Z",
+          "url": "https://x.com/HamelHusain/status/2119584949032693767",
+          "topic": "Why teams need private task-specific evals instead of public benchmark picking",
+          "text": "I see some are drawing the wrong inference from this study: they are focusing on this meta benchmark as yet another benchmark for model picking, i.e. open vs closed models, model families etc.  \n\nThat’s too narrow of an interpretation!  You need to do your own private evals on your specific tasks to know what’s “better”\n\nThis should give you healthy skepticism of all public benchmarks.  I believe that was the intention of this illustration to begin with.",
+          "attachments": [],
+          "quote_tweet": {
+            "url": "https://x.com/loresjpg/status/2118880329490637049",
+            "published_at": "2026-11-07T01:36:52.100Z",
+            "author": {
+              "name": "Justin Lo",
+              "handle": "loresjpg"
+            },
+            "text": "Nice DeepSWE score! Does it survive a lowercase filename?\n\nIntroducing MaxxBench: 89 DeepSWE tasks with small changes to the instructions or starting code. Same engineering problem, slightly different requirement.\n\nModels clustered around 74% on DeepSWE end up 23 pp apart.\n\nGood",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HWfGLoKaUAAi2sL?format=webp&name=large",
+                "width": 600,
+                "height": 337
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2119584949032693767",
+            "inspected_at": "2026-11-09T04:03:26.011Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/loresjpg/status/2118880329490637049"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "HamelHusain"
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "name": "Lance Martin",
+      "items": [],
+      "handle": "RLanceMartin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "name": "Sean Goedecke",
+      "items": [],
+      "handle": "sgoedecke",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "handle": "birgitta410",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "name": "Boris Cherny",
+      "items": [],
+      "handle": "bcherny",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "handle": "trq212",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "name": "Sholto Douglas",
+      "items": [],
+      "handle": "_sholtodouglas",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "handle": "karpathy",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "name": "t3dotgg",
+      "items": [],
+      "handle": "t3dotgg",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "name": "danabra.mov",
+      "items": [],
+      "handle": "danabra.mov",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "name": "calebwritescode",
+      "items": [],
+      "handle": "calebwritescode",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "name": "matthew_berman",
+      "items": [],
+      "handle": "matthew_berman",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "handle": "TwoMinutePapers",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "name": "adamwathan",
+      "items": [
+        {
+          "published_at": "2026-11-09T01:16:31.343Z",
+          "url": "https://x.com/adamwathan/status/2119599984995876945",
+          "topic": "Cloud agents avoid laptop-bound development interruptions",
+          "text": "Doing some local development the last couple of days and having to worry about the agents stopping when I shut my laptop feels absolutely insane, how the hell does anyone live like this?\n\nUse cloud agents.",
+          "attachments": [],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/adamwathan/status/2119599984995876945",
+            "inspected_at": "2026-11-09T04:03:28.806Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ],
+      "handle": "adamwathan"
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "name": "mustafaakin",
+      "items": [],
+      "handle": "mustafaakin",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "name": "dfeinition",
+      "items": [],
+      "handle": "dfeinition",
+      "note": "Visited successfully; no sufficiently useful in-window items were selected."
+    }
+  ]
+}
