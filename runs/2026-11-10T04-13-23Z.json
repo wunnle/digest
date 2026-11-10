@@ -1,0 +1,527 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-10T04:13:23Z",
+  "window": {
+    "start": "2026-11-09T04:13:23Z",
+    "end": "2026-11-10T04:13:23Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Concrete AI and software-development tools, workflows, artifacts, experiments, evaluations, and evidence-backed criticism.",
+    "source": "Logged-out rendered public timelines and watch pages from the live authenticated source list.",
+    "note": "All enabled sources were visited. X discovery covered each initially rendered recent timeline batch; logged-out rendering may omit replies or repost-only activity."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "note": "Visited; 2 recent candidates inspected, 2 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-10T00:09:34.384Z",
+          "url": "https://x.com/simonw/status/2119945524514328631",
+          "topic": "Claude-assisted acoustic triangulation",
+          "text": "There is a mysterious intermittent beep coming from somewhere in your room of unopened boxes. Do you:\n\n1. Open boxes methodically until you find it\n\n2. Vibe code software to triangulate it using two laptops, two iPads and a phone all listening at once",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+              "title": "Locating the source of a mysterious beep with Claude",
+              "publisher": "simonwillison.net",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2119945400086097920/vjtZEKfw?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2119945524514328631",
+            "inspected_at": "2026-11-10T04:06:33.307Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-09T04:36:40.045Z",
+          "url": "https://x.com/simonw/status/2119650353142747181",
+          "topic": "Collapsible AI-generated PR descriptions",
+          "text": "I've recently started hiding the bulk of my AI-generated GitHub PR descriptions behind a collapsed <details><summary> HTML tag (thankfully supported by GitHub Markdown) and I think it's a useful pattern for making PR slop a little bit less exhausting",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://simonwillison.net/2026/Nov/9/details-summary/",
+              "title": "Hide your slop PR descriptions behind <details><summary>",
+              "publisher": "simonwillison.net",
+              "thumbnail_url": "https://pbs.twimg.com/card_img/2119650395538763776/1q8tKh6B?format=webp&name=medium"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2119650353142747181",
+            "inspected_at": "2026-11-10T04:06:38.095Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://simonwillison.net/2026/Nov/9/details-summary/"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "note": "Visited; 2 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "note": "Visited; 4 recent candidates inspected, 2 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-09T17:26:21.072Z",
+          "url": "https://x.com/badlogicgames/status/2119844050408751433",
+          "topic": "Evidence-based criticism of agent-generated systems code",
+          "text": "man, who should i trust? a bunch of nerds who made linux run on apple silicon, reverse engineering that pesky gpu isa among a gazillion other things, all pre-ai.\n\nor the guy who thinks having your agent rewrite shitty rust he never looked at in x86_64 is excellence?",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2119844050408751433",
+            "inspected_at": "2026-11-10T04:07:02.015Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-09T17:19:43.298Z",
+          "url": "https://x.com/badlogicgames/status/2119842382023680391",
+          "topic": "Human review of coding agents",
+          "text": "the most import skill in 2026 is still being able to tell your agents \"wtf is this crap, no, not like this\"\n\nif you stop doing that, you're basically fucked, despite what some devfluencers would like you to think.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2119842382023680391",
+            "inspected_at": "2026-11-10T04:07:06.990Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "note": "Visited; 0 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "note": "Visited; 4 recent candidates inspected, 2 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-09T16:41:54.882Z",
+          "url": "https://x.com/thorstenball/status/2119832867597685121",
+          "topic": "Multi-account Amp automation workflow",
+          "text": "The Amp app now lets you open different accounts in different windows.\n\nComplete game changer. I now have so many more automations and use Puck like I used ChatGPT.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2119832867597685121",
+            "inspected_at": "2026-11-10T04:07:11.804Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-09T16:29:23.809Z",
+          "url": "https://x.com/thorstenball/status/2119829717369122873",
+          "topic": "A universal debugging loop",
+          "text": "I just spent the last three hours with the HVAC guy because our heat was out.\n\nIt's wild how universal the process and the skill for debugging is.\n\n1. Define hypothesis\n2. Try to prove it\n3. If proven: done, else: binary search over the problem space, go to 1",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2119829717369122873",
+            "inspected_at": "2026-11-10T04:07:16.574Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "note": "Visited; 0 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "note": "Visited; 0 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "note": "Visited; 1 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "note": "Visited; 0 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "note": "Visited; 0 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "note": "Visited; 1 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "note": "Visited; 0 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "note": "Visited; 3 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "note": "Visited; 0 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "note": "Visited; 5 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "note": "Visited; 1 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "note": "Visited; 5 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "note": "Visited; 5 recent candidates inspected, 1 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-09T19:02:56.000Z",
+          "url": "https://www.youtube.com/watch?v=0vNyVMDFdkg",
+          "title": "Fable 5.2 is ridiculous",
+          "topic": "Fable 5.2 model evaluation",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/0vNyVMDFdkg/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "note": "Visited; 5 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "note": "Visited; 1 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "note": "Visited; 0 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "note": "Visited; 4 recent candidates inspected, nothing relevant selected.",
+      "items": []
+    }
+  ]
+}
