@@ -1,0 +1,575 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-11T04:12:33Z",
+  "window": {
+    "start": "2026-11-10T04:12:33Z",
+    "end": "2026-11-11T04:12:33Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Concrete AI and software-development tools, workflows, artifacts, experiments, evaluations, and evidence-backed criticism.",
+    "source": "Logged-out rendered public timelines and watch pages from the live authenticated source list.",
+    "note": "All enabled sources were visited. X discovery covered each initially rendered recent timeline batch; logged-out rendering may omit replies or repost-only activity."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "note": "Visited; 2 recent candidates inspected, 2 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-10T20:55:01.223Z",
+          "url": "https://x.com/simonw/status/2120258951594037732",
+          "topic": "Gemini 4 Carbon Three.js generation",
+          "text": "Gemini 4 Carbon is good at pelican SVGs, but that's nothing new for Gemini\n\n\"Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and stomps around manhattan and queens and Brooklyn, use openstreetmap mapping data\"\nsimonwillison.net/2026/Nov/10/ll…",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2120258832077299712/img/1GY5-KLgbJxo6MtU?format=webp&name=medium",
+              "external_url": "https://x.com/simonw/status/2120258951594037732",
+              "width": 1028,
+              "height": 720,
+              "duration": 59.681
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2120258951594037732",
+            "inspected_at": "2026-11-11T04:05:29.248Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-10T05:42:39.448Z",
+          "url": "https://x.com/simonw/status/2120029347948220500",
+          "topic": "Fable 5.2 code ownership prompting",
+          "text": "When Anthropic release a new model it's always worth taking a look at their updated prompting guide - here's an entertaining tip to make Fable 5.2 less likely to be cautious in how it improves existing code: tell it \"This codebase is yours\" platform.claude.com/docs/en/build-…",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HWvbWwFaAAAyY8_?format=webp&name=large",
+              "width": 547,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2120029347948220500",
+            "inspected_at": "2026-11-11T04:05:33.939Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "note": "Visited; 2 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "note": "Visited; 4 recent candidates inspected, 1 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-10T21:49:05.673Z",
+          "url": "https://x.com/badlogicgames/status/2120272559803408764",
+          "topic": "Rethinking the chat-sidebar interface",
+          "text": "sidebar chat sidebar must die. i'm going to kill it for good.\n\nthen i can rest.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2120272559803408764",
+            "inspected_at": "2026-11-11T04:06:03.165Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "note": "Visited; 1 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "note": "Visited; 4 recent candidates inspected, 1 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-10T08:52:34.412Z",
+          "url": "https://x.com/thorstenball/status/2120077141891067915",
+          "topic": "How coding agents may change software abstractions",
+          "text": "Loose thoughts on the future of abstractions:\n\nAt first glance, it seems evident that shared abstractions (stdlibs, frameworks, libraries) will still be beneficial in a world of agents. Centralized and shared knowledge, lower costs (no tokens needed) are just two reasons for why this is good.\n\nBut, looking back at the last ten years, it's clear that a lot of frameworks and libraries were made due to (to simplify) personal preference: framework X is Y but in language Foo which has same runtime characteristics as Bar but I like it better, or framework X was born out of frustration with syntax of Y, or framework X uses TOML instead of YAML and is container-native or ... <insert favorite thing here>.\n\nMeaning: a lot of abstractions in the last twenty years were made for reasons that no longer seem valid.\n\nThat makes me think that there will be less need for more abstractions (as we've known them!) in the future. But if you look around, you'll see that there's a thousand new things being created every day. I think that's a temporary phase.\n\nThere are other, deeper (for lack of a better term) abstractions though that still seem valid: abstractions that introduce a different way to compute. Think: type systems, Lisps, CUDA, unikernels, IaC, k8s. (That's not a final and super confident list, more a general pointing in a direction. I'm unsure here.)\n\nI do think that in the future people will still create new abstractions of this latter type. Sharing those is still valuable, because they go along with a platform or a product.\n\nBut the former type -- different languages that just switch syntax, frameworks that fix one grievance, util-like stdlibs -- for that I can see a future in which we're just endlessly remixing and \"vendoring\" existing abstractions.\n\nAnd just to say this out loud: I do think a lot of code-level abstractions (MVC, composition over inheritance, avoid-god-objects, classes vs. modules) don't matter in the future, because they're born out of the ability of humans to understand and maintain code.\n\nEven if new abstractions in this realm might make sense in the future, I think the barrier for them to spread is now incredibly high.\n\nExample: friend reported that in his company they're trying to introduce a new pattern because \"adding a new country to our system requires changing all of these places in this 1500-line long class\" -- who gives a shit about that anymore?\n\nOh and another thing: I think the \"is it in the training data?\" concern is way overblown by now. Intelligence generalizes to a certain degree and the latest models have 0 problems writing in a language or framework that you just made up. Try it.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2120077141891067915",
+            "inspected_at": "2026-11-11T04:06:28.067Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "note": "Visited; 1 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "note": "Visited; 2 recent candidates inspected, 1 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-11T02:20:02.211Z",
+          "url": "https://x.com/HamelHusain/status/2120340744665989528",
+          "topic": "Benchmark-weight instability over time",
+          "text": "The Artificial Analysis Intelligence Index is currently made up of 9 benchmarks with arbitrary weights.  \n\nI wanted to know how these weights varied over time.  They vary quite a bit!",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HWz2QDZakAApqon?format=webp&name=large",
+              "width": 600,
+              "height": 600
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2120340744665989528",
+            "inspected_at": "2026-11-11T04:06:37.628Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "note": "Visited; 0 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "note": "Visited; 0 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "note": "Visited; 0 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "note": "Visited; 0 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "note": "Visited; 1 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "note": "Visited; 0 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "note": "Visited; 0 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "note": "Visited; 5 newest visible videos inspected, 1 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-10T19:38:40.000Z",
+          "url": "https://www.youtube.com/watch?v=yh5IAUow4Hc",
+          "title": "Nobody Is Competing With Anthropic",
+          "topic": "AI and software development",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/yh5IAUow4Hc/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "note": "Visited; the logged-out profile rendered recommendations before a usable recent-post batch, so no items were selected.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "note": "Visited; 5 newest visible videos inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "note": "Visited; 5 newest visible videos inspected, 1 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-10T07:24:24.000Z",
+          "url": "https://www.youtube.com/watch?v=kMdHCyAnNHA",
+          "title": "Is SaaS Dead? Box CEO Aaron Levie on What AI Changes",
+          "topic": "AI and software development",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi/kMdHCyAnNHA/maxresdefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "note": "Visited; 5 newest visible videos inspected, 1 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-10T10:15:57.000Z",
+          "url": "https://www.youtube.com/watch?v=vug73goPJaM",
+          "title": "Is Software Over?",
+          "topic": "AI and software development",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/vug73goPJaM/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "note": "Visited; 0 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "note": "Visited; 2 recent candidates inspected, 0 selected.",
+      "items": []
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "note": "Visited; 2 recent candidates inspected, 1 selected.",
+      "items": [
+        {
+          "published_at": "2026-11-10T17:26:59.528Z",
+          "url": "https://x.com/dfeinition/status/2120206599570510096",
+          "topic": "Claude collaborative whiteboards, sheets, and data dashboards",
+          "text": "We just added Whiteboards and Sheets to Claude, and Dashboards is now Claude Data.\n\nWork with your team and Claude to:\n\n• Sketch a plan and brainstorm live\n• Ask for a formula in plain words\n• Turn the numbers into a story\n\nSketch, sum, show it in Claude",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2120205934039281664/img/DO_gmHNNrUgbbcH3?format=webp&name=medium",
+              "external_url": "https://x.com/dfeinition/status/2120206599570510096",
+              "width": 720,
+              "height": 720,
+              "duration": 61.766
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/dfeinition/status/2120206599570510096",
+            "inspected_at": "2026-11-11T04:07:07.123Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
