@@ -1,0 +1,624 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-12T04:10:05Z",
+  "window": {
+    "start": "2026-11-11T04:10:05Z",
+    "end": "2026-11-12T04:10:05Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered browser collection from the live authenticated source list.",
+    "note": "Logged-out timelines expose a bounded recent batch; every enabled source was visited."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-11-11T17:33:54.489000Z",
+          "url": "https://x.com/badlogicgames/status/2120570727908995542",
+          "topic": "Pi creators on coding in the AI age",
+          "text": "i got AI-ed",
+          "quote_tweet": {
+            "url": "https://x.com/mattpocockuk/status/2120554967035433183",
+            "published_at": "2026-11-11T16:31:16.804000Z",
+            "author": {
+              "name": "Matt Pocock",
+              "handle": "mattpocockuk"
+            },
+            "text": "Super excited to be doing another one of my live interviews\n\nThis time, with two legends in the space: @mitsuhiko and @badlogicgames \n\nYou'll learn how the creators of Pi think code should be written in the AI age\n\nMonday, 4:20PM UTC\n\nyoutube.com/live/ZBTegd8DU…"
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2120570727908995542",
+            "inspected_at": "2026-11-12T04:05:05Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/mattpocockuk/status/2120554967035433183"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-11-12T02:52:21.562000Z",
+          "url": "https://x.com/steipete/status/2120711266759258616",
+          "topic": "AI policy conflict in open source",
+          "text": "reading some of these comments makes my brain hurt. oss is already hard enough without politics.",
+          "quote_tweet": {
+            "url": "https://x.com/supahvee1234/status/2120564675662188999",
+            "published_at": "2026-11-11T17:09:51.521000Z",
+            "author": {
+              "name": "Vittorio Romeo",
+              "handle": "supahvee1234"
+            },
+            "text": "The anti-AI cult is harassing and pressuring open-source projects such as `curl` and `ImageMagick` to outright ban LLM usage.\n\nIf you care about the open-source ecosystem and humanity's technological progress, fight back with me:\n\ngithub.com/curl/curl/disc…\n\ngithub.com/ImageMagick/Im…"
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2120711266759258616",
+            "inspected_at": "2026-11-12T04:04:13Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/supahvee1234/status/2120564675662188999"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-11-11T17:07:37.989000Z",
+          "url": "https://x.com/thorstenball/status/2120564115588436458",
+          "topic": "Amp interface iteration",
+          "text": "Already looking very different than this morning.\n\n\"It should feel calm to work in Amp\"",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2120564115588436458",
+            "inspected_at": "2026-11-12T04:04:13Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-11T16:45:08.155000Z",
+          "url": "https://x.com/thorstenball/status/2120558453974601736",
+          "topic": "Shipping and polishing Amp",
+          "text": "I want to tweet so much more about this, but I'm also heads down shipping and fixing and polishing things.\n\nWe'll record a podcast tomorrow though.",
+          "quote_tweet": {
+            "url": "https://x.com/thorstenball/status/2120199882677833826",
+            "published_at": "2026-11-10T17:00:18.096000Z",
+            "author": {
+              "name": "Thorsten Ball",
+              "handle": "thorstenball"
+            },
+            "text": "Amp now has a home for all the beautiful things you build.\n\nampcode.com/news/boxes"
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2120558453974601736",
+            "inspected_at": "2026-11-12T04:04:13Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/thorstenball/status/2120199882677833826"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-11T10:27:10.530000Z",
+          "url": "https://x.com/thorstenball/status/2120463337121108110",
+          "topic": "Amp Boxes adoption",
+          "text": "So many boxes created over night! Love to see it.",
+          "quote_tweet": {
+            "url": "https://x.com/thorstenball/status/2120199882677833826",
+            "published_at": "2026-11-10T17:00:18.096000Z",
+            "author": {
+              "name": "Thorsten Ball",
+              "handle": "thorstenball"
+            },
+            "text": "Amp now has a home for all the beautiful things you build.\n\nampcode.com/news/boxes"
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2120463337121108110",
+            "inspected_at": "2026-11-12T04:04:19Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/thorstenball/status/2120199882677833826"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-11-11T07:47:09.654000Z",
+          "url": "https://x.com/HamelHusain/status/2120423068128727247",
+          "topic": "Benchmark uncertainty and reproducibility",
+          "text": "Love to see error bars on benchmarks \n\nIt’s very much a chart crime not to show them",
+          "quote_tweet": {
+            "url": "https://x.com/ryan_marten/status/2119845004940378276",
+            "published_at": "2026-11-09T17:30:08.650000Z",
+            "author": {
+              "name": "Ryan Marten",
+              "handle": "ryan_marten"
+            },
+            "text": "Terminal-Bench 4.1 is here with updated verifiers for all tasks.\n\nIn this release, we focused on:\n- resisting reward hacking\n- reducing false negatives\n- improving reproducibility\n\nRe-grading the 4.0 leaderboard trials with the 4.1 verifiers, resulted in ~1% of rewards flipping."
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2120423068128727247",
+            "inspected_at": "2026-11-12T04:04:26Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/ryan_marten/status/2119845004940378276"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HWsqyS4akAAIVrx?format=webp&name=large",
+              "width": 600,
+              "height": 287
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [
+        {
+          "published_at": "2026-11-11T21:54:19.518000Z",
+          "url": "https://x.com/RLanceMartin/status/2120636264030646397",
+          "topic": "Scaling agent teams and memory",
+          "text": "if you are at @aiDotEngineer, come say hi! \n\ni'll be giving a talk Thurs (tmrw) 12:30p on two recent articles i worked on: (1) how we scaled a team of 1,000 Fable 5.2 agents to formalize of Fermat's Last Theorem and (2) a few ways to think about memory + dreaming.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/RLanceMartin/status/2120636264030646397",
+            "inspected_at": "2026-11-12T04:04:32Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/tweet_video_thumb/HW3-Bt2acAAoH6V?format=webp&name=large",
+              "width": 1280,
+              "height": 592
+            }
+          ],
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/tweet_video_thumb/HW3-Bt2acAAoH6V?format=webp&name=large",
+              "external_url": "https://x.com/RLanceMartin/status/2120636264030646397",
+              "playback_url": "https://video.twimg.com/tweet_video/HW3-Bt2acAAoH6V.mp4",
+              "width": 1280,
+              "height": 592,
+              "duration": 61.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [
+        {
+          "published_at": "2026-11-11T15:50:36Z",
+          "url": "https://www.youtube.com/watch?v=OBNVzWYMKbE",
+          "topic": "AI and software development",
+          "title": "Progress?",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/OBNVzWYMKbE/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [
+        {
+          "published_at": "2026-11-11T08:58:57Z",
+          "url": "https://www.youtube.com/watch?v=8ZLhSNvG2aY",
+          "topic": "AI and software development",
+          "title": "why Fable 5.2 is the next frontier..",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/8ZLhSNvG2aY/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [
+        {
+          "published_at": "2026-11-11T11:00:25Z",
+          "url": "https://www.youtube.com/watch?v=FCmLuTENOp0",
+          "topic": "AI and software development",
+          "title": "Gemini Carbon, NVIDIA CEO AFFAIR, Fable 5.2, Meta Muse Ember, GPT Image 2.6, Minimax H3: AI NEWS",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/FCmLuTENOp0/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    }
+  ]
+}
