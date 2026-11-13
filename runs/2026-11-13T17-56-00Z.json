@@ -1,0 +1,641 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-13T17:56:00Z",
+  "window": {
+    "start": "2026-11-12T17:56:00Z",
+    "end": "2026-11-13T17:56:00Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered browser collection from the live authenticated source list.",
+    "note": "Logged-out timelines expose a bounded recent batch; every enabled source was visited."
+  },
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [
+        {
+          "published_at": "2026-11-13T00:36:20Z",
+          "url": "https://x.com/simonw/status/2121039423441981444",
+          "topic": "Gemini 4 pricing and image quality",
+          "text": "The pricing for Gemini 4 is pretty confusing - Argon and Carbon are the same token price as each other, and the new Hydrogen is only a 25% discount on that price - though Carbon/Argon will 2x in price on Dec 1st\n\nHydrogen's pelicans are notably worse\n simonwillison.net/2026/Nov/12/ll…",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/simonw/status/2121039423441981444",
+            "inspected_at": "2026-11-13T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HW9xkj-bsAEV4fm?format=webp&name=large",
+              "width": 600,
+              "height": 532
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-11-12T19:14:35.846Z",
+          "url": "https://x.com/badlogicgames/status/2120958455062397361",
+          "topic": "Agent-built bespoke hot-reloading interfaces",
+          "text": "because why the fuck not. pi, the everything app. everything is build ad-hoc, reusable, agent accessible, hot reloads without leaks or page reloads.",
+          "quote_tweet": {
+            "url": "https://x.com/badlogicgames/status/2120954639663485120",
+            "published_at": "2026-11-12T18:59:26.184Z",
+            "author": {
+              "name": "Mario Zechner",
+              "handle": "badlogicgames"
+            },
+            "text": "everything is bespoke now",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HW8kBd7WwAEg94C?format=webp&name=large",
+                "width": 600,
+                "height": 375
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2120958455062397361",
+            "inspected_at": "2026-11-13T17:48:00Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/badlogicgames/status/2120954639663485120"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HW8oWO4WwAApHgF?format=webp&name=large",
+              "width": 600,
+              "height": 375
+            }
+          ]
+        },
+        {
+          "published_at": "2026-11-12T18:59:26Z",
+          "url": "https://x.com/badlogicgames/status/2120954639663485120",
+          "topic": "Bespoke agent-accessible interfaces",
+          "text": "everything is bespoke now",
+          "quote_tweet": null,
+          "author_replies": [
+            {
+              "url": "https://x.com/badlogicgames/status/2120955784838427089",
+              "published_at": "2026-11-12T19:03:59Z",
+              "author": {
+                "name": "Mario Zechner",
+                "handle": "badlogicgames"
+              },
+              "text": "and now i never have to look at gmail again, have an interface exactly how i want it, and all of it is accessible by my agent, inside my agent's ui."
+            }
+          ],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2120954639663485120",
+            "inspected_at": "2026-11-13T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HW8kBd7WwAEg94C?format=webp&name=large",
+              "width": 600,
+              "height": 375
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-11-13T01:53:12.974Z",
+          "url": "https://x.com/steipete/status/2121058770767982997",
+          "topic": "Operating persistent enterprise agents",
+          "text": "My team wrote about how we run persistent agents inside OpenAI.",
+          "quote_tweet": {
+            "url": "https://x.com/kevins8/status/2120962631788114377",
+            "published_at": "2026-11-12T19:31:11.655Z",
+            "author": {
+              "name": "Kevin S Lin",
+              "handle": "kevins8"
+            },
+            "text": "deploying persistent agents like Openclaw or Dots pose a major challenge for enterprise IT\n\nagents are more like contractors than traditional saas software, able to take proactive actions in the background without human intervention\nthey are capable of fulfilling entire job",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2121058770767982997",
+            "inspected_at": "2026-11-13T17:48:00Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/kevins8/status/2120962631788114377"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-12T22:36:55Z",
+          "url": "https://x.com/steipete/status/2121009372470067544",
+          "topic": "Paid promotion and honest agent reviews",
+          "text": "There’s some new agent launching later this week and marketers offer a lot of money to say nice things about it on X. Keep a lookout on honest reviews 🫠",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2121009372470067544",
+            "inspected_at": "2026-11-13T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-11-13T12:06:01.083Z",
+          "url": "https://x.com/thorstenball/status/2121212987394379923",
+          "topic": "Agent-assisted incident and velocity analysis",
+          "text": "Interesting, I asked Amp to look at our incidents over the last 4 months.\n\nCommits up, incidents down.",
+          "quote_tweet": {
+            "url": "https://x.com/thorstenball/status/2120917288366829695",
+            "published_at": "2026-11-12T16:31:00.941Z",
+            "author": {
+              "name": "Thorsten Ball",
+              "handle": "thorstenball"
+            },
+            "text": "Showed an earlier version of this chart in a talk a month ago and said: look at our velocity!\n\nNow I recreated the chart and wow\n\n(Same headcount.)",
+            "media": [
+              {
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/HW8CdgUWAAEzWNX?format=webp&name=large",
+                "width": 600,
+                "height": 484
+              }
+            ]
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2121212987394379923",
+            "inspected_at": "2026-11-13T17:48:00Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/thorstenball/status/2120917288366829695"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HXAPwwXWkAAktVT?format=webp&name=large",
+              "width": 600,
+              "height": 522
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [
+        {
+          "published_at": "2026-11-13T02:34:12Z",
+          "url": "https://www.youtube.com/watch?v=XtykeVoSmP8",
+          "topic": "Choosing AI models",
+          "title": "I think I figured it out",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/XtykeVoSmP8/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [
+        {
+          "published_at": "2026-11-12T22:09:15Z",
+          "url": "https://www.youtube.com/watch?v=Sjdvu4nHfDk",
+          "topic": "Training large language models",
+          "title": "Anthropic Researcher explains how to train LLMs",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi/Sjdvu4nHfDk/maxresdefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items in the 24-hour window."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [
+        {
+          "published_at": "2026-11-12T20:19:40Z",
+          "url": "https://x.com/dfeinition/status/2120974831038435827",
+          "topic": "Claude as an active meeting participant",
+          "text": "Claude can now join your meetings as an active participant.\n\nIt’s unlike anything I’ve used on a call, it can:\n\n• Build a doc or whiteboard live as you talk\n• Check connected tools with your OK\n• Answer the team when asked out loud\n\nThe work kicks off before the call ends.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/dfeinition/status/2120974831038435827",
+            "inspected_at": "2026-11-13T04:08:00Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          },
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/amplify_video_thumb/2120974583536701440/img/64ZBTgMVabEv2I2V?format=webp&name=medium",
+              "width": 1200,
+              "height": 1200
+            }
+          ],
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2120974583536701440/img/64ZBTgMVabEv2I2V?format=webp&name=medium",
+              "external_url": "https://x.com/dfeinition/status/2120974831038435827",
+              "width": 1200,
+              "height": 1200
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
