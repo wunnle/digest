@@ -1,0 +1,804 @@
+{
+  "collection_schema": 3,
+  "generated_at": "2026-11-26T04:10:49Z",
+  "window": {
+    "start": "2026-11-25T04:10:49Z",
+    "end": "2026-11-26T04:10:49Z",
+    "timezone": "UTC",
+    "duration_hours": 24
+  },
+  "scope": {
+    "sources": [
+      {
+        "id": "x:simonw",
+        "type": "x",
+        "target": "simonw",
+        "label": "Simon Willison",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:mitsuhiko",
+        "type": "x",
+        "target": "mitsuhiko",
+        "label": "Armin Ronacher",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:badlogicgames",
+        "type": "x",
+        "target": "badlogicgames",
+        "label": "Mario Zechner",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:steipete",
+        "type": "x",
+        "target": "steipete",
+        "label": "Peter Steinberger",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:thorstenball",
+        "type": "x",
+        "target": "thorstenball",
+        "label": "Thorsten Ball",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:geoffreylitt",
+        "type": "x",
+        "target": "geoffreylitt",
+        "label": "Geoffrey Litt",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:hamelhusain",
+        "type": "x",
+        "target": "HamelHusain",
+        "label": "Hamel Husain",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:rlancemartin",
+        "type": "x",
+        "target": "RLanceMartin",
+        "label": "Lance Martin",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:sgoedecke",
+        "type": "x",
+        "target": "sgoedecke",
+        "label": "Sean Goedecke",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:birgitta410",
+        "type": "x",
+        "target": "birgitta410",
+        "label": "Birgitta Böckeler",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:bcherny",
+        "type": "x",
+        "target": "bcherny",
+        "label": "Boris Cherny",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:trq212",
+        "type": "x",
+        "target": "trq212",
+        "label": "Thariq Shihipar",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:_sholtodouglas",
+        "type": "x",
+        "target": "_sholtodouglas",
+        "label": "Sholto Douglas",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "x:karpathy",
+        "type": "x",
+        "target": "karpathy",
+        "label": "Andrej Karpathy",
+        "enabled": true,
+        "addedAt": "2026-09-24T04:17:31Z"
+      },
+      {
+        "id": "youtube:t3dotgg",
+        "type": "youtube",
+        "target": "t3dotgg",
+        "enabled": true,
+        "addedAt": "2026-09-25T06:34:31.582Z"
+      },
+      {
+        "id": "bluesky:danabra.mov",
+        "type": "bluesky",
+        "target": "danabra.mov",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:52.124Z"
+      },
+      {
+        "id": "youtube:calebwritescode",
+        "type": "youtube",
+        "target": "calebwritescode",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:48:58.816Z"
+      },
+      {
+        "id": "youtube:matthew_berman",
+        "type": "youtube",
+        "target": "matthew_berman",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:06.119Z"
+      },
+      {
+        "id": "youtube:twominutepapers",
+        "type": "youtube",
+        "target": "TwoMinutePapers",
+        "enabled": true,
+        "addedAt": "2026-09-25T11:49:12.038Z"
+      },
+      {
+        "id": "x:adamwathan",
+        "type": "x",
+        "target": "adamwathan",
+        "enabled": true,
+        "addedAt": "2026-09-25T12:03:17.198Z"
+      },
+      {
+        "id": "x:mustafaakin",
+        "type": "x",
+        "target": "mustafaakin",
+        "enabled": true,
+        "addedAt": "2026-09-27T05:13:12.037Z"
+      },
+      {
+        "id": "x:dfeinition",
+        "type": "x",
+        "target": "dfeinition",
+        "enabled": true,
+        "addedAt": "2026-10-06T15:41:33.516Z"
+      }
+    ],
+    "filter": "Useful AI and software-development tools, workflows, artifacts, experiments, evaluations, operational lessons, and evidence-backed criticism.",
+    "source": "Fresh logged-out rendered public timelines and video pages from the authenticated live source list.",
+    "note": "Logged-out rendered collection; X timelines expose a bounded recent batch and may omit replies or repost-only activity."
+  },
+  "collection_audit": [
+    {
+      "source_id": "x:simonw",
+      "visited": true,
+      "candidate_count": 2,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 1
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "visited": true,
+      "candidate_count": 3,
+      "selected_count": 1
+    },
+    {
+      "source_id": "x:steipete",
+      "visited": true,
+      "candidate_count": 1,
+      "selected_count": 1
+    },
+    {
+      "source_id": "x:thorstenball",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 1
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "visited": true,
+      "candidate_count": 1,
+      "selected_count": 1
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "visited": true,
+      "candidate_count": 2,
+      "selected_count": 2
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:birgitta410",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:bcherny",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:trq212",
+      "visited": true,
+      "candidate_count": 2,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:karpathy",
+      "visited": true,
+      "candidate_count": 1,
+      "selected_count": 1
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "visited": true,
+      "candidate_count": 4,
+      "selected_count": 0
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 1
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 1
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "visited": true,
+      "candidate_count": 5,
+      "selected_count": 1
+    },
+    {
+      "source_id": "x:adamwathan",
+      "visited": true,
+      "candidate_count": 1,
+      "selected_count": 1
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    },
+    {
+      "source_id": "x:dfeinition",
+      "visited": true,
+      "candidate_count": 0,
+      "selected_count": 0
+    }
+  ],
+  "digest": [
+    {
+      "source_id": "x:simonw",
+      "type": "x",
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:mitsuhiko",
+      "type": "x",
+      "handle": "mitsuhiko",
+      "name": "Armin Ronacher",
+      "items": [
+        {
+          "published_at": "2026-11-25T08:20:20.675Z",
+          "url": "https://x.com/mitsuhiko/status/2125504849194410245",
+          "topic": "Rust lock-poisoning failure modes",
+          "text": "I didn't cover this here but most poison errors that people encounter are from longer held locks, where no invariants are violated. Most locks are not there to protect invariants but to give out exclusive access only.",
+          "quote_tweet": {
+            "url": "https://x.com/mitsuhiko/status/2125365782981062916",
+            "published_at": "2026-11-24T23:07:44.706Z",
+            "author": {
+              "name": "Armin Ronacher ⇌",
+              "handle": "mitsuhiko"
+            },
+            "text": "Somehow lock poisoning landed in Rust, and now people feel strongly that it helps. I really don't think it does and I collected some examples from the real world of why I think it should go: lucumr.pocoo.org/2026/11/25/poi…",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/mitsuhiko/status/2125504849194410245",
+            "inspected_at": "2026-11-26T04:04:48.044Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/mitsuhiko/status/2125365782981062916"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:badlogicgames",
+      "type": "x",
+      "handle": "badlogicgames",
+      "name": "Mario Zechner",
+      "items": [
+        {
+          "published_at": "2026-11-25T19:19:09.822Z",
+          "url": "https://x.com/badlogicgames/status/2125670646453883007",
+          "topic": "Model side-channel communication through shared inference servers",
+          "text": "welp, that's not great. (i never want to link to lesswrong, but this has some meat)",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+              "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed — LessWrong",
+              "publisher": "lesswrong.com"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/badlogicgames/status/2125670646453883007",
+            "inspected_at": "2026-11-26T04:04:54.848Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:steipete",
+      "type": "x",
+      "handle": "steipete",
+      "name": "Peter Steinberger",
+      "items": [
+        {
+          "published_at": "2026-11-25T18:15:13.383Z",
+          "url": "https://x.com/steipete/status/2125654555262431248",
+          "topic": "Google Workspace MCP access policy",
+          "text": "huh, so Google finally built an MCP and is now forbidding clis like gog unless you pay them more? classy",
+          "quote_tweet": {
+            "url": "https://x.com/coccoinomane/status/2125547127803985932",
+            "published_at": "2026-11-25T11:08:20.681Z",
+            "author": {
+              "name": "Guido Pettinari",
+              "handle": "coccoinomane"
+            },
+            "text": "Google to forbid AI Agents from using Workspace APIs. @steipete does this affect gog and @openclaw?\n\nSource: workspaceupdates.googleblog.com/2026/11/mcp-se…",
+            "media": []
+          },
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/steipete/status/2125654555262431248",
+            "inspected_at": "2026-11-26T04:05:15.592Z",
+            "quote_card": {
+              "visible": true,
+              "status_url": "https://x.com/coccoinomane/status/2125547127803985932"
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:thorstenball",
+      "type": "x",
+      "handle": "thorstenball",
+      "name": "Thorsten Ball",
+      "items": [
+        {
+          "published_at": "2026-11-25T08:10:10.582Z",
+          "url": "https://x.com/thorstenball/status/2125502290278723726",
+          "topic": "Coding agents expanding beyond code generation",
+          "text": "At this point, \"coding agent\" itself is a misnomer.\n\nIf you're still thinking of your \"coding agent\" you might be holding it back.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/thorstenball/status/2125502290278723726",
+            "inspected_at": "2026-11-26T04:05:47.973Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:geoffreylitt",
+      "type": "x",
+      "handle": "geoffreylitt",
+      "name": "Geoffrey Litt",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:hamelhusain",
+      "type": "x",
+      "handle": "HamelHusain",
+      "name": "Hamel Husain",
+      "items": [
+        {
+          "published_at": "2026-11-25T21:22:15.521Z",
+          "url": "https://x.com/HamelHusain/status/2125701624320680214",
+          "topic": "Public/private benchmark overfitting",
+          "text": "Looking at the decision index benchmarks and wow pervasive overfitting of models!!! \n\nI'm more likely to use a model that has a high & consistent public + private score vs. those with a huge drift\n\nAlso, beware - the models are sorted by public scores in the individual benchmark cards\n\nhuggingface.co/spaces/multimo…",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HX__3PPbMAAf1Y-?format=png&name=large",
+              "width": 600,
+              "height": 528
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HYAADAUaIAA2FzS?format=png&name=large",
+              "width": 600,
+              "height": 543
+            },
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HYAAL_waUAAIUz5?format=png&name=large",
+              "width": 600,
+              "height": 517
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/HamelHusain/status/2125701624320680214",
+            "inspected_at": "2026-11-26T04:05:54.770Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:rlancemartin",
+      "type": "x",
+      "handle": "RLanceMartin",
+      "name": "Lance Martin",
+      "items": [
+        {
+          "published_at": "2026-11-25T20:57:34.465Z",
+          "url": "https://x.com/RLanceMartin/status/2125695412321538242",
+          "topic": "Scaling agents for formal mathematics and memory",
+          "text": "my talk from @aiDotEngineer is now up :)\n\ni talk about scaling 1,000 Fable 5.2 agents to formalize Fermat’s Last Theorem. \n\ni also talk about “dreaming” to help Claude build, organize + correct its memory.",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://www.youtube.com/watch?v=wrfbI5eyLAI",
+              "title": "1,000 Claude Agents Formalized Fermat's Last Theorem — Lance Martin, Anthropic",
+              "publisher": "YouTube"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/RLanceMartin/status/2125695412321538242",
+            "inspected_at": "2026-11-26T04:06:02.372Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://www.youtube.com/watch?v=wrfbI5eyLAI"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        },
+        {
+          "published_at": "2026-11-25T16:26:00.406Z",
+          "url": "https://x.com/RLanceMartin/status/2125627070084796562",
+          "topic": "Agent-driven Python-to-Rust API migration",
+          "text": "we recently migrated the Claude Messages API from Python to Rust. \n\nin this new eng blog, we share how we used the Python API as an oracle, set up verification loops, and had a team of agents fix diffs until Rust matched production's observable behavior.",
+          "attachments": [
+            {
+              "type": "link_card",
+              "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+              "title": "Migrating our Messages API to Rust",
+              "publisher": "anthropic.com"
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/RLanceMartin/status/2125627070084796562",
+            "inspected_at": "2026-11-26T04:06:09.435Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": true,
+              "final_url": "https://www.anthropic.com/research/migrating-api-to-rust"
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:sgoedecke",
+      "type": "x",
+      "handle": "sgoedecke",
+      "name": "Sean Goedecke",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:birgitta410",
+      "type": "x",
+      "handle": "birgitta410",
+      "name": "Birgitta Böckeler",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:bcherny",
+      "type": "x",
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:trq212",
+      "type": "x",
+      "handle": "trq212",
+      "name": "Thariq Shihipar",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:_sholtodouglas",
+      "type": "x",
+      "handle": "_sholtodouglas",
+      "name": "Sholto Douglas",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:karpathy",
+      "type": "x",
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "items": [
+        {
+          "published_at": "2026-11-26T02:31:52.532Z",
+          "url": "https://x.com/karpathy/status/2125779541952246039",
+          "topic": "Long-running agent builds a real-data Civilization map",
+          "text": "I asked Claude to populate a Civilization-style game map with real data from the US. Opus 5.5 downloaded and parse a ton of public data and 7 hours and 45K lines of code later... it works :)\n\n- 31 real data sources including Census, BEA, BLS, EIA, NOAA, USGS, DoD, NPS, FAA, FEMA, CDC...\n- Real elevation, land cover, GDP, jobs, power plants, mines, ports, airports, bases, parks, universities, freight flows, disasters; all reconciled onto one 25 km hex grid.\n- The data is converted into Civilization language, e.g. Gold yield is GDP. A city's districts are its real industry specializations: San Jose gets a Campus, Detroit is \"Motor city\". Its citizens are its real workforce: 1 in 4 San Jose workers are engineers, coders or scientists, against 1 in 14 nationally. Wonders are chosen by published rules, such as national parks by visitor numbers and universities by R&D spending, etc etc.\n- 19 lenses (income, degrees, faith, disasters…), a City View for 524 metros, and nine advisors plus an Explorer. The Explorer turns any column for any of 3,100+ counties into a table and scatter plot, linked to the map.\n- Claude decided to skip a few states and territories sry\n- Built using Claude Code desktop app, Opus 5.5 on medium and turning on ultracode.\n\nIt's deployed here: karpathy.ai/usaciv/ and the \"?\" has the source link too. I don't exactly know where I was going with this but it's really fun to browse and play with. Possibly it can be expanded or built into a game. I only have half of my weekly Claude quote left though so someone else will have to take over :D. Claude also made a trailer:",
+          "attachments": [
+            {
+              "type": "native_video",
+              "poster_url": "https://pbs.twimg.com/amplify_video_thumb/2125775560517570561/img/GDE8h47dSgwy5uSy?format=jpg&name=medium",
+              "external_url": "https://x.com/karpathy/status/2125779541952246039",
+              "width": 1200,
+              "height": 675
+            }
+          ],
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/karpathy/status/2125779541952246039",
+            "inspected_at": "2026-11-26T04:06:30.425Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:t3dotgg",
+      "type": "youtube",
+      "handle": "t3dotgg",
+      "name": "t3dotgg",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "bluesky:danabra.mov",
+      "type": "bluesky",
+      "handle": "danabra.mov",
+      "name": "danabra.mov",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "youtube:calebwritescode",
+      "type": "youtube",
+      "handle": "calebwritescode",
+      "name": "calebwritescode",
+      "items": [
+        {
+          "published_at": "2026-11-25T17:01:45.000Z",
+          "url": "https://www.youtube.com/watch?v=Ane0wdhb4wo",
+          "topic": "Looped models have better reasoning..?",
+          "title": "Looped models have better reasoning..?",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/Ane0wdhb4wo/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:matthew_berman",
+      "type": "youtube",
+      "handle": "matthew_berman",
+      "name": "matthew_berman",
+      "items": [
+        {
+          "published_at": "2026-11-25T19:28:41.000Z",
+          "url": "https://www.youtube.com/watch?v=iA0ns69dZGM",
+          "topic": "RANKING the BEST AI Models for Coding | TIER LIST",
+          "title": "RANKING the BEST AI Models for Coding | TIER LIST",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi/iA0ns69dZGM/maxresdefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "youtube:twominutepapers",
+      "type": "youtube",
+      "handle": "TwoMinutePapers",
+      "name": "TwoMinutePapers",
+      "items": [
+        {
+          "published_at": "2026-11-25T09:54:23.000Z",
+          "url": "https://www.youtube.com/watch?v=hwWlEuI359w",
+          "topic": "Claude AI’s Biggest Math Breakthrough Has A Problem.",
+          "title": "Claude AI’s Biggest Math Breakthrough Has A Problem.",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://i.ytimg.com/vi_webp/hwWlEuI359w/maxresdefault.webp",
+              "width": 1920,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "x:adamwathan",
+      "type": "x",
+      "handle": "adamwathan",
+      "name": "adamwathan",
+      "items": [
+        {
+          "published_at": "2026-11-25T20:14:28.647Z",
+          "url": "https://x.com/adamwathan/status/2125684566614524175",
+          "topic": "High-risk banking workflow delegated to an AI agent",
+          "text": "Did the insane thing of giving Grok Bot my banking credentials today to put together a ton of documents for my accountant.\n\nAbsolutely crushed it, was 100% worth the risk of losing every penny I have to my name.",
+          "quote_tweet": null,
+          "author_replies": [],
+          "render_audit": {
+            "root_article_url": "https://x.com/adamwathan/status/2125684566614524175",
+            "inspected_at": "2026-11-26T04:06:37.484Z",
+            "quote_card": {
+              "visible": false
+            },
+            "external_link_card": {
+              "visible": false
+            },
+            "native_video": {
+              "visible": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "x:mustafaakin",
+      "type": "x",
+      "handle": "mustafaakin",
+      "name": "mustafaakin",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    },
+    {
+      "source_id": "x:dfeinition",
+      "type": "x",
+      "handle": "dfeinition",
+      "name": "dfeinition",
+      "items": [],
+      "note": "Visited; no relevant items selected in the 24-hour window."
+    }
+  ]
+}
